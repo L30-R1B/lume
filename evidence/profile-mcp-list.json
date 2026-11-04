@@ -1,0 +1,20 @@
+[
+  {
+    "name": "codex-economy",
+    "enabled": true,
+    "disabled_reason": null,
+    "transport": {
+      "type": "stdio",
+      "command": "/home/leo-ribeiro/.local/share/codex-economy/runtime/bin/ce",
+      "args": [
+        "mcp"
+      ],
+      "env": null,
+      "env_vars": [],
+      "cwd": null
+    },
+    "startup_timeout_sec": null,
+    "tool_timeout_sec": null,
+    "auth_status": "unsupported"
+  }
+]

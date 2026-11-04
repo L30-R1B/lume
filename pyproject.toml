@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "codex-economy"
+version = "0.1.0"
+description = "Local evidence retrieval and measured Codex task execution"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["mcp>=1.20,<2", "tree-sitter>=0.25,<0.26", "tree-sitter-javascript", "tree-sitter-typescript", "tree-sitter-kotlin", "tree-sitter-c", "tree-sitter-cpp", "PyYAML>=6", "scikit-learn>=1.5", "libclang>=18,<19"]
+[project.scripts]
+ce = "codex_economy.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.ruff]
+line-length = 120
+extend-exclude = ["tests/benchmark-fixtures", "tests/confirmation-inputs", "evidence", "tools"]
+[tool.setuptools.package-data]
+codex_economy = ["*.cjs"]
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "PLW1510"]

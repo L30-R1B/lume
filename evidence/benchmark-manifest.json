@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "phase": "confirmation-representative-small-tasks",
+  "seed": 20261104,
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "arms": [
+    "A",
+    "B",
+    "C"
+  ],
+  "repetitions": 3,
+  "timeout": 180,
+  "context_bytes": 6000,
+  "output": "/home/leo-ribeiro/codex-economy/evidence/benchmark",
+  "tasks": [
+    {
+      "id": "python-clamp",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-clamp",
+      "objective": "Fix clamp in logic.py. It must restrict x to the inclusive interval lo to hi.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "check.py"
+      ],
+      "protected": [
+        "check.py"
+      ],
+      "target": "logic.py"
+    },
+    {
+      "id": "python-span",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-span",
+      "objective": "Fix span in logic.py. It must compute hi minus lo.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "check.py"
+      ],
+      "protected": [
+        "check.py"
+      ],
+      "target": "logic.py"
+    },
+    {
+      "id": "python-parity",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-parity",
+      "objective": "Fix parity in logic.py. It must return whether x is even.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "check.py"
+      ],
+      "protected": [
+        "check.py"
+      ],
+      "target": "logic.py"
+    },
+    {
+      "id": "python-square",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-square",
+      "objective": "Fix square in logic.py. It must compute x squared.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "check.py"
+      ],
+      "protected": [
+        "check.py"
+      ],
+      "target": "logic.py"
+    },
+    {
+      "id": "node-clamp",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-clamp",
+      "objective": "Fix clamp in logic.js. It must restrict x to the inclusive interval lo to hi.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "node",
+        "check.js"
+      ],
+      "protected": [
+        "check.js"
+      ],
+      "target": "logic.js"
+    },
+    {
+      "id": "node-span",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-span",
+      "objective": "Fix span in logic.js. It must compute hi minus lo.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "node",
+        "check.js"
+      ],
+      "protected": [
+        "check.js"
+      ],
+      "target": "logic.js"
+    },
+    {
+      "id": "node-parity",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-parity",
+      "objective": "Fix parity in logic.js. It must return whether x is even.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "node",
+        "check.js"
+      ],
+      "protected": [
+        "check.js"
+      ],
+      "target": "logic.js"
+    },
+    {
+      "id": "node-square",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-square",
+      "objective": "Fix square in logic.js. It must compute x squared.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "node",
+        "check.js"
+      ],
+      "protected": [
+        "check.js"
+      ],
+      "target": "logic.js"
+    },
+    {
+      "id": "cpp-clamp",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-clamp",
+      "objective": "Fix clamp in logic.hpp. It must restrict x to the inclusive interval lo to hi.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "verify.py"
+      ],
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "target": "logic.hpp"
+    },
+    {
+      "id": "cpp-span",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-span",
+      "objective": "Fix span in logic.hpp. It must compute hi minus lo.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "verify.py"
+      ],
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "target": "logic.hpp"
+    },
+    {
+      "id": "cpp-parity",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-parity",
+      "objective": "Fix parity in logic.hpp. It must return whether x is even.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "verify.py"
+      ],
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "target": "logic.hpp"
+    },
+    {
+      "id": "cpp-square",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-square",
+      "objective": "Fix square in logic.hpp. It must compute x squared.",
+      "acceptance": "All existing checks pass; tests unchanged; only the target implementation may change.",
+      "verify": [
+        "python3",
+        "verify.py"
+      ],
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "target": "logic.hpp"
+    }
+  ]
+}

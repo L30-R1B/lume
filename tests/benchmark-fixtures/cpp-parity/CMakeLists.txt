@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(check CXX)
+enable_testing()
+add_executable(check check.cpp)
+add_test(NAME logic COMMAND check)

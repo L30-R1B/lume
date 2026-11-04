@@ -1,0 +1,20 @@
+{
+  "base_config_preserved": true,
+  "hash": "e8f3847a6e16e9e3439fb72b64f7b603769c483238ed67ee1fecd6b3eb130bde",
+  "operations": [
+    {
+      "removed": "/home/leo-ribeiro/.codex/economy.config.toml",
+      "base_config_preserved": true
+    },
+    {
+      "profile": "/home/leo-ribeiro/.codex/economy.config.toml",
+      "use": "codex -p economy",
+      "base_config_preserved": true
+    },
+    {
+      "profile": "/home/leo-ribeiro/.codex/economy.config.toml",
+      "use": "codex -p economy",
+      "base_config_preserved": true
+    }
+  ]
+}

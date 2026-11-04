@@ -1,0 +1,400 @@
+{
+  "version": 2,
+  "phase": "confirmation-held-out-small-functions",
+  "seed": 20261105,
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "arms": [
+    "A",
+    "B",
+    "C"
+  ],
+  "repetitions": 3,
+  "timeout": 180,
+  "context_bytes": 6000,
+  "output": "/home/leo-ribeiro/codex-economy/evidence/confirmation",
+  "fixture_hashes": {
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/check.cpp": "5f2070f9d64c9b8689becba209f0bddc1f6c68b71574b8891bb125c0afc0cd98",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/CMakeLists.txt": "5eeee409d40df3e672edf0071357658d9cf218fb0dabfcc664f04a267f77393a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/verify.py": "d8766c792067da2370b22e6ea425754dd815c221555bf3ed992ab65aaccba41b",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/logic.hpp": "e323281484e91719b2259610f3404b605fb6daea0ce7b8f9346d66ed20a7fed8",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/check.py": "80fdc806f31e977098969544056f05a17b6dd6f5887011eb21e48684f689f723",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/logic.py": "b7c7d1d2ad9cce2c34c2b193b828404607d3f0565a69d291ef3c2aa7e37ccbf5",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/check.js": "d3a746aa961cc495a4b28aa9c2ed9bf8148e9da83debe10f330393931edfc3f0",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum/logic.js": "a9db8ed7ef5c56929ee5fb1b7417c0aab21fa081d123ba1d42bf38c28b454749",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/check.cpp": "d9be7e3b4cd75eb6699ca9baf9e28a30bea17a9e638ef63344dc51459e1d834a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/CMakeLists.txt": "5eeee409d40df3e672edf0071357658d9cf218fb0dabfcc664f04a267f77393a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/verify.py": "d8766c792067da2370b22e6ea425754dd815c221555bf3ed992ab65aaccba41b",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/logic.hpp": "8318a1c713c6cc491018370222a2ff7bafd65468efdd29b677ae01f6fbd8c34a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/check.js": "6008712d78f66d0caff0dff6f67ceadfe923be3a2194b8afc1cf28001d793bc8",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/logic.js": "f83990c0e15038b459ea76fa2f6ca3a6d15af081cee3be02218ce5b5d1408fcc",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/check.py": "aebb62f94e9d6231c2478d60e4c71aeb5b39f7766a31d0013d98e3265491e0d7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/logic.py": "331162f053a0f5bf125b4c429d5e0ebdf9d4d6174f92671b1e981c125ffd8684",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/check.cpp": "0d5a6de8debdba537a3d3e958df5da765a10ba476d9f115532ce93994798c2af",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/CMakeLists.txt": "5eeee409d40df3e672edf0071357658d9cf218fb0dabfcc664f04a267f77393a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/verify.py": "d8766c792067da2370b22e6ea425754dd815c221555bf3ed992ab65aaccba41b",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/logic.hpp": "bc450b8834efa5f1b4936a3ebc405e1cfee539710d201cd03d9a2b3628692c2a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/check.js": "961df1cc7fe6b0a0994b99cc64f3bb2fe548966a457c60f8f6f1be1b096c1eec",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube/logic.js": "bd8904689f10772c26bbb825a874eb35be70e02856002f4220504ca0bc57136c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/check.py": "eda05b49e8c5e9e18bdd1307ffe2f9d88eefa3332bdc948a8a42dc0cf9aacfc4",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/logic.py": "0c41851b5f59ccefc06bd0b59fc5e3146a43de90ccb0a9a0318d8f4be56b97e9",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/check.cpp": "71d4146502f274cb91cf8057912a53e3a5210dc663fae6ca77991ab017b964bf",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/CMakeLists.txt": "5eeee409d40df3e672edf0071357658d9cf218fb0dabfcc664f04a267f77393a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/verify.py": "d8766c792067da2370b22e6ea425754dd815c221555bf3ed992ab65aaccba41b",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/logic.hpp": "1208cbfdff1b60edea88311aa562b555626980d983cc815e30a4e518cee9fdd1",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/check.py": "19c3db883642fc1ba29b73540b5a4723fca9260c26d27e1193d5271cc5d4ed74",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/logic.py": "0b03613334d27d8c8e939cb5d52ba7ba28099012d96c77f28eddf7dac2f64f03",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-7.md": "2bda512817197836205721041cce52b10a3411ae196a20b09656e3155fc1ce68",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-10.md": "505a0df2584faeceb90857bbce6c93d342e9abf65cce8a6450cd808572c71737",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/check.js": "0acfb907b97137c5beb6760ac1ca6334313de88516bfc4882f4835465e8b4aa4",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-1.md": "b89fd5e97b26c445fbc0a5ccdbd05cce55853355a34201f21746b92942842eaa",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-2.md": "90c12571a15548462580ee17560cfe289a3234326c82702db66d74cbbb54f70d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-3.md": "50d52ae34a2bdf56860e32227a5c5affb7f7021681e33868d4ae1fa0c3a0d02d",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-5.md": "e97653655315c64f226383e44f5c5d39536b32fb082fd045dc690c597f33d185",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-11.md": "406fd86cda79a59acc072331b1a4511d1582c89b5c60a8fab8e2d95f6311722a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-9.md": "cce0178cd8ab3556b9681c79383bbe0c2e385b79dd7d33b014869bfdc53fb15c",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-8.md": "05ae03fb969004b45df25709edb2608c8a96e59fa530acba9f985d0282995f54",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-6.md": "6976fffa83100b24fd79c0cb44e7571b509970ffa2bc32b89dc625978e77d2c7",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-0.md": "de575589b78303b000d10bd36f08020f3a082ba7c0ed3f61c3791fbee4736007",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/notes-4.md": "972256c1ef9c211c7bad254a8c0124528503243045676fccdec4b96351adf05a",
+    "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/logic.js": "96b39a92a0534cd177c49ad447ca6a30bca3f2158caee7a3c5c0db9f73711c19",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/benchmark.py": "4490566b87dd7aa1b30571ba9fe7697ef8cb3587f8c333b4ef0438fe62203ccd",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/semantic.py": "1e44184b51d7d0857cf3dca008f8b8804a0ca4391d0766d8d983e1691bf4bd0e",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/security.py": "d96ab8c72e9c7573effe83edcab8adf3440a31113c64763b533c97fb22d15a25",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/providers.py": "ce7952b003cf7cd533fc10b1f377fc310ba76a165b94550352c440ba03b8e422",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/sessions.py": "aa7f22869b79570a410a0235f1428c9aa57be5e81e26b2e9cdb03805544691e5",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/mcp_server.py": "759eb3b41260af038834f7e7de068ca5dcdd8e3280e289019489665371f09d68",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/orchestrator.py": "1b6b5b2af68c86f6f1a4d2b8871f7c8861d93961d2daf64072bd0fd4c7eb327e",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/engine.py": "5684e4d20ed06251cf379928fdad37c2fe46ec6c59a419ec259492e8da2e3c04",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/typescript.cjs": "f3a8b6889ed345b3cbfad3b5c04587adf3e550a881b5f36e6afc2abe83ca3092",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/cli.py": "8cf3b4b3bcde6702e9e0fd83c7cd9f03fe81d5d251701341d06fae2cfc9eeb1a",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/store.py": "d4588f380948ad3fa1a73163aba055db07aafb471fff3f410494c697d4a6161f",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/runner.py": "973efdf30ffaeccff0a855780353748cb24044dfc158a39e762d8bbe8ec9b9fa",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/adapters.py": "8c7f9811b921ecf33aee731548bae576ab5cb4c138a1d738566f746cf4dfc3c0",
+    "/home/leo-ribeiro/codex-economy/src/codex_economy/__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+  },
+  "tasks": [
+    {
+      "id": "python-distance",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance",
+      "objective": "Correct distance in logic.py to compute the absolute distance between a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.py",
+      "protected": [
+        "check.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-minimum",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum",
+      "objective": "Correct minimum in logic.py to compute the smaller of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.py",
+      "protected": [
+        "check.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-maximum",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum",
+      "objective": "Correct maximum in logic.py to compute the larger of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.py",
+      "protected": [
+        "check.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-cube",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube",
+      "objective": "Correct cube in logic.py to compute x cubed.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.py",
+      "protected": [
+        "check.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "node-distance",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance",
+      "objective": "Correct distance in logic.js to compute the absolute distance between a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.js",
+      "protected": [
+        "check.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-minimum",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-minimum",
+      "objective": "Correct minimum in logic.js to compute the smaller of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.js",
+      "protected": [
+        "check.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-maximum",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum",
+      "objective": "Correct maximum in logic.js to compute the larger of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.js",
+      "protected": [
+        "check.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-cube",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-cube",
+      "objective": "Correct cube in logic.js to compute x cubed.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.js",
+      "protected": [
+        "check.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "cpp-distance",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance",
+      "objective": "Correct distance in logic.hpp to compute the absolute distance between a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.hpp",
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "verify": [
+        "python3",
+        "verify.py"
+      ]
+    },
+    {
+      "id": "cpp-minimum",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum",
+      "objective": "Correct minimum in logic.hpp to compute the smaller of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.hpp",
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "verify": [
+        "python3",
+        "verify.py"
+      ]
+    },
+    {
+      "id": "cpp-maximum",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum",
+      "objective": "Correct maximum in logic.hpp to compute the larger of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.hpp",
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "verify": [
+        "python3",
+        "verify.py"
+      ]
+    },
+    {
+      "id": "cpp-cube",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube",
+      "objective": "Correct cube in logic.hpp to compute x cubed.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.hpp",
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "verify": [
+        "python3",
+        "verify.py"
+      ]
+    }
+  ],
+  "codex_binary": "/home/leo-ribeiro/.nvm/versions/node/v22.23.2/bin/codex",
+  "reference_config_hash": "b733e232dbe00343b7198f1999a33816d002d3eeb54bfd5ab3ff41018c6a710c"
+}
