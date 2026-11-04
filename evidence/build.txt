@@ -82,6 +82,7 @@ copying README.md -> codex_economy-0.1.0
 copying pyproject.toml -> codex_economy-0.1.0
 copying requirements-runtime.lock -> codex_economy-0.1.0
 copying docs/benchmark.md -> codex_economy-0.1.0/docs
+copying docs/checkpoint.md -> codex_economy-0.1.0/docs
 copying docs/economy-SKILL.md -> codex_economy-0.1.0/docs
 copying docs/operations.md -> codex_economy-0.1.0/docs
 copying docs/requirements.md -> codex_economy-0.1.0/docs
@@ -559,7 +560,7 @@ running install_egg_info
 Copying src/codex_economy.egg-info to build/bdist.linux-x86_64/wheel/./codex_economy-0.1.0-py3.12.egg-info
 running install_scripts
 creating build/bdist.linux-x86_64/wheel/codex_economy-0.1.0.dist-info/WHEEL
-creating '/home/leo-ribeiro/codex-economy/dist/.tmp-hkfa0cns/codex_economy-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+creating '/home/leo-ribeiro/codex-economy/dist/.tmp-ddygzqns/codex_economy-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
 adding 'codex_economy/__init__.py'
 adding 'codex_economy/adapters.py'
 adding 'codex_economy/benchmark.py'

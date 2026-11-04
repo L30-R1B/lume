@@ -17,7 +17,7 @@ def benchmark(store, manifest_path, execute=False, report=False):
     manifest_path = Path(manifest_path).resolve()
     manifest = json.loads(manifest_path.read_text())
     frozen = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
-    if manifest.get("fixture_hashes"):
+    if execute and manifest.get("fixture_hashes"):
         for filename, expected in manifest["fixture_hashes"].items():
             if hashlib.sha256(Path(filename).read_bytes()).hexdigest() != expected:
                 raise ValueError("Frozen benchmark input changed: " + filename)
@@ -112,7 +112,7 @@ def benchmark(store, manifest_path, execute=False, report=False):
             raise ValueError("Unrecorded workspace exists: inspect and move before resuming " + str(root))
         shutil.copytree(task["root"], root, symlinks=False)
         subprocess.run(["git", "init", "-q", str(root)], check=True)
-        name = "bench-" + job
+        name = "bench-" + frozen[:8] + "-" + job
         engine.register(name, root)
         original_hashes = {
             str(file.relative_to(root)): hashlib.sha256(file.read_bytes()).hexdigest()

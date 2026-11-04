@@ -248,3 +248,25 @@ def test_repetition_resets_on_source_change_and_map(env):
     assert not e.search("test", "answer")["repeated_investigation"]
     assert e.map("test")["files"][0]["name"] == "answer"
     assert e.capabilities("test")["structure"] == ["python-ast"]
+
+
+def test_python_relative_import_without_module(env):
+    root, s, e = env
+    (root / "main.py").write_text("from . import helpers\nfrom .tools import run\n")
+    (root / "helpers.py").write_text("def help():\n return 1\n")
+    indexed = e.index("test")
+    assert indexed["state"] == "ready"
+    assert all(isinstance(r["target"], str) for r in s.rows("SELECT target FROM edges"))
+
+
+def test_extractor_upgrade_refreshes_unchanged_symbols(env, monkeypatch):
+    root, s, e = env
+    from codex_economy import adapters
+
+    (root / "main.py").write_text("def answer():\n return 42\n")
+    e.index("test")
+    monkeypatch.setattr(adapters, "VERSION", "test-extractor-next-version")
+    assert e.status("test")["state"] == "stale"
+    result = e.index("test")
+    assert result["changed"] == 1
+    assert s.rows("SELECT origin FROM symbols")[0]["origin"].startswith("test-extractor-next-version:")

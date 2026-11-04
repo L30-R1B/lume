@@ -389,7 +389,7 @@
       "id": "R10.05",
       "requirement": "Backup/restore/corrupção",
       "state": "implementado",
-      "evidence": "backup real íntegro; restore healthy; restauração de corrupção integral pendente"
+      "evidence": "backup real íntegro; restore saudável validado em restore-check.json; restauração de corrupção integral pendente"
     },
     {
       "id": "R10.06",
@@ -413,7 +413,7 @@
       "id": "R11.01",
       "requirement": "Suíte comportamental famílias e fronteiras",
       "state": "implementado",
-      "evidence": "tests + evidências; Android/Next/infra completos faltam"
+      "evidence": "16 testes + evidências; Android/Next/infra completos faltam"
     },
     {
       "id": "R11.02",

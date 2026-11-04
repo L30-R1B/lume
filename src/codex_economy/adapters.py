@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-VERSION = "adapters-1"
+VERSION = "adapters-2"
 LANG = {
     ".js": "javascript",
     ".jsx": "javascript",
@@ -49,7 +49,9 @@ def extract(path, source):
                     symbols.append((n.name, type(n).__name__, n.lineno, n.end_lineno, "resolved_by_tool"))
                 if isinstance(n, (ast.Import, ast.ImportFrom)):
                     for a in n.names:
-                        relations.append((n.module if isinstance(n, ast.ImportFrom) else a.name, "imports", "inferred"))
+                        relations.append(
+                            ((n.module or a.name) if isinstance(n, ast.ImportFrom) else a.name, "imports", "inferred")
+                        )
                 if isinstance(n, ast.Call):
                     name = ast.unparse(n.func)
                     relations.append((name, "calls", "inferred"))

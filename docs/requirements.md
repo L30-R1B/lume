@@ -68,11 +68,11 @@ Estados: **pendente**, **implementado**, **validado**, **bloqueado**, **não apl
 | R10.02 | Migração real entre schemas | pendente | criação schema1 transacional e rejeição versões; sem versão2 testada |
 | R10.03 | Segurança traversal/symlinks/binários/multibyte | validado | test_boundaries; O_NOFOLLOW, UTF-8 estrito; auditoria não independente |
 | R10.04 | Retenção/logs/redação | implementado | prune/eventos/logs; coleta snapshots/cache e regras mais completas faltam |
-| R10.05 | Backup/restore/corrupção | implementado | backup real íntegro; restore healthy; restauração de corrupção integral pendente |
+| R10.05 | Backup/restore/corrupção | implementado | backup real íntegro; restore saudável validado em restore-check.json; restauração de corrupção integral pendente |
 | R10.06 | Instalação fora checkout/build/update | implementado | runtime próprio instalado e testado em /tmp; wheel/sdist gerados |
 | R10.07 | Desinstalação preserva projetos/config/credenciais | validado | installation-cycle.json e profile-lifecycle.json; estado e projetos preservados; toolchains opcionais permanecem no prefixo |
 | R10.08 | Serviço/exposição explícita | validado | stdio sob demanda; nenhuma porta/daemon; serviço permanente não necessário |
-| R11.01 | Suíte comportamental famílias e fronteiras | implementado | tests + evidências; Android/Next/infra completos faltam |
+| R11.01 | Suíte comportamental famílias e fronteiras | implementado | 16 testes + evidências; Android/Next/infra completos faltam |
 | R11.02 | Build/lint/auditoria | validado | build.txt; lint.txt; dependency-audit.json após pip26.3 sem CVEs conhecidos |
 | R11.03 | Performance fria/incremental/buscas/DB/RAM | validado | 600 arquivos/3 projetos, performance.json, gates específicos passados |
 | R11.04 | Branch/worktrees/falhas parciais/cancelamento | pendente | cobertura não integral; rollback e concorrência testados |

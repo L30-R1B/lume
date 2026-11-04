@@ -96,6 +96,9 @@ class Engine:
         start = time.monotonic()
         self.db.execute("BEGIN IMMEDIATE")
         try:
+            prior = self.s.rows("SELECT details FROM snapshots WHERE project=? ORDER BY id DESC LIMIT 1", (p["id"],))
+            if prior and json.loads(prior[0]["details"]).get("extractor_version") != adapters.VERSION:
+                force = True
             files, omissions = self.scan(p)
             fingerprint = self.fingerprint(p, files)
             snap = self.db.execute(
@@ -191,6 +194,7 @@ class Engine:
             warnings = [{"path": k, "warnings": v["warnings"]} for k, v in facts.items() if v["warnings"]]
             state = "partial" if omissions or warnings else "ready"
             details = {
+                "extractor_version": adapters.VERSION,
                 "files": len(files),
                 "changed": changed,
                 "deleted": len(deleted),
