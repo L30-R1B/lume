@@ -1,5 +1,5 @@
 # Prévia das métricas coletadas
-2026-11-05T13:20:41.879259+00:00
+2026-11-05T13:23:36.538102+00:00
 
 Tokens totais = entrada + saída; cache é subconjunto de entrada; raciocínio é subconjunto de saída. Rodadas não são somadas como percentuais de economia.
 
@@ -42,3 +42,4 @@ Alertas:
 - latest editor confirmation used code before subsequent hardening
 - neural document compression is not Codex task savings
 - cached input is part of input, reasoning output part of output
+- experiment totals exclude other Codex validation calls; inspect their individual event logs

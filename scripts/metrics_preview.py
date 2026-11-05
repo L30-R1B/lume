@@ -118,6 +118,13 @@ if "jev-real-calibration.json" in artifacts:
     jev_runs += artifacts["jev-real-calibration.json"]["runs"]
 if "jev-ranking-real.json" in artifacts:
     jev_runs += artifacts["jev-ranking-real.json"]["real_calls"]
+profile_smoke = base / "evidence/codex-profile-mcp-latest.jsonl"
+smoke_usage = None
+if profile_smoke.exists():
+    for line in profile_smoke.read_text().splitlines():
+        event = json.loads(line)
+        if event.get("type") == "turn.completed":
+            smoke_usage = event.get("usage")
 summary = {
     "captured_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
     "experiments": experiments,
@@ -126,6 +133,7 @@ summary = {
     "overall_experiment_attempts": len(task_rows),
     "overall_accepted": sum(row["accepted"] for row in task_rows),
     "overall_unavailable_usage": sum(not row["usage_available"] for row in task_rows),
+    "latest_codex_profile_smoke_usage_separate_from_experiments": smoke_usage,
     "jev_real": {
         "requests": sum(r["requests"] for r in jev_runs),
         "input_tokens": sum(r.get("usage", {}).get("input_tokens", 0) for r in jev_runs),
@@ -144,6 +152,7 @@ summary = {
         "latest editor confirmation used code before subsequent hardening",
         "neural document compression is not Codex task savings",
         "cached input is part of input, reasoning output part of output",
+        "experiment totals exclude other Codex validation calls; inspect their individual event logs",
     ],
 }
 (base / "evidence/metrics-preview.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False))

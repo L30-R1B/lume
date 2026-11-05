@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-11-05T13:20:41.879259+00:00",
+  "captured_utc": "2026-11-05T13:23:36.538102+00:00",
   "experiments": [
     {
       "experiment": "benchmark",
@@ -1806,6 +1806,13 @@
   "overall_experiment_attempts": 228,
   "overall_accepted": 222,
   "overall_unavailable_usage": 3,
+  "latest_codex_profile_smoke_usage_separate_from_experiments": {
+    "input_tokens": 64577,
+    "cached_input_tokens": 43136,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 196,
+    "reasoning_output_tokens": 14
+  },
   "jev_real": {
     "requests": 5,
     "input_tokens": 4389,
@@ -1829,6 +1836,7 @@
     "one native B run has incomplete usage after subscription limit",
     "latest editor confirmation used code before subsequent hardening",
     "neural document compression is not Codex task savings",
-    "cached input is part of input, reasoning output part of output"
+    "cached input is part of input, reasoning output part of output",
+    "experiment totals exclude other Codex validation calls; inspect their individual event logs"
   ]
 }
