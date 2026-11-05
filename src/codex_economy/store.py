@@ -33,9 +33,13 @@ MIGRATIONS = {
         "CREATE TABLE jobs(id TEXT PRIMARY KEY, project INTEGER, state TEXT NOT NULL, payload TEXT NOT NULL, updated REAL NOT NULL)",
         "CREATE TABLE approvals(id TEXT PRIMARY KEY, project INTEGER, fingerprint TEXT, checks TEXT, created REAL)",
         "PRAGMA user_version=2",
-    ]
+    ],
+    3: [
+        "CREATE TABLE run_outputs(run TEXT NOT NULL REFERENCES runs(id) ON DELETE CASCADE, stream TEXT NOT NULL CHECK(stream IN ('stdout','stderr')), content BLOB NOT NULL, sha256 TEXT NOT NULL, PRIMARY KEY(run,stream))",
+        "PRAGMA user_version=3",
+    ],
 }
-VERSION = 2
+VERSION = 3
 
 
 def root_identity(root):

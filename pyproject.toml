@@ -14,7 +14,7 @@ ce = "codex_economy.cli:main"
 where = ["src"]
 [tool.ruff]
 line-length = 120
-extend-exclude = ["tests/benchmark-fixtures", "tests/confirmation-inputs", "tests/editor-confirmation-inputs", "tests/framework-fixtures", "evidence", "tools"]
+extend-exclude = ["tests/benchmark-fixtures", "tests/confirmation-inputs", "tests/editor-confirmation-inputs", "tests/representative-inputs", "tests/framework-fixtures", "evidence", "tools"]
 [tool.setuptools.package-data]
 codex_economy = ["*.cjs"]
 [tool.ruff.lint]

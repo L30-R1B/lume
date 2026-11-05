@@ -13,6 +13,29 @@ from .engine import Engine
 from .runner import Runner
 
 
+def config_fingerprint(config, workspaces):
+    """Hash configuration values while ignoring trust entries for this experiment's own workspaces."""
+    import tomllib
+
+    value = tomllib.loads(Path(config).read_text()) if Path(config).exists() else {}
+    projects = value.get("projects", {})
+    root = Path(workspaces).resolve()
+    if isinstance(projects, dict):
+        for key in list(projects):
+            try:
+                if Path(key).resolve().is_relative_to(root):
+                    entry = projects[key]
+                    if isinstance(entry, dict) and entry.get("trust_level") == "trusted":
+                        del entry["trust_level"]
+                        if not entry:
+                            del projects[key]
+            except (OSError, ValueError):
+                continue
+        if not projects:
+            value.pop("projects", None)
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
 def benchmark(store, manifest_path, execute=False, report=False):
     import fcntl
     import os
@@ -39,12 +62,17 @@ def _benchmark(store, manifest_path, execute=False, report=False):
     manifest_path = Path(manifest_path).resolve()
     manifest = json.loads(manifest_path.read_text())
     frozen = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
-    if execute and manifest.get("reference_config_hash"):
+    if execute and (manifest.get("reference_config_hash") or manifest.get("reference_config_semantic_hash")):
         import os
 
         config = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")) / "config.toml"
-        actual = hashlib.sha256(config.read_bytes()).hexdigest() if config.exists() else None
-        if actual != manifest["reference_config_hash"]:
+        if manifest.get("reference_config_semantic_hash"):
+            actual = config_fingerprint(config, Path(manifest["output"]) / "workspaces")
+            expected = manifest["reference_config_semantic_hash"]
+        else:
+            actual = hashlib.sha256(config.read_bytes()).hexdigest() if config.exists() else None
+            expected = manifest["reference_config_hash"]
+        if actual != expected:
             raise ValueError("Reference Codex configuration changed; use a new frozen experiment")
     if execute and manifest.get("fixture_hashes"):
         for filename, expected in manifest["fixture_hashes"].items():
@@ -159,6 +187,12 @@ def _benchmark(store, manifest_path, execute=False, report=False):
         }
     engine = Engine(store)
     for task, rep, arm in pending:
+        if (
+            manifest.get("reference_config_semantic_hash")
+            and config_fingerprint(config, Path(manifest["output"]) / "workspaces")
+            != manifest["reference_config_semantic_hash"]
+        ):
+            raise ValueError("Codex configuration changed during benchmark; completed attempts are preserved")
         job = f"{task['id']}-{rep}-{arm}"
         root = out / "workspaces" / job
         if root.exists():
@@ -291,13 +325,18 @@ def _benchmark(store, manifest_path, execute=False, report=False):
             text=True,
         )
         (out / (job + ".patch")).write_text(diff.stdout)
+        config_compatible = (
+            not manifest.get("reference_config_semantic_hash")
+            or config_fingerprint(config, Path(manifest["output"]) / "workspaces")
+            == manifest["reference_config_semantic_hash"]
+        )
         record = {
             "task": task["id"],
             "family": task["family"],
             "repeat": rep,
             "arm": arm,
             "usage": usage,
-            "accepted": run["code"] == 0 and check["code"] == 0 and unchanged,
+            "accepted": run["code"] == 0 and check["code"] == 0 and unchanged and config_compatible,
             "run": run["run"],
             "verification": check,
             "seconds": time.monotonic() - started,
@@ -306,6 +345,7 @@ def _benchmark(store, manifest_path, execute=False, report=False):
             "manifest_hash": frozen,
             "original_hashes": original_hashes,
             "scope_unchanged": unchanged,
+            "config_compatible": config_compatible,
             "code": run["code"],
             "codex_invocations": len(experimental.get("attempts", [])) if experimental is not None else 1,
             "experimental_harness": "structured-edit" if arm == "E" else None,
@@ -321,6 +361,8 @@ def _benchmark(store, manifest_path, execute=False, report=False):
             json.dumps({"benchmark_job": job, "accepted": record["accepted"], "code": run["code"], "usage": usage}),
             flush=True,
         )
+        if not config_compatible:
+            return {"state": "blocked", "reason": "Codex configuration changed during attempt", "job": job}
         if run["code"] != 0 and not usage:
             return {
                 "state": "blocked",

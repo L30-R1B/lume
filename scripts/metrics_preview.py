@@ -12,7 +12,16 @@ experiments = []
 task_rows = []
 for root, names in [
     (original, ["benchmark", "confirmation", "confirmation-v2"]),
-    (base, ["editor-pilot", "editor-confirmation", "editor-confirmation-r2"]),
+    (
+        base,
+        [
+            "editor-pilot",
+            "editor-confirmation",
+            "editor-confirmation-r2",
+            "representative-pilot",
+            "representative-confirmation",
+        ],
+    ),
 ]:
     for name in names:
         source = root / "evidence" / name / "results.jsonl"
@@ -44,7 +53,10 @@ for root, names in [
             g["index_seconds"] += row.get("index_seconds", 0)
             g["actions"] += row.get("actions") or 0
             g["times"].append(row.get("seconds", 0))
-            known = bool(row.get("usage")) or row.get("run") is None
+            invocations = row.get(
+                "codex_invocations", 0 if row.get("all_model_attempts") == [] and row.get("run") is None else 1
+            )
+            known = bool(row.get("usage")) or invocations == 0
             if not known:
                 g["usage_unavailable_attempts"] += 1
             tokens = {
@@ -99,6 +111,8 @@ for name in [
     "hooks-real-events.json",
     "release-validation.json",
     "installed-source-match-v2.json",
+    "delegation-live.json",
+    "hooks-project-latest.json",
 ]:
     path = base / "evidence" / name
     if not path.exists():

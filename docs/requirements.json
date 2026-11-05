@@ -58,8 +58,8 @@
     {
       "id": "R02.06",
       "requirement": "Hooks úteis compatíveis",
-      "state": "implementado",
-      "evidence": "Hook diagnóstico oficial executado por configuração inline real; descoberta project-local ainda depende de trust e não foi demonstrada."
+      "state": "validado",
+      "evidence": "Hook local observado em projeto descartável com confiança temporária oficial para a definição inspecionada; operação normal exige trust."
     },
     {
       "id": "R02.07",
@@ -352,8 +352,8 @@
     {
       "id": "R09.03",
       "requirement": "Delegação configurável contabilizada",
-      "state": "implementado",
-      "evidence": "Delegação desligada por padrão; worktrees isolados quando explicitamente habilitada; falta validação real com múltiplos Codex."
+      "state": "validado",
+      "evidence": "Duas tarefas independentes executadas em worktrees por Codex real; verificações, isolamento e 192.975 tokens registrados; desabilitado por padrão."
     },
     {
       "id": "R09.04",
@@ -371,7 +371,7 @@
       "id": "R10.02",
       "requirement": "Migração real entre schemas",
       "state": "validado",
-      "evidence": "Migração transacional schema 1→2 testada com persistência."
+      "evidence": "Migrações transacionais 1→2→3 e persistência em registros legados testadas; banco instalado verificado."
     },
     {
       "id": "R10.03",
@@ -383,7 +383,7 @@
       "id": "R10.04",
       "requirement": "Retenção/logs/redação",
       "state": "implementado",
-      "evidence": "Redação e retenção de runs, eventos, snapshots e caches; saída bruta redigida/UTF-8, limitada por tamanho."
+      "evidence": "Retenção e redação; bytes inválidos preservados em saídas redigidas novas, dados anteriores ao schema 3 ou além do limite não são recuperáveis."
     },
     {
       "id": "R10.05",
@@ -413,7 +413,7 @@
       "id": "R11.01",
       "requirement": "Suíte comportamental famílias e fronteiras",
       "state": "implementado",
-      "evidence": "40 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo."
+      "evidence": "44 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo."
     },
     {
       "id": "R11.02",

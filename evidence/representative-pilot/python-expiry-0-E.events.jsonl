@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1ac2e-edfd-7433-94a6-ced1636384a5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"status\":\"edit\",\"missing_fact\":\"\",\"edits\":[{\"path\":\"service.py\",\"hash\":\"221a837a64edf7889a727b3a31ba8db27a0065233c7431be511cd67e07e5e1e1\",\"old\":\"def is_expired(now, expires_at):\\n    return now > expires_at\\n\",\"new\":\"def is_expired(now, expires_at):\\n    return now >= expires_at\\n\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":12591,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":110,"reasoning_output_tokens":0}}

@@ -26,6 +26,8 @@ def setup(store, name, remove=False, hooks=False):
             remove_project_file(root, location, managed["skill"])
             if managed.get("hooks"):
                 remove_project_file(root, ".codex/hooks.json", managed["hooks"])
+            if managed.get("config"):
+                remove_project_file(root, ".codex/config.toml", managed["config"])
             with store.db:
                 store.db.execute("DELETE FROM jobs WHERE id=?", ("extension-" + key,))
         return {"removed": location, "project": name}
@@ -33,6 +35,13 @@ def setup(store, name, remove=False, hooks=False):
     metadata = dict(managed)
     metadata["skill"] = SKILL
     if hooks:
+        # A project config layer is necessary for Codex to discover adjacent hooks.json.
+        # Existing project config remains entirely user-owned.
+        project_config = root / ".codex/config.toml"
+        if not project_config.exists() and not project_config.is_symlink():
+            config_text = "# codex-economy project hook discovery layer\n"
+            write_project(root, ".codex/config.toml", config_text)
+            metadata["config"] = config_text
         executable = str(Path(sys.executable).with_name("ce"))
         # JSON string quoting protects the executable path in the hook command string.
         command = __import__("shlex").quote(executable) + " telemetry"

@@ -1,0 +1,10 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-trim/service.hpp b/home/leo-ribeiro/codex-economy-next/evidence/representative-pilot/workspaces/cpp-trim-0-A/service.hpp
+index 6f198cf..61f567f 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-trim/service.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-pilot/workspaces/cpp-trim-0-A/service.hpp
+@@ -2,4 +2,4 @@
+ #include <string>
+ #include <cstdlib>
+ #include <climits>
+-inline std::string trim(std::string s){auto a=s.find_first_not_of(" "); if(a==std::string::npos)return ""; return s.substr(a,s.find_last_not_of(" ")-a+1);}
++inline std::string trim(std::string s){auto a=s.find_first_not_of(" \t\r\n"); if(a==std::string::npos)return ""; return s.substr(a,s.find_last_not_of(" \t\r\n")-a+1);}

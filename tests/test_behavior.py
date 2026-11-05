@@ -154,6 +154,50 @@ def test_runner_causal_error_log_timeout_arguments(env):
     assert "hunter2" not in str(redacted)
 
 
+def test_binary_log_roundtrip_redaction_and_cli_ranges(env, tmp_path):
+    import base64
+    import hashlib
+    import subprocess
+
+    from codex_economy.runner import log_bytes
+
+    root, store, _engine = env
+    original = b"hello \xff\x00\xe2\x82\xac\npassword=hunter2\nend\xfe"
+    code = "import sys;sys.stdout.buffer.write(bytes.fromhex('" + original.hex() + "'))"
+    run = Runner(store).run("test", [sys.executable, "-c", code])
+    expected = original.replace(b"hunter2", b"[REDACTED]")
+    first = log_bytes(store, run["run"], length=9)
+    tail = log_bytes(store, run["run"], offset=9)
+    assert base64.b64decode(first["base64"]) + base64.b64decode(tail["base64"]) == expected
+    assert first["sha256"] == hashlib.sha256(expected).hexdigest()
+    assert "hunter2" not in str(store.rows("SELECT stdout,stderr FROM runs"))
+    assert b"hunter2" not in store.db.execute("SELECT content FROM run_outputs WHERE stream='stdout'").fetchone()[0]
+    cli = subprocess.run(
+        [sys.executable, "-m", "codex_economy.cli", "log", run["run"], "--bytes", "--offset", "6", "--length", "3"],
+        cwd=root,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    assert base64.b64decode(json.loads(cli.stdout)["base64"]) == original[6:9]
+    from codex_economy.mcp_server import evidence_log
+
+    mcp = evidence_log(run["run"], stream="stdout", encoding="base64", offset=6, length=3)
+    assert base64.b64decode(mcp["base64"]) == original[6:9]
+    backup_path = tmp_path / "with-output.sqlite"
+    store.backup(backup_path)
+    import sqlite3
+
+    with sqlite3.connect(backup_path) as backup:
+        assert backup.execute("SELECT content FROM run_outputs WHERE stream='stdout'").fetchone()[0] == expected
+    with pytest.raises(ValueError):
+        log_bytes(store, run["run"], length=65537)
+    store.db.execute("UPDATE runs SET started=0 WHERE id=?", (run["run"],))
+    store.db.commit()
+    store.prune(days=1)
+    assert not store.rows("SELECT run FROM run_outputs WHERE run=?", (run["run"],))
+
+
 def test_jev_mock_and_local(env, monkeypatch):
     _root, s, _e = env
     j = Jev(s)
@@ -198,6 +242,7 @@ def test_mcp_real_stdio(env):
     root, s, e = env
     (root / "a.py").write_text("def answer():\n return 42\n")
     e.index("test")
+    run = Runner(s).run("test", [sys.executable, "-c", "import sys; sys.stdout.buffer.write(b'\\xff!')"])
     from mcp import ClientSession, StdioServerParameters
     from mcp.client.stdio import stdio_client
 
@@ -213,6 +258,10 @@ def test_mcp_real_stdio(env):
                 "evidence_search", {"project": "test", "query": "answer", "mode": "lexical"}
             )
             assert not result.isError and "return 42" in str(result)
+            binary = await session.call_tool(
+                "evidence_log", {"run": run["run"], "stream": "stdout", "encoding": "base64", "length": 2}
+            )
+            assert not binary.isError and "/yE=" in str(binary)
 
     asyncio.run(client())
 

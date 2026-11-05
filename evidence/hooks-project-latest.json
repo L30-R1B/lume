@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "code": 0,
+  "events": [
+    {
+      "hook_event_name": "PostModelRequest",
+      "session_id": "01a1ac2a-9b81-7972-88c5-2931298a2f3a",
+      "turn_id": "01a1ac2a-9d87-7c11-85bd-f70447e61a03",
+      "model": "gpt-6.1-terra",
+      "status": "completed",
+      "token_usage": {
+        "input_tokens": 15593,
+        "cached_input_tokens": 12160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 15599
+      }
+    },
+    {
+      "hook_event_name": "SessionEnd",
+      "session_id": "01a1ac2a-9b81-7972-88c5-2931298a2f3a"
+    }
+  ],
+  "fixture_trust": "official one-off bypass for vetted disposable hooks",
+  "configured_command": "/home/leo-ribeiro/.local/share/codex-economy/releases/1038fcb871bf9da2/bin/ce telemetry"
+}

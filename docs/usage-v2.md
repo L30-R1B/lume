@@ -25,9 +25,12 @@ ce run --timeout 120 --memory-mb 1024 --cpu-seconds 60 projeto -- python3 -m pyt
 ce batch projeto @operacoes.json
 ce trace projeto check.py
 ce log RUN --stream stderr --start 1 --end 200
+ce log RUN --stream stderr --bytes --offset 0 --length 65536
 ```
 
 Opções de run devem preceder o nome do projeto por causa do separador de argv. Batch recebe `[{"id":"lint","argv":["npm","run","lint"]},{"id":"test","needs":["lint"],"argv":["npm","test"]}]`. Configuração de build é código confiável: somente execute em projetos autorizados. Gradle roda offline; falta de dependência em cache é erro explícito, sem fingir resolução. Modelos de build e semântica devem ser regenerados após atualização do índice que invalide seus fatos.
+
+`ce log --bytes` devolve em JSON uma faixa de até 65.536 bytes em base64, com offset, tamanho total e SHA-256 da saída **redigida**. A mesma opção existe em `evidence_log` com `encoding="base64"`. Bytes inválidos de UTF-8 são preservados; trechos identificados como segredos são substituídos antes da gravação e não são recuperáveis. Para execuções anteriores à migração de schema 3, o texto anterior permanece disponível, mas seus bytes originais não podem ser reconstruídos. Se o limite de saída for atingido, o processo é interrompido e o campo de truncamento indica que a saída além desse limite não existe no registro.
 
 ```bash
 ce config
@@ -54,7 +57,7 @@ ce setup projeto --remove
 ce integrate --remove
 ```
 
-O perfil separado não reescreve config.toml. A skill fica em `.agents/skills/codex-economy/SKILL.md`; hooks opcionais ficam em `.codex/hooks.json`. Arquivos alheios ou editados externamente não são sobrescritos. Hooks exigem revisão/confiança pelo mecanismo oficial do Codex e são diagnósticos, sem bloqueio ou edição de contexto. Não configure um hook para chamar uma ferramenta de edição automaticamente.
+O perfil separado não reescreve config.toml. A skill fica em `.agents/skills/codex-economy/SKILL.md`; hooks opcionais ficam em `.codex/hooks.json`. Quando necessário, o setup cria um `.codex/config.toml` mínimo para descoberta de hooks; um arquivo preexistente é preservado. Arquivos alheios ou editados externamente não são sobrescritos. Hooks exigem revisão/confiança pelo mecanismo oficial do Codex e são diagnósticos, sem bloqueio ou edição de contexto. Não configure um hook para chamar uma ferramenta de edição automaticamente.
 
 ```bash
 ce policy projeto

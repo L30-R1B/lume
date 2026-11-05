@@ -67,6 +67,9 @@ def parser():
     s.add_argument("--stream", choices=["stdout", "stderr"], default="stdout")
     s.add_argument("--start", type=int, default=1)
     s.add_argument("--end", type=int, default=200)
+    s.add_argument("--bytes", action="store_true", help="Return a base64-encoded byte range of redacted output")
+    s.add_argument("--offset", type=int, default=0)
+    s.add_argument("--length", type=int, default=65536)
     s = sub.add_parser("session")
     s.add_argument("project")
     s.add_argument("objective")
@@ -299,6 +302,10 @@ def dispatch(a):
             cpu_seconds=a.cpu_seconds,
         )
     if a.cmd == "log":
+        if a.bytes:
+            from .runner import log_bytes
+
+            return log_bytes(s, a.run, a.stream, a.offset, a.length)
         from .mcp_server import evidence_log
 
         return evidence_log(a.run, a.start, a.end, a.stream)

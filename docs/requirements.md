@@ -13,7 +13,7 @@ Estados: **pendente**, **implementado**, **validado**, **bloqueado**, **não apl
 | R02.03 | Integração com login ChatGPT | validado | smoke real e MCP; sem leitura/reutilização OAuth |
 | R02.04 | Perfil reversível e preservação config | validado | profile-lifecycle.json confirma remoção/reinstalação/idempotência e hash da configuração principal preservado |
 | R02.05 | Skills/instruções específicas por projeto | validado | setup instala/remove skill própria; testes de idempotência e symlink; hooks opcionais têm revisão de confiança do Codex. |
-| R02.06 | Hooks úteis compatíveis | implementado | Hook diagnóstico oficial executado por configuração inline real; descoberta project-local ainda depende de trust e não foi demonstrada. |
+| R02.06 | Hooks úteis compatíveis | validado | Hook local observado em projeto descartável com confiança temporária oficial para a definição inspecionada; operação normal exige trust. |
 | R02.07 | Contratos/schema/discovery | validado | Schemas app-server gerados e usados para validar pedidos; integração real documentada. |
 | R03.01 | SQLite persistente, FTS, símbolos, grafo | validado | store/engine; testes de consulta e integridade |
 | R03.02 | Snapshots/worktrees/arquivos atuais não commitados | validado | Teste de branches e worktree; conteúdo, raiz e HEAD fazem parte do snapshot. |
@@ -62,17 +62,17 @@ Estados: **pendente**, **implementado**, **validado**, **bloqueado**, **não apl
 | R08.04 | Roteamento de documentos/continuidade por utilidade | implementado | Roteamento por assunto e continuidade por estado/orçamento; heurísticas não garantem suficiência. |
 | R09.01 | Preparação/Codex/eventos/verificação/resultado | validado | Codex real altera código, verifica independentemente e atualiza índice; app-server validado por eventos reais. |
 | R09.02 | Modelos/esforço/orçamento distinguido | implementado | task flags + bytes/output/task timeout; sem teto global de tokens |
-| R09.03 | Delegação configurável contabilizada | implementado | Delegação desligada por padrão; worktrees isolados quando explicitamente habilitada; falta validação real com múltiplos Codex. |
+| R09.03 | Delegação configurável contabilizada | validado | Duas tarefas independentes executadas em worktrees por Codex real; verificações, isolamento e 192.975 tokens registrados; desabilitado por padrão. |
 | R09.04 | Continuação/bloqueio sem falso sucesso | validado | Sessões bloqueadas não podem ser aceitas; interrupção app-server observada e retomada de fila sem sobrescrita. |
 | R10.01 | Inputs/erros/validação config/diagnóstico | implementado | Config versionada por schema JSON, modo estruturado, diagnóstico; todos subprocessos mantêm estado e código. |
-| R10.02 | Migração real entre schemas | validado | Migração transacional schema 1→2 testada com persistência. |
+| R10.02 | Migração real entre schemas | validado | Migrações transacionais 1→2→3 e persistência em registros legados testadas; banco instalado verificado. |
 | R10.03 | Segurança traversal/symlinks/binários/multibyte | validado | test_boundaries; O_NOFOLLOW, UTF-8 estrito; auditoria não independente |
-| R10.04 | Retenção/logs/redação | implementado | Redação e retenção de runs, eventos, snapshots e caches; saída bruta redigida/UTF-8, limitada por tamanho. |
+| R10.04 | Retenção/logs/redação | implementado | Retenção e redação; bytes inválidos preservados em saídas redigidas novas, dados anteriores ao schema 3 ou além do limite não são recuperáveis. |
 | R10.05 | Backup/restore/corrupção | validado | Backup e restauração de corrupção testados; arquivos anteriores preservados; bundle valida checksums e travessia. |
 | R10.06 | Instalação fora checkout/build/update | validado | Instalação, atualização, rollback e desinstalação isoladas; execução fora do checkout. |
 | R10.07 | Desinstalação preserva projetos/config/credenciais | validado | installation-cycle.json e profile-lifecycle.json; estado e projetos preservados; toolchains opcionais permanecem no prefixo |
 | R10.08 | Serviço/exposição explícita | validado | stdio sob demanda; nenhuma porta/daemon; serviço permanente não necessário |
-| R11.01 | Suíte comportamental famílias e fronteiras | implementado | 40 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo. |
+| R11.01 | Suíte comportamental famílias e fronteiras | implementado | 44 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo. |
 | R11.02 | Build/lint/auditoria | validado | Build/lint e auditoria de 49 dependências Python sem vulnerabilidades conhecidas; npm audit zero. |
 | R11.03 | Performance fria/incremental/buscas/DB/RAM | implementado | 3 ensaios adicionais passaram gates; 1 ensaio anterior excedeu p95 lexical 1s e permanece registrado. |
 | R11.04 | Branch/worktrees/falhas parciais/cancelamento | validado | Branches/worktrees, concorrência, rollback, SIGINT e retomada testados. |

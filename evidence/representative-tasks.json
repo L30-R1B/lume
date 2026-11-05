@@ -1,0 +1,281 @@
+{
+  "pilot": [
+    {
+      "id": "python-expiry",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-expiry",
+      "objective": "In service.py, fix is_expired. Treat a credential as expired when now is at or after expires_at. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "node-cors",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-cors",
+      "objective": "In service.js, fix allowOrigin. Return the supplied origin only if it exactly equals an entry in the allowlist, otherwise null. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "cpp-trim",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-trim",
+      "objective": "In service.hpp, fix trim. Trim leading and trailing ASCII spaces, tabs, carriage returns and line feeds; preserve interior bytes. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    }
+  ],
+  "confirmation": [
+    {
+      "id": "python-discount",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount",
+      "objective": "In service.py, fix discounted_cents. Apply an integer percent discount to cents using floor division only after multiplication. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-bearer",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer",
+      "objective": "In service.py, fix bearer. Extract a nonempty token only from the exact case-sensitive prefix Bearer followed by one space; otherwise return None. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-filename",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename",
+      "objective": "In service.py, fix safe_name. Accept a nonempty filename only if it is neither . nor .. and contains neither slash nor backslash. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-pagination",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination",
+      "objective": "In service.py, fix offset. Return zero-based pagination offset for a one-based page and size 1 through 100; raise ValueError for any other page or size. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "node-utf8length",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length",
+      "objective": "In service.js, fix bodyBytes. Return the UTF-8 byte length of a string as transmitted over HTTP. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-retryheader",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader",
+      "objective": "In service.js, fix retrySeconds. Convert milliseconds to a nonnegative Retry-After number of whole seconds, rounding upward. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-identifier",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier",
+      "objective": "In service.js, fix parseId. Parse only a canonical positive decimal integer string without leading zero and within JavaScript safe integer range; otherwise return null. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-tax",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax",
+      "objective": "In service.js, fix taxCents. Return tax in cents rounded to nearest integer from integer cents and basis points (10000 basis points is 100%). Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "cpp-port",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port",
+      "objective": "In service.hpp, fix parsePort. Parse a nonempty ASCII decimal port from 1 to 65535 inclusive; return -1 for malformed or out-of-range input, including overflow. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-overlap",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap",
+      "objective": "In service.hpp, fix overlap. Return whether two nonempty half-open integer intervals [a,b) and [c,d) overlap; empty or reversed intervals never overlap. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-kib",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib",
+      "objective": "In service.hpp, fix kib. Round unsigned byte counts up to whole kibibytes without overflowing for the maximum unsigned long long. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-csvfield",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield",
+      "objective": "In service.hpp, fix csvField. Encode one CSV field by surrounding it with double quotes and doubling each embedded double quote; preserve all other bytes. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    }
+  ]
+}

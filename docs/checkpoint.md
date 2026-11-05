@@ -1,17 +1,24 @@
 # Checkpoint verificável — escopo integral incompleto
 
-Atualizado em 2026-11-05. O produto 0.2.0 está instalado em `~/.local/bin/ce`, com estado em `~/.local/state/codex-economy` e perfil isolado em `~/.codex/economy.config.toml`. O código desta revisão está em `/home/leo-ribeiro/codex-economy-next`; a matriz `requirements.md` e o relatório `acceptance-report.md` detalham o escopo e os limites. O checkout inicial e evidências anteriores permanecem em `/home/leo-ribeiro/codex-economy`.
+Atualizado em 2026-11-05. Código em `/home/leo-ribeiro/codex-economy-next`, instalação em `~/.local/bin/ce`, perfil `~/.codex/economy.config.toml`, estado `~/.local/state/codex-economy`. Banco migrado a schema 3 com backup prévio. `docs/requirements.md` registra requisitos e `docs/acceptance-report.md` resultados e limites. A revisão atual foi instalada; os 30 arquivos do pacote coincidem com a fonte segundo `evidence/installed-source-match-schema3.json`.
 
-O índice, servidor MCP, adaptadores, execução, continuidade, recuperação e harnesses foram implementados e exercitados em fixtures. `evidence/tests-release-latest.txt`, `lint-release-corrected.txt`, `build-release-latest.txt` e `installed-source-match-latest.json` registram a verificação final. A primeira execução `tests-release-final.txt` falhou na coleta porque a virtualenv apontava para o checkout inicial; um caminho relativo permitiu coleta, mas falhou no subprocesso de trace; a correção é usar `PYTHONPATH` absoluto. O primeiro lint abrangente encontrou problemas de formatação nos scripts; estes foram corrigidos e a falha anterior mantida em `lint-release-final.txt`.
+A recuperação de saídas novas por faixas de bytes após redação, migração v2→v3 e backup foram implementadas. Execuções antigas conservam apenas o texto anterior e segredos redigidos ou conteúdo além do limite não são recuperáveis. A suíte completa após as alterações passou com 44 testes (`evidence/tests-schema3-benchmark-final.txt`); a recuperação binária pelo transporte MCP real passou em `evidence/tests-mcp-bytes.txt`.
 
-A confirmação A/E reservada mediu 84,04% de redução com 36/36 aceites por braço em 12 tarefas pequenas, agrupadas em quatro problemas repetidos em três linguagens. A/B/C anterior mediu 12,21% entre A e C, com consumo incompleto de uma tentativa B. A comparação D continua bloqueada pela instrução de não assumir novos custos: Jev já foi testado em cinco requisições reais, e `auxiliary.allow_paid` agora é falso por padrão. A qualidade equivalente e economia geral permanecem inconclusivas. As rodadas, incluindo falhas e tentativas interrompidas, não devem ser sobrescritas.
+Dois trabalhadores Codex reais realizaram tarefas independentes e passaram verificações em worktrees isoladas (`evidence/delegation-live.json`); os 192.975 tokens observados não pertencem aos benchmarks. Hooks de projeto foram descobertos em fixture descartável com a opção oficial de confiança temporária para a definição inspecionada (`evidence/hooks-project-latest.json`). Seu setup cria a camada de configuração necessária quando ausente e preserva config preexistente.
 
-Faltam os dois PDFs especificados, uma confirmação independente da revisão endurecida em tarefas mais representativas, comparação D sob autorização de custos, teste real de delegação, demonstração de hooks descobertos por configuração local do projeto, teste em dispositivo Android e conservação binária integral de logs com UTF-8 inválido. Limites de assinatura e algumas contagens históricas não são expostos por interface suportada. `docs/research.md` rastreia recomendações disponíveis sem atribuir conteúdo aos PDFs ausentes.
+O piloto A/E com três defeitos distintos foi aceito 3/3 por braço (235.907 e 38.841 tokens). A confirmação separada de 12 defeitos × 3 repetições × 2 braços começou em `evidence/representative-confirmation/`; verifique `results.jsonl`, `representative-confirmation-worker.log`, stderr e estado do processo antes de fazer qualquer intervenção. **Não altere arquivos `src/codex_economy` nem fixtures congeladas enquanto o worker estiver ativo**: seus hashes estão no manifest. A fila tem lock, registra tentativas antes de continuar e pode parar diante de alteração de configuração, quota ou resposta sem métricas. Não sobrescreva workspaces nem apague falhas. O consumo não autoriza inferir a meta enquanto a fila estiver em andamento.
 
-Para continuar sem chamadas pagas:
+Um emulador Android headless foi instalado em prefixo próprio e iniciado por emulação de software; não há dispositivo físico conectado nem permissão KVM para este usuário. Ele ainda não completou o boot no último registro. Diagnósticos em `evidence/android-emulator-*`. Pare apenas o processo próprio do emulador depois do ensaio; não altere grupos/permissões do sistema ou serviços alheios.
+
+Continuam bloqueados o braço D por instrução de não assumir novos custos e a rastreabilidade específica dos dois PDFs não encontrados. A chave Jev existe e chamadas pagas permanecem desabilitadas; não execute scripts Jev reais sem autorização de custos. Outros limites e pendências de qualidade permanecem detalhados no relatório; não atribua ao produto aprovação total.
+
+Comandos úteis sem serviços pagos:
 
 ```bash
 cd /home/leo-ribeiro/codex-economy-next
+wc -l evidence/representative-confirmation/results.jsonl
+tail -n 10 evidence/representative-confirmation-worker.log
+tail -n 20 evidence/representative-confirmation-worker.stderr
 PYTHONPATH=/home/leo-ribeiro/codex-economy-next/src /home/leo-ribeiro/codex-economy/.venv/bin/pytest -q
 /home/leo-ribeiro/codex-economy/.venv/bin/ruff check src tests scripts
 ~/.local/bin/ce integrity
@@ -19,4 +26,4 @@ PYTHONPATH=/home/leo-ribeiro/codex-economy-next/src /home/leo-ribeiro/codex-econ
 python3 scripts/metrics_preview.py
 ```
 
-Preserve snapshots, hashes, manifests, logs e todas as tentativas ao preparar novo conjunto. Não execute `scripts/calibrate_jev_real.py` nem `scripts/validate_jev_ranking.py` enquanto chamadas faturáveis não estiverem autorizadas. Não contorne a política de custos nem inclua segredos em argumentos, logs ou repositórios.
+Após a fila terminar, gere relatório com o mesmo manifest, confira aceite, todas as tentativas, consumo e intervalos, capture evidências, teste instalação/atualização/rollback e atualize a documentação sem inventar resultados. Se a fila interromper, reconcilie a tentativa usando o mecanismo do executor antes de retomar; limites de assinatura não autorizam descartá-la.

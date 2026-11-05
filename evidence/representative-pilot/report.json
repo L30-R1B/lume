@@ -1,0 +1,84 @@
+{
+  "goal_80_percent": "achieved",
+  "complete": true,
+  "planned": 6,
+  "completed": 6,
+  "groups": {
+    "A": {
+      "attempts": 3,
+      "accepted": 3,
+      "tokens": 235907,
+      "cached_input_tokens": 207744,
+      "unknown_usage": 0,
+      "seconds": 99.40726195694879,
+      "tokens_per_accepted": 78635.66666666667
+    },
+    "E": {
+      "attempts": 3,
+      "accepted": 3,
+      "tokens": 38841,
+      "cached_input_tokens": 0,
+      "unknown_usage": 0,
+      "seconds": 28.571499763056636,
+      "tokens_per_accepted": 12947.0
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_comparison_arm": "E",
+  "paired_mean_difference_tokens": 65688.66666666667,
+  "paired_bootstrap_95_percent": [
+    53401,
+    74132
+  ],
+  "paired_n": 3,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "45f085997d105f41d76ff9337af148728b50357c911c5111954937dc9a5e1329",
+  "queue_complete": true,
+  "usage_complete": true,
+  "amortization": {
+    "index_seconds_total": 0.20727308304049075,
+    "assumption": "one cold per-task index; local wall time only, no API-price equivalence"
+  },
+  "task_quality": [
+    {
+      "task": "python-expiry",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "node-cors",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "cpp-trim",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    }
+  ]
+}

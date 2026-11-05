@@ -47,8 +47,23 @@ def evidence_handoff(session: str) -> dict:
 
 
 @mcp.tool()
-def evidence_log(run: str, start: int = 1, end: int = 80, stream: str = "stderr") -> dict:
-    """Expand retained redacted verification output by lines."""
+def evidence_log(
+    run: str,
+    start: int = 1,
+    end: int = 80,
+    stream: str = "stderr",
+    encoding: str = "text",
+    offset: int = 0,
+    length: int = 65536,
+) -> dict:
+    """Expand redacted output by lines or return a bounded base64-encoded byte range."""
+    if encoding == "base64":
+        from .runner import log_bytes
+
+        with Store() as store:
+            return log_bytes(store, run, stream, offset, length)
+    if encoding != "text":
+        raise ValueError("encoding must be text or base64")
     if stream not in ("stderr", "stdout") or not 1 <= start <= end or end - start > 1000:
         raise ValueError("Invalid stream or line range")
     rows = Store().rows("SELECT stdout,stderr FROM runs WHERE id=?", (run,))

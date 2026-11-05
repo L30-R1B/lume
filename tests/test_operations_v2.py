@@ -34,7 +34,7 @@ def test_v1_migration_and_corrupt_recovery(tmp_path):
     con.executescript(SCHEMA)
     con.close()
     store = Store(home)
-    assert store.db.execute("PRAGMA user_version").fetchone()[0] == 2
+    assert store.db.execute("PRAGMA user_version").fetchone()[0] == 3
     with store.db:
         store.db.execute("INSERT INTO events(created,kind,payload) VALUES(1,'preserved','{}')")
     backup = tmp_path / "backup.sqlite"
@@ -48,6 +48,43 @@ def test_v1_migration_and_corrupt_recovery(tmp_path):
     with Store(home) as restarted:
         assert restarted.rows("SELECT kind FROM events")[0]["kind"] == "preserved"
     assert (Path(restored["archive"]) / "state.sqlite").read_bytes() == b"corrupt index"
+
+
+def test_v2_migration_keeps_legacy_text_and_reports_missing_bytes(tmp_path):
+    from codex_economy.runner import log_bytes
+    from codex_economy.store import MIGRATIONS
+
+    home = tmp_path / "state-v2"
+    home.mkdir()
+    with sqlite3.connect(home / "state.sqlite") as db:
+        db.executescript(SCHEMA)
+        for statement in MIGRATIONS[2]:
+            db.execute(statement)
+        db.execute(
+            "INSERT INTO runs VALUES(?,?,?,?,?,?,?,?,?,?)",
+            ("old", None, "[]", 1, 0, 0, "completed", "old text", "", "{}"),
+        )
+    with Store(home) as store:
+        assert store.db.execute("PRAGMA user_version").fetchone()[0] == 3
+        assert store.rows("SELECT stdout FROM runs WHERE id='old'")[0]["stdout"] == "old text"
+        with pytest.raises(ValueError, match="saved before schema 3"):
+            log_bytes(store, "old")
+
+
+def test_benchmark_config_hash_ignores_only_own_workspace_trust(tmp_path):
+    from codex_economy.benchmark import config_fingerprint
+
+    config = tmp_path / "config.toml"
+    workspaces = tmp_path / "workspaces"
+    project = workspaces / "fixture"
+    config.write_text('model = "gpt-6.1-sol"\n')
+    before = config_fingerprint(config, workspaces)
+    config.write_text('model = "gpt-6.1-sol"\n[projects.' + json.dumps(str(project)) + ']\ntrust_level = "trusted"\n')
+    assert config_fingerprint(config, workspaces) == before
+    config.write_text(config.read_text() + 'sandbox_mode = "danger-full-access"\n')
+    assert config_fingerprint(config, workspaces) != before
+    config.write_text('model = "other-model"\n')
+    assert config_fingerprint(config, workspaces) != before
 
 
 def test_project_root_swap_rejected(env, tmp_path):
@@ -539,7 +576,19 @@ def test_paid_jev_disabled_by_default_even_with_key(env, monkeypatch):
 def test_project_extension_idempotent_hooks_remain_removable(env):
     root, store, _ = env
     setup(store, "project", hooks=True)
+    assert (root / ".codex/config.toml").read_text() == "# codex-economy project hook discovery layer\n"
     setup(store, "project")
     assert (root / ".codex/hooks.json").exists()
     setup(store, "project", remove=True)
     assert not (root / ".codex/hooks.json").exists()
+    assert not (root / ".codex/config.toml").exists()
+
+
+def test_project_extension_preserves_existing_config(env):
+    root, store, _engine = env
+    config = root / ".codex/config.toml"
+    config.parent.mkdir()
+    config.write_text("model = 'existing'\n")
+    setup(store, "project", hooks=True)
+    setup(store, "project", remove=True)
+    assert config.read_text() == "model = 'existing'\n"

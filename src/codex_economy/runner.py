@@ -1,6 +1,8 @@
 """Bounded argv execution with nonblocking stdin/output, process-group cleanup and causal logs."""
 
 import json
+import hashlib
+import base64
 import os
 import selectors
 import signal
@@ -162,8 +164,15 @@ class Runner:
         return self._save(rid, start, code, state, out)
 
     def _save(self, rid, start, code, state, out):
-        stdout = redact(bytes(out["stdout"]).decode("utf-8", errors="replace"))
-        stderr = redact(bytes(out["stderr"]).decode("utf-8", errors="replace"))
+        # surrogateescape round-trips invalid UTF-8 while redacting secrets before persistence.
+        retained = {
+            stream: redact(bytes(content).decode("utf-8", errors="surrogateescape")).encode(
+                "utf-8", errors="surrogateescape"
+            )
+            for stream, content in out.items()
+        }
+        stdout = retained["stdout"].decode("utf-8", errors="replace")
+        stderr = retained["stderr"].decode("utf-8", errors="replace")
         seconds = time.monotonic() - start
         row = self.s.rows("SELECT project,details FROM runs WHERE id=?", (rid,))[0]
         project_name = self.s.rows("SELECT name FROM projects WHERE id=?", (row["project"],))[0]["name"]
@@ -181,6 +190,10 @@ class Runner:
                 "UPDATE runs SET elapsed=?,code=?,state=?,stdout=?,stderr=?,details=? WHERE id=?",
                 (seconds, code, state, stdout, stderr, json.dumps(details), rid),
             )
+            self.s.db.executemany(
+                "INSERT OR REPLACE INTO run_outputs(run,stream,content,sha256) VALUES(?,?,?,?)",
+                [(rid, name, content, hashlib.sha256(content).hexdigest()) for name, content in retained.items()],
+            )
         return {
             "run": rid,
             "code": code,
@@ -192,6 +205,31 @@ class Runner:
             "redacted": True,
             "truncated_at_storage_limit": state == "output_limit",
         }
+
+
+def log_bytes(store, run, stream="stdout", offset=0, length=65536):
+    """Return a bounded byte range of the redacted retained output, encoded for JSON."""
+    if stream not in ("stdout", "stderr") or not 0 <= offset or not 1 <= length <= 65536:
+        raise ValueError("Invalid stream, offset or byte range (maximum 65536 bytes)")
+    rows = store.rows(
+        "SELECT length(content) AS total,substr(content,?,?) AS part,sha256 FROM run_outputs WHERE run=? AND stream=?",
+        (offset + 1, length, run, stream),
+    )
+    if not rows:
+        raise ValueError("Byte output unavailable: run not found or saved before schema 3")
+    row = rows[0]
+    return {
+        "run": run,
+        "stream": stream,
+        "offset": offset,
+        "length": len(row["part"]),
+        "total_bytes": row["total"],
+        "sha256": row["sha256"],
+        "base64": base64.b64encode(row["part"]).decode("ascii"),
+        "redacted": True,
+        "truncated_at_storage_limit": store.rows("SELECT state FROM runs WHERE id=?", (run,))[0]["state"]
+        == "output_limit",
+    }
 
 
 def summarize(text, budget=2500):
