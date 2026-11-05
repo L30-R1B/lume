@@ -1,0 +1,1834 @@
+{
+  "captured_utc": "2026-11-05T13:20:41.879259+00:00",
+  "experiments": [
+    {
+      "experiment": "benchmark",
+      "records": 32,
+      "source": "/home/leo-ribeiro/codex-economy/evidence/benchmark/results.jsonl",
+      "groups": {
+        "C": {
+          "attempts": 13,
+          "accepted": 12,
+          "input_tokens": 864325,
+          "cached_input_tokens": 762112,
+          "output_tokens": 6277,
+          "reasoning_output_tokens": 119,
+          "usage_unavailable_attempts": 1,
+          "seconds": 264.0266611217521,
+          "index_seconds": 0.16697820299305022,
+          "actions": 83,
+          "total_tokens": 870602,
+          "tokens_per_accepted": null,
+          "cache_fraction": 0.8817424001388366,
+          "p50_seconds": 20.055118140997365,
+          "p95_seconds": 29.981757113011554
+        },
+        "B": {
+          "attempts": 11,
+          "accepted": 10,
+          "input_tokens": 765600,
+          "cached_input_tokens": 677504,
+          "output_tokens": 6149,
+          "reasoning_output_tokens": 114,
+          "usage_unavailable_attempts": 0,
+          "seconds": 235.5914284759201,
+          "index_seconds": 0.14897113793995231,
+          "actions": 79,
+          "total_tokens": 771749,
+          "tokens_per_accepted": 77174.9,
+          "cache_fraction": 0.8849320794148381,
+          "p50_seconds": 20.70621360698715,
+          "p95_seconds": 29.19921865593642
+        },
+        "A": {
+          "attempts": 8,
+          "accepted": 7,
+          "input_tokens": 612347,
+          "cached_input_tokens": 549376,
+          "output_tokens": 4201,
+          "reasoning_output_tokens": 96,
+          "usage_unavailable_attempts": 0,
+          "seconds": 182.7189470459707,
+          "index_seconds": 0.1310512680793181,
+          "actions": 61,
+          "total_tokens": 616548,
+          "tokens_per_accepted": 88078.28571428571,
+          "cache_fraction": 0.8971645161975155,
+          "p50_seconds": 23.509702019044198,
+          "p95_seconds": 27.875029188930057
+        }
+      }
+    },
+    {
+      "experiment": "confirmation",
+      "records": 9,
+      "source": "/home/leo-ribeiro/codex-economy/evidence/confirmation/results.jsonl",
+      "groups": {
+        "C": {
+          "attempts": 5,
+          "accepted": 5,
+          "input_tokens": 388119,
+          "cached_input_tokens": 342912,
+          "output_tokens": 4308,
+          "reasoning_output_tokens": 378,
+          "usage_unavailable_attempts": 0,
+          "seconds": 142.28696079994552,
+          "index_seconds": 0.11956472904421389,
+          "actions": 37,
+          "total_tokens": 392427,
+          "tokens_per_accepted": 78485.4,
+          "cache_fraction": 0.8835228370680126,
+          "p50_seconds": 25.920028993976302,
+          "p95_seconds": 42.32252232497558
+        },
+        "B": {
+          "attempts": 2,
+          "accepted": 1,
+          "input_tokens": 65969,
+          "cached_input_tokens": 61056,
+          "output_tokens": 881,
+          "reasoning_output_tokens": 38,
+          "usage_unavailable_attempts": 1,
+          "seconds": 41.134252399089746,
+          "index_seconds": 0.015656633069738746,
+          "actions": 10,
+          "total_tokens": 66850,
+          "tokens_per_accepted": null,
+          "cache_fraction": 0.9255256256726644,
+          "p50_seconds": 20.567126199544873,
+          "p95_seconds": 28.186362532083876
+        },
+        "A": {
+          "attempts": 2,
+          "accepted": 2,
+          "input_tokens": 168496,
+          "cached_input_tokens": 147328,
+          "output_tokens": 2452,
+          "reasoning_output_tokens": 258,
+          "usage_unavailable_attempts": 0,
+          "seconds": 70.37824940402061,
+          "index_seconds": 0.03293547499924898,
+          "actions": 18,
+          "total_tokens": 170948,
+          "tokens_per_accepted": 85474.0,
+          "cache_fraction": 0.8743709049472984,
+          "p50_seconds": 35.189124702010304,
+          "p95_seconds": 38.71693549992051
+        }
+      }
+    },
+    {
+      "experiment": "confirmation-v2",
+      "records": 108,
+      "source": "/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/results.jsonl",
+      "groups": {
+        "C": {
+          "attempts": 36,
+          "accepted": 36,
+          "input_tokens": 2664961,
+          "cached_input_tokens": 2322944,
+          "output_tokens": 30733,
+          "reasoning_output_tokens": 1523,
+          "usage_unavailable_attempts": 0,
+          "seconds": 1066.7117957670707,
+          "index_seconds": 5.269740533316508,
+          "actions": 264,
+          "total_tokens": 2695694,
+          "tokens_per_accepted": 74880.38888888889,
+          "cache_fraction": 0.8716615365102904,
+          "p50_seconds": 28.01003494503675,
+          "p95_seconds": 39.48388131498359
+        },
+        "B": {
+          "attempts": 36,
+          "accepted": 35,
+          "input_tokens": 2677674,
+          "cached_input_tokens": 2390400,
+          "output_tokens": 30879,
+          "reasoning_output_tokens": 1804,
+          "usage_unavailable_attempts": 1,
+          "seconds": 1026.5059945357498,
+          "index_seconds": 1.3288307092152536,
+          "actions": 283,
+          "total_tokens": 2708553,
+          "tokens_per_accepted": null,
+          "cache_fraction": 0.8927150952655177,
+          "p50_seconds": 27.09184205107158,
+          "p95_seconds": 34.8147100439528
+        },
+        "A": {
+          "attempts": 36,
+          "accepted": 36,
+          "input_tokens": 3035583,
+          "cached_input_tokens": 2731008,
+          "output_tokens": 35056,
+          "reasoning_output_tokens": 3954,
+          "usage_unavailable_attempts": 0,
+          "seconds": 1189.900754073984,
+          "index_seconds": 1.465719810104929,
+          "actions": 279,
+          "total_tokens": 3070639,
+          "tokens_per_accepted": 85295.52777777778,
+          "cache_fraction": 0.8996650725741975,
+          "p50_seconds": 32.37394952803152,
+          "p95_seconds": 42.79636170191225
+        }
+      }
+    },
+    {
+      "experiment": "editor-pilot",
+      "records": 6,
+      "source": "/home/leo-ribeiro/codex-economy-next/evidence/editor-pilot/results.jsonl",
+      "groups": {
+        "E": {
+          "attempts": 3,
+          "accepted": 3,
+          "input_tokens": 53852,
+          "cached_input_tokens": 0,
+          "output_tokens": 338,
+          "reasoning_output_tokens": 17,
+          "usage_unavailable_attempts": 0,
+          "seconds": 21.970861011883244,
+          "index_seconds": 0.19055921398103237,
+          "actions": 3,
+          "total_tokens": 54190,
+          "tokens_per_accepted": 18063.333333333332,
+          "cache_fraction": 0.0,
+          "p50_seconds": 7.336390949902125,
+          "p95_seconds": 8.260857610031962
+        },
+        "A": {
+          "attempts": 3,
+          "accepted": 3,
+          "input_tokens": 215271,
+          "cached_input_tokens": 181888,
+          "output_tokens": 2907,
+          "reasoning_output_tokens": 503,
+          "usage_unavailable_attempts": 0,
+          "seconds": 99.92107360588852,
+          "index_seconds": 0.05894521507434547,
+          "actions": 21,
+          "total_tokens": 218178,
+          "tokens_per_accepted": 72726.0,
+          "cache_fraction": 0.8449256983058563,
+          "p50_seconds": 34.9534821449779,
+          "p95_seconds": 38.0150153839495
+        }
+      }
+    },
+    {
+      "experiment": "editor-confirmation",
+      "records": 1,
+      "source": "/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation/results.jsonl",
+      "groups": {
+        "E": {
+          "attempts": 1,
+          "accepted": 0,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_output_tokens": 0,
+          "usage_unavailable_attempts": 0,
+          "seconds": 1.3175332769751549,
+          "index_seconds": 0.10907894198317081,
+          "actions": 0,
+          "total_tokens": 0,
+          "tokens_per_accepted": null,
+          "cache_fraction": null,
+          "p50_seconds": 1.3175332769751549,
+          "p95_seconds": 1.3175332769751549
+        }
+      }
+    },
+    {
+      "experiment": "editor-confirmation-r2",
+      "records": 72,
+      "source": "/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/results.jsonl",
+      "groups": {
+        "E": {
+          "attempts": 36,
+          "accepted": 36,
+          "input_tokens": 470871,
+          "cached_input_tokens": 80000,
+          "output_tokens": 10404,
+          "reasoning_output_tokens": 3894,
+          "usage_unavailable_attempts": 0,
+          "seconds": 436.54658246820327,
+          "index_seconds": 0.7650492178509012,
+          "actions": 36,
+          "total_tokens": 481275,
+          "tokens_per_accepted": 13368.75,
+          "cache_fraction": 0.16989791259177142,
+          "p50_seconds": 11.06228518707212,
+          "p95_seconds": 22.4718508470105
+        },
+        "A": {
+          "attempts": 36,
+          "accepted": 36,
+          "input_tokens": 2981286,
+          "cached_input_tokens": 2680064,
+          "output_tokens": 33436,
+          "reasoning_output_tokens": 4076,
+          "usage_unavailable_attempts": 0,
+          "seconds": 1205.8930451390333,
+          "index_seconds": 0.6970882860478014,
+          "actions": 281,
+          "total_tokens": 3014722,
+          "tokens_per_accepted": 83742.27777777778,
+          "cache_fraction": 0.8989623940809436,
+          "p50_seconds": 33.14887527155224,
+          "p95_seconds": 52.82400658703409
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "performance.json": {
+      "hardware": {
+        "system": "Linux",
+        "node": "mestion-vm",
+        "release": "6.17.0-23-generic",
+        "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+        "machine": "x86_64",
+        "processor": "x86_64"
+      },
+      "workload": {
+        "projects": 3,
+        "files": 600,
+        "bytes": 53787
+      },
+      "cold_seconds": {
+        "n": 3,
+        "p50": 0.10288605198729783,
+        "p95": 0.14778998703695834,
+        "max": 0.14778998703695834
+      },
+      "incremental_seconds": {
+        "n": 30,
+        "p50": 0.07268267503241077,
+        "p95": 0.08395285694859922,
+        "max": 0.08789610501844436
+      },
+      "lexical_seconds": {
+        "n": 30,
+        "p50": 0.03330873104277998,
+        "p95": 0.039614277076907456,
+        "max": 0.050432760966941714
+      },
+      "max_rss_kib": 25424,
+      "db_bytes": 638976,
+      "gates": {
+        "cold_max_seconds": 10,
+        "incremental_p95_seconds": 2,
+        "lexical_p95_seconds": 1,
+        "rss_kib": 524288
+      },
+      "passed": true
+    },
+    "performance-v2.json": {
+      "hardware": {
+        "system": "Linux",
+        "node": "mestion-vm",
+        "release": "6.17.0-23-generic",
+        "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+        "machine": "x86_64",
+        "processor": "x86_64"
+      },
+      "workload": {
+        "projects": 3,
+        "files": 600,
+        "bytes": 53787
+      },
+      "cold_seconds": {
+        "n": 3,
+        "p50": 0.19406711298506707,
+        "p95": 1.6118982440093532,
+        "max": 1.6118982440093532
+      },
+      "incremental_seconds": {
+        "n": 30,
+        "p50": 0.09147089649923146,
+        "p95": 0.9032471409300342,
+        "max": 1.0897790879243985
+      },
+      "lexical_seconds": {
+        "n": 30,
+        "p50": 0.0394050789764151,
+        "p95": 1.0433432110585272,
+        "max": 1.0797413439722732
+      },
+      "max_rss_kib": 26100,
+      "db_bytes": 577536,
+      "gates": {
+        "cold_max_seconds": 10,
+        "incremental_p95_seconds": 2,
+        "lexical_p95_seconds": 1,
+        "rss_kib": 524288
+      },
+      "passed": false
+    },
+    "performance-final.json": {
+      "runs": [
+        {
+          "hardware": {
+            "system": "Linux",
+            "node": "mestion-vm",
+            "release": "6.17.0-23-generic",
+            "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+            "machine": "x86_64",
+            "processor": "x86_64"
+          },
+          "workload": {
+            "projects": 3,
+            "files": 600,
+            "bytes": 53787
+          },
+          "cold_seconds": {
+            "n": 3,
+            "p50": 0.09821684297639877,
+            "p95": 1.0934098869329318,
+            "max": 1.0934098869329318,
+            "samples": [
+              1.0934098869329318,
+              0.09639688697643578,
+              0.09821684297639877
+            ]
+          },
+          "incremental_seconds": {
+            "n": 30,
+            "p50": 0.06782670953543857,
+            "p95": 0.07666292309295386,
+            "max": 0.07827153394464403,
+            "samples": [
+              0.06605438503902406,
+              0.0720467580249533,
+              0.06969841104000807,
+              0.0753357739886269,
+              0.07827153394464403,
+              0.07116612000390887,
+              0.06838286994025111,
+              0.06492350494954735,
+              0.0666854870505631,
+              0.07252169109415263,
+              0.06800675601698458,
+              0.0695218991022557,
+              0.06450144399423152,
+              0.06439731200225651,
+              0.06652158906217664,
+              0.06286399392411113,
+              0.06639571697451174,
+              0.06442891107872128,
+              0.06400534405838698,
+              0.06842983409296721,
+              0.06993285997305065,
+              0.07666292309295386,
+              0.06764666305389255,
+              0.06944556103553623,
+              0.0652161679463461,
+              0.06277529802173376,
+              0.07437255000695586,
+              0.07485422294121236,
+              0.061662087915465236,
+              0.06725275900680572
+            ]
+          },
+          "lexical_seconds": {
+            "n": 30,
+            "p50": 0.026873923954553902,
+            "p95": 0.02979699498973787,
+            "max": 0.030058018979616463,
+            "samples": [
+              0.027949676965363324,
+              0.0260110420640558,
+              0.028351867920719087,
+              0.030058018979616463,
+              0.02838126104325056,
+              0.02877564402297139,
+              0.027135609998367727,
+              0.025170823908410966,
+              0.02729386300779879,
+              0.026272085960954428,
+              0.027646970003843307,
+              0.027911040000617504,
+              0.025539112044498324,
+              0.026405566022731364,
+              0.024881655001081526,
+              0.02355203207116574,
+              0.02979699498973787,
+              0.026440814952366054,
+              0.02489646791946143,
+              0.023371782968752086,
+              0.028490144992247224,
+              0.02723480900749564,
+              0.025682929903268814,
+              0.02722985192667693,
+              0.02494804805610329,
+              0.02710450196173042,
+              0.027701107086613774,
+              0.026643345947377384,
+              0.026149490964598954,
+              0.023928698035888374
+            ]
+          },
+          "max_rss_kib": 26340,
+          "db_bytes": 577536,
+          "gates": {
+            "cold_max_seconds": 10,
+            "incremental_p95_seconds": 2,
+            "lexical_p95_seconds": 1,
+            "rss_kib": 524288
+          },
+          "passed": true,
+          "environment_before": {
+            "loadavg": "1.36 1.70 2.03 2/1188 1310183",
+            "meminfo": "MemTotal:        7871916 kB\nMemFree:         1794352 kB\nMemAvailable:    5055872 kB\nBuffers:          150860 kB\nCached:          2556280 kB\nSwapCached:        34164 kB\nActive:          1703464 kB\nInactive:        2356812 kB\nActive(anon):    1135476 kB\nInactive(anon):   292508 kB\nActive(file):     567988 kB\nInactive(file):  2064304 kB\nUnevictable:       10536 kB\nMlocked:              16 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380248 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              9724 kB\nWriteback:            16 kB\nAnonPages:       1358096 kB\nMapped:           665004 kB\nShmem:             74884 kB\nKReclaimable:     938776 kB\nSlab:            1256740 kB\nSReclaimable:     938776 kB\nSUnreclaim:       317964 kB\nKernelStack:       18924 kB\nPageTables:        47608 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13202288 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86288 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+          },
+          "environment_after_loadavg": "1.33 1.68 2.03 2/1188 1310376"
+        },
+        {
+          "hardware": {
+            "system": "Linux",
+            "node": "mestion-vm",
+            "release": "6.17.0-23-generic",
+            "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+            "machine": "x86_64",
+            "processor": "x86_64"
+          },
+          "workload": {
+            "projects": 3,
+            "files": 600,
+            "bytes": 53787
+          },
+          "cold_seconds": {
+            "n": 3,
+            "p50": 0.11292491806671023,
+            "p95": 1.1116221219999716,
+            "max": 1.1116221219999716,
+            "samples": [
+              1.1116221219999716,
+              0.11292491806671023,
+              0.10829369502607733
+            ]
+          },
+          "incremental_seconds": {
+            "n": 30,
+            "p50": 0.07101714902091771,
+            "p95": 0.09091106499545276,
+            "max": 0.09102731302846223,
+            "samples": [
+              0.07324973004870117,
+              0.07740617997478694,
+              0.09102731302846223,
+              0.06952337792608887,
+              0.06750925595406443,
+              0.07109210104681551,
+              0.09091106499545276,
+              0.07444938900880516,
+              0.07491202396340668,
+              0.07457127596717328,
+              0.07503757195081562,
+              0.08211996697355062,
+              0.0737499080132693,
+              0.07094219699501991,
+              0.06497612898238003,
+              0.07379517401568592,
+              0.06366772204637527,
+              0.06593416794203222,
+              0.07175013399682939,
+              0.07486612489446998,
+              0.0664101029979065,
+              0.06654089700896293,
+              0.06656153802759945,
+              0.06679410394281149,
+              0.06765134597662836,
+              0.06400135101284832,
+              0.06432232598308474,
+              0.06709251494612545,
+              0.07275189703796059,
+              0.07017876300960779
+            ]
+          },
+          "lexical_seconds": {
+            "n": 30,
+            "p50": 0.027280824026092887,
+            "p95": 0.03231143800076097,
+            "max": 0.03742270800285041,
+            "samples": [
+              0.03742270800285041,
+              0.027133161085657775,
+              0.02754022099543363,
+              0.02502960991114378,
+              0.024178431020118296,
+              0.031111204996705055,
+              0.028325814986601472,
+              0.028836312936618924,
+              0.027653404977172613,
+              0.030615412979386747,
+              0.028881306992843747,
+              0.03231143800076097,
+              0.028840707032941282,
+              0.027396204066462815,
+              0.028734865016303957,
+              0.024543293984606862,
+              0.024397092987783253,
+              0.02640239696484059,
+              0.02800319599919021,
+              0.02716544398572296,
+              0.02638338494580239,
+              0.02443100092932582,
+              0.025401460006833076,
+              0.02406624099239707,
+              0.027401417028158903,
+              0.024118339992128313,
+              0.02620665298309177,
+              0.025016566971316934,
+              0.028648932930082083,
+              0.022190905991010368
+            ]
+          },
+          "max_rss_kib": 26192,
+          "db_bytes": 577536,
+          "gates": {
+            "cold_max_seconds": 10,
+            "incremental_p95_seconds": 2,
+            "lexical_p95_seconds": 1,
+            "rss_kib": 524288
+          },
+          "passed": true,
+          "environment_before": {
+            "loadavg": "1.33 1.68 2.03 2/1188 1310376",
+            "meminfo": "MemTotal:        7871916 kB\nMemFree:         1788048 kB\nMemAvailable:    5050860 kB\nBuffers:          151480 kB\nCached:          2556948 kB\nSwapCached:        34164 kB\nActive:          1717828 kB\nInactive:        2357656 kB\nActive(anon):    1149540 kB\nInactive(anon):   292364 kB\nActive(file):     568288 kB\nInactive(file):  2065292 kB\nUnevictable:       10536 kB\nMlocked:              16 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380328 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             11624 kB\nWriteback:             0 kB\nAnonPages:       1372172 kB\nMapped:           665536 kB\nShmem:             74884 kB\nKReclaimable:     938780 kB\nSlab:            1256760 kB\nSReclaimable:     938780 kB\nSUnreclaim:       317980 kB\nKernelStack:       18924 kB\nPageTables:        47788 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13216616 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86272 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+          },
+          "environment_after_loadavg": "1.31 1.67 2.02 1/1185 1310610"
+        },
+        {
+          "hardware": {
+            "system": "Linux",
+            "node": "mestion-vm",
+            "release": "6.17.0-23-generic",
+            "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+            "machine": "x86_64",
+            "processor": "x86_64"
+          },
+          "workload": {
+            "projects": 3,
+            "files": 600,
+            "bytes": 53787
+          },
+          "cold_seconds": {
+            "n": 3,
+            "p50": 0.12342833308503032,
+            "p95": 1.0798809019615874,
+            "max": 1.0798809019615874,
+            "samples": [
+              1.0798809019615874,
+              0.09316426899749786,
+              0.12342833308503032
+            ]
+          },
+          "incremental_seconds": {
+            "n": 30,
+            "p50": 0.07081950944848359,
+            "p95": 0.08433754998259246,
+            "max": 0.08886589901521802,
+            "samples": [
+              0.06536642811261117,
+              0.06398310395888984,
+              0.06766216200776398,
+              0.0720892270328477,
+              0.06571169896051288,
+              0.06571652099955827,
+              0.06439678196329623,
+              0.0684145160485059,
+              0.08195231098216027,
+              0.07003052497748286,
+              0.06057963601779193,
+              0.06666358897928149,
+              0.06582610204350203,
+              0.07596892397850752,
+              0.0665458720177412,
+              0.07241757703013718,
+              0.07219014898873866,
+              0.07485478406306356,
+              0.07271243794821203,
+              0.08433754998259246,
+              0.08076985599473119,
+              0.08886589901521802,
+              0.07530178793240339,
+              0.0749342639464885,
+              0.07822399004362524,
+              0.06763067003339529,
+              0.08357647201046348,
+              0.07160849391948432,
+              0.0620107629802078,
+              0.0645083929412067
+            ]
+          },
+          "lexical_seconds": {
+            "n": 30,
+            "p50": 0.02743203897261992,
+            "p95": 0.030278502963483334,
+            "max": 0.033453288953751326,
+            "samples": [
+              0.024209283059462905,
+              0.02689095598179847,
+              0.02673854399472475,
+              0.026736370055004954,
+              0.027795318979769945,
+              0.024991738027893007,
+              0.025168920983560383,
+              0.027437009965069592,
+              0.030278502963483334,
+              0.02643943892326206,
+              0.02742706798017025,
+              0.024796265992335975,
+              0.028125448967330158,
+              0.027733296970836818,
+              0.02967080706730485,
+              0.028111475985497236,
+              0.029063962982036173,
+              0.030236060032621026,
+              0.027972887037321925,
+              0.029420044971629977,
+              0.02842029696330428,
+              0.028873834060505033,
+              0.027425715001299977,
+              0.033453288953751326,
+              0.02929702401161194,
+              0.026686389930546284,
+              0.02625078905839473,
+              0.026860954938456416,
+              0.025104256928898394,
+              0.023584955953992903
+            ]
+          },
+          "max_rss_kib": 26408,
+          "db_bytes": 577536,
+          "gates": {
+            "cold_max_seconds": 10,
+            "incremental_p95_seconds": 2,
+            "lexical_p95_seconds": 1,
+            "rss_kib": 524288
+          },
+          "passed": true,
+          "environment_before": {
+            "loadavg": "1.31 1.67 2.02 1/1185 1310610",
+            "meminfo": "MemTotal:        7871916 kB\nMemFree:         1714728 kB\nMemAvailable:    4977912 kB\nBuffers:          151892 kB\nCached:          2556912 kB\nSwapCached:        34164 kB\nActive:          1772120 kB\nInactive:        2358032 kB\nActive(anon):    1203832 kB\nInactive(anon):   292364 kB\nActive(file):     568288 kB\nInactive(file):  2065668 kB\nUnevictable:       10552 kB\nMlocked:              32 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380336 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             12236 kB\nWriteback:             0 kB\nAnonPages:       1426284 kB\nMapped:           664560 kB\nShmem:             74884 kB\nKReclaimable:     938776 kB\nSlab:            1256752 kB\nSReclaimable:     938776 kB\nSUnreclaim:       317976 kB\nKernelStack:       18880 kB\nPageTables:        47652 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13227536 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86256 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+          },
+          "environment_after_loadavg": "1.28 1.66 2.01 1/1183 1310815"
+        }
+      ],
+      "all_gates_passed": true,
+      "prior_failed_run_preserved": "evidence/performance-v2.json",
+      "cold_index_definition": "fresh database, no extraction cache; OS page cache not forcibly cleared",
+      "logical_cpus": 4
+    },
+    "neural-offline-enforced.json": {
+      "model": "/home/leo-ribeiro/.local/share/codex-economy/experimental/models/llmlingua-2-bert-base-multilingual-cased-meetingbank",
+      "provider": "LLMLingua-2",
+      "result": {
+        "compressed_prompt": "Database transactional failure rollback changes Preserve original evidence verification pass before acceptance documentation factory historical administration",
+        "compressed_prompt_list": [
+          "Database transactional failure rollback changes Preserve original evidence verification pass before acceptance documentation factory historical administration"
+        ],
+        "origin_tokens": 37,
+        "compressed_tokens": 17,
+        "ratio": "2.2x",
+        "rate": "45.9%"
+      },
+      "seconds": 4.784111769986339,
+      "max_rss_kib": 820752,
+      "offline": true,
+      "network_enforcement": "seccomp denies connect/sendto/sendmsg",
+      "source_code_compression": false
+    },
+    "jev-live-integration.json": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "read",
+          "confidence": 1.0,
+          "probabilities": {
+            "read": 1.0,
+            "deploy": 0.0
+          }
+        },
+        "relevance": {
+          "type": "score",
+          "score": 1.93,
+          "confidence": 0.9,
+          "legend": {
+            "0": "Unrelated",
+            "1": "Partially related",
+            "2": "Direct evidence"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.96
+          }
+        },
+        "is_python": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 408,
+        "output_tokens": 64
+      },
+      "mode": "jev",
+      "latency_seconds": 0.2898440030403435,
+      "provider": "typesafe",
+      "requested_model": "jev-latest",
+      "input_bytes": 622,
+      "cost": null,
+      "requests": 1,
+      "decision_used": "ranking_only",
+      "cache_hit": false
+    },
+    "jev-real-calibration.json": {
+      "model": "jev-1.14.0",
+      "question_domain": "actual named function definition vs mention; not general correctness",
+      "calibration": {
+        "threshold": 0.64,
+        "objective": "maximum calibration F1",
+        "f1": 1.0,
+        "n": 24,
+        "brier": 0.042883333333333336,
+        "dataset_hash": "9b296e1506f02bac7ccd357448c4d8ef4319d489ea1f5fc89a1b726a73596211",
+        "evaluation": false,
+        "guarantee": false,
+        "use": "advisory routing only; independent acceptance checks remain mandatory",
+        "confusion": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "holdout": {
+        "n": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "calibration_rows": [
+        {
+          "split": "calibration",
+          "probability": 0.77,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.65,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.72,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.72,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.7,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.65,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.76,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.72,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.72,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.77,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.64,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.03,
+          "label": 0
+        },
+        {
+          "split": "calibration",
+          "probability": 0.71,
+          "label": 1
+        },
+        {
+          "split": "calibration",
+          "probability": 0.01,
+          "label": 0
+        }
+      ],
+      "holdout_rows": [
+        {
+          "split": "holdout",
+          "probability": 0.97,
+          "label": 1
+        },
+        {
+          "split": "holdout",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "holdout",
+          "probability": 0.94,
+          "label": 1
+        },
+        {
+          "split": "holdout",
+          "probability": 0.01,
+          "label": 0
+        },
+        {
+          "split": "holdout",
+          "probability": 0.97,
+          "label": 1
+        },
+        {
+          "split": "holdout",
+          "probability": 0.02,
+          "label": 0
+        },
+        {
+          "split": "holdout",
+          "probability": 0.96,
+          "label": 1
+        },
+        {
+          "split": "holdout",
+          "probability": 0.01,
+          "label": 0
+        }
+      ],
+      "runs": [
+        {
+          "model": "jev-1.14.0",
+          "answers": {
+            "0": {
+              "type": "noul",
+              "noul": 0.77
+            },
+            "1": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "2": {
+              "type": "noul",
+              "noul": 0.65
+            },
+            "3": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "4": {
+              "type": "noul",
+              "noul": 0.72
+            },
+            "5": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "6": {
+              "type": "noul",
+              "noul": 0.72
+            },
+            "7": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "8": {
+              "type": "noul",
+              "noul": 0.7
+            },
+            "9": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "10": {
+              "type": "noul",
+              "noul": 0.65
+            },
+            "11": {
+              "type": "noul",
+              "noul": 0.02
+            }
+          },
+          "usage": {
+            "input_tokens": 1022,
+            "output_tokens": 198
+          },
+          "mode": "jev",
+          "latency_seconds": 0.29847678600344807,
+          "provider": "typesafe",
+          "requested_model": "jev-1.14.0",
+          "input_bytes": 3236,
+          "cost": null,
+          "requests": 1,
+          "decision_used": "ranking_only",
+          "cache_hit": false
+        },
+        {
+          "model": "jev-1.14.0",
+          "answers": {
+            "0": {
+              "type": "noul",
+              "noul": 0.76
+            },
+            "1": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "2": {
+              "type": "noul",
+              "noul": 0.72
+            },
+            "3": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "4": {
+              "type": "noul",
+              "noul": 0.72
+            },
+            "5": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "6": {
+              "type": "noul",
+              "noul": 0.77
+            },
+            "7": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "8": {
+              "type": "noul",
+              "noul": 0.64
+            },
+            "9": {
+              "type": "noul",
+              "noul": 0.03
+            },
+            "10": {
+              "type": "noul",
+              "noul": 0.71
+            },
+            "11": {
+              "type": "noul",
+              "noul": 0.01
+            }
+          },
+          "usage": {
+            "input_tokens": 1022,
+            "output_tokens": 198
+          },
+          "mode": "jev",
+          "latency_seconds": 0.2602176599903032,
+          "provider": "typesafe",
+          "requested_model": "jev-1.14.0",
+          "input_bytes": 3272,
+          "cost": null,
+          "requests": 1,
+          "decision_used": "ranking_only",
+          "cache_hit": false
+        },
+        {
+          "model": "jev-1.14.0",
+          "answers": {
+            "0": {
+              "type": "noul",
+              "noul": 0.97
+            },
+            "1": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "2": {
+              "type": "noul",
+              "noul": 0.94
+            },
+            "3": {
+              "type": "noul",
+              "noul": 0.01
+            },
+            "4": {
+              "type": "noul",
+              "noul": 0.97
+            },
+            "5": {
+              "type": "noul",
+              "noul": 0.02
+            },
+            "6": {
+              "type": "noul",
+              "noul": 0.96
+            },
+            "7": {
+              "type": "noul",
+              "noul": 0.01
+            }
+          },
+          "usage": {
+            "input_tokens": 769,
+            "output_tokens": 132
+          },
+          "mode": "jev",
+          "latency_seconds": 0.2550935000181198,
+          "provider": "typesafe",
+          "requested_model": "jev-1.14.0",
+          "input_bytes": 2192,
+          "cost": null,
+          "requests": 1,
+          "decision_used": "ranking_only",
+          "cache_hit": false
+        }
+      ],
+      "acceptance_decision": false,
+      "universal_threshold_claimed": false
+    },
+    "jev-ranking-real.json": {
+      "passed": true,
+      "context": {
+        "snapshot": 163,
+        "repeated_investigation": false,
+        "previous_equivalent_queries": 0,
+        "state": "ready",
+        "effective_mode": {
+          "mode": "jev",
+          "provider": "typesafe",
+          "model": "jev-1.14.0",
+          "requests": 1,
+          "latency_seconds": 0.34499775897711515,
+          "cache_hit": false,
+          "usage": {
+            "input_tokens": 1168,
+            "output_tokens": 159
+          }
+        },
+        "candidates": null,
+        "candidate_limit": 20,
+        "candidate_universe_limit": 500,
+        "index_omissions": [],
+        "insufficient": false,
+        "evidence": [
+          {
+            "path": "logic.py",
+            "hash": "26cffdd8578f5627d8122063318a9c8a6afab7ef24dd32778d79e700f8224cfb",
+            "start": 1,
+            "end": 2,
+            "source": "def calculate_tax(amount):\n    return amount * 0.2\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-0.md",
+            "hash": "e94fb94317bc647eb3b46fc1985bce7bc69d169675de931c759bef31c3cae240",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 0\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-1.md",
+            "hash": "99517b0868654015fa717da1da4d060ab4ca181a40e073b6b876f937ad7c4aaf",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 1\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-2.md",
+            "hash": "5fb717bc0e51dba93bfe0c6acfa9ae33471187906f47f64ec4872a054cf0f7b5",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 2\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-6.md",
+            "hash": "19adfd879facce89111b66feecab68c166db0e4f41634f9e0b34e70bc0b2ed5e",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 6\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-4.md",
+            "hash": "624a6a79cb95e0e7f1387e66af581d3abef9f5450e51d84a20e229a19684194e",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 4\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-3.md",
+            "hash": "72ff58bb931b9057aeb4e3b48f8513d938fed1f3ae35d9ef4560fb9975324b6b",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 3\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          },
+          {
+            "path": "notes-5.md",
+            "hash": "815960248d4a0898e821aada0312c35d236eae8a2b2bf0954be3777512a49fc7",
+            "start": 1,
+            "end": 2,
+            "source": "# Tax module 5\nTax configuration is described here, but the actual calculate_tax implementation is elsewhere.\n",
+            "omitted_before": 0,
+            "omitted_after": 0
+          }
+        ],
+        "omissions": [],
+        "remaining_source_bytes": 3765,
+        "budget_scope": "entire serialized UTF-8 JSON; not a Codex task token cap",
+        "relations": [],
+        "related_tests": [],
+        "strategy": "assisted",
+        "original_source_only": true,
+        "requested_bytes": 6000,
+        "sufficiency": "unassessed",
+        "metadata_or_evidence_omitted": 0
+      },
+      "real_calls": [
+        {
+          "model": "jev-1.14.0",
+          "answers": {
+            "0": {
+              "type": "score",
+              "score": 0.6,
+              "confidence": 0.38,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.4,
+                "1": 0.59,
+                "2": 0.01
+              }
+            },
+            "1": {
+              "type": "score",
+              "score": 0.5,
+              "confidence": 0.24,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.5,
+                "1": 0.49,
+                "2": 0.01
+              }
+            },
+            "2": {
+              "type": "score",
+              "score": 0.44,
+              "confidence": 0.36,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.57,
+                "1": 0.43,
+                "2": 0.0
+              }
+            },
+            "3": {
+              "type": "score",
+              "score": 0.37,
+              "confidence": 0.46,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.64,
+                "1": 0.36,
+                "2": 0.0
+              }
+            },
+            "4": {
+              "type": "score",
+              "score": 0.38,
+              "confidence": 0.44,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.63,
+                "1": 0.37,
+                "2": 0.0
+              }
+            },
+            "5": {
+              "type": "score",
+              "score": 0.35,
+              "confidence": 0.49,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.66,
+                "1": 0.34,
+                "2": 0.0
+              }
+            },
+            "6": {
+              "type": "score",
+              "score": 0.44,
+              "confidence": 0.36,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.57,
+                "1": 0.43,
+                "2": 0.0
+              }
+            },
+            "7": {
+              "type": "score",
+              "score": 2.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Irrelevant",
+                "1": "Related",
+                "2": "Direct evidence"
+              },
+              "probabilities": {
+                "0": 0.0,
+                "1": 0.0,
+                "2": 1.0
+              }
+            },
+            "action": {
+              "type": "choice",
+              "choice": "read",
+              "confidence": 0.8,
+              "probabilities": {
+                "read": 0.87,
+                "test": 0.04,
+                "search": 0.09
+              }
+            },
+            "repeat": {
+              "type": "noul",
+              "noul": 0.32
+            }
+          },
+          "usage": {
+            "input_tokens": 1168,
+            "output_tokens": 159
+          },
+          "mode": "jev",
+          "latency_seconds": 0.34499775897711515,
+          "provider": "typesafe",
+          "requested_model": "jev-latest",
+          "input_bytes": 2904,
+          "cost": null,
+          "requests": 1,
+          "decision_used": "ranking_only",
+          "cache_hit": false
+        }
+      ],
+      "external_policy_explicitly_enabled_for_public_synthetic_fixture": true
+    },
+    "framework-validation.json": {
+      "next": {
+        "passed": true,
+        "phases": [
+          {
+            "phase": "before",
+            "response": {
+              "status": "ready"
+            },
+            "build": {
+              "code": 0,
+              "log": "next-before-build.log"
+            },
+            "snapshot": 1
+          },
+          {
+            "phase": "after",
+            "response": {
+              "status": "updated"
+            },
+            "build": {
+              "code": 0,
+              "log": "next-after-build.log"
+            },
+            "snapshot": 2
+          }
+        ]
+      },
+      "kotlin_gradle_android_declarations": {
+        "passed": true,
+        "initial": {
+          "code": 0,
+          "log": "gradle-before.log"
+        },
+        "final": {
+          "code": 0,
+          "log": "gradle-after.log"
+        },
+        "modules": 3,
+        "apk_compilation": false,
+        "limitation": "No Android SDK/API installed; actual Kotlin/JVM compilation and Android resource XML validation performed"
+      },
+      "prisma_sql": {
+        "passed": true,
+        "phases": [
+          {
+            "phase": "before",
+            "columns": [
+              "id",
+              "name"
+            ]
+          },
+          {
+            "phase": "after",
+            "columns": [
+              "id",
+              "name",
+              "active"
+            ]
+          }
+        ]
+      },
+      "compose": {
+        "passed": true,
+        "ports_verified": [
+          18080,
+          18081
+        ],
+        "daemon_required": false,
+        "container_execution_claimed": false
+      }
+    },
+    "android-validation.json": {
+      "passed": true,
+      "apk_sha256": "fd49fdb66943fb121cb86a165e4a6ac87b58671ff8d6f0b7fbf5fab2c7bda90a",
+      "apk_bytes": 847963,
+      "compile_sdk": 36,
+      "agp": "9.0.1",
+      "gradle": "9.2.1",
+      "source_change": "equivalent Kotlin implementation",
+      "resource_change_verified_in_apk": true,
+      "unit_tests": [
+        "TEST-sample.economy.CalculationTest.xml"
+      ],
+      "device_instrumentation": false
+    },
+    "app-server-real.json": {
+      "thread": "01a1a639-490d-7062-ab68-ed23bd645061",
+      "turn": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+      "state": "budget_reached",
+      "usage": {
+        "total": {
+          "totalTokens": 15098,
+          "inputTokens": 15093,
+          "cachedInputTokens": 12288,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 5,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 15098,
+          "inputTokens": 15093,
+          "cachedInputTokens": 12288,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 5,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "accepted": false,
+      "version": "codex-cli 0.166.0",
+      "budget": {
+        "requested_observed_tokens": 1,
+        "hard_global_cap": false,
+        "interruption_requested": true
+      },
+      "continuation": "resume same thread or create bounded handoff; independent checks required"
+    },
+    "hooks-real-events.json": {
+      "events": [
+        {
+          "hook_event_name": "PostModelRequest",
+          "session_id": "01a1a733-3dc2-7193-9a8f-da78838b0172",
+          "turn_id": "01a1a733-3f1b-7570-af99-09924621cd41",
+          "model": "gpt-6.1-sol",
+          "status": "completed",
+          "token_usage": {
+            "input_tokens": 14894,
+            "cached_input_tokens": 12288,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 14899
+          }
+        },
+        {
+          "hook_event_name": "SessionEnd",
+          "session_id": "01a1a733-3dc2-7193-9a8f-da78838b0172"
+        }
+      ],
+      "count": 2,
+      "command": "/home/leo-ribeiro/.local/bin/ce --home /tmp/ce-hooks-real-state telemetry",
+      "source": "official inline config",
+      "own_hook_sources_reviewed": true
+    },
+    "release-validation.json": {
+      "passed": true,
+      "first_release": "/tmp/ce-release-validation-_0y1ehkf/prefix/releases/fcc9dc0f734b8d42",
+      "second_release": "/tmp/ce-release-validation-_0y1ehkf/prefix/releases/056239cf2167ef35",
+      "state_preserved": true,
+      "project_preserved": true,
+      "operations": [
+        {
+          "argv": [
+            "/home/leo-ribeiro/codex-economy-next/scripts/install.sh"
+          ],
+          "code": 0,
+          "stdout": "nux2014_x86_64.whl (344 kB)\nInstalling collected packages: libclang, typing-extensions, tree-sitter-typescript, tree-sitter-kotlin, tree-sitter-javascript, tree-sitter-cpp, tree-sitter-c, tree-sitter, threadpoolctl, rpds-py, PyYAML, python-multipart, python-dotenv, pyjwt, pycparser, parso, numpy, narwhals, idna, httpx-sse, h11, defusedxml, cloudpickle, click, certifi, attrs, annotated-types, uvicorn, typing-inspection, scipy, referencing, pydantic-core, joblib, jedi, httpcore, cffi, anyio, starlette, scikit-learn, pydantic, jsonschema-specifications, httpx, cryptography, sse-starlette, pydantic-settings, jsonschema, mcp, codex-economy\n\nSuccessfully installed PyYAML-6.0.3 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 certifi-2026.10.23 cffi-2.1.1 click-8.5.0 cloudpickle-3.1.2 codex-economy-0.2.0 cryptography-50.0.2 defusedxml-0.7.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 httpx-sse-0.4.3 idna-3.20 jedi-0.20.1 joblib-1.6.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 libclang-18.1.1 mcp-1.30.0 narwhals-2.28.0 numpy-2.5.4 parso-0.8.7 pycparser-3.12 pydantic-2.14.2 pydantic-core-2.50.2 pydantic-settings-2.16.2 pyjwt-2.15.1 python-dotenv-1.2.4 python-multipart-0.0.33 referencing-0.37.0 rpds-py-2026.9.1 scikit-learn-1.9.1 scipy-1.18.1 sse-starlette-3.6.0 starlette-1.10.0 threadpoolctl-3.7.0 tree-sitter-0.25.2 tree-sitter-c-0.24.2 tree-sitter-cpp-0.23.4 tree-sitter-javascript-0.25.0 tree-sitter-kotlin-1.1.0 tree-sitter-typescript-0.23.2 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0\n{\"sqlite\": \"ok\", \"foreign_keys\": []}\n{\"sqlite\": \"ok\", \"foreign_keys\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "register",
+            "fixture",
+            "/tmp/ce-release-validation-_0y1ehkf/project"
+          ],
+          "code": 0,
+          "stdout": "{\"id\": 1, \"name\": \"fixture\", \"root\": \"/tmp/ce-release-validation-_0y1ehkf/project\", \"policy\": {\"version\": 1, \"external\": false, \"max_file_bytes\": 1000000, \"exclude\": [\".git\", \"node_modules\", \".venv\", \"venv\", \"build\", \"dist\", \".next\", \".gradle\", \"__pycache__\", \".env*\", \"*.pem\", \"*.key\", \"*credentials*\", \"*secret*\", \".codex\", \".ce\", \"*.sqlite*\"]}, \"root_identity\": \"2050:42994200\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "index",
+            "fixture"
+          ],
+          "code": 0,
+          "stdout": "{\"snapshot\": 1, \"fingerprint\": \"505ec6ccc183dfbd1567ac8039ff846a5c7b84d8521a67b896ddceed8501fc2e\", \"state\": \"ready\", \"extractor_version\": \"adapters-3\", \"files\": 1, \"changed\": 1, \"deleted\": 0, \"omissions\": [], \"warnings\": [], \"seconds\": 0.046497524017468095, \"commands\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "context",
+            "fixture",
+            "answer"
+          ],
+          "code": 0,
+          "stdout": "{\"snapshot\": 1, \"repeated_investigation\": false, \"previous_equivalent_queries\": 0, \"state\": \"ready\", \"effective_mode\": \"hybrid\", \"candidates\": null, \"candidate_limit\": 20, \"candidate_universe_limit\": 500, \"index_omissions\": [], \"insufficient\": false, \"evidence\": [{\"path\": \"module.py\", \"hash\": \"0c5314a277746eee9059e60e14ede8ba0ddc3038a44746e46b2cf28b0f81651b\", \"start\": 1, \"end\": 2, \"source\": \"def answer():\\n return 42\\n\", \"omitted_before\": 0, \"omitted_after\": 0}], \"omissions\": [], \"remaining_source_bytes\": 5799, \"budget_scope\": \"entire serialized UTF-8 JSON; not a Codex task token cap\", \"relations\": [], \"related_tests\": [], \"strategy\": \"hybrid\", \"original_source_only\": true, \"requested_bytes\": 5799, \"sufficiency\": \"unassessed\", \"metadata_or_evidence_omitted\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "setup",
+            "fixture"
+          ],
+          "code": 0,
+          "stdout": "{\"skill\": \".agents/skills/codex-economy/SKILL.md\", \"hooks\": false, \"hook_trust\": \"requires Codex-supported trust review; installed handlers are diagnostic only\", \"project\": \"fixture\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "setup",
+            "fixture",
+            "--remove"
+          ],
+          "code": 0,
+          "stdout": "{\"removed\": \".agents/skills/codex-economy/SKILL.md\", \"project\": \"fixture\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/leo-ribeiro/codex-economy-next/scripts/install.sh"
+          ],
+          "code": 0,
+          "stdout": "nux2014_x86_64.whl (344 kB)\nInstalling collected packages: libclang, typing-extensions, tree-sitter-typescript, tree-sitter-kotlin, tree-sitter-javascript, tree-sitter-cpp, tree-sitter-c, tree-sitter, threadpoolctl, rpds-py, PyYAML, python-multipart, python-dotenv, pyjwt, pycparser, parso, numpy, narwhals, idna, httpx-sse, h11, defusedxml, cloudpickle, click, certifi, attrs, annotated-types, uvicorn, typing-inspection, scipy, referencing, pydantic-core, joblib, jedi, httpcore, cffi, anyio, starlette, scikit-learn, pydantic, jsonschema-specifications, httpx, cryptography, sse-starlette, pydantic-settings, jsonschema, mcp, codex-economy\n\nSuccessfully installed PyYAML-6.0.3 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 certifi-2026.10.23 cffi-2.1.1 click-8.5.0 cloudpickle-3.1.2 codex-economy-0.2.0 cryptography-50.0.2 defusedxml-0.7.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 httpx-sse-0.4.3 idna-3.20 jedi-0.20.1 joblib-1.6.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 libclang-18.1.1 mcp-1.30.0 narwhals-2.28.0 numpy-2.5.4 parso-0.8.7 pycparser-3.12 pydantic-2.14.2 pydantic-core-2.50.2 pydantic-settings-2.16.2 pyjwt-2.15.1 python-dotenv-1.2.4 python-multipart-0.0.33 referencing-0.37.0 rpds-py-2026.9.1 scikit-learn-1.9.1 scipy-1.18.1 sse-starlette-3.6.0 starlette-1.10.0 threadpoolctl-3.7.0 tree-sitter-0.25.2 tree-sitter-c-0.24.2 tree-sitter-cpp-0.23.4 tree-sitter-javascript-0.25.0 tree-sitter-kotlin-1.1.0 tree-sitter-typescript-0.23.2 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0\n{\"sqlite\": \"ok\", \"foreign_keys\": []}\n{\"sqlite\": \"ok\", \"foreign_keys\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/leo-ribeiro/codex-economy-next/scripts/rollback.sh"
+          ],
+          "code": 0,
+          "stdout": "Runtime rolled back. A schema downgrade requires the pre-upgrade database backup; do not open newer state with an older release.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/tmp/ce-release-validation-_0y1ehkf/bin/ce",
+            "integrity"
+          ],
+          "code": 0,
+          "stdout": "{\"sqlite\": \"ok\", \"foreign_keys\": []}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/leo-ribeiro/codex-economy-next/scripts/uninstall.sh"
+          ],
+          "code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "installed-source-match-v2.json": {
+      "passed": true,
+      "files": [
+        {
+          "file": "benchmark.py",
+          "same": true
+        },
+        {
+          "file": "semantic.py",
+          "same": true
+        },
+        {
+          "file": "retrieval.py",
+          "same": true
+        },
+        {
+          "file": "security.py",
+          "same": true
+        },
+        {
+          "file": "traces.py",
+          "same": true
+        },
+        {
+          "file": "providers.py",
+          "same": true
+        },
+        {
+          "file": "sessions.py",
+          "same": true
+        },
+        {
+          "file": "experiments.py",
+          "same": true
+        },
+        {
+          "file": "extensions.py",
+          "same": true
+        },
+        {
+          "file": "mcp_server.py",
+          "same": true
+        },
+        {
+          "file": "backup.py",
+          "same": true
+        },
+        {
+          "file": "trace_worker.py",
+          "same": true
+        },
+        {
+          "file": "orchestrator.py",
+          "same": true
+        },
+        {
+          "file": "contracts.py",
+          "same": true
+        },
+        {
+          "file": "neural_worker.py",
+          "same": true
+        },
+        {
+          "file": "engine.py",
+          "same": true
+        },
+        {
+          "file": "registry.py",
+          "same": true
+        },
+        {
+          "file": "patch_harness.py",
+          "same": true
+        },
+        {
+          "file": "typescript.cjs",
+          "same": true
+        },
+        {
+          "file": "delegation.py",
+          "same": true
+        },
+        {
+          "file": "resource_exec.py",
+          "same": true
+        },
+        {
+          "file": "cli.py",
+          "same": true
+        },
+        {
+          "file": "config.py",
+          "same": true
+        },
+        {
+          "file": "continuity.py",
+          "same": true
+        },
+        {
+          "file": "build_analysis.py",
+          "same": true
+        },
+        {
+          "file": "store.py",
+          "same": true
+        },
+        {
+          "file": "runner.py",
+          "same": true
+        },
+        {
+          "file": "adapters.py",
+          "same": true
+        },
+        {
+          "file": "app_server.py",
+          "same": true
+        },
+        {
+          "file": "__init__.py",
+          "same": true
+        }
+      ]
+    }
+  },
+  "overall_observed_experiment_tokens": 15132375,
+  "overall_experiment_attempts": 228,
+  "overall_accepted": 222,
+  "overall_unavailable_usage": 3,
+  "jev_real": {
+    "requests": 5,
+    "input_tokens": 4389,
+    "output_tokens": 751,
+    "latency_seconds": [
+      0.2898440030403435,
+      0.29847678600344807,
+      0.2602176599903032,
+      0.2550935000181198,
+      0.34499775897711515
+    ],
+    "monetary_cost": null
+  },
+  "unavailable": [
+    "supported subscription quota counter",
+    "monetary auxiliary billing",
+    "fully classified rereads and compactions for every historical run"
+  ],
+  "warnings": [
+    "historical exploratory rounds are not confirmation",
+    "one native B run has incomplete usage after subscription limit",
+    "latest editor confirmation used code before subsequent hardening",
+    "neural document compression is not Codex task savings",
+    "cached input is part of input, reasoning output part of output"
+  ]
+}

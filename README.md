@@ -1,41 +1,33 @@
-# codex-economy 0.1.0
+# codex-economy 0.2.0
 
-Ferramenta local de seleção de evidências e execução mensurada de tarefas Codex. **O escopo integral solicitado ainda não está concluído nem validado para produção.** Veja `docs/requirements.md` e `docs/checkpoint.md`. A meta de 80% não está demonstrada.
-
-Requer Linux, Python 3.12+, Git; Node para análise TypeScript, CMake/GCC para os exemplos C++. O runtime fica isolado em `~/.local/share/codex-economy/runtime`; o estado em `~/.local/state/codex-economy` (`CE_HOME` permite outro diretório).
+Aplicação local para recuperar evidências, controlar saídas e executar tarefas Codex com consumo rastreável, preservando o login ChatGPT. **A meta de 80% depende dos resultados do experimento; não é uma propriedade presumida do produto.** O estado de validação e os bloqueios externos estão em [docs/acceptance-report.md](docs/acceptance-report.md).
 
 ```bash
 ./scripts/install.sh
-~/.local/bin/ce register meu-projeto /caminho/absoluto
-~/.local/bin/ce index meu-projeto
-~/.local/bin/ce search meu-projeto 'mensagem exata' --mode lexical
-~/.local/bin/ce context meu-projeto 'validar pedido' --budget 6000
-~/.local/bin/ce read meu-projeto src/main.py --start 1 --end 80 --hash HASH
-~/.local/bin/ce graph meu-projeto src/main.py --depth 2 --limit 20
-~/.local/bin/ce run meu-projeto -- python3 -m pytest
+~/.local/bin/ce register projeto /raiz/do/projeto
+~/.local/bin/ce index projeto
+~/.local/bin/ce context projeto 'problema a investigar' --budget 6000
 ~/.local/bin/ce integrate
 codex -p economy
 ```
 
-Saídas são JSON; `ce --human ...` aplica indentação. `ce --help` lista todas as operações. `run` recebe argumentos após `--`; não interpreta shell. Subprocessos executam com as permissões do usuário: não é sandbox de comandos arbitrários. MCP expõe somente seis operações de evidência sobre projetos cadastrados; não oferece execução de comandos.
-
-`ce task PROJETO 'objetivo' 'aceite'` prepara índice/contexto, executa o Codex instalado com sua autenticação e registra sessão, eventos e consumo. Não declara aceite automaticamente: verifique o patch e rode os critérios de aceite. `ce session`, `ce handoff ID --patch '{"next_step":"..."}'` preservam continuidade.
-
-`ce integrate` instala o perfil `economy.config.toml`, sem alterar a configuração principal. `ce integrate --remove` remove esse perfil. O perfil pré-autoriza as operações do MCP local dentro dos projetos cadastrados. Use somente raízes autorizadas. Uma sessão anterior precisa ser reiniciada com `codex -p economy`. A skill curta em `docs/economy-SKILL.md` é fornecida para instalação explícita; ainda não é instalada automaticamente.
+Para execução completa com verificação independente:
 
 ```bash
-npm install --prefix ~/.local/share/codex-economy/node typescript@5.9.3
-ce semantic meu-projeto typescript
-# C/C++: gere build/compile_commands.json antes
-ce semantic meu-projeto clang
-ce doctor
-ce integrity
-ce backup /caminho/novo-backup.sqlite
-ce restore /caminho/backup.sqlite
-ce log IDENTIFICADOR --stream stderr --start 1 --end 200
-ce prune --days 30
+ce task projeto 'objetivo' 'critério de aceite' --verify '["npm","test"]'
+ce task projeto 'objetivo' 'critério de aceite' --harness patch --verify '["python3","check.py"]'
+ce task projeto 'objetivo' 'critério de aceite' --harness app-server --observed-token-budget 100000
 ```
 
-Atualize rodando `scripts/install.sh` novamente. Desinstale com `scripts/uninstall.sh`: projetos, credenciais, backups e estado são preservados. Não altere `CE_PREFIX` para diretórios de terceiros.
+O harness `patch` é um fluxo separado de edições estruturadas: o modelo opera em sandbox de leitura e devolve substituições originais exatas; o software verifica hashes, aplica e testa. O MCP não intercepta automaticamente ferramentas nativas nem modifica o histórico do Codex. Orçamento de contexto é o JSON completo em bytes; orçamento de tarefa no app-server interrompe após consumo observado, sem prometer teto rígido por requisição.
 
-Detalhes de arquitetura, privacidade, manutenção, limitações, benchmark e fontes: `docs/operations.md`, `docs/research.md`, `docs/requirements.md`.
+Linux/Python 3.12+; Node/TypeScript, Java/Gradle/Kotlin, CMake/libclang e demais ferramentas são necessários conforme o adaptador. Instalação usa releases isoladas em `~/.local/share/codex-economy`; estado em `~/.local/state/codex-economy`; `CE_HOME`, `CE_PREFIX` e `CE_BIN` permitem instalações separadas. Configuração, credenciais e projetos alheios são preservados.
+
+- [Comandos, configuração e operação](docs/usage-v2.md)
+- [Arquitetura e notas da revisão](docs/release-0.2.md)
+- [Validação e limitações](docs/acceptance-report.md)
+- [Requisitos e rastreabilidade](docs/requirements.md)
+- [Pesquisa e fontes](docs/research.md)
+- [Metodologia de benchmark](docs/benchmark.md)
+
+Atualize executando `scripts/install.sh` novamente. Use `scripts/rollback.sh` para trocar o runtime anterior e backup compatível para downgrade de schema. `scripts/uninstall.sh` preserva projetos, credenciais, estado e toolchains/modelos opcionais. `ce --help` apresenta o catálogo completo; saída padrão é JSON e `ce --human ...` aplica indentação.

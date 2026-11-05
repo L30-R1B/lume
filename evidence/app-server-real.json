@@ -1,0 +1,338 @@
+{
+  "thread": "01a1a639-490d-7062-ab68-ed23bd645061",
+  "turn": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+  "state": "budget_reached",
+  "usage": {
+    "total": {
+      "totalTokens": 15098,
+      "inputTokens": 15093,
+      "cachedInputTokens": 12288,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 5,
+      "reasoningOutputTokens": 0
+    },
+    "last": {
+      "totalTokens": 15098,
+      "inputTokens": 15093,
+      "cachedInputTokens": 12288,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 5,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 475000
+  },
+  "accepted": false,
+  "version": "codex-cli 0.166.0",
+  "events": [
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "mestion-vm",
+        "installationId": "ec1b3308-76e7-472a-a6f0-08c731bd0b9a",
+        "environmentId": null
+      },
+      "emittedAtMs": 1793790134520
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a1a639-490d-7062-ab68-ed23bd645061",
+          "environments": [
+            {
+              "environmentId": "local",
+              "cwd": "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture",
+              "runtimeWorkspaceRoots": [
+                "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture"
+              ]
+            }
+          ],
+          "extra": null,
+          "sessionId": "01a1a639-490d-7062-ab68-ed23bd645061",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": false,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "high",
+          "createdAt": 1793790134,
+          "updatedAt": 1793790134,
+          "recencyAt": 1793790134,
+          "status": {
+            "type": "idle"
+          },
+          "path": "/home/leo-ribeiro/.codex/sessions/2026/11/04/rollout-2026-11-04T08-02-14-01a1a639-490d-7062-ab68-ed23bd645061.jsonl",
+          "cwd": "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture",
+          "cliVersion": "0.166.0",
+          "originator": "codex-economy",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1793790134613
+    },
+    {
+      "method": "mcpServer/startupStatus/updated",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "name": "codex_apps",
+        "status": "starting",
+        "error": null,
+        "failureReason": null
+      },
+      "emittedAtMs": 1793790134613
+    },
+    {
+      "method": "account/updated",
+      "params": {
+        "authMode": "chatgpt",
+        "planType": "plus"
+      },
+      "emittedAtMs": 1793790134752
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1793790135036
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turn": {
+          "id": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+          "rootTurnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1793790134,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1793790135037
+    },
+    {
+      "method": "mcpServer/startupStatus/updated",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "name": "codex_apps",
+        "status": "ready",
+        "error": null,
+        "failureReason": null
+      },
+      "emittedAtMs": 1793790135425
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1a639-4d9b-76f0-b894-2ee7ba5dfbd4",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Reply exactly OK. Do not use tools.",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1793790135708,
+          "completedAtMs": null
+        },
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "startedAtMs": 1793790135708
+      },
+      "emittedAtMs": 1793790135708
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1a639-4d9b-76f0-b894-2ee7ba5dfbd4",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Reply exactly OK. Do not use tools.",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1793790135708,
+          "completedAtMs": 1793790135708
+        },
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "completedAtMs": 1793790135708
+      },
+      "emittedAtMs": 1793790135718
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_016fa3231e2273c5016aeb10b9304c87d28a5ce47a880cb5e0",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1793790137221,
+          "completedAtMs": null
+        },
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "startedAtMs": 1793790137221
+      },
+      "emittedAtMs": 1793790137221
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "itemId": "msg_016fa3231e2273c5016aeb10b9304c87d28a5ce47a880cb5e0",
+        "delta": "OK"
+      },
+      "emittedAtMs": 1793790137221
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_016fa3231e2273c5016aeb10b9304c87d28a5ce47a880cb5e0",
+          "text": "OK",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1793790137221,
+          "completedAtMs": 1793790137286
+        },
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "completedAtMs": 1793790137286
+      },
+      "emittedAtMs": 1793790137293
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 15098,
+            "inputTokens": 15093,
+            "cachedInputTokens": 12288,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 15098,
+            "inputTokens": 15093,
+            "cachedInputTokens": 12288,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 475000
+        }
+      },
+      "emittedAtMs": 1793790137299
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": {
+            "usedPercent": 87,
+            "windowDurationMins": 300,
+            "resetsAt": 1793799579
+          },
+          "secondary": {
+            "usedPercent": 58,
+            "windowDurationMins": 10080,
+            "resetsAt": 1794261396
+          },
+          "credits": {
+            "hasCredits": false,
+            "unlimited": false,
+            "balance": "0"
+          },
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": "plus",
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1793790137299
+    },
+    {
+      "id": 4,
+      "result": {}
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1793790137312
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1a639-490d-7062-ab68-ed23bd645061",
+        "turn": {
+          "id": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+          "rootTurnId": "01a1a639-497b-7de1-b5fc-fcc74bee0238",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "interrupted",
+          "error": null,
+          "startedAt": 1793790134,
+          "completedAt": 1793790137,
+          "durationMs": 2652
+        }
+      },
+      "emittedAtMs": 1793790137312
+    }
+  ],
+  "budget": {
+    "requested_observed_tokens": 1,
+    "hard_global_cap": false,
+    "interruption_requested": true
+  },
+  "continuation": "resume same thread or create bounded handoff; independent checks required"
+}

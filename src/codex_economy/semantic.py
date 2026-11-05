@@ -32,6 +32,10 @@ def analyze(store, name, family):
         if proc.returncode:
             raise ValueError("TypeScript compiler analysis failed: " + proc.stderr[:1000])
         result = json.loads(proc.stdout)
+    elif family == "python":
+        from .build_analysis import python_semantic
+
+        result = python_semantic(p, store)
     elif family == "clang":
         result = clang_analyze(p)
     else:
@@ -40,7 +44,9 @@ def analyze(store, name, family):
     if Engine(store).require_current(name)["id"] != snapshot["id"]:
         raise ValueError("Snapshot changed during compiler analysis")
     with store.db:
-        store.db.execute("DELETE FROM edges WHERE project=? AND kind='compiler_reference'", (p["id"],))
+        store.db.execute(
+            "DELETE FROM edges WHERE project=? AND kind IN ('compiler_reference','semantic_reference')", (p["id"],)
+        )
         for f in result["facts"]:
             store.db.execute(
                 "INSERT INTO edges(project,source,target,kind,origin,status,snapshot) VALUES(?,?,?,?,?,?,?)",

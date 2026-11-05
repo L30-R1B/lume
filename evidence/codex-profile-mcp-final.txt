@@ -1,0 +1,2 @@
+Name           Command                          Args  Env  Cwd  Status   Auth       
+codex-economy  /home/leo-ribeiro/.local/bin/ce  mcp   -    -    enabled  Unsupported

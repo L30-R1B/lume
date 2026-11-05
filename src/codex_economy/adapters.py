@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-VERSION = "adapters-2"
+VERSION = "adapters-3"
 LANG = {
     ".js": "javascript",
     ".jsx": "javascript",
@@ -35,6 +35,11 @@ DEFS = {
 
 
 def extract(path, source):
+    from .registry import installed, validate
+
+    for extension in installed().values():
+        if extension.supports(path):
+            return validate(extension.extract(path, source))
     ext = Path(path).suffix
     symbols = []
     relations = []

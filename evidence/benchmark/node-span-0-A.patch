@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-span/logic.js b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-span-0-A/logic.js
+index 775a00c..4aad920 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-span/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-span-0-A/logic.js
+@@ -1 +1 @@
+-exports.span = function(lo, hi) { return hi + lo; };
++exports.span = function(lo, hi) { return hi - lo; };

@@ -1,0 +1,19 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-parse_port/logic.py b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-parse_port-2-A/logic.py
+index db3dd39..e58b620 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-parse_port/logic.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-parse_port-2-A/logic.py
+@@ -1,2 +1,13 @@
+ def parse_port(text):
+-    return int(text) if text else None
++    if not isinstance(text, str) or not text:
++        return None
++
++    port = 0
++    for digit in text:
++        if not "0" <= digit <= "9":
++            return None
++        port = port * 10 + ord(digit) - ord("0")
++        if port > 65535:
++            return None
++
++    return port or None

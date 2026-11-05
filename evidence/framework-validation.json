@@ -1,0 +1,72 @@
+{
+  "next": {
+    "passed": true,
+    "phases": [
+      {
+        "phase": "before",
+        "response": {
+          "status": "ready"
+        },
+        "build": {
+          "code": 0,
+          "log": "next-before-build.log"
+        },
+        "snapshot": 1
+      },
+      {
+        "phase": "after",
+        "response": {
+          "status": "updated"
+        },
+        "build": {
+          "code": 0,
+          "log": "next-after-build.log"
+        },
+        "snapshot": 2
+      }
+    ]
+  },
+  "kotlin_gradle_android_declarations": {
+    "passed": true,
+    "initial": {
+      "code": 0,
+      "log": "gradle-before.log"
+    },
+    "final": {
+      "code": 0,
+      "log": "gradle-after.log"
+    },
+    "modules": 3,
+    "apk_compilation": false,
+    "limitation": "No Android SDK/API installed; actual Kotlin/JVM compilation and Android resource XML validation performed"
+  },
+  "prisma_sql": {
+    "passed": true,
+    "phases": [
+      {
+        "phase": "before",
+        "columns": [
+          "id",
+          "name"
+        ]
+      },
+      {
+        "phase": "after",
+        "columns": [
+          "id",
+          "name",
+          "active"
+        ]
+      }
+    ]
+  },
+  "compose": {
+    "passed": true,
+    "ports_verified": [
+      18080,
+      18081
+    ],
+    "daemon_required": false,
+    "container_execution_claimed": false
+  }
+}

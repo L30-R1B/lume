@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/logic.py b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-maximum-1-C/logic.py
+index 5dc82ca..b711888 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-maximum/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-maximum-1-C/logic.py
+@@ -1,2 +1,2 @@
+ def maximum(a, b):
+-    return min(a,b)
++    return max(a,b)

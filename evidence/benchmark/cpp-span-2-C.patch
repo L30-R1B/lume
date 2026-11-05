@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-span/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-span-2-C/logic.hpp
+index fb7cc07..bc2484c 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-span/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-span-2-C/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int span(int lo, int hi) { return hi + lo; }
++inline int span(int lo, int hi) { return hi - lo; }

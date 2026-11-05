@@ -1,0 +1,1704 @@
+E702 Multiple statements on one line (semicolon)
+  --> scripts/calibrate_jev_real.py:9:15
+   |
+ 7 | base=Path(__file__).resolve().parents[1]
+ 8 | os.environ['CE_JEV_MODEL']='jev-1.14.0'
+ 9 | calibration=[];holdout=[];runs=[]
+   |               ^
+10 | with Store() as store:
+11 |  for split,names in [('calibration',['add','subtract','multiply','divide','square','cube','clamp','distance','minimum','maximum','norm…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/calibrate_jev_real.py:9:26
+   |
+ 7 | base=Path(__file__).resolve().parents[1]
+ 8 | os.environ['CE_JEV_MODEL']='jev-1.14.0'
+ 9 | calibration=[];holdout=[];runs=[]
+   |                          ^
+10 | with Store() as store:
+11 |  for split,names in [('calibration',['add','subtract','multiply','divide','square','cube','clamp','distance','minimum','maximum','norm…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/calibrate_jev_real.py:19:55
+   |
+17 |    state={'split':split,'cases':[{'id':i,'task':c['task'],'candidate':c['candidate']} for i,c in enumerate(batch)]}
+18 |    questions={str(i):{'type':'noul','instructions':f'Does candidate {i} actually define the function requested by its task, rather tha…
+19 |    result=Jev(store).ask(state,questions,allowed=True);runs.append(result)
+   |                                                       ^
+20 |    if result['mode'] not in ('jev','jev-cache'): raise RuntimeError('Real Jev calibration failed: '+str(result.get('error')))
+21 |    for i,case in enumerate(batch):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/calibrate_jev_real.py:20:48
+   |
+18 |    questions={str(i):{'type':'noul','instructions':f'Does candidate {i} actually define the function requested by its task, rather tha…
+19 |    result=Jev(store).ask(state,questions,allowed=True);runs.append(result)
+20 |    if result['mode'] not in ('jev','jev-cache'): raise RuntimeError('Real Jev calibration failed: '+str(result.get('error')))
+   |                                                ^
+21 |    for i,case in enumerate(batch):
+22 |     row={'split':split,'probability':result['answers'][str(i)]['noul'],'label':case['label']}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/e2e.py:17:10
+   |
+15 | protected=hashlib.sha256((root/'check.py').read_bytes()).hexdigest()
+16 | subprocess.run(['git','init','-q',str(root)],check=True)
+17 | s=Store();e=Engine(s);e.register('e2e-shipping',root)
+   |          ^
+18 | result=execute(s,'e2e-shipping','Fix shipping_fee in fee.py: orders with total >=100 have free shipping, lower totals cost 10. Only ch…
+19 | check=Runner(s).run('e2e-shipping',['python3','check.py'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/e2e.py:17:22
+   |
+15 | protected=hashlib.sha256((root/'check.py').read_bytes()).hexdigest()
+16 | subprocess.run(['git','init','-q',str(root)],check=True)
+17 | s=Store();e=Engine(s);e.register('e2e-shipping',root)
+   |                      ^
+18 | result=execute(s,'e2e-shipping','Fix shipping_fee in fee.py: orders with total >=100 have free shipping, lower totals cost 10. Only ch…
+19 | check=Runner(s).run('e2e-shipping',['python3','check.py'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:11:35
+   |
+ 9 | for family in ('python','node','cpp'):
+10 |  for name,args,bug,cases,description in operations:
+11 |   directory=root/(family+'-'+name);directory.mkdir(parents=True,exist_ok=True)
+   |                                   ^
+12 |   if family=='python':
+13 |    target='logic.py';verify=['python3','check.py'];protected=['check.py']
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:13:21
+   |
+11 |   directory=root/(family+'-'+name);directory.mkdir(parents=True,exist_ok=True)
+12 |   if family=='python':
+13 |    target='logic.py';verify=['python3','check.py'];protected=['check.py']
+   |                     ^
+14 |    pybug={'distance':'return a + b','minimum':'return max(a,b)','maximum':'return min(a,b)','cube':'return x * x'}[name]
+15 |    (directory/target).write_text(f'def {name}({", ".join(args)}):\n    {pybug}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:13:51
+   |
+11 |   directory=root/(family+'-'+name);directory.mkdir(parents=True,exist_ok=True)
+12 |   if family=='python':
+13 |    target='logic.py';verify=['python3','check.py'];protected=['check.py']
+   |                                                   ^
+14 |    pybug={'distance':'return a + b','minimum':'return max(a,b)','maximum':'return min(a,b)','cube':'return x * x'}[name]
+15 |    (directory/target).write_text(f'def {name}({", ".join(args)}):\n    {pybug}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:18:21
+   |
+16 |    (directory/'check.py').write_text(f'from logic import {name}\n'+''.join(f'assert {name}({", ".join(str(x) for x in row[:-1])}) == {…
+17 |   elif family=='node':
+18 |    target='logic.js';verify=['node','check.js'];protected=['check.js']
+   |                     ^
+19 |    (directory/target).write_text(f'exports.{name} = ({", ".join(args)}) => {{ {bug} }};\n')
+20 |    (directory/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.joi…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:18:48
+   |
+16 |    (directory/'check.py').write_text(f'from logic import {name}\n'+''.join(f'assert {name}({", ".join(str(x) for x in row[:-1])}) == {…
+17 |   elif family=='node':
+18 |    target='logic.js';verify=['node','check.js'];protected=['check.js']
+   |                                                ^
+19 |    (directory/target).write_text(f'exports.{name} = ({", ".join(args)}) => {{ {bug} }};\n')
+20 |    (directory/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.joi…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:22:22
+   |
+20 |    (directory/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.joi…
+21 |   else:
+22 |    target='logic.hpp';verify=['python3','verify.py'];protected=['check.cpp','CMakeLists.txt','verify.py']
+   |                      ^
+23 |    (directory/target).write_text(f'#pragma once\ninline int {name}({", ".join("int "+a for a in args)}) {{ {bug} }}\n')
+24 |    (directory/'check.cpp').write_text('#include <cassert>\n#include "logic.hpp"\nint main() {\n'+''.join(f'assert({name}({", ".join(st…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/freeze_confirmation.py:22:53
+   |
+20 |    (directory/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.joi…
+21 |   else:
+22 |    target='logic.hpp';verify=['python3','verify.py'];protected=['check.cpp','CMakeLists.txt','verify.py']
+   |                                                     ^
+23 |    (directory/target).write_text(f'#pragma once\ninline int {name}({", ".join("int "+a for a in args)}) {{ {bug} }}\n')
+24 |    (directory/'check.cpp').write_text('#include <cassert>\n#include "logic.hpp"\nint main() {\n'+''.join(f'assert({name}({", ".join(st…
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/freeze_confirmation.py:27:21
+   |
+25 |    (directory/'CMakeLists.txt').write_text('cmake_minimum_required(VERSION 3.16)\nproject(check CXX)\nenable_testing()\nadd_executable…
+26 |    (directory/'verify.py').write_text('import subprocess\nfor cmd in [["cmake","-S",".","-B","build"],["cmake","--build","build"],["ct…
+27 |   for i in range(12): (directory/f'notes-{i}.md').write_text(f'# Topic {i}\nUnrelated administration documentation.\n'*20)
+   |                     ^
+28 |   tasks.append({'id':family+'-'+name,'family':family,'root':str(directory),'objective':f'Correct {name} in {target} to compute {descri…
+29 | hashes={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in root.rglob('*') if f.is_file()}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/install_android_validation.py:8:58
+   |
+ 6 | import zipfile
+ 7 | from pathlib import Path
+ 8 | root=Path.home()/'.local/share/codex-economy/android-sdk';root.mkdir(parents=True,exist_ok=True)
+   |                                                          ^
+ 9 | archive=root/'commandline-tools.zip';url='https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip'
+10 | if not archive.exists(): urllib.request.urlretrieve(url,archive)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/install_android_validation.py:9:37
+   |
+ 7 | from pathlib import Path
+ 8 | root=Path.home()/'.local/share/codex-economy/android-sdk';root.mkdir(parents=True,exist_ok=True)
+ 9 | archive=root/'commandline-tools.zip';url='https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip'
+   |                                     ^
+10 | if not archive.exists(): urllib.request.urlretrieve(url,archive)
+11 | assert hashlib.sha1(archive.read_bytes()).hexdigest()=='e025545c62a8e64c7559119566a569fb1dec5f60'
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/install_android_validation.py:10:24
+   |
+ 8 | root=Path.home()/'.local/share/codex-economy/android-sdk';root.mkdir(parents=True,exist_ok=True)
+ 9 | archive=root/'commandline-tools.zip';url='https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip'
+10 | if not archive.exists(): urllib.request.urlretrieve(url,archive)
+   |                        ^
+11 | assert hashlib.sha1(archive.read_bytes()).hexdigest()=='e025545c62a8e64c7559119566a569fb1dec5f60'
+12 | with zipfile.ZipFile(archive) as z:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/install_android_validation.py:14:62
+   |
+12 | with zipfile.ZipFile(archive) as z:
+13 |  for entry in z.infolist():
+14 |   if not (root/entry.filename).resolve().is_relative_to(root): raise ValueError('Invalid tool archive')
+   |                                                              ^
+15 |  z.extractall(root)
+16 | for file in (root/'cmdline-tools/bin').iterdir(): file.chmod(0o755)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/install_android_validation.py:16:49
+   |
+14 |   if not (root/entry.filename).resolve().is_relative_to(root): raise ValueError('Invalid tool archive')
+15 |  z.extractall(root)
+16 | for file in (root/'cmdline-tools/bin').iterdir(): file.chmod(0o755)
+   |                                                 ^
+17 | manager=root/'cmdline-tools/bin/sdkmanager'
+18 | # Local installation was authorized for the requested Android validation. No account or purchase.
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/install_android_validation.py:23:24
+   |
+21 | installed=subprocess.run([str(manager),'--sdk_root='+str(root),'platforms;android-36','build-tools;36.0.0','platform-tools'],input='y\…
+22 | Path('evidence/android-sdk-install.log').write_text(installed.stdout+'\n'+installed.stderr)
+23 | if installed.returncode: raise RuntimeError('Android SDK install failed; see log')
+   |                        ^
+24 | print(json.dumps({'sdk':str(root),'platform':36,'build_tools':'36.0.0','code':installed.returncode}))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/installation_check.py:14:24
+   |
+12 |         p=subprocess.run(argv,env=env,cwd='/tmp',capture_output=True,text=True,check=False,timeout=180)
+13 |         log.append({'argv':argv,'code':p.returncode,'stdout':p.stdout[-3000:],'stderr':p.stderr[-1000:]})
+14 |         if p.returncode: raise RuntimeError(json.dumps(log))
+   |                        ^
+15 |     run([str(base/'scripts/install.sh')])
+16 |     run([str(root/'bin/ce'),'register','fixture',str(base/'tests/semantic-fixture')])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:12:40
+   |
+10 |         ('parity','return x % 2 == 1;','return x % 2 == 0;',[(2,True),(3,False),(-2,True)]),
+11 |         ('square','return x + x;','return x * x;',[(3,9),(-3,9),(0,0)])]):
+12 |         root=fixtures/(family+'-'+name);root.mkdir(parents=True,exist_ok=True)
+   |                                        ^
+13 |         nargs=3 if name=='clamp' else 2 if name=='span' else 1
+14 |         args=['x','lo','hi'] if name=='clamp' else ['lo','hi'] if name=='span' else ['x']
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:16:30
+   |
+14 |         args=['x','lo','hi'] if name=='clamp' else ['lo','hi'] if name=='span' else ['x']
+15 |         if family=='python':
+16 |             target='logic.py';protected=['check.py'];verify=['python3','check.py']
+   |                              ^
+17 |             body={'clamp':'return x','span':'return hi + lo','parity':'return x % 2 == 1','square':'return x + x'}[name]
+18 |             (root/target).write_text(f'def {name}({", ".join(args)}):\n    {body}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:16:53
+   |
+14 |         args=['x','lo','hi'] if name=='clamp' else ['lo','hi'] if name=='span' else ['x']
+15 |         if family=='python':
+16 |             target='logic.py';protected=['check.py'];verify=['python3','check.py']
+   |                                                     ^
+17 |             body={'clamp':'return x','span':'return hi + lo','parity':'return x % 2 == 1','square':'return x + x'}[name]
+18 |             (root/target).write_text(f'def {name}({", ".join(args)}):\n    {body}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:21:30
+   |
+19 | …         (root/'check.py').write_text(f'from logic import {name}\n'+''.join(f'assert {name}({", ".join(repr(a) for a in row[:-1])}) =…
+20 | …     elif family=='node':
+21 | …         target='logic.js';protected=['check.js'];verify=['node','check.js']
+   |                            ^
+22 | …         (root/target).write_text(f'exports.{name} = function({", ".join(args)}) {{ {bug} }};\n')
+23 | …         (root/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.j…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:21:53
+   |
+19 | …         (root/'check.py').write_text(f'from logic import {name}\n'+''.join(f'assert {name}({", ".join(repr(a) for a in row[:-1])}) =…
+20 | …     elif family=='node':
+21 | …         target='logic.js';protected=['check.js'];verify=['node','check.js']
+   |                                                   ^
+22 | …         (root/target).write_text(f'exports.{name} = function({", ".join(args)}) {{ {bug} }};\n')
+23 | …         (root/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.j…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:25:31
+   |
+23 | …         (root/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.j…
+24 | …     else:
+25 | …         target='logic.hpp';protected=['check.cpp','CMakeLists.txt'];verify=['python3','verify.py'];protected+=['verify.py']
+   |                             ^
+26 | …         (root/target).write_text(f'#pragma once\ninline int {name}({", ".join("int "+a for a in args)}) {{ {bug} }}\n')
+27 | …         (root/'check.cpp').write_text('#include <cassert>\n#include "logic.hpp"\nint main() {\n'+''.join(f'assert({name}({", ".join(…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:25:72
+   |
+23 | …         (root/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.j…
+24 | …     else:
+25 | …         target='logic.hpp';protected=['check.cpp','CMakeLists.txt'];verify=['python3','verify.py'];protected+=['verify.py']
+   |                                                                      ^
+26 | …         (root/target).write_text(f'#pragma once\ninline int {name}({", ".join("int "+a for a in args)}) {{ {bug} }}\n')
+27 | …         (root/'check.cpp').write_text('#include <cassert>\n#include "logic.hpp"\nint main() {\n'+''.join(f'assert({name}({", ".join(…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_benchmark.py:25:103
+   |
+23 | …         (root/'check.js').write_text(f'const assert = require("node:assert/strict");\nconst {{{name}}} = require("./logic");\n'+''.j…
+24 | …     else:
+25 | …         target='logic.hpp';protected=['check.cpp','CMakeLists.txt'];verify=['python3','verify.py'];protected+=['verify.py']
+   |                                                                                                     ^
+26 | …         (root/target).write_text(f'#pragma once\ninline int {name}({", ".join("int "+a for a in args)}) {{ {bug} }}\n')
+27 | …         (root/'check.cpp').write_text('#include <cassert>\n#include "logic.hpp"\nint main() {\n'+''.join(f'assert({name}({", ".join(…
+   |
+
+E702 Multiple statements on one line (semicolon)
+ --> scripts/make_editor_confirmation.py:5:41
+  |
+3 | import shutil
+4 | from pathlib import Path
+5 | base=Path(__file__).resolve().parents[1];fixtures=base/'tests/editor-confirmation-inputs';tasks=[]
+  |                                         ^
+6 | ops={
+7 | 'unique':{'args':'values','description':'return unique integers preserving first-occurrence order without mutating the input','py':'def…
+  |
+
+E702 Multiple statements on one line (semicolon)
+ --> scripts/make_editor_confirmation.py:5:90
+  |
+3 | import shutil
+4 | from pathlib import Path
+5 | base=Path(__file__).resolve().parents[1];fixtures=base/'tests/editor-confirmation-inputs';tasks=[]
+  |                                                                                          ^
+6 | ops={
+7 | 'unique':{'args':'values','description':'return unique integers preserving first-occurrence order without mutating the input','py':'def…
+  |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:13:27
+   |
+11 | }
+12 | def cpp_literal(value):
+13 |  if isinstance(value,list): return '{'+','.join(cpp_literal(v) for v in value)+'}'
+   |                           ^
+14 |  if isinstance(value,str): return json.dumps(value)
+15 |  if value is None: return '-1'
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:14:26
+   |
+12 | def cpp_literal(value):
+13 |  if isinstance(value,list): return '{'+','.join(cpp_literal(v) for v in value)+'}'
+14 |  if isinstance(value,str): return json.dumps(value)
+   |                          ^
+15 |  if value is None: return '-1'
+16 |  return str(value)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:15:18
+   |
+13 |  if isinstance(value,list): return '{'+','.join(cpp_literal(v) for v in value)+'}'
+14 |  if isinstance(value,str): return json.dumps(value)
+15 |  if value is None: return '-1'
+   |                  ^
+16 |  return str(value)
+17 | for family in ('python','node','cpp'):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:19:34
+   |
+17 | for family in ('python','node','cpp'):
+18 |  for name,op in ops.items():
+19 |   root=fixtures/(family+'-'+name);root.mkdir(parents=True,exist_ok=True)
+   |                                  ^
+20 |   if family=='python':
+21 |    target='logic.py';(root/target).write_text(op['py']);checks=f'from logic import {name}\nimport copy\n'
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:21:21
+   |
+19 |   root=fixtures/(family+'-'+name);root.mkdir(parents=True,exist_ok=True)
+20 |   if family=='python':
+21 |    target='logic.py';(root/target).write_text(op['py']);checks=f'from logic import {name}\nimport copy\n'
+   |                     ^
+22 |    for argument,expected in op['cases']:
+23 |     args=argument if name=='retry_delay' else (argument,)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:21:56
+   |
+19 |   root=fixtures/(family+'-'+name);root.mkdir(parents=True,exist_ok=True)
+20 |   if family=='python':
+21 |    target='logic.py';(root/target).write_text(op['py']);checks=f'from logic import {name}\nimport copy\n'
+   |                                                        ^
+22 |    for argument,expected in op['cases']:
+23 |     args=argument if name=='retry_delay' else (argument,)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:25:40
+   |
+23 |     args=argument if name=='retry_delay' else (argument,)
+24 |     checks+=f'args=copy.deepcopy({args!r})\nbefore=copy.deepcopy(args)\nassert {name}(*args)=={expected!r}\nassert args==before\n'
+25 |    (root/'check.py').write_text(checks);verify=['python3','check.py'];protected=['check.py']
+   |                                        ^
+26 |   elif family=='node':
+27 |    target='logic.js';(root/target).write_text(op['js']);checks=f'const assert=require("node:assert/strict"); const {{{name}}}=require(…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:25:70
+   |
+23 |     args=argument if name=='retry_delay' else (argument,)
+24 |     checks+=f'args=copy.deepcopy({args!r})\nbefore=copy.deepcopy(args)\nassert {name}(*args)=={expected!r}\nassert args==before\n'
+25 |    (root/'check.py').write_text(checks);verify=['python3','check.py'];protected=['check.py']
+   |                                                                      ^
+26 |   elif family=='node':
+27 |    target='logic.js';(root/target).write_text(op['js']);checks=f'const assert=require("node:assert/strict"); const {{{name}}}=require(…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:27:21
+   |
+25 |    (root/'check.py').write_text(checks);verify=['python3','check.py'];protected=['check.py']
+26 |   elif family=='node':
+27 |    target='logic.js';(root/target).write_text(op['js']);checks=f'const assert=require("node:assert/strict"); const {{{name}}}=require(…
+   |                     ^
+28 |    for argument,expected in op['cases']:
+29 |     args=list(argument) if name=='retry_delay' else [argument]
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:27:56
+   |
+25 |    (root/'check.py').write_text(checks);verify=['python3','check.py'];protected=['check.py']
+26 |   elif family=='node':
+27 |    target='logic.js';(root/target).write_text(op['js']);checks=f'const assert=require("node:assert/strict"); const {{{name}}}=require(…
+   |                                                        ^
+28 |    for argument,expected in op['cases']:
+29 |     args=list(argument) if name=='retry_delay' else [argument]
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:31:40
+   |
+29 |     args=list(argument) if name=='retry_delay' else [argument]
+30 |     checks+='{ const args='+json.dumps(args)+'; const before=JSON.stringify(args); assert.deepEqual('+name+'(...args),'+json.dumps(exp…
+31 |    (root/'check.js').write_text(checks);verify=['node','check.js'];protected=['check.js']
+   |                                        ^
+32 |   else:
+33 |    target='logic.hpp';(root/target).write_text('#pragma once\n#include <vector>\n#include <string>\n#include <cstdlib>\n#include <algo…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:31:67
+   |
+29 |     args=list(argument) if name=='retry_delay' else [argument]
+30 |     checks+='{ const args='+json.dumps(args)+'; const before=JSON.stringify(args); assert.deepEqual('+name+'(...args),'+json.dumps(exp…
+31 |    (root/'check.js').write_text(checks);verify=['node','check.js'];protected=['check.js']
+   |                                                                   ^
+32 |   else:
+33 |    target='logic.hpp';(root/target).write_text('#pragma once\n#include <vector>\n#include <string>\n#include <cstdlib>\n#include <algo…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:33:22
+   |
+31 |    (root/'check.js').write_text(checks);verify=['node','check.js'];protected=['check.js']
+32 |   else:
+33 |    target='logic.hpp';(root/target).write_text('#pragma once\n#include <vector>\n#include <string>\n#include <cstdlib>\n#include <algo…
+   |                      ^
+34 |    checks='#include <cassert>\n#include "logic.hpp"\nint main(){\n'
+35 |    for argument,expected in op['cases']:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:41:9
+   |
+39 |      typ='std::vector<std::vector<int>>' if name=='merge_intervals' else 'std::vector<int>'
+40 |      checks+='{ '+typ+' expected='+cpp_literal(expected)+';assert('+call+'==expected); }\n'
+41 |     else: checks+='assert('+call+'=='+cpp_literal(expected)+');\n'
+   |         ^
+42 |    (root/'check.cpp').write_text(checks+'}\n')
+43 |    (root/'CMakeLists.txt').write_text('cmake_minimum_required(VERSION 3.16)\nproject(validation CXX)\nset(CMAKE_CXX_STANDARD 17)\nenab…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/make_editor_confirmation.py:45:34
+   |
+43 |    (root/'CMakeLists.txt').write_text('cmake_minimum_required(VERSION 3.16)\nproject(validation CXX)\nset(CMAKE_CXX_STANDARD 17)\nenab…
+44 |    (root/'verify.py').write_text('import subprocess\nfor argv in [["cmake","-S",".","-B","build"],["cmake","--build","build"],["ctest"…
+45 |    verify=['python3','verify.py'];protected=['check.cpp','CMakeLists.txt','verify.py']
+   |                                  ^
+46 |   for i in range(8): (root/f'document-{i}.md').write_text(f'# Unrelated module {i}\nFactory inventory administration background.\n'*10)
+47 |   tasks.append({'id':family+'-'+name,'family':family,'root':str(root),'objective':f'In {target}, correct or implement {name} to {op["d…
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:46:20
+   |
+44 |    (root/'verify.py').write_text('import subprocess\nfor argv in [["cmake","-S",".","-B","build"],["cmake","--build","build"],["ctest"…
+45 |    verify=['python3','verify.py'];protected=['check.cpp','CMakeLists.txt','verify.py']
+46 |   for i in range(8): (root/f'document-{i}.md').write_text(f'# Unrelated module {i}\nFactory inventory administration background.\n'*10)
+   |                    ^
+47 |   tasks.append({'id':family+'-'+name,'family':family,'root':str(root),'objective':f'In {target}, correct or implement {name} to {op["d…
+48 | manifest={'version':4,'phase':'heldout-structured-editor-confirmation','seed':20261108,'model':'gpt-6.1-sol','effort':'high','arms':['…
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/make_editor_confirmation.py:50:34
+   |
+48 | manifest={'version':4,'phase':'heldout-structured-editor-confirmation','seed':20261108,'model':'gpt-6.1-sol','effort':'high','arms':['…
+49 | for file in (base/'src/codex_economy').glob('*'):
+50 |  if file.suffix in ('.py','.cjs'): manifest['fixture_hashes'][str(file)]=hashlib.sha256(file.read_bytes()).hexdigest()
+   |                                  ^
+51 | (base/'evidence/editor-confirmation-manifest.json').write_text(json.dumps(manifest,indent=2))
+   |
+
+F401 [*] `os` imported but unused
+ --> scripts/metrics_preview.py:5:8
+  |
+3 | import datetime
+4 | import json
+5 | import os
+  |        ^^
+6 | import statistics
+7 | from pathlib import Path
+  |
+help: Remove unused import: `os`
+  |
+4 | import json
+  - import os
+5 | import statistics
+  |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:8:41
+   |
+ 6 | import statistics
+ 7 | from pathlib import Path
+ 8 | base=Path(__file__).resolve().parents[1];original=base.parent/'codex-economy'
+   |                                         ^
+ 9 | experiments=[];task_rows=[]
+10 | for root,names in [(original,['benchmark','confirmation','confirmation-v2']),(base,['editor-pilot','editor-confirmation','editor-confi…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:9:15
+   |
+ 7 | from pathlib import Path
+ 8 | base=Path(__file__).resolve().parents[1];original=base.parent/'codex-economy'
+ 9 | experiments=[];task_rows=[]
+   |               ^
+10 | for root,names in [(original,['benchmark','confirmation','confirmation-v2']),(base,['editor-pilot','editor-confirmation','editor-confi…
+11 |  for name in names:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:13:25
+   |
+11 |  for name in names:
+12 |   source=root/'evidence'/name/'results.jsonl'
+13 |   if not source.exists(): continue
+   |                         ^
+14 |   rows=[json.loads(line) for line in source.read_text().splitlines()]
+15 |   groups={}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:17:18
+   |
+15 |   groups={}
+16 |   for row in rows:
+17 |    arm=row['arm'];g=groups.setdefault(arm,{'attempts':0,'accepted':0,'input_tokens':0,'cached_input_tokens':0,'output_tokens':0,'reaso…
+   |                  ^
+18 |    g['attempts']+=1;g['accepted']+=int(row['accepted']);g['seconds']+=row.get('seconds',0);g['index_seconds']+=row.get('index_seconds'…
+19 |    known=bool(row.get('usage')) or row.get('run') is None
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:18:20
+   |
+16 |   for row in rows:
+17 |    arm=row['arm'];g=groups.setdefault(arm,{'attempts':0,'accepted':0,'input_tokens':0,'cached_input_tokens':0,'output_tokens':0,'reaso…
+18 |    g['attempts']+=1;g['accepted']+=int(row['accepted']);g['seconds']+=row.get('seconds',0);g['index_seconds']+=row.get('index_seconds'…
+   |                    ^
+19 |    known=bool(row.get('usage')) or row.get('run') is None
+20 |    if not known:g['usage_unavailable_attempts']+=1
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:18:56
+   |
+16 |   for row in rows:
+17 |    arm=row['arm'];g=groups.setdefault(arm,{'attempts':0,'accepted':0,'input_tokens':0,'cached_input_tokens':0,'output_tokens':0,'reaso…
+18 |    g['attempts']+=1;g['accepted']+=int(row['accepted']);g['seconds']+=row.get('seconds',0);g['index_seconds']+=row.get('index_seconds'…
+   |                                                        ^
+19 |    known=bool(row.get('usage')) or row.get('run') is None
+20 |    if not known:g['usage_unavailable_attempts']+=1
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:18:91
+   |
+16 |   for row in rows:
+17 |    arm=row['arm'];g=groups.setdefault(arm,{'attempts':0,'accepted':0,'input_tokens':0,'cached_input_tokens':0,'output_tokens':0,'reaso…
+18 |    g['attempts']+=1;g['accepted']+=int(row['accepted']);g['seconds']+=row.get('seconds',0);g['index_seconds']+=row.get('index_seconds'…
+   |                                                                                           ^
+19 |    known=bool(row.get('usage')) or row.get('run') is None
+20 |    if not known:g['usage_unavailable_attempts']+=1
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:18:138
+   |
+16 | …
+17 | …nput_tokens':0,'cached_input_tokens':0,'output_tokens':0,'reasoning_output_tokens':0,'usage_unavailable_attempts':0,'seconds':0,'inde…
+18 | …ow.get('seconds',0);g['index_seconds']+=row.get('index_seconds',0);g['actions']+=row.get('actions') or 0;g['times'].append(row.get('s…
+   |                                                                    ^
+19 | …
+20 | …
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:18:176
+   |
+16 | …
+17 | …,'output_tokens':0,'reasoning_output_tokens':0,'usage_unavailable_attempts':0,'seconds':0,'index_seconds':0,'actions':0,'times':[]})
+18 | …+=row.get('index_seconds',0);g['actions']+=row.get('actions') or 0;g['times'].append(row.get('seconds',0))
+   |                                                                    ^
+19 | …
+20 | …
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:20:16
+   |
+18 |    g['attempts']+=1;g['accepted']+=int(row['accepted']);g['seconds']+=row.get('seconds',0);g['index_seconds']+=row.get('index_seconds'…
+19 |    known=bool(row.get('usage')) or row.get('run') is None
+20 |    if not known:g['usage_unavailable_attempts']+=1
+   |                ^
+21 |    tokens={key:sum(u.get(key,0) for u in row.get('usage',[])) for key in ('input_tokens','cached_input_tokens','output_tokens','reason…
+22 |    for key,value in tokens.items():g[key]+=value
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:22:35
+   |
+20 |    if not known:g['usage_unavailable_attempts']+=1
+21 |    tokens={key:sum(u.get(key,0) for u in row.get('usage',[])) for key in ('input_tokens','cached_input_tokens','output_tokens','reason…
+22 |    for key,value in tokens.items():g[key]+=value
+   |                                   ^
+23 |    task_rows.append({'experiment':name,'task':row['task'],'family':row['family'],'repeat':row['repeat'],'arm':arm,'accepted':row['acce…
+24 |   for group in groups.values():
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:25:36
+   |
+23 |    task_rows.append({'experiment':name,'task':row['task'],'family':row['family'],'repeat':row['repeat'],'arm':arm,'accepted':row['acce…
+24 |   for group in groups.values():
+25 |    times=sorted(group.pop('times'));group['total_tokens']=group['input_tokens']+group['output_tokens'];group['tokens_per_accepted']=gr…
+   |                                    ^
+26 |    group['cache_fraction']=group['cached_input_tokens']/group['input_tokens'] if group['input_tokens'] else None;group['p50_seconds']=…
+27 |   experiments.append({'experiment':name,'records':len(rows),'source':str(source),'groups':groups})
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:25:103
+   |
+23 |    task_rows.append({'experiment':name,'task':row['task'],'family':row['family'],'repeat':row['repeat'],'arm':arm,'accepted':row['acce…
+24 |   for group in groups.values():
+25 |    times=sorted(group.pop('times'));group['total_tokens']=group['input_tokens']+group['output_tokens'];group['tokens_per_accepted']=gr…
+   |                                                                                                       ^
+26 |    group['cache_fraction']=group['cached_input_tokens']/group['input_tokens'] if group['input_tokens'] else None;group['p50_seconds']=…
+27 |   experiments.append({'experiment':name,'records':len(rows),'source':str(source),'groups':groups})
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:26:113
+   |
+24 |   for group in groups.values():
+25 |    times=sorted(group.pop('times'));group['total_tokens']=group['input_tokens']+group['output_tokens'];group['tokens_per_accepted']=gr…
+26 |    group['cache_fraction']=group['cached_input_tokens']/group['input_tokens'] if group['input_tokens'] else None;group['p50_seconds']=…
+   |                                                                                                                 ^
+27 |   experiments.append({'experiment':name,'records':len(rows),'source':str(source),'groups':groups})
+28 | artifacts={}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:26:159
+   |
+24 | …
+25 | …t_tokens'];group['tokens_per_accepted']=group['total_tokens']/group['accepted'] if group['accepted'] and not group['usage_unavailable…
+26 | …t_tokens'] else None;group['p50_seconds']=statistics.median(times);group['p95_seconds']=times[min(len(times)-1,int(len(times)*.95))]
+   |                                                                    ^
+27 | …oups})
+28 | …
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:31:22
+   |
+29 | for name in ['performance.json','performance-v2.json','neural-offline-enforced.json','jev-live-integration.json','jev-real-calibration…
+30 |  path=base/'evidence'/name
+31 |  if not path.exists():path=original/'evidence'/name
+   |                      ^
+32 |  if path.exists():
+33 |   value=json.loads(path.read_text())
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:34:34
+   |
+32 |  if path.exists():
+33 |   value=json.loads(path.read_text())
+34 |   if name=='app-server-real.json':value.pop('events',None)
+   |                                  ^
+35 |   if name.startswith('performance'):
+36 |    for metric in ('cold_seconds','incremental_seconds','lexical_seconds'):value[metric].pop('samples',None)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:36:74
+   |
+34 |   if name=='app-server-real.json':value.pop('events',None)
+35 |   if name.startswith('performance'):
+36 |    for metric in ('cold_seconds','incremental_seconds','lexical_seconds'):value[metric].pop('samples',None)
+   |                                                                          ^
+37 |   artifacts[name]=value
+38 | jev_runs=[]
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:39:44
+   |
+37 |   artifacts[name]=value
+38 | jev_runs=[]
+39 | if 'jev-live-integration.json' in artifacts:jev_runs.append(artifacts['jev-live-integration.json'])
+   |                                            ^
+40 | if 'jev-real-calibration.json' in artifacts:jev_runs+=artifacts['jev-real-calibration.json']['runs']
+41 | summary={'captured_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'experiments':experiments,'artifacts':artifacts,'over…
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/metrics_preview.py:40:44
+   |
+38 | jev_runs=[]
+39 | if 'jev-live-integration.json' in artifacts:jev_runs.append(artifacts['jev-live-integration.json'])
+40 | if 'jev-real-calibration.json' in artifacts:jev_runs+=artifacts['jev-real-calibration.json']['runs']
+   |                                            ^
+41 | summary={'captured_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'experiments':experiments,'artifacts':artifacts,'over…
+42 | (base/'evidence/metrics-preview.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:44:59
+   |
+42 | (base/'evidence/metrics-preview.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False))
+43 | with (base/'evidence/metrics-preview-tasks.csv').open('w') as file:
+44 |  writer=csv.DictWriter(file,fieldnames=list(task_rows[0]));writer.writeheader();writer.writerows(task_rows)
+   |                                                           ^
+45 | lines=['# Prévia das métricas coletadas',summary['captured_utc'],'','Tokens totais = entrada + saída; cache é subconjunto de entrada; …
+46 | for experiment in experiments:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/metrics_preview.py:44:80
+   |
+42 | (base/'evidence/metrics-preview.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False))
+43 | with (base/'evidence/metrics-preview-tasks.csv').open('w') as file:
+44 |  writer=csv.DictWriter(file,fieldnames=list(task_rows[0]));writer.writeheader();writer.writerows(task_rows)
+   |                                                                                ^
+45 | lines=['# Prévia das métricas coletadas',summary['captured_utc'],'','Tokens totais = entrada + saída; cache é subconjunto de entrada; …
+46 | for experiment in experiments:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:14:25
+   |
+13 | with tempfile.TemporaryDirectory() as directory:
+14 |     base=Path(directory);store=Store(base/'state');engine=Engine(store)
+   |                         ^
+15 |     cold=[];incremental=[];search=[]
+16 |     for project in range(3):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:14:51
+   |
+13 | with tempfile.TemporaryDirectory() as directory:
+14 |     base=Path(directory);store=Store(base/'state');engine=Engine(store)
+   |                                                   ^
+15 |     cold=[];incremental=[];search=[]
+16 |     for project in range(3):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:15:12
+   |
+13 | with tempfile.TemporaryDirectory() as directory:
+14 |     base=Path(directory);store=Store(base/'state');engine=Engine(store)
+15 |     cold=[];incremental=[];search=[]
+   |            ^
+16 |     for project in range(3):
+17 |         root=base/str(project);root.mkdir()
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:15:27
+   |
+13 | with tempfile.TemporaryDirectory() as directory:
+14 |     base=Path(directory);store=Store(base/'state');engine=Engine(store)
+15 |     cold=[];incremental=[];search=[]
+   |                           ^
+16 |     for project in range(3):
+17 |         root=base/str(project);root.mkdir()
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:17:31
+   |
+15 |     cold=[];incremental=[];search=[]
+16 |     for project in range(3):
+17 |         root=base/str(project);root.mkdir()
+   |                               ^
+18 |         for i in range(200): (root/f'module_{i}.py').write_text(f'def function_{i}(x):\n    if x < 0:\n        raise ValueError("negat…
+19 |         name=f'project-{project}';engine.register(name,root)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/performance.py:18:28
+   |
+16 |     for project in range(3):
+17 |         root=base/str(project);root.mkdir()
+18 |         for i in range(200): (root/f'module_{i}.py').write_text(f'def function_{i}(x):\n    if x < 0:\n        raise ValueError("negat…
+   |                            ^
+19 |         name=f'project-{project}';engine.register(name,root)
+20 |         t=time.perf_counter();engine.index(name);cold.append(time.perf_counter()-t)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:19:34
+   |
+17 | …     root=base/str(project);root.mkdir()
+18 | …     for i in range(200): (root/f'module_{i}.py').write_text(f'def function_{i}(x):\n    if x < 0:\n        raise ValueError("negativ…
+19 | …     name=f'project-{project}';engine.register(name,root)
+   |                                ^
+20 | …     t=time.perf_counter();engine.index(name);cold.append(time.perf_counter()-t)
+21 | …     for repeat in range(10):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:20:30
+   |
+18 | …     for i in range(200): (root/f'module_{i}.py').write_text(f'def function_{i}(x):\n    if x < 0:\n        raise ValueError("negativ…
+19 | …     name=f'project-{project}';engine.register(name,root)
+20 | …     t=time.perf_counter();engine.index(name);cold.append(time.perf_counter()-t)
+   |                            ^
+21 | …     for repeat in range(10):
+22 | …         (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:20:49
+   |
+18 | …     for i in range(200): (root/f'module_{i}.py').write_text(f'def function_{i}(x):\n    if x < 0:\n        raise ValueError("negativ…
+19 | …     name=f'project-{project}';engine.register(name,root)
+20 | …     t=time.perf_counter();engine.index(name);cold.append(time.perf_counter()-t)
+   |                                               ^
+21 | …     for repeat in range(10):
+22 | …         (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:23:34
+   |
+21 |         for repeat in range(10):
+22 |             (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+23 |             t=time.perf_counter();engine.index(name);incremental.append(time.perf_counter()-t)
+   |                                  ^
+24 |             t=time.perf_counter();engine.search(name,'function_123',mode='lexical');search.append(time.perf_counter()-t)
+25 |     def metrics(samples):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:23:53
+   |
+21 |         for repeat in range(10):
+22 |             (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+23 |             t=time.perf_counter();engine.index(name);incremental.append(time.perf_counter()-t)
+   |                                                     ^
+24 |             t=time.perf_counter();engine.search(name,'function_123',mode='lexical');search.append(time.perf_counter()-t)
+25 |     def metrics(samples):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:24:34
+   |
+22 |             (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+23 |             t=time.perf_counter();engine.index(name);incremental.append(time.perf_counter()-t)
+24 |             t=time.perf_counter();engine.search(name,'function_123',mode='lexical');search.append(time.perf_counter()-t)
+   |                                  ^
+25 |     def metrics(samples):
+26 |         return {'n':len(samples),'p50':statistics.median(samples),'p95':sorted(samples)[min(len(samples)-1,int(len(samples)*.95))],'ma…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance.py:24:84
+   |
+22 |             (root/'module_0.py').write_text(f'def function_0(x):\n    return x + {repeat}\n')
+23 |             t=time.perf_counter();engine.index(name);incremental.append(time.perf_counter()-t)
+24 |             t=time.perf_counter();engine.search(name,'function_123',mode='lexical');search.append(time.perf_counter()-t)
+   |                                                                                    ^
+25 |     def metrics(samples):
+26 |         return {'n':len(samples),'p50':statistics.median(samples),'p95':sorted(samples)[min(len(samples)-1,int(len(samples)*.95))],'ma…
+   |
+
+E702 Multiple statements on one line (semicolon)
+ --> scripts/performance_repeat.py:7:41
+  |
+5 | import sys
+6 | from pathlib import Path
+7 | base=Path(__file__).resolve().parents[1];reports=[]
+  |                                         ^
+8 | for i in range(3):
+9 |  before={'loadavg':Path('/proc/loadavg').read_text().strip(),'meminfo':Path('/proc/meminfo').read_text()}
+  |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance_repeat.py:11:29
+   |
+ 9 |  before={'loadavg':Path('/proc/loadavg').read_text().strip(),'meminfo':Path('/proc/meminfo').read_text()}
+10 |  p=subprocess.run([sys.executable,str(base/'scripts/performance.py')],capture_output=True,text=True,timeout=120,check=True)
+11 |  report=json.loads(p.stdout);report['environment_before']=before;report['environment_after_loadavg']=Path('/proc/loadavg').read_text()…
+   |                             ^
+12 |  (base/'evidence'/f'performance-final-{i+1}.json').write_text(json.dumps(report,indent=2))
+13 | result={'runs':reports,'all_gates_passed':all(r['passed'] for r in reports),'prior_failed_run_preserved':'evidence/performance-v2.json…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance_repeat.py:11:65
+   |
+ 9 |  before={'loadavg':Path('/proc/loadavg').read_text().strip(),'meminfo':Path('/proc/meminfo').read_text()}
+10 |  p=subprocess.run([sys.executable,str(base/'scripts/performance.py')],capture_output=True,text=True,timeout=120,check=True)
+11 |  report=json.loads(p.stdout);report['environment_before']=before;report['environment_after_loadavg']=Path('/proc/loadavg').read_text()…
+   |                                                                 ^
+12 |  (base/'evidence'/f'performance-final-{i+1}.json').write_text(json.dumps(report,indent=2))
+13 | result={'runs':reports,'all_gates_passed':all(r['passed'] for r in reports),'prior_failed_run_preserved':'evidence/performance-v2.json…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance_repeat.py:11:143
+   |
+ 9 | …'/proc/meminfo').read_text()}
+10 | …e_output=True,text=True,timeout=120,check=True)
+11 | …ironment_after_loadavg']=Path('/proc/loadavg').read_text().strip();reports.append(report)
+   |                                                                    ^
+12 | …ort,indent=2))
+13 | …'prior_failed_run_preserved':'evidence/performance-v2.json','cold_index_definition':'fresh database, no extraction cache; OS page cac…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/performance_repeat.py:14:81
+   |
+12 |  (base/'evidence'/f'performance-final-{i+1}.json').write_text(json.dumps(report,indent=2))
+13 | result={'runs':reports,'all_gates_passed':all(r['passed'] for r in reports),'prior_failed_run_preserved':'evidence/performance-v2.json…
+14 | (base/'evidence/performance-final.json').write_text(json.dumps(result,indent=2));print(json.dumps({'all_gates_passed':result['all_gate…
+   |                                                                                 ^
+
+E701 Multiple statements on one line (colon)
+  --> scripts/pre_upgrade_backup.py:11:68
+   |
+ 9 | try:
+10 |     source.backup(backup)
+11 |     if backup.execute('PRAGMA integrity_check').fetchone()[0]!='ok': raise ValueError('Pre-upgrade backup is corrupt')
+   |                                                                    ^
+12 | finally: backup.close();source.close()
+13 | os.chmod(path,0o600)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/pre_upgrade_backup.py:12:8
+   |
+10 |     source.backup(backup)
+11 |     if backup.execute('PRAGMA integrity_check').fetchone()[0]!='ok': raise ValueError('Pre-upgrade backup is corrupt')
+12 | finally: backup.close();source.close()
+   |        ^
+13 | os.chmod(path,0o600)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/pre_upgrade_backup.py:12:24
+   |
+10 |     source.backup(backup)
+11 |     if backup.execute('PRAGMA integrity_check').fetchone()[0]!='ok': raise ValueError('Pre-upgrade backup is corrupt')
+12 | finally: backup.close();source.close()
+   |                        ^
+13 | os.chmod(path,0o600)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/remove_extensions.py:9:12
+   |
+ 7 |     results=[]
+ 8 |     for project in projects:
+ 9 |         try: results.append(setup(store,project['name'],remove=True))
+   |            ^
+10 |         except (OSError,ValueError) as error: results.append({'project':project['name'],'preserved':True,'reason':str(error)})
+11 |     print(json.dumps({'extensions':results}))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/remove_extensions.py:10:45
+   |
+ 8 |     for project in projects:
+ 9 |         try: results.append(setup(store,project['name'],remove=True))
+10 |         except (OSError,ValueError) as error: results.append({'project':project['name'],'preserved':True,'reason':str(error)})
+   |                                             ^
+11 |     print(json.dumps({'extensions':results}))
+   |
+
+E702 Multiple statements on one line (semicolon)
+ --> scripts/validate_android.py:6:41
+  |
+4 | import subprocess
+5 | from pathlib import Path
+6 | base=Path(__file__).resolve().parents[1];root=base/'tests/framework-fixtures/android'
+  |                                         ^
+7 | sdk=Path.home()/'.local/share/codex-economy/android-sdk'
+8 | gradle=Path.home()/'.local/share/codex-economy/gradle/gradle-9.2.1/bin/gradle'
+  |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_android.py:9:65
+   |
+ 7 | sdk=Path.home()/'.local/share/codex-economy/android-sdk'
+ 8 | gradle=Path.home()/'.local/share/codex-economy/gradle/gradle-9.2.1/bin/gradle'
+ 9 | source=root/'app/src/main/kotlin/sample/economy/MainActivity.kt';resource=root/'app/src/main/res/values/strings.xml'
+   |                                                                 ^
+10 | original=source.read_text();original_resource=resource.read_text()
+11 | try:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_android.py:10:28
+   |
+ 8 | gradle=Path.home()/'.local/share/codex-economy/gradle/gradle-9.2.1/bin/gradle'
+ 9 | source=root/'app/src/main/kotlin/sample/economy/MainActivity.kt';resource=root/'app/src/main/res/values/strings.xml'
+10 | original=source.read_text();original_resource=resource.read_text()
+   |                            ^
+11 | try:
+12 |  source.write_text(original.replace('value * 2','value + value'))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_android.py:16:23
+   |
+14 |  process=subprocess.run([str(gradle),'--no-daemon','--max-workers=1','assembleDebug','testDebugUnitTest'],cwd=root,capture_output=True…
+15 |  (base/'evidence/android-build-after.log').write_text(process.stdout+'\n'+process.stderr)
+16 |  if process.returncode: raise RuntimeError('Android build/check failed: see log')
+   |                       ^
+17 |  apk=root/'app/build/outputs/apk/debug/app-debug.apk'
+18 |  inspected=subprocess.run([str(sdk/'build-tools/36.0.0/aapt2'),'dump','resources',str(apk)],capture_output=True,text=True,check=True,t…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_android.py:22:83
+   |
+20 |  (base/'evidence/android-resource-dump.log').write_text(inspected.stdout)
+21 |  report={'passed':True,'apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'apk_bytes':apk.stat().st_size,'compile_sdk':36,'agp'…
+22 |  (base/'evidence/android-validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
+   |                                                                                   ^
+23 | finally:
+24 |  source.write_text(original);resource.write_text(original_resource)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_android.py:24:29
+   |
+22 |  (base/'evidence/android-validation.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
+23 | finally:
+24 |  source.write_text(original);resource.write_text(original_resource)
+   |                             ^
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:16:25
+   |
+15 | base=Path(__file__).resolve().parents[1]
+16 | evidence=base/'evidence';evidence.mkdir(exist_ok=True)
+   |                         ^
+17 | results={}
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:22:20
+   |
+20 |     p=subprocess.run(argv,cwd=cwd,capture_output=True,text=True,timeout=timeout,check=False)
+21 |     (evidence/log).write_text(p.stdout+'\n'+p.stderr)
+22 |     if p.returncode: raise RuntimeError(log+': '+str(p.returncode))
+   |                    ^
+23 |     return {'code':p.returncode,'log':log}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:29:46
+   |
+27 |     engine=Engine(store)
+28 |     # Next: real production build and localhost HTTP request before and after a source change.
+29 |     root=base/'tests/framework-fixtures/next';engine.register('next',root)
+   |                                              ^
+30 |     route=root/'app/api/ping/route.ts';original=route.read_text()
+31 |     outputs=[]
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:30:39
+   |
+28 |     # Next: real production build and localhost HTTP request before and after a source change.
+29 |     root=base/'tests/framework-fixtures/next';engine.register('next',root)
+30 |     route=root/'app/api/ping/route.ts';original=route.read_text()
+   |                                       ^
+31 |     outputs=[]
+32 |     try:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:37:37
+   |
+35 | …     indexed=engine.index('next')
+36 | …     built=command(['npm','run','build'],root,'next-'+label+'-build.log')
+37 | …     with socket.socket() as sock: sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
+   |                                   ^
+38 | …     log=(evidence/('next-'+label+'-server.log')).open('w')
+39 | …     process=subprocess.Popen(['npm','run','start','--','--hostname','127.0.0.1','--port',str(port)],cwd=root,stdout=log,stderr=log,s…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:37:65
+   |
+35 | …     indexed=engine.index('next')
+36 | …     built=command(['npm','run','build'],root,'next-'+label+'-build.log')
+37 | …     with socket.socket() as sock: sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
+   |                                                               ^
+38 | …     log=(evidence/('next-'+label+'-server.log')).open('w')
+39 | …     process=subprocess.Popen(['npm','run','start','--','--hostname','127.0.0.1','--port',str(port)],cwd=root,stdout=log,stderr=log,s…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:41:39
+   |
+39 | …     process=subprocess.Popen(['npm','run','start','--','--hostname','127.0.0.1','--port',str(port)],cwd=root,stdout=log,stderr=log,s…
+40 | …     try:
+41 | …       deadline=time.monotonic()+30;data=None
+   |                                     ^
+42 | …       while time.monotonic()<deadline:
+43 | …         try:
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:44:101
+   |
+42 |           while time.monotonic()<deadline:
+43 |             try:
+44 |               with urllib.request.urlopen(f'http://127.0.0.1:{port}/api/ping',timeout=2) as response: data=json.load(response)
+   |                                                                                                     ^
+45 |               break
+46 |             except OSError: time.sleep(.2)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:46:27
+   |
+44 |               with urllib.request.urlopen(f'http://127.0.0.1:{port}/api/ping',timeout=2) as response: data=json.load(response)
+45 |               break
+46 |             except OSError: time.sleep(.2)
+   |                           ^
+47 |           assert data=={'status':'ready' if label=='before' else 'updated'}
+48 |           outputs.append({'phase':label,'response':data,'build':built,'snapshot':indexed['snapshot']})
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:50:48
+   |
+48 |           outputs.append({'phase':label,'response':data,'build':built,'snapshot':indexed['snapshot']})
+49 |         finally:
+50 |           os.killpg(process.pid,signal.SIGKILL);process.wait();log.close()
+   |                                                ^
+51 |     finally: route.write_text(original)
+52 |     results['next']={'passed':True,'phases':outputs}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:50:63
+   |
+48 |           outputs.append({'phase':label,'response':data,'build':built,'snapshot':indexed['snapshot']})
+49 |         finally:
+50 |           os.killpg(process.pid,signal.SIGKILL);process.wait();log.close()
+   |                                                               ^
+51 |     finally: route.write_text(original)
+52 |     results['next']={'passed':True,'phases':outputs}
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:51:12
+   |
+49 |         finally:
+50 |           os.killpg(process.pid,signal.SIGKILL);process.wait();log.close()
+51 |     finally: route.write_text(original)
+   |            ^
+52 |     results['next']={'passed':True,'phases':outputs}
+53 |     # Gradle/Kotlin + declared Android resources, actual compiler and resource validation.
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:54:48
+   |
+52 |     results['next']={'passed':True,'phases':outputs}
+53 |     # Gradle/Kotlin + declared Android resources, actual compiler and resource validation.
+54 |     root=base/'tests/framework-fixtures/gradle';engine.register('gradle',root);engine.index('gradle')
+   |                                                ^
+55 |     model=analyze_build(store,'gradle','gradle')
+56 |     assert any(m['path']==':shared' for m in model['modules'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:54:79
+   |
+52 |     results['next']={'passed':True,'phases':outputs}
+53 |     # Gradle/Kotlin + declared Android resources, actual compiler and resource validation.
+54 |     root=base/'tests/framework-fixtures/gradle';engine.register('gradle',root);engine.index('gradle')
+   |                                                                               ^
+55 |     model=analyze_build(store,'gradle','gradle')
+56 |     assert any(m['path']==':shared' for m in model['modules'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:59:56
+   |
+57 |     assert any(d.get('project')==':shared' for m in model['modules'] for c in m['configurations'] for d in c['dependencies'])
+58 |     gradle=str(Path.home()/'.local/share/codex-economy/gradle/gradle-9.2.1/bin/gradle')
+59 |     resource=root/'app/src/main/res/values/strings.xml';original=resource.read_text()
+   |                                                        ^
+60 |     try:
+61 |       initial=command([gradle,'--offline','--no-daemon','--max-workers=1','check'],root,'gradle-before.log')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:63:55
+   |
+61 |       initial=command([gradle,'--offline','--no-daemon','--max-workers=1','check'],root,'gradle-before.log')
+62 |       resource.write_text(original.replace('Factory','Updated factory'))
+63 |       assert engine.status('gradle')['state']=='stale';engine.index('gradle')
+   |                                                       ^
+64 |       final=command([gradle,'--offline','--no-daemon','--max-workers=1','check','--rerun-tasks'],root,'gradle-after.log')
+65 |       assert any('Updated factory' in r['payload'] for r in store.rows("SELECT payload FROM entities WHERE kind='android_resource'"))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:67:12
+   |
+65 |       assert any('Updated factory' in r['payload'] for r in store.rows("SELECT payload FROM entities WHERE kind='android_resource'"))
+66 |       results['kotlin_gradle_android_declarations']={'passed':True,'initial':initial,'final':final,'modules':len(model['modules']),'ap…
+67 |     finally: resource.write_text(original)
+   |            ^
+68 |     # Prisma official engine emits SQL, executed with SQLite before and after schema change.
+69 |     root=base/'tests/framework-fixtures/prisma';engine.register('prisma',root);engine.index('prisma')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:69:48
+   |
+67 |     finally: resource.write_text(original)
+68 |     # Prisma official engine emits SQL, executed with SQLite before and after schema change.
+69 |     root=base/'tests/framework-fixtures/prisma';engine.register('prisma',root);engine.index('prisma')
+   |                                                ^
+70 |     prisma=str(Path.home()/'.local/share/codex-economy/prisma/node_modules/.bin/prisma');schema=root/'schema.prisma';original=schema.r…
+71 |     try:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:69:79
+   |
+67 |     finally: resource.write_text(original)
+68 |     # Prisma official engine emits SQL, executed with SQLite before and after schema change.
+69 |     root=base/'tests/framework-fixtures/prisma';engine.register('prisma',root);engine.index('prisma')
+   |                                                                               ^
+70 |     prisma=str(Path.home()/'.local/share/codex-economy/prisma/node_modules/.bin/prisma');schema=root/'schema.prisma';original=schema.r…
+71 |     try:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:70:89
+   |
+68 |     # Prisma official engine emits SQL, executed with SQLite before and after schema change.
+69 |     root=base/'tests/framework-fixtures/prisma';engine.register('prisma',root);engine.index('prisma')
+70 |     prisma=str(Path.home()/'.local/share/codex-economy/prisma/node_modules/.bin/prisma');schema=root/'schema.prisma';original=schema.r…
+   |                                                                                         ^
+71 |     try:
+72 |       outputs=[]
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:70:117
+   |
+68 |     # Prisma official engine emits SQL, executed with SQLite before and after schema change.
+69 |     root=base/'tests/framework-fixtures/prisma';engine.register('prisma',root);engine.index('prisma')
+70 |     prisma=str(Path.home()/'.local/share/codex-economy/prisma/node_modules/.bin/prisma');schema=root/'schema.prisma';original=schema.r…
+   |                                                                                                                     ^
+71 |     try:
+72 |       outputs=[]
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:74:32
+   |
+72 |       outputs=[]
+73 |       for phase,body in [('before',original),('after',original.replace('  name String','  name String\n  active Boolean @default(true)…
+74 |         schema.write_text(body);engine.index('prisma')
+   |                                ^
+75 |         command([prisma,'validate','--schema','schema.prisma'],root,'prisma-'+phase+'-validate.log')
+76 |         proc=subprocess.run([prisma,'migrate','diff','--from-empty','--to-schema-datamodel','schema.prisma','--script'],cwd=root,captu…
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:77:40
+   |
+75 | …     command([prisma,'validate','--schema','schema.prisma'],root,'prisma-'+phase+'-validate.log')
+76 | …     proc=subprocess.run([prisma,'migrate','diff','--from-empty','--to-schema-datamodel','schema.prisma','--script'],cwd=root,capture…
+77 | …     con=sqlite3.connect(':memory:');con.executescript(proc.stdout);con.execute('INSERT INTO User(name) VALUES(?)',('Factory',));asse…
+   |                                      ^
+78 | …     columns=[r[1] for r in con.execute('PRAGMA table_info(User)')]
+79 | …     if phase=='after': assert 'active' in columns
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:77:71
+   |
+75 | …     command([prisma,'validate','--schema','schema.prisma'],root,'prisma-'+phase+'-validate.log')
+76 | …     proc=subprocess.run([prisma,'migrate','diff','--from-empty','--to-schema-datamodel','schema.prisma','--script'],cwd=root,capture…
+77 | …     con=sqlite3.connect(':memory:');con.executescript(proc.stdout);con.execute('INSERT INTO User(name) VALUES(?)',('Factory',));asse…
+   |                                                                     ^
+78 | …     columns=[r[1] for r in con.execute('PRAGMA table_info(User)')]
+79 | …     if phase=='after': assert 'active' in columns
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:77:132
+   |
+75 | …ot,'prisma-'+phase+'-validate.log')
+76 | …y','--to-schema-datamodel','schema.prisma','--script'],cwd=root,capture_output=True,text=True,check=True,timeout=60)
+77 | …dout);con.execute('INSERT INTO User(name) VALUES(?)',('Factory',));assert con.execute('SELECT name FROM User').fetchone()[0]=='Factor…
+   |                                                                    ^
+78 | …r)')]
+79 | …
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:79:26
+   |
+77 |         con=sqlite3.connect(':memory:');con.executescript(proc.stdout);con.execute('INSERT INTO User(name) VALUES(?)',('Factory',));as…
+78 |         columns=[r[1] for r in con.execute('PRAGMA table_info(User)')]
+79 |         if phase=='after': assert 'active' in columns
+   |                          ^
+80 |         outputs.append({'phase':phase,'columns':columns});con.close()
+81 |       results['prisma_sql']={'passed':True,'phases':outputs}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:80:58
+   |
+78 |         columns=[r[1] for r in con.execute('PRAGMA table_info(User)')]
+79 |         if phase=='after': assert 'active' in columns
+80 |         outputs.append({'phase':phase,'columns':columns});con.close()
+   |                                                          ^
+81 |       results['prisma_sql']={'passed':True,'phases':outputs}
+82 |     finally: schema.write_text(original)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_frameworks.py:82:12
+   |
+80 |         outputs.append({'phase':phase,'columns':columns});con.close()
+81 |       results['prisma_sql']={'passed':True,'phases':outputs}
+82 |     finally: schema.write_text(original)
+   |            ^
+83 |     # Compose validates declared service topology without inferring calls or pulling images.
+84 |     root=Path(state)/'compose';root.mkdir();engine.register('compose',root)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:84:31
+   |
+82 |     finally: schema.write_text(original)
+83 |     # Compose validates declared service topology without inferring calls or pulling images.
+84 |     root=Path(state)/'compose';root.mkdir();engine.register('compose',root)
+   |                               ^
+85 |     compose=root/'compose.yaml'
+86 |     for port in (18080,18081):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:84:44
+   |
+82 |     finally: schema.write_text(original)
+83 |     # Compose validates declared service topology without inferring calls or pulling images.
+84 |     root=Path(state)/'compose';root.mkdir();engine.register('compose',root)
+   |                                            ^
+85 |     compose=root/'compose.yaml'
+86 |     for port in (18080,18081):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_frameworks.py:90:34
+   |
+88 |       indexed=engine.index('compose')
+89 |       proc=subprocess.run(['docker','compose','-f',str(compose),'config','--format','json'],capture_output=True,text=True,check=True,t…
+90 |       obj=json.loads(proc.stdout);assert obj['services']['web']['ports'][0]['published']==str(port)
+   |                                  ^
+91 |     results['compose']={'passed':True,'ports_verified':[18080,18081],'daemon_required':False,'container_execution_claimed':False}
+92 | (evidence/'framework-validation.json').write_text(json.dumps(results,indent=2))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_jev_ranking.py:8:29
+   |
+ 6 | base=Path(__file__).resolve().parents[1]
+ 7 | with tempfile.TemporaryDirectory(prefix='ce-jev-evidence-') as folder:
+ 8 |  root=Path(folder)/'project';root.mkdir()
+   |                             ^
+ 9 |  (root/'logic.py').write_text('def calculate_tax(amount):\n    return amount * 0.2\n')
+10 |  for i in range(7): (root/f'notes-{i}.md').write_text(f'# Tax module {i}\nTax configuration is described here, but the actual calculat…
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_jev_ranking.py:10:19
+   |
+ 8 |  root=Path(folder)/'project';root.mkdir()
+ 9 |  (root/'logic.py').write_text('def calculate_tax(amount):\n    return amount * 0.2\n')
+10 |  for i in range(7): (root/f'notes-{i}.md').write_text(f'# Tax module {i}\nTax configuration is described here, but the actual calculat…
+   |                   ^
+11 |  with Store() as store:
+12 |     engine=Engine(store);engine.register('jev-ranking-'+root.parent.name,root);name='jev-ranking-'+root.parent.name
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_jev_ranking.py:12:25
+   |
+10 |  for i in range(7): (root/f'notes-{i}.md').write_text(f'# Tax module {i}\nTax configuration is described here, but the actual calculat…
+11 |  with Store() as store:
+12 |     engine=Engine(store);engine.register('jev-ranking-'+root.parent.name,root);name='jev-ranking-'+root.parent.name
+   |                         ^
+13 |     p=store.project(name);p['policy']['external']=True
+14 |     with store.db: store.db.execute('UPDATE projects SET policy=? WHERE id=?',(json.dumps(p['policy']),p['id']))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_jev_ranking.py:12:79
+   |
+10 |  for i in range(7): (root/f'notes-{i}.md').write_text(f'# Tax module {i}\nTax configuration is described here, but the actual calculat…
+11 |  with Store() as store:
+12 |     engine=Engine(store);engine.register('jev-ranking-'+root.parent.name,root);name='jev-ranking-'+root.parent.name
+   |                                                                               ^
+13 |     p=store.project(name);p['policy']['external']=True
+14 |     with store.db: store.db.execute('UPDATE projects SET policy=? WHERE id=?',(json.dumps(p['policy']),p['id']))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_jev_ranking.py:13:26
+   |
+11 |  with Store() as store:
+12 |     engine=Engine(store);engine.register('jev-ranking-'+root.parent.name,root);name='jev-ranking-'+root.parent.name
+13 |     p=store.project(name);p['policy']['external']=True
+   |                          ^
+14 |     with store.db: store.db.execute('UPDATE projects SET policy=? WHERE id=?',(json.dumps(p['policy']),p['id']))
+15 |     engine.index(name)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_jev_ranking.py:14:18
+   |
+12 |     engine=Engine(store);engine.register('jev-ranking-'+root.parent.name,root);name='jev-ranking-'+root.parent.name
+13 |     p=store.project(name);p['policy']['external']=True
+14 |     with store.db: store.db.execute('UPDATE projects SET policy=? WHERE id=?',(json.dumps(p['policy']),p['id']))
+   |                  ^
+15 |     engine.index(name)
+16 |     before=store.rows('SELECT coalesce(max(id),0) AS last FROM events')[0]['last']
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_jev_ranking.py:20:84
+   |
+18 |     events=[json.loads(r['payload']) for r in store.rows("SELECT payload FROM events WHERE kind='auxiliary' AND id>?",(before,))]
+19 |     report={'passed':result.get('effective_mode',{}).get('mode') in ('jev','jev-cache') and bool(result['evidence']) and result['evide…
+20 |     (base/'evidence/jev-ranking-real.json').write_text(json.dumps(report,indent=2));print(json.dumps({'passed':report['passed'],'mode'…
+   |                                                                                    ^
+21 |     if not report['passed']: raise SystemExit(1)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_jev_ranking.py:21:28
+   |
+19 |     report={'passed':result.get('effective_mode',{}).get('mode') in ('jev','jev-cache') and bool(result['evidence']) and result['evide…
+20 |     (base/'evidence/jev-ranking-real.json').write_text(json.dumps(report,indent=2));print(json.dumps({'passed':report['passed'],'mode'…
+21 |     if not report['passed']: raise SystemExit(1)
+   |                            ^
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_python_semantic.py:8:32
+   |
+ 6 | from codex_economy.semantic import analyze
+ 7 | with tempfile.TemporaryDirectory(prefix='ce-python-semantic-') as folder:
+ 8 |     root=Path(folder)/'project';root.mkdir();(root/'library.py').write_text('def twice(n):\n return n*2\n');(root/'main.py').write_tex…
+   |                                ^
+ 9 |     with Store(Path(folder)/'state') as store:
+10 |         engine=Engine(store);engine.register('python',root);engine.index('python')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_python_semantic.py:8:45
+   |
+ 6 | from codex_economy.semantic import analyze
+ 7 | with tempfile.TemporaryDirectory(prefix='ce-python-semantic-') as folder:
+ 8 |     root=Path(folder)/'project';root.mkdir();(root/'library.py').write_text('def twice(n):\n return n*2\n');(root/'main.py').write_tex…
+   |                                             ^
+ 9 |     with Store(Path(folder)/'state') as store:
+10 |         engine=Engine(store);engine.register('python',root);engine.index('python')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_python_semantic.py:8:108
+   |
+ 6 | from codex_economy.semantic import analyze
+ 7 | with tempfile.TemporaryDirectory(prefix='ce-python-semantic-') as folder:
+ 8 |     root=Path(folder)/'project';root.mkdir();(root/'library.py').write_text('def twice(n):\n return n*2\n');(root/'main.py').write_tex…
+   |                                                                                                            ^
+ 9 |     with Store(Path(folder)/'state') as store:
+10 |         engine=Engine(store);engine.register('python',root);engine.index('python')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_python_semantic.py:10:29
+   |
+ 8 |     root=Path(folder)/'project';root.mkdir();(root/'library.py').write_text('def twice(n):\n return n*2\n');(root/'main.py').write_tex…
+ 9 |     with Store(Path(folder)/'state') as store:
+10 |         engine=Engine(store);engine.register('python',root);engine.index('python')
+   |                             ^
+11 |         result=analyze(store,'python','python')
+12 |         assert any(f['source']=='main.py' and f['target']=='library.py' and f['name']=='twice' for f in result['facts'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_python_semantic.py:10:60
+   |
+ 8 |     root=Path(folder)/'project';root.mkdir();(root/'library.py').write_text('def twice(n):\n return n*2\n');(root/'main.py').write_tex…
+ 9 |     with Store(Path(folder)/'state') as store:
+10 |         engine=Engine(store);engine.register('python',root);engine.index('python')
+   |                                                            ^
+11 |         result=analyze(store,'python','python')
+12 |         assert any(f['source']=='main.py' and f['target']=='library.py' and f['name']=='twice' for f in result['facts'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+ --> scripts/validate_release.py:7:41
+  |
+5 | import tempfile
+6 | from pathlib import Path
+7 | base=Path(__file__).resolve().parents[1];report=[]
+  |                                         ^
+8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+  |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:9:22
+   |
+ 7 | base=Path(__file__).resolve().parents[1];report=[]
+ 8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+ 9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+   |                      ^
+10 |  (project/'module.py').write_text('def answer():\n return 42\n')
+11 |  env={**os.environ,'CE_PREFIX':str(prefix),'CE_BIN':str(binpath),'CE_HOME':str(state)}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:9:43
+   |
+ 7 | base=Path(__file__).resolve().parents[1];report=[]
+ 8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+ 9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+   |                                           ^
+10 |  (project/'module.py').write_text('def answer():\n return 42\n')
+11 |  env={**os.environ,'CE_PREFIX':str(prefix),'CE_BIN':str(binpath),'CE_HOME':str(state)}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:9:62
+   |
+ 7 | base=Path(__file__).resolve().parents[1];report=[]
+ 8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+ 9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+   |                                                              ^
+10 |  (project/'module.py').write_text('def answer():\n return 42\n')
+11 |  env={**os.environ,'CE_PREFIX':str(prefix),'CE_BIN':str(binpath),'CE_HOME':str(state)}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:9:81
+   |
+ 7 | base=Path(__file__).resolve().parents[1];report=[]
+ 8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+ 9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+   |                                                                                 ^
+10 |  (project/'module.py').write_text('def answer():\n return 42\n')
+11 |  env={**os.environ,'CE_PREFIX':str(prefix),'CE_BIN':str(binpath),'CE_HOME':str(state)}
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:9:104
+   |
+ 7 | base=Path(__file__).resolve().parents[1];report=[]
+ 8 | with tempfile.TemporaryDirectory(prefix='ce-release-validation-') as directory:
+ 9 |  root=Path(directory);prefix=root/'prefix';binpath=root/'bin';state=root/'state';project=root/'project';project.mkdir()
+   |                                                                                                        ^
+10 |  (project/'module.py').write_text('def answer():\n return 42\n')
+11 |  env={**os.environ,'CE_PREFIX':str(prefix),'CE_BIN':str(binpath),'CE_HOME':str(state)}
+   |
+
+E701 Multiple statements on one line (colon)
+  --> scripts/validate_release.py:15:20
+   |
+13 |     p=subprocess.run(argv,cwd=cwd,env=env,capture_output=True,text=True,timeout=timeout,check=False)
+14 |     report.append({'argv':argv,'code':p.returncode,'stdout':p.stdout[-1600:],'stderr':p.stderr[-1200:]})
+15 |     if p.returncode: raise RuntimeError(json.dumps(report[-1]))
+   |                    ^
+16 |     return p.stdout
+17 |  execute([str(base/'scripts/install.sh')],timeout=300)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:18:22
+   |
+16 |     return p.stdout
+17 |  execute([str(base/'scripts/install.sh')],timeout=300)
+18 |  ce=str(binpath/'ce');release1=os.readlink(prefix/'runtime')
+   |                      ^
+19 |  execute([ce,'register','fixture',str(project)])
+20 |  execute([ce,'index','fixture']);result=json.loads(execute([ce,'context','fixture','answer']))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:20:33
+   |
+18 |  ce=str(binpath/'ce');release1=os.readlink(prefix/'runtime')
+19 |  execute([ce,'register','fixture',str(project)])
+20 |  execute([ce,'index','fixture']);result=json.loads(execute([ce,'context','fixture','answer']))
+   |                                 ^
+21 |  assert 'return 42' in str(result)
+22 |  execute([ce,'setup','fixture']);execute([ce,'setup','fixture','--remove'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:22:33
+   |
+20 |  execute([ce,'index','fixture']);result=json.loads(execute([ce,'context','fixture','answer']))
+21 |  assert 'return 42' in str(result)
+22 |  execute([ce,'setup','fixture']);execute([ce,'setup','fixture','--remove'])
+   |                                 ^
+23 |  execute([str(base/'scripts/install.sh')],timeout=300)
+24 |  release2=os.readlink(prefix/'runtime')
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:25:44
+   |
+23 |  execute([str(base/'scripts/install.sh')],timeout=300)
+24 |  release2=os.readlink(prefix/'runtime')
+25 |  execute([str(base/'scripts/rollback.sh')]);assert os.readlink(prefix/'runtime')==release1
+   |                                            ^
+26 |  execute([ce,'integrity'])
+27 |  # Exercise runtime removal separately, preserving the real user's economy profile.
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> scripts/validate_release.py:28:25
+   |
+26 |  execute([ce,'integrity'])
+27 |  # Exercise runtime removal separately, preserving the real user's economy profile.
+28 |  (binpath/'ce').unlink();execute([str(base/'scripts/uninstall.sh')])
+   |                         ^
+29 |  assert (state/'state.sqlite').exists() and (project/'module.py').exists()
+30 |  assert not (prefix/'runtime').exists()
+   |
+
+Found 156 errors.
+[*] 1 fixable with `--fix`.

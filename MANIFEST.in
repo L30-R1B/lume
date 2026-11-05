@@ -5,3 +5,13 @@ recursive-include tests *.py *.ts *.js *.cpp *.hpp *.kt *.json *.md CMakeLists.t
 prune evidence
 prune tools
 global-exclude __pycache__ *.pyc *.jar
+prune tests/framework-fixtures/next/node_modules
+prune tests/framework-fixtures/next/.next
+prune tests/framework-fixtures/gradle/.gradle
+prune tests/framework-fixtures/gradle/app/build
+prune tests/framework-fixtures/gradle/shared/build
+recursive-include tests/framework-fixtures *.gradle *.kts *.java *.xml *.prisma *.sql
+prune tests/framework-fixtures/android/.gradle
+prune tests/framework-fixtures/android/app/build
+prune tests/framework-fixtures/android/build
+recursive-include tests/framework-fixtures *.properties

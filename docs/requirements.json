@@ -11,7 +11,7 @@
       "id": "R01.02",
       "requirement": "PDFs exigidos",
       "state": "bloqueado",
-      "evidence": "nomes exatos ausentes na busca documentada; não lidos"
+      "evidence": "Ambos PDFs de nomes exatos ausentes; recomendações internas não foram atribuídas."
     },
     {
       "id": "R01.03",
@@ -29,7 +29,7 @@
       "id": "R02.01",
       "requirement": "CLI humana/JSON e todas funções básicas",
       "state": "implementado",
-      "evidence": "CLI com register/index/search/read/graph/impact/run/session/task/metrics/benchmark/export/prune/backup/restore/doctor"
+      "evidence": "CLI inclui registro, índices, contexto, sessões, métricas, benchmark, backup, recuperação e manutenção."
     },
     {
       "id": "R02.02",
@@ -52,20 +52,20 @@
     {
       "id": "R02.05",
       "requirement": "Skills/instruções específicas por projeto",
-      "state": "pendente",
-      "evidence": "skill curta fornecida; instalador de extensões por projeto falta"
+      "state": "validado",
+      "evidence": "setup instala/remove skill própria; testes de idempotência e symlink; hooks opcionais têm revisão de confiança do Codex."
     },
     {
       "id": "R02.06",
       "requirement": "Hooks úteis compatíveis",
-      "state": "não aplicável",
-      "evidence": "eventos exec usados; nenhum hook necessário ao caminho atual; telemetria adicional não implementada"
+      "state": "implementado",
+      "evidence": "Hook diagnóstico oficial executado por configuração inline real; descoberta project-local ainda depende de trust e não foi demonstrada."
     },
     {
       "id": "R02.07",
       "requirement": "Contratos/schema/discovery",
-      "state": "implementado",
-      "evidence": "CLI doctor; SDK MCP; schemas app-server gerados pelo binário; validação automática contra schemas pendente"
+      "state": "validado",
+      "evidence": "Schemas app-server gerados e usados para validar pedidos; integração real documentada."
     },
     {
       "id": "R03.01",
@@ -76,14 +76,14 @@
     {
       "id": "R03.02",
       "requirement": "Snapshots/worktrees/arquivos atuais não commitados",
-      "state": "implementado",
-      "evidence": "raiz+HEAD+conteúdo; teste branches/worktrees completo pendente"
+      "state": "validado",
+      "evidence": "Teste de branches e worktree; conteúdo, raiz e HEAD fazem parte do snapshot."
     },
     {
       "id": "R03.03",
       "requirement": "Contratos/documentos/testes/alvos como entidades específicas",
-      "state": "pendente",
-      "evidence": "arquivos/símbolos/commands existem; entidades e relações de build completas faltam"
+      "state": "validado",
+      "evidence": "Entidades de testes, documentos, schemas, serviços, contratos, alvos CMake e módulos Gradle."
     },
     {
       "id": "R03.04",
@@ -94,8 +94,8 @@
     {
       "id": "R03.05",
       "requirement": "Identidade em renome e deslocamento",
-      "state": "implementado",
-      "evidence": "preserva file id para renome por hash único; symbol id por file/kind/name/ocorrência; teste específico"
+      "state": "validado",
+      "evidence": "Teste preserva identidade em renome com hash único e deslocamento; edição+renome e sobrecargas reordenadas limitados."
     },
     {
       "id": "R03.06",
@@ -113,7 +113,7 @@
       "id": "R03.08",
       "requirement": "Concorrência e transação recuperável",
       "state": "validado",
-      "evidence": "múltiplos writers, rollback de extrator; segunda varredura; cancelamento real indexação pendente"
+      "evidence": "Concorrência, falha e SIGINT real; transação revertida e retomada testadas."
     },
     {
       "id": "R03.09",
@@ -136,20 +136,20 @@
     {
       "id": "R04.03",
       "requirement": "Next contratos de framework",
-      "state": "pendente",
-      "evidence": "TS/JS genéricos funcionam; rotas/server-client/actions não modeladas"
+      "state": "validado",
+      "evidence": "Rotas por convenção marcadas inferidas; Next real compila e responde antes/depois."
     },
     {
       "id": "R04.04",
       "requirement": "Prisma e SQL",
-      "state": "implementado",
-      "evidence": "modelos/tabelas inferidos; migração SQLite real; sem Prisma CLI/contratos completos"
+      "state": "validado",
+      "evidence": "Prisma valida schema e gera SQL; SQLite executa migração antes/depois; parsing de contratos continua heurístico."
     },
     {
       "id": "R04.05",
       "requirement": "Python estrutura/imports/referências",
-      "state": "implementado",
-      "evidence": "AST/imports/calls inferidos; não resolução semântica global; benchmark real Python"
+      "state": "validado",
+      "evidence": "Python AST e Jedi reais, chamadas observadas via sys.setprofile e teste de alteração."
     },
     {
       "id": "R04.06",
@@ -160,8 +160,8 @@
     {
       "id": "R04.07",
       "requirement": "Android/Gradle módulos/recursos/gerados/dependências",
-      "state": "pendente",
-      "evidence": "comandos Gradle descobertos; análise Android/Gradle integral e alteração validada faltam"
+      "state": "validado",
+      "evidence": "Gradle real, APK Android API 36, teste unitário e recurso alterado conferido no APK; sem teste em dispositivo."
     },
     {
       "id": "R04.08",
@@ -172,20 +172,20 @@
     {
       "id": "R04.09",
       "requirement": "CMake/CTest alvos/testes representados",
-      "state": "implementado",
-      "evidence": "descoberta de comandos e CTest real no benchmark; codemodel de alvos falta"
+      "state": "validado",
+      "evidence": "CMake File API e CTest JSON representam alvos e testes."
     },
     {
       "id": "R04.10",
       "requirement": "Docker/Compose/infra",
-      "state": "implementado",
-      "evidence": "Compose YAML services/depends_on declarados; demais manifests e validação Docker real pendentes"
+      "state": "validado",
+      "evidence": "Compose config real antes/depois, YAML seguro e entidades de manifests; sem alegar execução de containers."
     },
     {
       "id": "R04.11",
       "requirement": "Contrato extensível/capacidades por projeto",
-      "state": "pendente",
-      "evidence": "adapters.extract modular; falta registro e relatório completo de capacidades"
+      "state": "implementado",
+      "evidence": "Contrato de entry point de adaptador e relatório por projeto; extensões externas não auditadas."
     },
     {
       "id": "R04.12",
@@ -202,8 +202,8 @@
     {
       "id": "R05.02",
       "requirement": "Expansão seletiva grafo e recuperação iterativa",
-      "state": "implementado",
-      "evidence": "graph separado com limites; incorporação progressiva ao contexto falta"
+      "state": "validado",
+      "evidence": "Expansão bounded por tipos e refino direcionado; testes de orçamento e origem."
     },
     {
       "id": "R05.03",
@@ -215,7 +215,7 @@
       "id": "R05.04",
       "requirement": "Fonte fiel/hash/posições/omissões/origem/testes",
       "state": "implementado",
-      "evidence": "pacote original fiel; enriquecimento automático de interfaces/testes falta"
+      "evidence": "Fonte original, hashes, relações, testes e omissões; cobertura de invariantes depende da recuperação."
     },
     {
       "id": "R05.05",
@@ -226,8 +226,8 @@
     {
       "id": "R05.06",
       "requirement": "SWE-Pruner/LongCodeZip/LLMLingua experimental",
-      "state": "pendente",
-      "evidence": "princípio de seleção fiel; integrações experimentais distintas faltam"
+      "state": "validado",
+      "evidence": "Variantes fiéis isoladas e LLMLingua-2 real offline para documentos; sem alegar equivalência a papers ou comprimir código."
     },
     {
       "id": "R05.07",
@@ -238,44 +238,44 @@
     {
       "id": "R06.01",
       "requirement": "Jev API/schema/Choice/Score/Noul",
-      "state": "implementado",
-      "evidence": "docs oficiais; batch real no código; fake explícito em testes"
+      "state": "validado",
+      "evidence": "Choice, Score e Noul por Jev real 1.14.0; fallback e testes controlados separados."
     },
     {
       "id": "R06.02",
       "requirement": "Jev real autenticado",
-      "state": "bloqueado",
-      "evidence": "TYPESAFE_API_KEY não disponibilizada no ambiente; arquivos pessoais não usados como cofre presumido"
+      "state": "validado",
+      "evidence": "Chave fornecida pelo usuário; requisição real e seleção real de evidências, modelo e uso registrados."
     },
     {
       "id": "R06.03",
       "requirement": "Calibração em dados separados",
-      "state": "pendente",
-      "evidence": "não há decisão de parada/aceite baseada em limiar arbitrário"
+      "state": "validado",
+      "evidence": "24 rótulos sintéticos para calibração e 8 separados para avaliação; domínio restrito a definição de função."
     },
     {
       "id": "R06.04",
       "requirement": "Bypass/off/fallback/erros classificados",
       "state": "validado",
-      "evidence": "testes chave ausente, política, fake, timeout, inválido; erros HTTP adicionais pendentes"
+      "evidence": "Testes de bypass, off, política, chave, timeout, resposta inválida, limite e HTTP 429."
     },
     {
       "id": "R06.05",
       "requirement": "Entrada/timeout/concorrência/cache inferência",
-      "state": "implementado",
-      "evidence": "limites de entrada/timeout/uma tentativa; controle global concorrente/cache inferência faltam"
+      "state": "validado",
+      "evidence": "Limites de entrada, duas vagas de concorrência e cache apenas em versão fixada."
     },
     {
       "id": "R06.06",
       "requirement": "Telemetria auxiliar/modelo/uso/latência",
-      "state": "implementado",
-      "evidence": "events com resposta usada/modelo/usage/latência; custo nulo sem billing"
+      "state": "validado",
+      "evidence": "Evento real registra modelo, tokens, latência, decisão e modo; custo efetivo de conta indisponível."
     },
     {
       "id": "R06.07",
       "requirement": "Privacidade/chaves/política externa",
       "state": "implementado",
-      "evidence": "env; external=false; limites/redação; análise completa de segredos pendente"
+      "evidence": "Chave 0600 fora de logs; projeto precisa permitir envio; cobrança adicional desativada por padrão."
     },
     {
       "id": "R06.08",
@@ -292,20 +292,20 @@
     {
       "id": "R07.02",
       "requirement": "Formatos estruturados/agrupamento duplicados",
-      "state": "pendente",
-      "evidence": "logs preservados; sumarização por linhas; parser estrutural e contagem duplicados faltam"
+      "state": "validado",
+      "evidence": "Agrupamento de mensagens repetidas e campos JSON estruturados; conteúdo redigido expansível."
     },
     {
       "id": "R07.03",
       "requirement": "Ferramentas determinísticas e batch dependências",
-      "state": "implementado",
-      "evidence": "argv/CMake/CTest/npm/Python; batch DAG falta"
+      "state": "validado",
+      "evidence": "Batch DAG testa ordem de dependências, falhas e paralelismo limitado."
     },
     {
       "id": "R07.04",
       "requirement": "Timeout/cancelamento/subprocessos/limites",
       "state": "validado",
-      "evidence": "timeout e grupo de processos; output limit; limites CPU/RAM pendentes"
+      "evidence": "Timeout, grupo de processos, limite de saída e limites opcionais de CPU/RAM Linux testados."
     },
     {
       "id": "R07.05",
@@ -316,14 +316,14 @@
     {
       "id": "R08.01",
       "requirement": "Estado objetivo/aceite/snapshot/decisões/checks",
-      "state": "implementado",
-      "evidence": "sessions + CLI/handoff MCP; teste retomada longa falta"
+      "state": "validado",
+      "evidence": "Sessões e handoff preservados; aceite exige runs reais após sessão com fingerprint atual."
     },
     {
       "id": "R08.02",
       "requirement": "Cache separado de extração/inferência/tarefa",
-      "state": "pendente",
-      "evidence": "namespace extraction ativo; namespaces adicionais sem políticas/uso"
+      "state": "validado",
+      "evidence": "Extração por hash/versão; inferência por modelo fixado/TTL; resultado de tarefa exige fingerprint e novos checks."
     },
     {
       "id": "R08.03",
@@ -334,14 +334,14 @@
     {
       "id": "R08.04",
       "requirement": "Roteamento de documentos/continuidade por utilidade",
-      "state": "pendente",
-      "evidence": "handoff manual disponível; política automática falta"
+      "state": "implementado",
+      "evidence": "Roteamento por assunto e continuidade por estado/orçamento; heurísticas não garantem suficiência."
     },
     {
       "id": "R09.01",
       "requirement": "Preparação/Codex/eventos/verificação/resultado",
-      "state": "implementado",
-      "evidence": "orchestrator + runner; benchmark altera/checks reais; aceite task exige verificação independente"
+      "state": "validado",
+      "evidence": "Codex real altera código, verifica independentemente e atualiza índice; app-server validado por eventos reais."
     },
     {
       "id": "R09.02",
@@ -352,26 +352,26 @@
     {
       "id": "R09.03",
       "requirement": "Delegação configurável contabilizada",
-      "state": "pendente",
-      "evidence": "nenhuma delegação automática usada"
+      "state": "implementado",
+      "evidence": "Delegação desligada por padrão; worktrees isolados quando explicitamente habilitada; falta validação real com múltiplos Codex."
     },
     {
       "id": "R09.04",
       "requirement": "Continuação/bloqueio sem falso sucesso",
-      "state": "implementado",
-      "evidence": "task permanece active/blocked; benchmark preserva erros e retomada; budget global falta"
+      "state": "validado",
+      "evidence": "Sessões bloqueadas não podem ser aceitas; interrupção app-server observada e retomada de fila sem sobrescrita."
     },
     {
       "id": "R10.01",
       "requirement": "Inputs/erros/validação config/diagnóstico",
       "state": "implementado",
-      "evidence": "CLI JSON errors; políticas validadas; validação integral de contratos falta"
+      "evidence": "Config versionada por schema JSON, modo estruturado, diagnóstico; todos subprocessos mantêm estado e código."
     },
     {
       "id": "R10.02",
       "requirement": "Migração real entre schemas",
-      "state": "pendente",
-      "evidence": "criação schema1 transacional e rejeição versões; sem versão2 testada"
+      "state": "validado",
+      "evidence": "Migração transacional schema 1→2 testada com persistência."
     },
     {
       "id": "R10.03",
@@ -383,19 +383,19 @@
       "id": "R10.04",
       "requirement": "Retenção/logs/redação",
       "state": "implementado",
-      "evidence": "prune/eventos/logs; coleta snapshots/cache e regras mais completas faltam"
+      "evidence": "Redação e retenção de runs, eventos, snapshots e caches; saída bruta redigida/UTF-8, limitada por tamanho."
     },
     {
       "id": "R10.05",
       "requirement": "Backup/restore/corrupção",
-      "state": "implementado",
-      "evidence": "backup real íntegro; restore saudável validado em restore-check.json; restauração de corrupção integral pendente"
+      "state": "validado",
+      "evidence": "Backup e restauração de corrupção testados; arquivos anteriores preservados; bundle valida checksums e travessia."
     },
     {
       "id": "R10.06",
       "requirement": "Instalação fora checkout/build/update",
-      "state": "implementado",
-      "evidence": "runtime próprio instalado e testado em /tmp; wheel/sdist gerados"
+      "state": "validado",
+      "evidence": "Instalação, atualização, rollback e desinstalação isoladas; execução fora do checkout."
     },
     {
       "id": "R10.07",
@@ -413,85 +413,85 @@
       "id": "R11.01",
       "requirement": "Suíte comportamental famílias e fronteiras",
       "state": "implementado",
-      "evidence": "16 testes + evidências; Android/Next/infra completos faltam"
+      "evidence": "40 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo."
     },
     {
       "id": "R11.02",
       "requirement": "Build/lint/auditoria",
       "state": "validado",
-      "evidence": "build.txt; lint.txt; dependency-audit.json após pip26.3 sem CVEs conhecidos"
+      "evidence": "Build/lint e auditoria de 49 dependências Python sem vulnerabilidades conhecidas; npm audit zero."
     },
     {
       "id": "R11.03",
       "requirement": "Performance fria/incremental/buscas/DB/RAM",
-      "state": "validado",
-      "evidence": "600 arquivos/3 projetos, performance.json, gates específicos passados"
+      "state": "implementado",
+      "evidence": "3 ensaios adicionais passaram gates; 1 ensaio anterior excedeu p95 lexical 1s e permanece registrado."
     },
     {
       "id": "R11.04",
       "requirement": "Branch/worktrees/falhas parciais/cancelamento",
-      "state": "pendente",
-      "evidence": "cobertura não integral; rollback e concorrência testados"
+      "state": "validado",
+      "evidence": "Branches/worktrees, concorrência, rollback, SIGINT e retomada testados."
     },
     {
       "id": "R12.01",
       "requirement": "Executor benchmark A/B/C isolado/retomável",
-      "state": "implementado",
-      "evidence": "benchmark.py; manifest; raw results.jsonl/events/patches"
+      "state": "validado",
+      "evidence": "Execuções A/B/C e A/E reais, com snapshots isolados, dados brutos, retomada e reconciliação."
     },
     {
       "id": "R12.02",
       "requirement": "D Jev e E técnicas avançadas comparadas",
       "state": "bloqueado",
-      "evidence": "D sem chave; E distinto ainda não implementado"
+      "evidence": "D requer novas chamadas Jev faturáveis; instrução do usuário impede novos custos. E real concluído."
     },
     {
       "id": "R12.03",
       "requirement": "12 tarefas/3 famílias/3 repetições/arm",
-      "state": "pendente",
-      "evidence": "108 jobs A/B/C iniciados; execução ainda em andamento"
+      "state": "implementado",
+      "evidence": "A/B/C: 108 tentativas; A/E: 72 tentativas; 12 tarefas e três repetições por braço executado; D bloqueado por custos."
     },
     {
       "id": "R12.04",
       "requirement": "Piloto separado/congelamento/holdout",
-      "state": "pendente",
-      "evidence": "avaliação atual exploratória: formatter alterou whitespace de fixtures durante jobs; conservar dados, não tratar como confirmação final"
+      "state": "implementado",
+      "evidence": "Piloto 3 famílias e confirmação reservada; falhas anteriores preservadas; 4 problemas subjacentes em 3 linguagens limitam generalização."
     },
     {
       "id": "R12.05",
       "requirement": "Tokens reais/cache/output/reasoning sem dupla contagem",
-      "state": "implementado",
-      "evidence": "exec JSON usage; total input+output; cached subset separado; reasoning apenas informado"
+      "state": "validado",
+      "evidence": "Uso exec/app-server e hooks reais; cache como subconjunto de entrada e raciocínio como subconjunto de saída."
     },
     {
       "id": "R12.06",
       "requirement": "Todas tentativas/aceite/regressões/amortização",
       "state": "implementado",
-      "evidence": "falhas conservadas; taxa e tokens/aceita; regressões maiores/amortização/releituras detalhadas faltam"
+      "evidence": "Todas as tentativas de cada rodada preservadas; uso ausente em uma falha B; local indexação explicitada; releituras/compactações não integralmente expostas."
     },
     {
       "id": "R12.07",
       "requirement": "Pareamento/incerteza/consumo assinatura",
       "state": "implementado",
-      "evidence": "bootstrap de pares disponíveis; contador assinatura indisponível; confirmação completa falta"
+      "evidence": "Pares e bootstrap por tarefa e por problema; contador da assinatura e cobrança real não disponíveis."
     },
     {
       "id": "R12.08",
       "requirement": "Meta >=80%",
-      "state": "pendente",
-      "evidence": "inconclusiva; nenhum percentual de pacote usado como economia total"
+      "state": "implementado",
+      "evidence": "84,04% no ensaio A/E limitado; meta geral e validação integral inconclusivas."
     },
     {
       "id": "R13.01",
       "requirement": "Rastreabilidade pesquisas",
       "state": "implementado",
-      "evidence": "research.md explícito sobre ausências, equivalências e não aplicáveis"
+      "evidence": "Matriz research.md e fontes acessíveis; rastreabilidade específica dos dois PDFs indisponível."
     },
     {
       "id": "R13.02",
       "requirement": "Documentação consistente/RC/evidências",
       "state": "implementado",
-      "evidence": "README/operations/research/requirements/checkpoint; não há aprovação de produção"
+      "evidence": "Uso, arquitetura, operação, recovery e resultados em documentação; sem afirmar certificação ou aprovação de produção integral."
     }
   ]
 }

@@ -1,0 +1,15 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-merge_intervals/logic.py b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-merge_intervals-1-A/logic.py
+index 21c9737..b0a47b4 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-merge_intervals/logic.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-merge_intervals-1-A/logic.py
+@@ -1,2 +1,9 @@
+ def merge_intervals(intervals):
+-    raise NotImplementedError("implement interval merging")
++    """Return sorted, merged closed intervals without modifying the input."""
++    merged = []
++    for start, end in sorted(intervals):
++        if merged and start <= merged[-1][1]:
++            merged[-1][1] = max(merged[-1][1], end)
++        else:
++            merged.append([start, end])
++    return merged

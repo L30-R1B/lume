@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/logic.py b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-minimum-2-A/logic.py
+index c442370..76dcc0b 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-minimum/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-minimum-2-A/logic.py
+@@ -1,2 +1,2 @@
+ def minimum(a, b):
+-    return max(a,b)
++    return min(a,b)

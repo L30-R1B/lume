@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-cube-1-B/logic.hpp
+index 8f10b9f..711bf7c 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-cube/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-cube-1-B/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int cube(int x) { return x * x; }
++inline int cube(int x) { return x * x * x; }

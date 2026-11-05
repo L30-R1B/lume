@@ -1,0 +1,21 @@
+# codex-economy 0.2.0
+
+Esta revisão conclui os mecanismos locais descritos abaixo; a conclusão do experimento, as validações externas e a meta de 80% são avaliadas separadamente em `acceptance-report.md`. Não há certificação ou auditoria independente.
+
+A aplicação oferece CLI JSON/humana, seis ferramentas MCP por stdio, índice transacional, snapshots com hashes e identidade de raiz, busca FTS5/BM25, estrutura AST/Tree-sitter, relações tipadas e contexto com orçamento integral em bytes. O contexto inclui fonte original, posições, hashes, omissões, relações e testes pertinentes, admite insuficiência e permite refino. Nenhuma seleção equivale a prova de correção.
+
+Adaptadores incluem TS/JS e Next (convenções inferidas), resolução pelo compilador TypeScript 5.9.3, Python AST/Jedi, Kotlin e Gradle com modelos reais de módulos/dependências/tarefas/source sets, recursos e manifests Android, Prisma/SQL com heurísticas identificadas e validação real por Prisma/SQLite, C/C++ por libclang com banco de compilação, CMake File API/CTest, Docker/Compose e manifests declarados. Não há resolução semântica universal. A fixture Android instalou SDK, gerou APK e passou teste JVM; execução em dispositivo não foi realizada.
+
+Execução mantém saída integral redigida dentro do limite configurado, código de saída, referências de expansão, primeiro erro útil, mensagens repetidas e campos estruturados. Usa argv, stdin não bloqueante, grupos de processos, timeout, limite de saída e limites opcionais Linux de CPU/endereço virtual. Batch executa ondas independentes e respeita falhas/dependências. Trace Python grava chamadas observadas ligadas ao snapshot.
+
+Sessões guardam objetivo/aceite/decisões/hipóteses/verificações/próximo passo. Aceite exige runs reais bem-sucedidos da mesma sessão/projeto e fingerprint atual. Cache de resultado reaproveita evidência, exigindo novas verificações. Extração e inferência têm namespaces e invalidação próprias; inferência só é cacheada com modelo Jev fixado. Continuidade recomenda continuar, atualizar ou produzir handoff conforme utilidade/estado. Não mascara o histórico do Codex.
+
+Jev usa o contrato oficial Choice/Score/Noul, perguntas atômicas agrupadas, limites, duas vagas de concorrência entre processos, erros classificados, modo desligado, bypass e fallback explícitos. O modo real só é registrado após resposta válida. Chave vem do ambiente ou cofre próprio 0600; nunca de OAuth do Codex. O projeto precisa permitir contexto externo, e chamadas faturáveis ficam desativadas por padrão. CLI de calibração exige dados de calibração identificados e não afirma garantia universal. Ranking nunca aceita um patch.
+
+Auxiliares locais: TF-IDF e LSA funcionam sem rede. LLMLingua-2/BERT é opcional e isolado, com pesos públicos Apache-2.0 instalados, CPU de uma thread e bloqueio de rede por seccomp. É experimento de documentos, com original recuperável; não abrevia código nem controla o raciocínio do Codex. O custo observado do modelo é separado da economia total da tarefa.
+
+Há três harnesses: exec oficial; app-server oficial com schemas gerados/validados por versão, continuidade de thread e interrupção após orçamento observado; e edição estruturada com schema de resposta, instruções próprias curtas, sandbox de leitura, substituições exatas, hashes e rollback de falhas de escrita. Este último é outra forma de operação, não interceptação automática do CLI. Todas preservam autenticação suportada pelo plano ChatGPT. Orçamento observado não é teto rígido de uma requisição já iniciada.
+
+Delegação é desligada por padrão. Quando habilitada explicitamente, aceita tarefas declaradas independentes, cria worktrees de commit limpo e contabiliza resultados e consumo; não integra patches automaticamente. Skills e hooks por projeto têm instalação/remoção de arquivos próprios. Hooks de modelo são diagnósticos e respeitam a revisão de confiança do Codex.
+
+Operação: schema 1→2 migrado transacionalmente; locks de manutenção; backup SQLite e bundle com configuração e checksums (sem credenciais); recuperação de corrupção preserva banco/WAL anteriores; retenção; exportação; releases instaladas isoladamente e troca de runtime; rollback de binário; desinstalação preserva projetos/estado/credenciais. Downgrade de schema exige backup compatível.

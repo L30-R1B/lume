@@ -1,35 +1,22 @@
-# Checkpoint verificável — escopo incompleto
+# Checkpoint verificável — escopo integral incompleto
 
-Esta é continuidade de implementação, não entrega substituta de produto completo. A matriz requirements.md identifica todas as lacunas conhecidas. Não há aprovação de produção nem meta de 80% demonstrada.
+Atualizado em 2026-11-05. O produto 0.2.0 está instalado em `~/.local/bin/ce`, com estado em `~/.local/state/codex-economy` e perfil isolado em `~/.codex/economy.config.toml`. O código desta revisão está em `/home/leo-ribeiro/codex-economy-next`; a matriz `requirements.md` e o relatório `acceptance-report.md` detalham o escopo e os limites. O checkout inicial e evidências anteriores permanecem em `/home/leo-ribeiro/codex-economy`.
 
-Código: /home/leo-ribeiro/codex-economy. Instalado: ~/.local/bin/ce → ~/.local/share/codex-economy/runtime/bin/ce. Estado: ~/.local/state/codex-economy/state.sqlite. Perfil: ~/.codex/economy.config.toml, base config preservada por hash. Credenciais do Codex não foram extraídas. Jev não recebeu chamada real por ausência de chave disponibilizada no ambiente.
+O índice, servidor MCP, adaptadores, execução, continuidade, recuperação e harnesses foram implementados e exercitados em fixtures. `evidence/tests-release-latest.txt`, `lint-release-corrected.txt`, `build-release-final.txt` e `installed-source-match-latest.json` registram a verificação final. A primeira execução `tests-release-final.txt` falhou na coleta porque a virtualenv apontava para o checkout inicial; um caminho relativo permitiu coleta, mas falhou no subprocesso de trace; a correção é usar `PYTHONPATH` absoluto. O primeiro lint abrangente encontrou problemas de formatação nos scripts; estes foram corrigidos e a falha anterior mantida em `lint-release-final.txt`.
 
-Validado até este checkpoint: 16 testes comportamentais sem skips, build wheel/sdist, lint, auditoria de dependências sem vulnerabilidades conhecidas após upgrade do pip, instalação/update/remoção isoladas, integridade, performance local 600 arquivos/3 projetos, MCP stdio pelo SDK e chamado realmente pelo Codex, referências reais TS/Clang, compilação Kotlin JVM e fluxo fim a fim com patch aceito independentemente. Evidências em evidence/tests.txt, lint.txt, build.txt, dependency-audit.json, installation-cycle.json, profile-lifecycle.json, performance.json, codex-mcp-approved.jsonl e e2e-report.json.
+A confirmação A/E reservada mediu 84,04% de redução com 36/36 aceites por braço em 12 tarefas pequenas, agrupadas em quatro problemas repetidos em três linguagens. A/B/C anterior mediu 12,21% entre A e C, com consumo incompleto de uma tentativa B. A comparação D continua bloqueada pela instrução de não assumir novos custos: Jev já foi testado em cinco requisições reais, e `auxiliary.allow_paid` agora é falso por padrão. A qualidade equivalente e economia geral permanecem inconclusivas. As rodadas, incluindo falhas e tentativas interrompidas, não devem ser sobrescritas.
 
-Benchmark exploratório interrompido com dados preservados: 31 jobs finalizados mais tentativa cancelada; aviso de contaminação por formatação nas fixtures. Não usar como confirmação nem ignorar cancelamento. Uma primeira confirmação interrompida para corrigir imports relativos foi preservada em evidence/confirmation. A confirmação corrente usa 12 tarefas reservadas x 3 braços x 3 repetições (108 jobs), entradas/implementação hashadas, C++/Python/Node e verificação independente de escopo/testes. É um conjunto de funções pequenas, insuficiente para extrapolar à manutenção industrial ampla.
+Faltam os dois PDFs especificados, uma confirmação independente da revisão endurecida em tarefas mais representativas, comparação D sob autorização de custos, teste real de delegação, demonstração de hooks descobertos por configuração local do projeto, teste em dispositivo Android e conservação binária integral de logs com UTF-8 inválido. Limites de assinatura e algumas contagens históricas não são expostos por interface suportada. `docs/research.md` rastreia recomendações disponíveis sem atribuir conteúdo aos PDFs ausentes.
 
-A confirmação está em serviço systemd de usuário de execução única `codex-economy-confirmation-v2`. Sem recorrência/agendamento. Pode concluir depois deste arquivo. Consulte o estado real, não esta descrição:
-
-```bash
-systemctl --user status codex-economy-confirmation-v2
-journalctl --user -u codex-economy-confirmation-v2 -n 20 --no-pager
-cat evidence/confirmation-worker-status.json
-ce benchmark /home/leo-ribeiro/codex-economy/evidence/confirmation-v2-manifest.json --report
-```
-
-Não execute outro worker enquanto o serviço estiver ativo. `--execute` retoma os jobs já registrados, mas workspace interrompido não é sobrescrito: reconcilie com runs/artefatos e preserve tentativa antes de recomeçar. Não mude os arquivos de src/ nem inputs durante confirmação: hashes da implementação congelados estão no manifest. Configuração principal do Codex também foi registrada por hash; mudanças durante o experimento invalidam condições equivalentes.
-
-Próximas ações necessárias: concluir/analisar confirmação A/B/C; testar equivalência de qualidade e meta; continuar os requisitos pendentes na matriz, particularmente Android/Gradle completo, relações Next, contratos e alvos de build, recuperação de corrupção/migrações, cache auxiliar/tarefa, política automática de continuidade, expansão progressiva e estratégias experimentais. Rodadas D e calibração real dependem de Jev disponibilizado pelo mecanismo de segredo apropriado. PDFs ausentes impedem somente rastreabilidade específica de seu conteúdo, não justificam as demais pendências.
-
-Para continuar a validação local:
+Para continuar sem chamadas pagas:
 
 ```bash
-cd /home/leo-ribeiro/codex-economy
-.venv/bin/pytest -q
-.venv/bin/ruff check --config pyproject.toml src tests
-.venv/bin/python -m build
-.venv/bin/pip-audit
-ce integrity
+cd /home/leo-ribeiro/codex-economy-next
+PYTHONPATH=/home/leo-ribeiro/codex-economy-next/src /home/leo-ribeiro/codex-economy/.venv/bin/pytest -q
+/home/leo-ribeiro/codex-economy/.venv/bin/ruff check src tests scripts
+~/.local/bin/ce integrity
+~/.local/bin/ce config
+python3 scripts/metrics_preview.py
 ```
 
-Após a confirmação terminar e antes de alterar a implementação, preserve report/raw/manifests. Novas configurações e otimizações usam novos diretórios de resultado, sem apagar tentativas anteriores. O campo complete do relatório significa apenas fila concluída. A meta e a conclusão de todo o escopo exigem avaliação separada e honesta.
+Preserve snapshots, hashes, manifests, logs e todas as tentativas ao preparar novo conjunto. Não execute `scripts/calibrate_jev_real.py` nem `scripts/validate_jev_ranking.py` enquanto chamadas faturáveis não estiverem autorizadas. Não contorne a política de custos nem inclua segredos em argumentos, logs ou repositórios.

@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-unique/logic.js b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-unique-0-E/logic.js
+index de8364b..ed8187d 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-unique/logic.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-unique-0-E/logic.js
+@@ -1 +1 @@
+-exports.unique = function(values) { return [...values]; };
++exports.unique = function(values) { return [...new Set(values)]; };

@@ -1,0 +1,21 @@
+...............................F.......                                  [100%]
+=================================== FAILURES ===================================
+____________ test_observed_python_trace_is_real_and_snapshot_bound _____________
+
+env = (PosixPath('/tmp/pytest-of-leo-ribeiro/pytest-56/test_observed_python_trace_is_0/root'), <codex_economy.store.Store object at 0x775637f37ce0>, <codex_economy.engine.Engine object at 0x775637f37c20>)
+
+    def test_observed_python_trace_is_real_and_snapshot_bound(env):
+        from codex_economy.traces import trace
+    
+        root, store, engine = env
+        (root / "library.py").write_text("def twice(n):\n return n*2\n")
+        (root / "main.py").write_text("from library import twice\nassert twice(21)==42\n")
+        engine.index("project")
+        observed = trace(store, "project", "main.py")
+>       assert observed["run"]["code"] == 0 and observed["observed"]
+E       assert (1 == 0)
+
+tests/test_operations_v2.py:376: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_operations_v2.py::test_observed_python_trace_is_real_and_snapshot_bound
+1 failed, 38 passed in 17.66s

@@ -1,0 +1,889 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70
+  - wheel
+* Getting build dependencies for sdist...
+running egg_info
+writing src/codex_economy.egg-info/PKG-INFO
+writing dependency_links to src/codex_economy.egg-info/dependency_links.txt
+writing entry points to src/codex_economy.egg-info/entry_points.txt
+writing requirements to src/codex_economy.egg-info/requires.txt
+writing top-level names to src/codex_economy.egg-info/top_level.txt
+reading manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'evidence'
+no previously-included directories found matching 'tools'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.jar' found anywhere in distribution
+no previously-included directories found matching 'tests/framework-fixtures/gradle/app/build'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/shared/build'
+warning: no files found matching '*.kts' under directory 'tests/framework-fixtures'
+no previously-included directories found matching 'tests/framework-fixtures/android/build'
+adding license file 'LICENSE'
+writing manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building sdist...
+running sdist
+running egg_info
+writing src/codex_economy.egg-info/PKG-INFO
+writing dependency_links to src/codex_economy.egg-info/dependency_links.txt
+writing entry points to src/codex_economy.egg-info/entry_points.txt
+writing requirements to src/codex_economy.egg-info/requires.txt
+writing top-level names to src/codex_economy.egg-info/top_level.txt
+reading manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'evidence'
+no previously-included directories found matching 'tools'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.jar' found anywhere in distribution
+no previously-included directories found matching 'tests/framework-fixtures/gradle/app/build'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/shared/build'
+warning: no files found matching '*.kts' under directory 'tests/framework-fixtures'
+no previously-included directories found matching 'tests/framework-fixtures/android/build'
+adding license file 'LICENSE'
+writing manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+running check
+creating codex_economy-0.2.0
+creating codex_economy-0.2.0/docs
+creating codex_economy-0.2.0/scripts
+creating codex_economy-0.2.0/src/codex_economy
+creating codex_economy-0.2.0/src/codex_economy.egg-info
+creating codex_economy-0.2.0/tests
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/CMakeFiles/3.28.3/CompilerIdCXX
+creating codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/CMakeFiles/check.dir
+creating codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+creating codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+creating codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+creating codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+creating codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+creating codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+creating codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+creating codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+creating codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+creating codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+creating codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+creating codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+creating codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+creating codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+creating codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+creating codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+creating codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+creating codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+creating codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+creating codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+creating codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+creating codex_economy-0.2.0/tests/framework-fixtures/android
+creating codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/9.2.1
+creating codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/buildOutputCleanup
+creating codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/vcs-1
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/incremental/debug/mergeDebugResources
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/incremental/debug/packageDebugResources
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main/kotlin/sample/economy
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main/res/values
+creating codex_economy-0.2.0/tests/framework-fixtures/android/app/src/test/kotlin/sample/economy
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/9.2.1
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/buildOutputCleanup
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/vcs-1
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/app
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main/kotlin
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main/res/values
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/shared
+creating codex_economy-0.2.0/tests/framework-fixtures/gradle/shared/src/main/java/sample
+creating codex_economy-0.2.0/tests/framework-fixtures/next
+creating codex_economy-0.2.0/tests/framework-fixtures/next/app/api/ping
+creating codex_economy-0.2.0/tests/framework-fixtures/prisma
+creating codex_economy-0.2.0/tests/kotlin-fixture
+creating codex_economy-0.2.0/tests/semantic-fixture
+creating codex_economy-0.2.0/tests/semantic-fixture/lib
+copying files to codex_economy-0.2.0...
+copying LICENSE -> codex_economy-0.2.0
+copying MANIFEST.in -> codex_economy-0.2.0
+copying README.md -> codex_economy-0.2.0
+copying pyproject.toml -> codex_economy-0.2.0
+copying requirements-runtime.lock -> codex_economy-0.2.0
+copying docs/acceptance-report.md -> codex_economy-0.2.0/docs
+copying docs/benchmark.md -> codex_economy-0.2.0/docs
+copying docs/checkpoint.md -> codex_economy-0.2.0/docs
+copying docs/economy-SKILL.md -> codex_economy-0.2.0/docs
+copying docs/operations.md -> codex_economy-0.2.0/docs
+copying docs/release-0.2.md -> codex_economy-0.2.0/docs
+copying docs/requirements.md -> codex_economy-0.2.0/docs
+copying docs/research.md -> codex_economy-0.2.0/docs
+copying docs/usage-v2.md -> codex_economy-0.2.0/docs
+copying scripts/calibrate_jev_real.py -> codex_economy-0.2.0/scripts
+copying scripts/e2e.py -> codex_economy-0.2.0/scripts
+copying scripts/freeze_confirmation.py -> codex_economy-0.2.0/scripts
+copying scripts/install.sh -> codex_economy-0.2.0/scripts
+copying scripts/install_android_validation.py -> codex_economy-0.2.0/scripts
+copying scripts/install_neural.py -> codex_economy-0.2.0/scripts
+copying scripts/installation_check.py -> codex_economy-0.2.0/scripts
+copying scripts/make_benchmark.py -> codex_economy-0.2.0/scripts
+copying scripts/make_editor_confirmation.py -> codex_economy-0.2.0/scripts
+copying scripts/metrics_preview.py -> codex_economy-0.2.0/scripts
+copying scripts/performance.py -> codex_economy-0.2.0/scripts
+copying scripts/performance_repeat.py -> codex_economy-0.2.0/scripts
+copying scripts/pre_upgrade_backup.py -> codex_economy-0.2.0/scripts
+copying scripts/remove_extensions.py -> codex_economy-0.2.0/scripts
+copying scripts/rollback.sh -> codex_economy-0.2.0/scripts
+copying scripts/run_confirmation.py -> codex_economy-0.2.0/scripts
+copying scripts/uninstall.sh -> codex_economy-0.2.0/scripts
+copying scripts/validate_android.py -> codex_economy-0.2.0/scripts
+copying scripts/validate_frameworks.py -> codex_economy-0.2.0/scripts
+copying scripts/validate_jev_ranking.py -> codex_economy-0.2.0/scripts
+copying scripts/validate_python_semantic.py -> codex_economy-0.2.0/scripts
+copying scripts/validate_release.py -> codex_economy-0.2.0/scripts
+copying src/codex_economy/__init__.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/adapters.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/app_server.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/backup.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/benchmark.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/build_analysis.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/cli.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/config.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/continuity.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/contracts.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/delegation.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/engine.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/experiments.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/extensions.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/mcp_server.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/neural_worker.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/orchestrator.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/patch_harness.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/providers.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/registry.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/resource_exec.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/retrieval.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/runner.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/security.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/semantic.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/sessions.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/store.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/trace_worker.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/traces.py -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy/typescript.cjs -> codex_economy-0.2.0/src/codex_economy
+copying src/codex_economy.egg-info/PKG-INFO -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying src/codex_economy.egg-info/SOURCES.txt -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying src/codex_economy.egg-info/dependency_links.txt -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying src/codex_economy.egg-info/entry_points.txt -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying src/codex_economy.egg-info/requires.txt -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying src/codex_economy.egg-info/top_level.txt -> codex_economy-0.2.0/src/codex_economy.egg-info
+copying tests/test_behavior.py -> codex_economy-0.2.0/tests
+copying tests/test_compilers.py -> codex_economy-0.2.0/tests
+copying tests/test_operations_v2.py -> codex_economy-0.2.0/tests
+copying tests/benchmark-fixtures/cpp-clamp/CMakeLists.txt -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/check.cpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/logic.hpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-clamp/verify.py -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-clamp
+copying tests/benchmark-fixtures/cpp-parity/CMakeLists.txt -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/check.cpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/logic.hpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-parity/verify.py -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-parity
+copying tests/benchmark-fixtures/cpp-span/CMakeLists.txt -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/check.cpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/logic.hpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-span/verify.py -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-span
+copying tests/benchmark-fixtures/cpp-square/CMakeLists.txt -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/check.cpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/logic.hpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/verify.py -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square
+copying tests/benchmark-fixtures/cpp-square/build/compile_commands.json -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build
+copying tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply/codemodel-v2-8daffc8e4312122dc2fc.json -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply
+copying tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply/directory-.-f5ebdc15457944623624.json -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply
+copying tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply/index-2026-11-04T11-07-26-0105.json -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply
+copying tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply/target-check-ed6c618cd45683a80536.json -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/.cmake/api/v1/reply
+copying tests/benchmark-fixtures/cpp-square/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/CMakeFiles/3.28.3/CompilerIdCXX
+copying tests/benchmark-fixtures/cpp-square/build/CMakeFiles/check.dir/compiler_depend.ts -> codex_economy-0.2.0/tests/benchmark-fixtures/cpp-square/build/CMakeFiles/check.dir
+copying tests/benchmark-fixtures/node-clamp/check.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/logic.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-clamp/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-clamp
+copying tests/benchmark-fixtures/node-parity/check.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/logic.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-parity/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-parity
+copying tests/benchmark-fixtures/node-span/check.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/logic.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-span/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-span
+copying tests/benchmark-fixtures/node-square/check.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/logic.js -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/node-square/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/node-square
+copying tests/benchmark-fixtures/python-clamp/check.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/logic.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-clamp/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-clamp
+copying tests/benchmark-fixtures/python-parity/check.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/logic.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-parity/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-parity
+copying tests/benchmark-fixtures/python-span/check.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/logic.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-span/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-span
+copying tests/benchmark-fixtures/python-square/check.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/logic.py -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-0.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-1.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-10.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-11.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-2.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-3.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-4.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-5.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-6.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-7.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-8.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/benchmark-fixtures/python-square/notes-9.md -> codex_economy-0.2.0/tests/benchmark-fixtures/python-square
+copying tests/confirmation-inputs/cpp-cube/CMakeLists.txt -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/check.cpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/logic.hpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-cube/verify.py -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-cube
+copying tests/confirmation-inputs/cpp-distance/CMakeLists.txt -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/check.cpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/logic.hpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-distance/verify.py -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-distance
+copying tests/confirmation-inputs/cpp-maximum/CMakeLists.txt -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/check.cpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/logic.hpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-maximum/verify.py -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-maximum
+copying tests/confirmation-inputs/cpp-minimum/CMakeLists.txt -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/check.cpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/logic.hpp -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/cpp-minimum/verify.py -> codex_economy-0.2.0/tests/confirmation-inputs/cpp-minimum
+copying tests/confirmation-inputs/node-cube/check.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/logic.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-cube/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-cube
+copying tests/confirmation-inputs/node-distance/check.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/logic.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-distance/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-distance
+copying tests/confirmation-inputs/node-maximum/check.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/logic.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-maximum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-maximum
+copying tests/confirmation-inputs/node-minimum/check.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/logic.js -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/node-minimum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/node-minimum
+copying tests/confirmation-inputs/python-cube/check.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/logic.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-cube/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-cube
+copying tests/confirmation-inputs/python-distance/check.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/logic.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-distance/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-distance
+copying tests/confirmation-inputs/python-maximum/check.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/logic.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-maximum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-maximum
+copying tests/confirmation-inputs/python-minimum/check.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/logic.py -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-0.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-1.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-10.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-11.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-2.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-3.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-4.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-5.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-6.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-7.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-8.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/confirmation-inputs/python-minimum/notes-9.md -> codex_economy-0.2.0/tests/confirmation-inputs/python-minimum
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/CMakeLists.txt -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/check.cpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/logic.hpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-merge_intervals/verify.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-merge_intervals
+copying tests/editor-confirmation-inputs/cpp-parse_port/CMakeLists.txt -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/check.cpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/logic.hpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-parse_port/verify.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-parse_port
+copying tests/editor-confirmation-inputs/cpp-retry_delay/CMakeLists.txt -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/check.cpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/logic.hpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-retry_delay/verify.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-retry_delay
+copying tests/editor-confirmation-inputs/cpp-unique/CMakeLists.txt -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/check.cpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/logic.hpp -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/cpp-unique/verify.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/cpp-unique
+copying tests/editor-confirmation-inputs/node-merge_intervals/check.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-merge_intervals/logic.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-merge_intervals
+copying tests/editor-confirmation-inputs/node-parse_port/check.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-parse_port/logic.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-parse_port
+copying tests/editor-confirmation-inputs/node-retry_delay/check.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-retry_delay/logic.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-retry_delay
+copying tests/editor-confirmation-inputs/node-unique/check.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/node-unique/logic.js -> codex_economy-0.2.0/tests/editor-confirmation-inputs/node-unique
+copying tests/editor-confirmation-inputs/python-merge_intervals/check.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-merge_intervals/logic.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-merge_intervals
+copying tests/editor-confirmation-inputs/python-parse_port/check.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-parse_port/logic.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-parse_port
+copying tests/editor-confirmation-inputs/python-retry_delay/check.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-retry_delay/logic.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-retry_delay
+copying tests/editor-confirmation-inputs/python-unique/check.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-0.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-1.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-2.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-3.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-4.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-5.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-6.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/document-7.md -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/editor-confirmation-inputs/python-unique/logic.py -> codex_economy-0.2.0/tests/editor-confirmation-inputs/python-unique
+copying tests/framework-fixtures/android/build.gradle -> codex_economy-0.2.0/tests/framework-fixtures/android
+copying tests/framework-fixtures/android/gradle.properties -> codex_economy-0.2.0/tests/framework-fixtures/android
+copying tests/framework-fixtures/android/settings.gradle -> codex_economy-0.2.0/tests/framework-fixtures/android
+copying tests/framework-fixtures/android/.gradle/9.2.1/gc.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/9.2.1
+copying tests/framework-fixtures/android/.gradle/buildOutputCleanup/cache.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/buildOutputCleanup
+copying tests/framework-fixtures/android/.gradle/vcs-1/gc.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/.gradle/vcs-1
+copying tests/framework-fixtures/android/app/build.gradle -> codex_economy-0.2.0/tests/framework-fixtures/android/app
+copying tests/framework-fixtures/android/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata/app-metadata.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata
+copying tests/framework-fixtures/android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/incremental/debug/mergeDebugResources
+copying tests/framework-fixtures/android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties -> codex_economy-0.2.0/tests/framework-fixtures/android/app/build/intermediates/incremental/debug/packageDebugResources
+copying tests/framework-fixtures/android/app/src/main/AndroidManifest.xml -> codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main
+copying tests/framework-fixtures/android/app/src/main/kotlin/sample/economy/MainActivity.kt -> codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main/kotlin/sample/economy
+copying tests/framework-fixtures/android/app/src/main/res/values/strings.xml -> codex_economy-0.2.0/tests/framework-fixtures/android/app/src/main/res/values
+copying tests/framework-fixtures/android/app/src/test/kotlin/sample/economy/CalculationTest.kt -> codex_economy-0.2.0/tests/framework-fixtures/android/app/src/test/kotlin/sample/economy
+copying tests/framework-fixtures/gradle/build.gradle -> codex_economy-0.2.0/tests/framework-fixtures/gradle
+copying tests/framework-fixtures/gradle/settings.gradle -> codex_economy-0.2.0/tests/framework-fixtures/gradle
+copying tests/framework-fixtures/gradle/.gradle/9.2.1/gc.properties -> codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/9.2.1
+copying tests/framework-fixtures/gradle/.gradle/buildOutputCleanup/cache.properties -> codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/buildOutputCleanup
+copying tests/framework-fixtures/gradle/.gradle/vcs-1/gc.properties -> codex_economy-0.2.0/tests/framework-fixtures/gradle/.gradle/vcs-1
+copying tests/framework-fixtures/gradle/app/build.gradle -> codex_economy-0.2.0/tests/framework-fixtures/gradle/app
+copying tests/framework-fixtures/gradle/app/src/main/AndroidManifest.xml -> codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main
+copying tests/framework-fixtures/gradle/app/src/main/kotlin/Main.kt -> codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main/kotlin
+copying tests/framework-fixtures/gradle/app/src/main/res/values/strings.xml -> codex_economy-0.2.0/tests/framework-fixtures/gradle/app/src/main/res/values
+copying tests/framework-fixtures/gradle/shared/build.gradle -> codex_economy-0.2.0/tests/framework-fixtures/gradle/shared
+copying tests/framework-fixtures/gradle/shared/src/main/java/sample/Value.java -> codex_economy-0.2.0/tests/framework-fixtures/gradle/shared/src/main/java/sample
+copying tests/framework-fixtures/next/next-env.d.ts -> codex_economy-0.2.0/tests/framework-fixtures/next
+copying tests/framework-fixtures/next/package-lock.json -> codex_economy-0.2.0/tests/framework-fixtures/next
+copying tests/framework-fixtures/next/package.json -> codex_economy-0.2.0/tests/framework-fixtures/next
+copying tests/framework-fixtures/next/tsconfig.json -> codex_economy-0.2.0/tests/framework-fixtures/next
+copying tests/framework-fixtures/next/app/api/ping/route.ts -> codex_economy-0.2.0/tests/framework-fixtures/next/app/api/ping
+copying tests/framework-fixtures/prisma/migration.sql -> codex_economy-0.2.0/tests/framework-fixtures/prisma
+copying tests/framework-fixtures/prisma/schema.prisma -> codex_economy-0.2.0/tests/framework-fixtures/prisma
+copying tests/kotlin-fixture/Main.kt -> codex_economy-0.2.0/tests/kotlin-fixture
+copying tests/semantic-fixture/main.ts -> codex_economy-0.2.0/tests/semantic-fixture
+copying tests/semantic-fixture/tsconfig.json -> codex_economy-0.2.0/tests/semantic-fixture
+copying tests/semantic-fixture/lib/math.ts -> codex_economy-0.2.0/tests/semantic-fixture/lib
+Writing codex_economy-0.2.0/setup.cfg
+Creating tar archive
+removing 'codex_economy-0.2.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70
+  - wheel
+* Getting build dependencies for wheel...
+running egg_info
+writing src/codex_economy.egg-info/PKG-INFO
+writing dependency_links to src/codex_economy.egg-info/dependency_links.txt
+writing entry points to src/codex_economy.egg-info/entry_points.txt
+writing requirements to src/codex_economy.egg-info/requires.txt
+writing top-level names to src/codex_economy.egg-info/top_level.txt
+reading manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'evidence'
+no previously-included directories found matching 'tools'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.jar' found anywhere in distribution
+no previously-included directories found matching 'tests/framework-fixtures/next/node_modules'
+no previously-included directories found matching 'tests/framework-fixtures/next/.next'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/app/build'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/shared/build'
+warning: no files found matching '*.kts' under directory 'tests/framework-fixtures'
+no previously-included directories found matching 'tests/framework-fixtures/android/build'
+adding license file 'LICENSE'
+writing manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/codex_economy
+copying src/codex_economy/benchmark.py -> build/lib/codex_economy
+copying src/codex_economy/semantic.py -> build/lib/codex_economy
+copying src/codex_economy/retrieval.py -> build/lib/codex_economy
+copying src/codex_economy/security.py -> build/lib/codex_economy
+copying src/codex_economy/traces.py -> build/lib/codex_economy
+copying src/codex_economy/providers.py -> build/lib/codex_economy
+copying src/codex_economy/sessions.py -> build/lib/codex_economy
+copying src/codex_economy/experiments.py -> build/lib/codex_economy
+copying src/codex_economy/extensions.py -> build/lib/codex_economy
+copying src/codex_economy/mcp_server.py -> build/lib/codex_economy
+copying src/codex_economy/backup.py -> build/lib/codex_economy
+copying src/codex_economy/trace_worker.py -> build/lib/codex_economy
+copying src/codex_economy/orchestrator.py -> build/lib/codex_economy
+copying src/codex_economy/contracts.py -> build/lib/codex_economy
+copying src/codex_economy/neural_worker.py -> build/lib/codex_economy
+copying src/codex_economy/engine.py -> build/lib/codex_economy
+copying src/codex_economy/registry.py -> build/lib/codex_economy
+copying src/codex_economy/patch_harness.py -> build/lib/codex_economy
+copying src/codex_economy/delegation.py -> build/lib/codex_economy
+copying src/codex_economy/resource_exec.py -> build/lib/codex_economy
+copying src/codex_economy/cli.py -> build/lib/codex_economy
+copying src/codex_economy/config.py -> build/lib/codex_economy
+copying src/codex_economy/continuity.py -> build/lib/codex_economy
+copying src/codex_economy/build_analysis.py -> build/lib/codex_economy
+copying src/codex_economy/store.py -> build/lib/codex_economy
+copying src/codex_economy/runner.py -> build/lib/codex_economy
+copying src/codex_economy/adapters.py -> build/lib/codex_economy
+copying src/codex_economy/app_server.py -> build/lib/codex_economy
+copying src/codex_economy/__init__.py -> build/lib/codex_economy
+running egg_info
+writing src/codex_economy.egg-info/PKG-INFO
+writing dependency_links to src/codex_economy.egg-info/dependency_links.txt
+writing entry points to src/codex_economy.egg-info/entry_points.txt
+writing requirements to src/codex_economy.egg-info/requires.txt
+writing top-level names to src/codex_economy.egg-info/top_level.txt
+reading manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'evidence'
+no previously-included directories found matching 'tools'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.jar' found anywhere in distribution
+no previously-included directories found matching 'tests/framework-fixtures/next/node_modules'
+no previously-included directories found matching 'tests/framework-fixtures/next/.next'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/app/build'
+no previously-included directories found matching 'tests/framework-fixtures/gradle/shared/build'
+warning: no files found matching '*.kts' under directory 'tests/framework-fixtures'
+no previously-included directories found matching 'tests/framework-fixtures/android/build'
+adding license file 'LICENSE'
+writing manifest file 'src/codex_economy.egg-info/SOURCES.txt'
+copying src/codex_economy/typescript.cjs -> build/lib/codex_economy
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/codex_economy
+copying build/lib/codex_economy/benchmark.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/semantic.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/retrieval.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/security.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/traces.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/providers.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/sessions.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/experiments.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/extensions.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/mcp_server.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/backup.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/trace_worker.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/orchestrator.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/contracts.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/neural_worker.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/engine.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/registry.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/patch_harness.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/typescript.cjs -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/delegation.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/resource_exec.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/cli.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/config.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/continuity.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/build_analysis.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/store.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/runner.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/adapters.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/app_server.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+copying build/lib/codex_economy/__init__.py -> build/bdist.linux-x86_64/wheel/./codex_economy
+running install_egg_info
+Copying src/codex_economy.egg-info to build/bdist.linux-x86_64/wheel/./codex_economy-0.2.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/codex_economy-0.2.0.dist-info/WHEEL
+creating '/home/leo-ribeiro/codex-economy-next/dist/.tmp-2ialpbhr/codex_economy-0.2.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'codex_economy/__init__.py'
+adding 'codex_economy/adapters.py'
+adding 'codex_economy/app_server.py'
+adding 'codex_economy/backup.py'
+adding 'codex_economy/benchmark.py'
+adding 'codex_economy/build_analysis.py'
+adding 'codex_economy/cli.py'
+adding 'codex_economy/config.py'
+adding 'codex_economy/continuity.py'
+adding 'codex_economy/contracts.py'
+adding 'codex_economy/delegation.py'
+adding 'codex_economy/engine.py'
+adding 'codex_economy/experiments.py'
+adding 'codex_economy/extensions.py'
+adding 'codex_economy/mcp_server.py'
+adding 'codex_economy/neural_worker.py'
+adding 'codex_economy/orchestrator.py'
+adding 'codex_economy/patch_harness.py'
+adding 'codex_economy/providers.py'
+adding 'codex_economy/registry.py'
+adding 'codex_economy/resource_exec.py'
+adding 'codex_economy/retrieval.py'
+adding 'codex_economy/runner.py'
+adding 'codex_economy/security.py'
+adding 'codex_economy/semantic.py'
+adding 'codex_economy/sessions.py'
+adding 'codex_economy/store.py'
+adding 'codex_economy/trace_worker.py'
+adding 'codex_economy/traces.py'
+adding 'codex_economy/typescript.cjs'
+adding 'codex_economy-0.2.0.dist-info/licenses/LICENSE'
+adding 'codex_economy-0.2.0.dist-info/METADATA'
+adding 'codex_economy-0.2.0.dist-info/WHEEL'
+adding 'codex_economy-0.2.0.dist-info/entry_points.txt'
+adding 'codex_economy-0.2.0.dist-info/top_level.txt'
+adding 'codex_economy-0.2.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built codex_economy-0.2.0.tar.gz and codex_economy-0.2.0-py3-none-any.whl

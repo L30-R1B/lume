@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/logic.js b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/node-distance-0-C/logic.js
+index 93d92b7..94a0aa9 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-distance/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/node-distance-0-C/logic.js
+@@ -1 +1 @@
+-exports.distance = (a, b) => { return a + b; };
++exports.distance = (a, b) => { return Math.abs(a - b); };

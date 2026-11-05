@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-clamp/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-clamp-0-B/logic.hpp
+index d53e64b..756a501 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-clamp/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-clamp-0-B/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int clamp(int x, int lo, int hi) { return x; }
++inline int clamp(int x, int lo, int hi) { return x < lo ? lo : (x > hi ? hi : x); }

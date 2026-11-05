@@ -1,0 +1,19 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-unique/logic.hpp b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-unique-2-A/logic.hpp
+index cd66dc9..2d86415 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-unique/logic.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-unique-2-A/logic.hpp
+@@ -6,4 +6,13 @@
+ #include <unordered_set>
+ #include <stdexcept>
+ #include <limits>
+-inline std::vector<int> unique(std::vector<int> values) { return values; }
++inline std::vector<int> unique(const std::vector<int>& values) {
++    std::unordered_set<int> seen;
++    std::vector<int> result;
++    for (int value : values) {
++        if (seen.insert(value).second) {
++            result.push_back(value);
++        }
++    }
++    return result;
++}

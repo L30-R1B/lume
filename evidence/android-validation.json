@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "apk_sha256": "fd49fdb66943fb121cb86a165e4a6ac87b58671ff8d6f0b7fbf5fab2c7bda90a",
+  "apk_bytes": 847963,
+  "compile_sdk": 36,
+  "agp": "9.0.1",
+  "gradle": "9.2.1",
+  "source_change": "equivalent Kotlin implementation",
+  "resource_change_verified_in_apk": true,
+  "unit_tests": [
+    "TEST-sample.economy.CalculationTest.xml"
+  ],
+  "device_instrumentation": false
+}

@@ -1,0 +1,21 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-merge_intervals/logic.hpp b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-merge_intervals-0-E/logic.hpp
+index 7425449..7c0972c 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-merge_intervals/logic.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-merge_intervals-0-E/logic.hpp
+@@ -6,4 +6,15 @@
+ #include <unordered_set>
+ #include <stdexcept>
+ #include <limits>
+-inline std::vector<std::vector<int>> merge_intervals(std::vector<std::vector<int>> intervals) { throw std::logic_error("implement interval merging"); }
++inline std::vector<std::vector<int>> merge_intervals(std::vector<std::vector<int>> intervals) {
++    std::sort(intervals.begin(), intervals.end());
++    std::vector<std::vector<int>> merged;
++    for (const auto& interval : intervals) {
++        if (merged.empty() || interval[0] > merged.back()[1]) {
++            merged.push_back(interval);
++        } else {
++            merged.back()[1] = std::max(merged.back()[1], interval[1]);
++        }
++    }
++    return merged;
++}

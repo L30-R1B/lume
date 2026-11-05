@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "__init__.py",
+      "same": true
+    },
+    {
+      "file": "adapters.py",
+      "same": true
+    },
+    {
+      "file": "app_server.py",
+      "same": true
+    },
+    {
+      "file": "backup.py",
+      "same": true
+    },
+    {
+      "file": "benchmark.py",
+      "same": true
+    },
+    {
+      "file": "build_analysis.py",
+      "same": true
+    },
+    {
+      "file": "cli.py",
+      "same": true
+    },
+    {
+      "file": "config.py",
+      "same": true
+    },
+    {
+      "file": "continuity.py",
+      "same": true
+    },
+    {
+      "file": "contracts.py",
+      "same": true
+    },
+    {
+      "file": "delegation.py",
+      "same": true
+    },
+    {
+      "file": "engine.py",
+      "same": true
+    },
+    {
+      "file": "experiments.py",
+      "same": true
+    },
+    {
+      "file": "extensions.py",
+      "same": true
+    },
+    {
+      "file": "mcp_server.py",
+      "same": true
+    },
+    {
+      "file": "neural_worker.py",
+      "same": true
+    },
+    {
+      "file": "orchestrator.py",
+      "same": true
+    },
+    {
+      "file": "patch_harness.py",
+      "same": true
+    },
+    {
+      "file": "providers.py",
+      "same": true
+    },
+    {
+      "file": "registry.py",
+      "same": true
+    },
+    {
+      "file": "resource_exec.py",
+      "same": true
+    },
+    {
+      "file": "retrieval.py",
+      "same": true
+    },
+    {
+      "file": "runner.py",
+      "same": true
+    },
+    {
+      "file": "security.py",
+      "same": true
+    },
+    {
+      "file": "semantic.py",
+      "same": true
+    },
+    {
+      "file": "sessions.py",
+      "same": true
+    },
+    {
+      "file": "store.py",
+      "same": true
+    },
+    {
+      "file": "trace_worker.py",
+      "same": true
+    },
+    {
+      "file": "traces.py",
+      "same": true
+    },
+    {
+      "file": "typescript.cjs",
+      "same": true
+    }
+  ]
+}

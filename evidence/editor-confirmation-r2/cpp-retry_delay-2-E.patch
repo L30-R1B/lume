@@ -1,0 +1,18 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-retry_delay/logic.hpp b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-retry_delay-2-E/logic.hpp
+index 6d04407..92a1055 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-retry_delay/logic.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-retry_delay-2-E/logic.hpp
+@@ -6,4 +6,12 @@
+ #include <unordered_set>
+ #include <stdexcept>
+ #include <limits>
+-inline long long retry_delay(int attempt, long long base, long long cap) { throw std::logic_error("implement backoff"); }
++inline long long retry_delay(int attempt, long long base, long long cap) {
++    if (base == 0 || cap == 0) return 0;
++    long long delay = std::min(base, cap);
++    for (int i = 0; i < attempt && delay < cap; ++i) {
++        if (delay > cap / 2) return cap;
++        delay *= 2;
++    }
++    return delay;
++}

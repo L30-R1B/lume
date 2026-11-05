@@ -1,0 +1,25 @@
+{
+  "point_reduction_percent": 84.03584144740377,
+  "bootstrap_cluster_by_task_95_percent": [
+    83.01269367481264,
+    84.92635132173075
+  ],
+  "tasks": 12,
+  "paired_repetitions": 36,
+  "resamples": 10000,
+  "seed": 20261105,
+  "reference_tokens": 3014722,
+  "structured_tokens": 481275,
+  "quality": "36/36 accepted for each arm on recorded acceptance tests",
+  "scope": "12 small synthetic tasks; not representative of all production work",
+  "failed_pilot_excluded_from_frozen_confirmation": {
+    "reason": "context budget bug before any model call, recorded in separate preceding experiment",
+    "model_tokens": 0
+  },
+  "bootstrap_cluster_by_problem_95_percent": [
+    83.0921663175118,
+    84.9371095907874
+  ],
+  "independent_problem_families": 4,
+  "caveat": "Four underlying algorithm problems repeated across three languages, so external generalization remains uncertain."
+}

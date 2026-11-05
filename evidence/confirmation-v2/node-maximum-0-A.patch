@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/logic.js b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/node-maximum-0-A/logic.js
+index 038198b..f011554 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/node-maximum/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/node-maximum-0-A/logic.js
+@@ -1 +1 @@
+-exports.maximum = (a, b) => { return a < b ? a : b; };
++exports.maximum = (a, b) => { return a > b ? a : b; };

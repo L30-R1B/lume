@@ -1,0 +1,12 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-retry_delay/logic.js b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-retry_delay-2-A/logic.js
+index 0849910..1a5c052 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-retry_delay/logic.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-retry_delay-2-A/logic.js
+@@ -1 +1,6 @@
+-exports.retry_delay = function(attempt, base, cap) { throw new Error("implement backoff"); };
++exports.retry_delay = function(attempt, base, cap) {
++  if (base === 0 || cap === 0) return 0;
++
++  const factor = 2 ** attempt;
++  return base >= cap / factor ? cap : base * factor;
++};

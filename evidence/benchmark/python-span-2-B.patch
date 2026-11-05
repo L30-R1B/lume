@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-span/logic.py b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/python-span-2-B/logic.py
+index 44ff9df..054376b 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-span/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/python-span-2-B/logic.py
+@@ -1,2 +1,2 @@
+ def span(lo, hi):
+-    return hi + lo
++    return hi - lo

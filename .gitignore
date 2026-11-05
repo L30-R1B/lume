@@ -10,3 +10,10 @@ dist/
 /evidence/confirmation/workspaces/
 /evidence/e2e-workspace/
 /tools/node_modules/
+node_modules/
+.next/
+.gradle/
+*.tsbuildinfo
+/evidence/editor-pilot/workspaces/
+/evidence/editor-confirmation/workspaces/
+/evidence/editor-confirmation-r2/workspaces/

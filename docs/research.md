@@ -17,25 +17,25 @@ Não foram lidos; a rastreabilidade de recomendações específicas e referênci
 | Hashes/invalidação | fingerprint de conteúdo/política/HEAD, segunda leitura transacional | test_incremental; rollback; concorrência | validado parcialmente |
 | Mapas hierárquicos, roteamento de docs | ce map retorna caminhos/símbolos/hashes; roteamento temático automático falta | test_repetition_resets_on_source_change_and_map | implementado parcialmente |
 | Reranking local | TF-IDF caracteres ajustado por corpus; sem pesos externos; não é semântica neural | test_jev_mock_and_local; híbrido no benchmark | validado como reranker |
-| Embeddings neurais | Contrato Embedder; implementação não incluída | — | pendente como alternativa experimental |
-| Jev: relevância/action/repetição | Um batch de Scores, Choice e Noul; somente ordenação usada | fake controlado, timeout, entrada incompleta; sem chamada real | implementado; validação externa bloqueada |
+| Embeddings e reranking locais | TF-IDF e LSA sem rede; contrato substituível | testes comportamentais | validado localmente; não equivale a embedding neural |
+| Jev: relevância/action/repetição | Um batch de Scores, Choice e Noul; somente ordenação usada | fake controlado, timeout e cinco chamadas reais em fixture sintética; `evidence/jev-ranking-real.json` | validado no serviço em escopo limitado; comparação D bloqueada por custos |
 | JevCoder | Princípio de julgamento atômico e decisões em código; não reproduzido integralmente | providers; nenhuma alegação dos resultados do artigo | implementado parcialmente |
 | Refinamento/localização separada da edição | MCP leitura/busca, task executa edição separada | MCP real; benchmark | implementado |
-| Testes/traces/evidência dinâmica | Runner preserva exit/stderr e permite expansão; trace graph automático falta | test_runner | implementado parcialmente |
+| Testes/traces/evidência dinâmica | Runner preserva exit/stderr e permite expansão; trace Python registra chamadas observadas por snapshot | testes do runner e trace | validado nas fixtures, não universal |
 | Seleção fiel e arquivos completos | trechos originais com hash/linhas, orçamento de bytes, omissões | test_budgets | validado |
-| SWE-Pruner/LongCodeZip/LLMLingua | Seleção de trechos é princípio transferível, sem equivalência declarada; variantes neurais isoladas faltam | — | pendente |
+| SWE-Pruner/LongCodeZip/LLMLingua | Seleção fiel é princípio transferível; LLMLingua-2 opcional isolado para documentos, sem equivalência declarada | `evidence/neural-offline-enforced.json` | validado em exemplo documental; não medido como economia por tarefa |
 | SWE-Pruner Pro/internal representations | Requer acesso interno não exposto pelo Codex fechado | limites oficiais | não aplicável |
 | Quantização, KV cache, fine-tuning, destilação | Não expostos pelo harness do Codex autenticado | nenhum controle falso implementado | não aplicável |
 | Filtragem de resultados | seleção causal começo/erro/final; recuperação por linhas | runner multibyte, saída extensa | validado |
 | Execução programática | argv, timeout, grupo de processos; sem shell implícito | runner; testes CMake reais | validado parcialmente |
 | Memória/handoff | sessions guarda objetivo/aceite/decisões/checks e próximo passo | validação de continuidade longa pendente | implementado |
 | Masking/compactação | Não há controle exato de histórico via MCP/exec; handoff é alternativa | doctor declara falso | masking não aplicável; política automática pendente |
-| Cache | extração hash/versionada; tabelas para outros namespaces; cache inferência/tarefa não ativado | incremental | implementado parcialmente |
-| Skills progressivas | skill curta fornecida, instalação automática pendente | docs/economy-SKILL.md | implementado parcialmente |
+| Cache | extração hash/versionada, inferência com modelo fixo e resultados de tarefa com validação | testes incrementais e operações | implementado; validade depende do snapshot |
+| Skills progressivas | skill curta instalada por `ce setup` no projeto autorizado, remoção preserva arquivos editados | `evidence/release-validation.json` | validado em projeto isolado |
 | Catálogo pequeno | seis ferramentas MCP stdio | teste cliente + Codex real | validado |
 | Aceite/esforço/modelo | task parametriza; benchmark verifica testes protegidos; não aceita só pelo juiz | eventos/fixtures | implementado parcialmente |
-| Delegação | não é padrão; nenhuma orquestração multiagente incluída | — | pendente como opção contabilizada |
-| Avaliação pareada | queue retomável, tentativas brutas, input/output/cache, bootstrap pareado | benchmark em andamento | implementado; confirmação pendente |
+| Delegação | configuração explícita, worktrees isoladas e contabilização; desligada por padrão | testes locais, sem execução multiagente real | implementado; validação real pendente |
+| Avaliação pareada | fila retomável, tentativas brutas, input/output/cache, bootstrap agrupado por problema | `evidence/editor-confirmation-r2/`, `evidence/confirmation-v2/` | validado em tarefas pequenas; confirmação abrangente e braço D pendentes |
 
 Fontes primárias consultadas em 2026-11-04:
 

@@ -1,0 +1,20 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-merge_intervals/logic.js b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-merge_intervals-0-E/logic.js
+index e3f0030..1993da1 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-merge_intervals/logic.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-merge_intervals-0-E/logic.js
+@@ -1 +1,14 @@
+-exports.merge_intervals = function(intervals) { throw new Error("implement interval merging"); };
++exports.merge_intervals = function(intervals) {
++  const sorted = intervals.map(interval => [interval[0], interval[1]])
++    .sort((a, b) => a[0] - b[0] || a[1] - b[1]);
++  const merged = [];
++  for (const interval of sorted) {
++    const last = merged[merged.length - 1];
++    if (!last || interval[0] > last[1]) {
++      merged.push(interval);
++    } else {
++      last[1] = Math.max(last[1], interval[1]);
++    }
++  }
++  return merged;
++};

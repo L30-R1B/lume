@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-clamp/logic.js b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-clamp-1-A/logic.js
+index 2c2ff78..86315cd 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-clamp/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-clamp-1-A/logic.js
+@@ -1 +1 @@
+-exports.clamp = function(x, lo, hi) { return x; };
++exports.clamp = function(x, lo, hi) { return Math.min(Math.max(x, lo), hi); };

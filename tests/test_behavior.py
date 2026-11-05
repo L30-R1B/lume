@@ -65,6 +65,18 @@ def test_boundaries_binary_invalid_utf8_symlinks(env, tmp_path):
     assert s.rows("SELECT path FROM files") == [{"path": "ok.py"}]
 
 
+def test_default_policy_excludes_python_tool_caches(env):
+    root, _store, engine = env
+    for directory in (".pytest_cache", ".ruff_cache", "example.egg-info"):
+        cache = root / directory
+        cache.mkdir()
+        (cache / "binary").write_bytes(b"\xff\x00")
+    (root / "source.py").write_text("value = 1\n")
+    result = engine.index("test")
+    assert result["state"] == "ready"
+    assert result["files"] == 1 and not result["omissions"]
+
+
 def test_adapters_and_budgets(env):
     root, s, e = env
     examples = {
@@ -148,6 +160,7 @@ def test_jev_mock_and_local(env, monkeypatch):
     assert j.ask("a", {}, False)["error"] == "external_context_denied"
     monkeypatch.delenv("TYPESAFE_API_KEY", raising=False)
     assert j.ask("a", {}, True)["error"] == "credential_unavailable"
+    monkeypatch.setenv("CE_JEV_ALLOW_PAID", "1")
     monkeypatch.setenv("TYPESAFE_API_KEY", "fake-controlled-test-key")
     import urllib.request
 
@@ -165,13 +178,16 @@ def test_jev_mock_and_local(env, monkeypatch):
 
     monkeypatch.setattr(urllib.request, "urlopen", lambda *args, **kwargs: Response())
     assert j.ask("a", {"q": {"type": "noul", "instructions": "test"}}, True)["mode"] == "jev"
-    assert j.ask("a", {"other": {"type": "noul"}}, True)["error"] == "invalid_response"
+    assert (
+        j.ask("a", {"other": {"type": "noul", "instructions": "missing response question"}}, True)["error"]
+        == "invalid_response"
+    )
 
     def timeout(*args, **kwargs):
         raise TimeoutError()
 
     monkeypatch.setattr(urllib.request, "urlopen", timeout)
-    assert j.ask("a", {"q": {"type": "noul"}}, True)["error"] == "timeout"
+    assert j.ask("a", {"q": {"type": "noul", "instructions": "test timeout"}}, True)["error"] == "timeout"
     ranked = LocalReranker().rank(
         "authentication", [{"path": "a", "source": "authentication credentials"}, {"path": "b", "source": "bananas"}]
     )

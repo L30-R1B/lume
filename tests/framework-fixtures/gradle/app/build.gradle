@@ -1,0 +1,14 @@
+plugins { id 'java' }
+dependencies { implementation project(':shared') }
+String kotlinCompiler = System.getenv('CE_KOTLINC_BIN') ?: System.getProperty('user.home') + '/.local/share/codex-economy/kotlin/kotlinc/bin/kotlinc'
+tasks.register('compileFixtureKotlin', Exec) {
+    inputs.file('src/main/kotlin/Main.kt')
+    outputs.file(layout.buildDirectory.file('fixture.jar'))
+    doFirst { layout.buildDirectory.get().asFile.mkdirs() }
+    commandLine kotlinCompiler, 'src/main/kotlin/Main.kt', '-include-runtime', '-d', layout.buildDirectory.file('fixture.jar').get().asFile
+}
+tasks.register('verifyFixtureKotlin', Exec) {
+    dependsOn 'compileFixtureKotlin'
+    commandLine 'java', '-jar', layout.buildDirectory.file('fixture.jar').get().asFile, 'src/main/res/values/strings.xml'
+}
+tasks.named('check') { dependsOn 'verifyFixtureKotlin' }

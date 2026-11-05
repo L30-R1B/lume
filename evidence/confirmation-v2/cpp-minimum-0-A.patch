@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-minimum-0-A/logic.hpp
+index fa71307..e1dbc8b 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-minimum/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-minimum-0-A/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int minimum(int a, int b) { return a > b ? a : b; }
++inline int minimum(int a, int b) { return a < b ? a : b; }

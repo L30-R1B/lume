@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "phase": "pilot-structured-editor",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "arms": [
+    "A",
+    "E"
+  ],
+  "repetitions": 1,
+  "seed": 20261107,
+  "timeout": 180,
+  "context_bytes": 6000,
+  "output": "/home/leo-ribeiro/codex-economy-next/evidence/editor-pilot",
+  "tasks": [
+    {
+      "id": "python-distance",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/confirmation-inputs/python-distance",
+      "objective": "Correct distance in logic.py to compute the absolute distance between a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.py",
+      "protected": [
+        "check.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "node-cube",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/confirmation-inputs/node-cube",
+      "objective": "Correct cube in logic.js to compute x cubed.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.js",
+      "protected": [
+        "check.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "cpp-minimum",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/confirmation-inputs/cpp-minimum",
+      "objective": "Correct minimum in logic.hpp to compute the smaller of a and b.",
+      "acceptance": "All checks pass; only the target implementation changes; every other source and test remains byte-identical.",
+      "target": "logic.hpp",
+      "protected": [
+        "check.cpp",
+        "CMakeLists.txt",
+        "verify.py"
+      ],
+      "verify": [
+        "python3",
+        "verify.py"
+      ]
+    }
+  ],
+  "codex_binary": "/home/leo-ribeiro/.nvm/versions/node/v22.23.2/bin/codex",
+  "reference_config_hash": "87bfc12bca10e9cf46bb7fda50b5b0e51580ff0e5db5c0dd6a63862abf75a220"
+}

@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-parity/logic.py b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/python-parity-2-B/logic.py
+index dbf36e7..4093370 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/python-parity/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/python-parity-2-B/logic.py
+@@ -1,2 +1,2 @@
+ def parity(x):
+-    return x % 2 == 1
++    return x % 2 == 0

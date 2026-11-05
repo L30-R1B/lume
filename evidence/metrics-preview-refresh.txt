@@ -1,0 +1,1 @@
+{"captured_utc": "2026-11-05T13:20:41.879259+00:00", "attempts": 228, "accepted": 222, "observed_tokens": 15132375, "jev_real": {"requests": 5, "input_tokens": 4389, "output_tokens": 751, "latency_seconds": [0.2898440030403435, 0.29847678600344807, 0.2602176599903032, 0.2550935000181198, 0.34499775897711515], "monetary_cost": null}}

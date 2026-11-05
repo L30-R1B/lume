@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-square/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-square-2-A/logic.hpp
+index a2e7482..12aef63 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-square/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-square-2-A/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int square(int x) { return x + x; }
++inline int square(int x) { return x * x; }

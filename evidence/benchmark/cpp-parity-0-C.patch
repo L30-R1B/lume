@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-parity/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-parity-0-C/logic.hpp
+index deac032..0f4cc85 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/cpp-parity/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/cpp-parity-0-C/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int parity(int x) { return x % 2 == 1; }
++inline int parity(int x) { return x % 2 == 0; }

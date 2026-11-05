@@ -1,0 +1,7 @@
+{
+  "classification": "exploratory_only",
+  "cause": "ruff format changed verify.py whitespace while jobs were running; one protection comparison was affected",
+  "required_action": "do not use this run as confirmation; all original records retained",
+  "cancelled_worker": true,
+  "timestamp": 1793787914.1714525
+}

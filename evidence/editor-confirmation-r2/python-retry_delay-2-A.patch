@@ -1,0 +1,10 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-retry_delay/logic.py b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-retry_delay-2-A/logic.py
+index 3ac94c7..afd225d 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-retry_delay/logic.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-retry_delay-2-A/logic.py
+@@ -1,2 +1,4 @@
+ def retry_delay(attempt, base, cap):
+-    raise NotImplementedError("implement backoff")
++    if base == 0 or cap == 0:
++        return 0
++    return min(cap, base * 2**attempt)

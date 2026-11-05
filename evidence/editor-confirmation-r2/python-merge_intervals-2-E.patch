@@ -1,0 +1,14 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-merge_intervals/logic.py b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-merge_intervals-2-E/logic.py
+index 21c9737..daf84e4 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-merge_intervals/logic.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-merge_intervals-2-E/logic.py
+@@ -1,2 +1,8 @@
+ def merge_intervals(intervals):
+-    raise NotImplementedError("implement interval merging")
++    merged = []
++    for start, end in sorted(intervals, key=lambda interval: interval[0]):
++        if merged and start <= merged[-1][1]:
++            merged[-1][1] = max(merged[-1][1], end)
++        else:
++            merged.append([start, end])
++    return merged

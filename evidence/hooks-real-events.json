@@ -1,0 +1,27 @@
+{
+  "events": [
+    {
+      "hook_event_name": "PostModelRequest",
+      "session_id": "01a1a733-3dc2-7193-9a8f-da78838b0172",
+      "turn_id": "01a1a733-3f1b-7570-af99-09924621cd41",
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "token_usage": {
+        "input_tokens": 14894,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 14899
+      }
+    },
+    {
+      "hook_event_name": "SessionEnd",
+      "session_id": "01a1a733-3dc2-7193-9a8f-da78838b0172"
+    }
+  ],
+  "count": 2,
+  "command": "/home/leo-ribeiro/.local/bin/ce --home /tmp/ce-hooks-real-state telemetry",
+  "source": "official inline config",
+  "own_hook_sources_reviewed": true
+}

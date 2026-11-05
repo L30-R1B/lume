@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-maximum-1-C/logic.hpp
+index 0fd1079..b2c371e 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-maximum/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-maximum-1-C/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int maximum(int a, int b) { return a < b ? a : b; }
++inline int maximum(int a, int b) { return a > b ? a : b; }

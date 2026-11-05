@@ -1,0 +1,41 @@
+{
+  "goal_80_percent": "inconclusive",
+  "complete": false,
+  "planned": 108,
+  "completed": 9,
+  "groups": {
+    "C": {
+      "attempts": 5,
+      "accepted": 5,
+      "tokens": 392427,
+      "cached_input_tokens": 342912,
+      "unknown_usage": 0,
+      "seconds": 142.28696079994552,
+      "tokens_per_accepted": 78485.4
+    },
+    "B": {
+      "attempts": 2,
+      "accepted": 1,
+      "tokens": 66850,
+      "cached_input_tokens": 61056,
+      "unknown_usage": 1,
+      "seconds": 41.134252399089746,
+      "tokens_per_accepted": null
+    },
+    "A": {
+      "attempts": 2,
+      "accepted": 2,
+      "tokens": 170948,
+      "cached_input_tokens": 147328,
+      "unknown_usage": 0,
+      "seconds": 70.37824940402061,
+      "tokens_per_accepted": 85474.0
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_bootstrap_95_percent": null,
+  "paired_n": 0,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "e6aed2adcf7994be4c263a9a5861d9ce0fde65446b6a8b153a63d3deca768dd8"
+}

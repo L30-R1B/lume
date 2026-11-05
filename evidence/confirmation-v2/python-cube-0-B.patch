@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/logic.py b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-cube-0-B/logic.py
+index 0e34eb1..1f6ff9c 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-cube/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-cube-0-B/logic.py
+@@ -1,2 +1,2 @@
+ def cube(x):
+-    return x * x
++    return x * x * x

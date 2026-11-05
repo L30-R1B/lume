@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a70d-0b92-79e0-90af-82193ae48ad6"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"status\":\"edit\",\"missing_fact\":\"\",\"edits\":[{\"path\":\"logic.py\",\"hash\":\"0b03613334d27d8c8e939cb5d52ba7ba28099012d96c77f28eddf7dac2f64f03\",\"old\":\"def distance(a, b):\\n    return a + b\\n\",\"new\":\"def distance(a, b):\\n    return abs(a - b)\\n\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":18036,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":105,"reasoning_output_tokens":0}}

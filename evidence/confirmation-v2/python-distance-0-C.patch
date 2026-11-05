@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/logic.py b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-distance-0-C/logic.py
+index f0d1075..1a779dc 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/python-distance/logic.py
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/python-distance-0-C/logic.py
+@@ -1,2 +1,2 @@
+ def distance(a, b):
+-    return a + b
++    return abs(a - b)

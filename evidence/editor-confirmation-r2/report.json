@@ -1,0 +1,201 @@
+{
+  "goal_80_percent": "achieved",
+  "complete": true,
+  "planned": 72,
+  "completed": 72,
+  "groups": {
+    "E": {
+      "attempts": 36,
+      "accepted": 36,
+      "tokens": 481275,
+      "cached_input_tokens": 80000,
+      "unknown_usage": 0,
+      "seconds": 436.54658246820327,
+      "tokens_per_accepted": 13368.75
+    },
+    "A": {
+      "attempts": 36,
+      "accepted": 36,
+      "tokens": 3014722,
+      "cached_input_tokens": 2680064,
+      "unknown_usage": 0,
+      "seconds": 1205.8930451390333,
+      "tokens_per_accepted": 83742.27777777778
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_comparison_arm": "E",
+  "paired_mean_difference_tokens": 70373.52777777778,
+  "paired_bootstrap_95_percent": [
+    66212.77777777778,
+    74776.80555555556
+  ],
+  "paired_n": 36,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "b5cc1ff97e459b8714b4c2ec6104b63b30595b028e70295158d3cb3f4b1888b5",
+  "queue_complete": true,
+  "usage_complete": true,
+  "amortization": {
+    "index_seconds_total": 1.4621375038987026,
+    "assumption": "one cold per-task index; local wall time only, no API-price equivalence"
+  },
+  "task_quality": [
+    {
+      "task": "python-unique",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-parse_port",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-retry_delay",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-merge_intervals",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-unique",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-parse_port",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-retry_delay",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-merge_intervals",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-unique",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-parse_port",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-retry_delay",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-merge_intervals",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    }
+  ]
+}

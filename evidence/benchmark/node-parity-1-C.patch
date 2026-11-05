@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-parity/logic.js b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-parity-1-C/logic.js
+index 0325a3d..29f2a64 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-parity/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-parity-1-C/logic.js
+@@ -1 +1 @@
+-exports.parity = function(x) { return x % 2 == 1; };
++exports.parity = function(x) { return x % 2 === 0; };

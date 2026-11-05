@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-square/logic.js b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-square-2-C/logic.js
+index dbb1c6c..a35bd02 100644
+--- a/home/leo-ribeiro/codex-economy/tests/benchmark-fixtures/node-square/logic.js
++++ b/home/leo-ribeiro/codex-economy/evidence/benchmark/workspaces/node-square-2-C/logic.js
+@@ -1 +1 @@
+-exports.square = function(x) { return x + x; };
++exports.square = function(x) { return x * x; };

@@ -1,0 +1,12 @@
+{
+  "real_requests": 5,
+  "input_tokens": 4389,
+  "output_tokens": 751,
+  "published_price_usd_per_million_input_tokens": 0.042,
+  "estimated_list_price_usd": 0.000184338,
+  "actual_billed_cost": "unavailable",
+  "source": "https://help.typesafe.ai/articles/5187202169-how-much-does-jev-cost",
+  "source_last_updated": "2026-11-03",
+  "subscription_quota_comparison": "not applicable",
+  "future_paid_calls": "disabled by default; no further calls made"
+}

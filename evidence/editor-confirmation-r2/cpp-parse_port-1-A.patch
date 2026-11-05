@@ -1,0 +1,19 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-parse_port/logic.hpp b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-parse_port-1-A/logic.hpp
+index 6aa2d03..140bf46 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/cpp-parse_port/logic.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/cpp-parse_port-1-A/logic.hpp
+@@ -6,4 +6,13 @@
+ #include <unordered_set>
+ #include <stdexcept>
+ #include <limits>
+-inline int parse_port(std::string text) { return text.empty() ? -1 : std::atoi(text.c_str()); }
++inline int parse_port(std::string text) {
++    if (text.empty()) return -1;
++    int port = 0;
++    for (char digit : text) {
++        if (digit < '0' || digit > '9') return -1;
++        if (port > (65535 - (digit - '0')) / 10) return -1;
++        port = port * 10 + (digit - '0');
++    }
++    return port == 0 ? -1 : port;
++}

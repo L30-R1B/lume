@@ -1,0 +1,2381 @@
+{
+  "modules": [
+    {
+      "path": ":",
+      "directory": "/home/leo-ribeiro/codex-economy-next/tests/framework-fixtures/android",
+      "plugins": [
+        "org.gradle.api.plugins.HelpTasksPlugin_Decorated",
+        "org.gradle.api.plugins.SoftwareReportingTasksPlugin_Decorated",
+        "org.gradle.buildinit.plugins.BuildInitPlugin_Decorated",
+        "org.gradle.buildinit.plugins.WrapperPlugin_Decorated"
+      ],
+      "tasks": [
+        {
+          "name": ":artifactTransforms",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ArtifactTransformsReportTask_Decorated"
+        },
+        {
+          "name": ":buildEnvironment",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.BuildEnvironmentReportTask_Decorated"
+        },
+        {
+          "name": ":dependencies",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.DependencyReportTask_Decorated"
+        },
+        {
+          "name": ":dependencyInsight",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.DependencyInsightReportTask_Decorated"
+        },
+        {
+          "name": ":help",
+          "group": "help",
+          "type": "org.gradle.configuration.Help_Decorated"
+        },
+        {
+          "name": ":init",
+          "group": "Build Setup",
+          "type": "org.gradle.buildinit.tasks.InitBuild_Decorated"
+        },
+        {
+          "name": ":javaToolchains",
+          "group": "help",
+          "type": "org.gradle.jvm.toolchain.internal.task.ShowToolchainsTask_Decorated"
+        },
+        {
+          "name": ":outgoingVariants",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.OutgoingVariantsReportTask_Decorated"
+        },
+        {
+          "name": ":prepareKotlinBuildScriptModel",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":projects",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ProjectReportTask_Decorated"
+        },
+        {
+          "name": ":properties",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.PropertyReportTask_Decorated"
+        },
+        {
+          "name": ":resolvableConfigurations",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ResolvableConfigurationsReportTask_Decorated"
+        },
+        {
+          "name": ":tasks",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.TaskReportTask_Decorated"
+        },
+        {
+          "name": ":updateDaemonJvm",
+          "group": "Build Setup",
+          "type": "org.gradle.buildconfiguration.tasks.UpdateDaemonJvm_Decorated"
+        },
+        {
+          "name": ":wrapper",
+          "group": "Build Setup",
+          "type": "org.gradle.api.tasks.wrapper.Wrapper_Decorated"
+        }
+      ],
+      "configurations": [],
+      "sourceSets": []
+    },
+    {
+      "path": ":app",
+      "directory": "/home/leo-ribeiro/codex-economy-next/tests/framework-fixtures/android/app",
+      "plugins": [
+        "org.gradle.api.plugins.HelpTasksPlugin_Decorated",
+        "org.gradle.api.plugins.SoftwareReportingTasksPlugin_Decorated",
+        "org.gradle.buildinit.plugins.BuildInitPlugin_Decorated",
+        "org.gradle.buildinit.plugins.WrapperPlugin_Decorated",
+        "com.android.build.gradle.internal.plugins.VersionCheckPlugin",
+        "org.gradle.language.base.plugins.LifecycleBasePlugin_Decorated",
+        "org.gradle.api.plugins.BasePlugin_Decorated",
+        "org.gradle.api.plugins.JvmEcosystemPlugin_Decorated",
+        "org.gradle.api.plugins.ReportingBasePlugin_Decorated",
+        "org.gradle.api.plugins.JvmToolchainsPlugin_Decorated",
+        "org.gradle.api.plugins.JavaBasePlugin_Decorated",
+        "org.jetbrains.kotlin.gradle.plugin.KotlinBaseApiPlugin_Decorated",
+        "com.android.build.gradle.api.AndroidBasePlugin",
+        "com.android.build.gradle.internal.plugins.AppPlugin",
+        "com.android.build.gradle.AppPlugin"
+      ],
+      "tasks": [
+        {
+          "name": ":app:analyzeDebugAndroidTestDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.AnalyzeDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:analyzeDebugDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.AnalyzeDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:analyzeDebugUnitTestDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.AnalyzeDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:analyzeReleaseDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.AnalyzeDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:artifactTransforms",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ArtifactTransformsReportTask_Decorated"
+        },
+        {
+          "name": ":app:assemble",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleAndroidTest",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleDebug",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleDebugAndroidTest",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleDebugUnitTest",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleRelease",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:assembleUnitTest",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:build",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:buildDebugPreBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PerModuleBundleTask_Decorated"
+        },
+        {
+          "name": ":app:buildDependents",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:buildEnvironment",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.BuildEnvironmentReportTask_Decorated"
+        },
+        {
+          "name": ":app:buildNeeded",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:buildReleasePreBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PerModuleBundleTask_Decorated"
+        },
+        {
+          "name": ":app:bundle",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:bundleDebug",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:bundleDebugClassesToCompileJar",
+          "group": null,
+          "type": "com.android.build.gradle.internal.feature.BundleAllClasses_Decorated"
+        },
+        {
+          "name": ":app:bundleDebugClassesToRuntimeJar",
+          "group": null,
+          "type": "com.android.build.gradle.internal.feature.BundleAllClasses_Decorated"
+        },
+        {
+          "name": ":app:bundleDebugResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.LinkAndroidResForBundleTask_Decorated"
+        },
+        {
+          "name": ":app:bundleRelease",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:bundleReleaseClassesToCompileJar",
+          "group": null,
+          "type": "com.android.build.gradle.internal.feature.BundleAllClasses_Decorated"
+        },
+        {
+          "name": ":app:bundleReleaseClassesToRuntimeJar",
+          "group": null,
+          "type": "com.android.build.gradle.internal.feature.BundleAllClasses_Decorated"
+        },
+        {
+          "name": ":app:bundleReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.LinkAndroidResForBundleTask_Decorated"
+        },
+        {
+          "name": ":app:check",
+          "group": "verification",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:checkDebugAarMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckAarMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:checkDebugAndroidTestAarMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckAarMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:checkDebugAndroidTestDuplicateClasses",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckDuplicateClassesTask_Decorated"
+        },
+        {
+          "name": ":app:checkDebugDuplicateClasses",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckDuplicateClassesTask_Decorated"
+        },
+        {
+          "name": ":app:checkDebugManifest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckManifest_Decorated"
+        },
+        {
+          "name": ":app:checkJetifier",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.tasks.CheckJetifierTask_Decorated"
+        },
+        {
+          "name": ":app:checkReleaseAarMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckAarMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:checkReleaseDuplicateClasses",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckDuplicateClassesTask_Decorated"
+        },
+        {
+          "name": ":app:checkReleaseManifest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CheckManifest_Decorated"
+        },
+        {
+          "name": ":app:clean",
+          "group": "build",
+          "type": "org.gradle.api.tasks.Delete_Decorated"
+        },
+        {
+          "name": ":app:collectReleaseDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PerModuleReportDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugAndroidTestJavaWithJavac",
+          "group": null,
+          "type": "org.gradle.api.tasks.compile.JavaCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugAndroidTestKotlin",
+          "group": null,
+          "type": "org.jetbrains.kotlin.gradle.tasks.KotlinCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugAndroidTestNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.CompileNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugAndroidTestSources",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugArtProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CompileArtProfileTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugJavaWithJavac",
+          "group": null,
+          "type": "org.gradle.api.tasks.compile.JavaCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugKotlin",
+          "group": null,
+          "type": "org.jetbrains.kotlin.gradle.tasks.KotlinCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.CompileNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugSources",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:compileDebugUnitTestJavaWithJavac",
+          "group": null,
+          "type": "org.gradle.api.tasks.compile.JavaCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugUnitTestKotlin",
+          "group": null,
+          "type": "org.jetbrains.kotlin.gradle.tasks.KotlinCompile_Decorated"
+        },
+        {
+          "name": ":app:compileDebugUnitTestSources",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:compileLint",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.LintCompile_Decorated"
+        },
+        {
+          "name": ":app:compileLintChecks",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:compileReleaseArtProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CompileArtProfileTask_Decorated"
+        },
+        {
+          "name": ":app:compileReleaseJavaWithJavac",
+          "group": null,
+          "type": "org.gradle.api.tasks.compile.JavaCompile_Decorated"
+        },
+        {
+          "name": ":app:compileReleaseKotlin",
+          "group": null,
+          "type": "org.jetbrains.kotlin.gradle.tasks.KotlinCompile_Decorated"
+        },
+        {
+          "name": ":app:compileReleaseNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.CompileNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:compileReleaseSources",
+          "group": "build",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:compressDebugAndroidTestAssets",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CompressAssetsTask_Decorated"
+        },
+        {
+          "name": ":app:compressDebugAssets",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CompressAssetsTask_Decorated"
+        },
+        {
+          "name": ":app:compressReleaseAssets",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.CompressAssetsTask_Decorated"
+        },
+        {
+          "name": ":app:configureReleaseDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleReportDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:connectedAndroidTest",
+          "group": "verification",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:connectedCheck",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.tasks.DeviceSerialTestTask_Decorated"
+        },
+        {
+          "name": ":app:connectedDebugAndroidTest",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.tasks.DeviceProviderInstrumentTestTask_Decorated"
+        },
+        {
+          "name": ":app:consumeConfigAttr",
+          "group": null,
+          "type": "com.android.build.gradle.internal.TaskManager$ConfigAttrTask_Decorated"
+        },
+        {
+          "name": ":app:createDebugAndroidTestApkListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createDebugApkListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createDebugApksFromBundleListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createDebugBundleListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createDebugCompatibleScreenManifests",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.CompatibleScreensManifest_Decorated"
+        },
+        {
+          "name": ":app:createMockableJar",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:createReleaseApkListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createReleaseApksFromBundleListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createReleaseBundleListingFileRedirect",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ListingFileRedirectTask_Decorated"
+        },
+        {
+          "name": ":app:createReleaseCompatibleScreenManifests",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.CompatibleScreensManifest_Decorated"
+        },
+        {
+          "name": ":app:dependencies",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.DependencyReportTask_Decorated"
+        },
+        {
+          "name": ":app:dependencyInsight",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.DependencyInsightReportTask_Decorated"
+        },
+        {
+          "name": ":app:desugarDebugAndroidTestFileDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexFileDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:desugarDebugFileDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexFileDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:desugarReleaseFileDependencies",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexFileDependenciesTask_Decorated"
+        },
+        {
+          "name": ":app:deviceAndroidTest",
+          "group": "verification",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:deviceCheck",
+          "group": "verification",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:dexBuilderDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexArchiveBuilderTask_Decorated"
+        },
+        {
+          "name": ":app:dexBuilderDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexArchiveBuilderTask_Decorated"
+        },
+        {
+          "name": ":app:dexBuilderRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexArchiveBuilderTask_Decorated"
+        },
+        {
+          "name": ":app:extractApksForDebug",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:extractApksForRelease",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:extractApksFromBundleForDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractApksTask_Decorated"
+        },
+        {
+          "name": ":app:extractApksFromBundleForRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractApksTask_Decorated"
+        },
+        {
+          "name": ":app:extractDebugNativeDebugMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:extractDebugNativeSymbolTables",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:extractDeepLinksDebug",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ExtractDeepLinksTask_Decorated"
+        },
+        {
+          "name": ":app:extractDeepLinksRelease",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ExtractDeepLinksTask_Decorated"
+        },
+        {
+          "name": ":app:extractProguardFiles",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractProguardFiles_Decorated"
+        },
+        {
+          "name": ":app:extractReleaseNativeDebugMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:extractReleaseNativeSymbolTables",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:extractReleaseVersionControlInfo",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ExtractVersionControlInfoTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAndroidTestAssets",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAndroidTestLintModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAndroidTestRFile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.GenerateLibraryRFileTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAndroidTestResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAndroidTestSources",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugAssets",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugFeatureMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.featuresplit.FeatureSetMetadataWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugFeatureTransitiveDeps",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.featuresplit.PackagedDependenciesWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugLintModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugLintReportModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugManifestClass",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.GenerateManifestJarTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugRFile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.GenerateLibraryRFileTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugSources",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugUnitTestAssets",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugUnitTestLintModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugUnitTestResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:generateDebugUnitTestSources",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseAssets",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseFeatureMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.featuresplit.FeatureSetMetadataWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseFeatureTransitiveDeps",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.featuresplit.PackagedDependenciesWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseLintModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseLintReportModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseLintVitalReportModel",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.LintModelWriterTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseManifestClass",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.GenerateManifestJarTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseRFile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.GenerateLibraryRFileTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:generateReleaseSources",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:help",
+          "group": "help",
+          "type": "org.gradle.configuration.Help_Decorated"
+        },
+        {
+          "name": ":app:installDebug",
+          "group": "Install",
+          "type": "com.android.build.gradle.internal.tasks.InstallVariantTask_Decorated"
+        },
+        {
+          "name": ":app:installDebugAndroidTest",
+          "group": "Install",
+          "type": "com.android.build.gradle.internal.tasks.InstallVariantTask_Decorated"
+        },
+        {
+          "name": ":app:javaPreCompileDebug",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.JavaPreCompileTask_Decorated"
+        },
+        {
+          "name": ":app:javaPreCompileDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.JavaPreCompileTask_Decorated"
+        },
+        {
+          "name": ":app:javaPreCompileDebugUnitTest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.JavaPreCompileTask_Decorated"
+        },
+        {
+          "name": ":app:javaPreCompileRelease",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.JavaPreCompileTask_Decorated"
+        },
+        {
+          "name": ":app:javaToolchains",
+          "group": "help",
+          "type": "org.gradle.jvm.toolchain.internal.task.ShowToolchainsTask_Decorated"
+        },
+        {
+          "name": ":app:lint",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintGlobalTask_Decorated"
+        },
+        {
+          "name": ":app:lintAnalyzeDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintAnalysisTask_Decorated"
+        },
+        {
+          "name": ":app:lintAnalyzeDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintAnalysisTask_Decorated"
+        },
+        {
+          "name": ":app:lintAnalyzeDebugUnitTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintAnalysisTask_Decorated"
+        },
+        {
+          "name": ":app:lintAnalyzeRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintAnalysisTask_Decorated"
+        },
+        {
+          "name": ":app:lintDebug",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTextOutputTask_Decorated"
+        },
+        {
+          "name": ":app:lintFix",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintGlobalTask_Decorated"
+        },
+        {
+          "name": ":app:lintFixDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:lintFixRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:lintRelease",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTextOutputTask_Decorated"
+        },
+        {
+          "name": ":app:lintReportDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:lintReportRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:lintVitalAnalyzeRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintAnalysisTask_Decorated"
+        },
+        {
+          "name": ":app:lintVitalRelease",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTextOutputTask_Decorated"
+        },
+        {
+          "name": ":app:lintVitalReportRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:makeApkFromBundleForDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleToApkTask_Decorated"
+        },
+        {
+          "name": ":app:makeApkFromBundleForRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleToApkTask_Decorated"
+        },
+        {
+          "name": ":app:mapDebugAndroidTestSourceSetPaths",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MapSourceSetPathsTask_Decorated"
+        },
+        {
+          "name": ":app:mapDebugSourceSetPaths",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MapSourceSetPathsTask_Decorated"
+        },
+        {
+          "name": ":app:mapReleaseSourceSetPaths",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MapSourceSetPathsTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestAssets",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestGeneratedProguardFiles",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeFileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestJavaResource",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeJavaResourceTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestJniLibFolders",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestNativeLibs",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeNativeLibsTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAndroidTestResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugArtProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeArtProfileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugAssets",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugGeneratedProguardFiles",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeFileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugJavaResource",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeJavaResourceTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugJniLibFolders",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugNativeDebugMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugNativeLibs",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeNativeLibsTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:mergeDebugStartupProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeStartupProfileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeDexRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeExtDexDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeExtDexDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeExtDexRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeLibDexDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeLibDexDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeProjectDexDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeProjectDexDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.DexMergingTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseArtProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeArtProfileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseAssets",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseGeneratedProguardFiles",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeFileTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseGlobalSynthetics",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.GlobalSyntheticsMergeTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseJavaResource",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeJavaResourceTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseJniLibFolders",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeSourceSetFolders_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseNativeDebugMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeNativeDebugMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseNativeLibs",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeNativeLibsTask_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:mergeReleaseStartupProfile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.MergeStartupProfileTask_Decorated"
+        },
+        {
+          "name": ":app:optimizeReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.OptimizeResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:outgoingVariants",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.OutgoingVariantsReportTask_Decorated"
+        },
+        {
+          "name": ":app:packageDebug",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.PackageApplication_Decorated"
+        },
+        {
+          "name": ":app:packageDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.PackageApplication_Decorated"
+        },
+        {
+          "name": ":app:packageDebugAndroidTestResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:packageDebugBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PackageBundleTask_Decorated"
+        },
+        {
+          "name": ":app:packageDebugResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:packageDebugUniversalApk",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleToStandaloneApkTask_Decorated"
+        },
+        {
+          "name": ":app:packageRelease",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.PackageApplication_Decorated"
+        },
+        {
+          "name": ":app:packageReleaseBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PackageBundleTask_Decorated"
+        },
+        {
+          "name": ":app:packageReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.MergeResources_Decorated"
+        },
+        {
+          "name": ":app:packageReleaseUniversalApk",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleToStandaloneApkTask_Decorated"
+        },
+        {
+          "name": ":app:parseDebugAndroidTestLocalResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.ParseLibraryResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:parseDebugIntegrityConfig",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ParseIntegrityConfigTask_Decorated"
+        },
+        {
+          "name": ":app:parseDebugLocalResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.ParseLibraryResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:parseReleaseIntegrityConfig",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ParseIntegrityConfigTask_Decorated"
+        },
+        {
+          "name": ":app:parseReleaseLocalResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.ParseLibraryResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:preBuild",
+          "group": null,
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:preDebugAndroidTestBuild",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.TestPreBuildTask_Decorated"
+        },
+        {
+          "name": ":app:preDebugBuild",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.AndroidVariantTask_Decorated"
+        },
+        {
+          "name": ":app:preDebugUnitTestBuild",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.AndroidVariantTask_Decorated"
+        },
+        {
+          "name": ":app:preReleaseBuild",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.AndroidVariantTask_Decorated"
+        },
+        {
+          "name": ":app:prepareLintJarForPublish",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.PrepareLintJarForPublish_Decorated"
+        },
+        {
+          "name": ":app:processApplicationManifestDebugForBundle",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessManifestForBundleTask_Decorated"
+        },
+        {
+          "name": ":app:processApplicationManifestReleaseForBundle",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessManifestForBundleTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugAndroidTestJavaRes",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessJavaResTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugAndroidTestManifest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessTestManifest_Decorated"
+        },
+        {
+          "name": ":app:processDebugAndroidTestNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugAndroidTestResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugJavaRes",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessJavaResTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugMainManifest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessApplicationManifest_Decorated"
+        },
+        {
+          "name": ":app:processDebugManifest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessMultiApkApplicationManifest_Decorated"
+        },
+        {
+          "name": ":app:processDebugManifestForPackage",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessPackagedManifestTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:processDebugUnitTestJavaRes",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessJavaResTask_Decorated"
+        },
+        {
+          "name": ":app:processManifestDebugForFeature",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessManifestForMetadataFeatureTask_Decorated"
+        },
+        {
+          "name": ":app:processManifestReleaseForFeature",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessManifestForMetadataFeatureTask_Decorated"
+        },
+        {
+          "name": ":app:processReleaseJavaRes",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessJavaResTask_Decorated"
+        },
+        {
+          "name": ":app:processReleaseMainManifest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessApplicationManifest_Decorated"
+        },
+        {
+          "name": ":app:processReleaseManifest",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessMultiApkApplicationManifest_Decorated"
+        },
+        {
+          "name": ":app:processReleaseManifestForPackage",
+          "group": null,
+          "type": "com.android.build.gradle.tasks.ProcessPackagedManifestTask_Decorated"
+        },
+        {
+          "name": ":app:processReleaseNavigationResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ProcessNavigationXmlTask_Decorated"
+        },
+        {
+          "name": ":app:processReleaseResources",
+          "group": null,
+          "type": "com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask_Decorated"
+        },
+        {
+          "name": ":app:produceDebugBundleIdeListingFile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleIdeModelProducerTask_Decorated"
+        },
+        {
+          "name": ":app:produceReleaseBundleIdeListingFile",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.BundleIdeModelProducerTask_Decorated"
+        },
+        {
+          "name": ":app:projects",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ProjectReportTask_Decorated"
+        },
+        {
+          "name": ":app:properties",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.PropertyReportTask_Decorated"
+        },
+        {
+          "name": ":app:resolvableConfigurations",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.ResolvableConfigurationsReportTask_Decorated"
+        },
+        {
+          "name": ":app:resolveConfigAttr",
+          "group": null,
+          "type": "com.android.build.gradle.internal.TaskManager$ConfigAttrTask_Decorated"
+        },
+        {
+          "name": ":app:sdkReleaseDependencyData",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SdkDependencyDataGeneratorTask_Decorated"
+        },
+        {
+          "name": ":app:signDebugBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.FinalizeBundleTask_Decorated"
+        },
+        {
+          "name": ":app:signReleaseBundle",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.FinalizeBundleTask_Decorated"
+        },
+        {
+          "name": ":app:signingConfigWriterDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigWriterTask_Decorated"
+        },
+        {
+          "name": ":app:signingConfigWriterDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigWriterTask_Decorated"
+        },
+        {
+          "name": ":app:signingConfigWriterRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigWriterTask_Decorated"
+        },
+        {
+          "name": ":app:signingReport",
+          "group": "Android",
+          "type": "com.android.build.gradle.internal.tasks.SigningReportTask_Decorated"
+        },
+        {
+          "name": ":app:stripDebugAndroidTestDebugSymbols",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.StripDebugSymbolsTask_Decorated"
+        },
+        {
+          "name": ":app:stripDebugDebugSymbols",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.StripDebugSymbolsTask_Decorated"
+        },
+        {
+          "name": ":app:stripReleaseDebugSymbols",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.StripDebugSymbolsTask_Decorated"
+        },
+        {
+          "name": ":app:tasks",
+          "group": "help",
+          "type": "org.gradle.api.tasks.diagnostics.TaskReportTask_Decorated"
+        },
+        {
+          "name": ":app:test",
+          "group": "verification",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:testDebugUnitTest",
+          "group": "verification",
+          "type": "com.android.build.gradle.tasks.factory.AndroidUnitTest_Decorated"
+        },
+        {
+          "name": ":app:uninstallAll",
+          "group": "Install",
+          "type": "org.gradle.api.DefaultTask_Decorated"
+        },
+        {
+          "name": ":app:uninstallDebug",
+          "group": "Install",
+          "type": "com.android.build.gradle.internal.tasks.UninstallTask_Decorated"
+        },
+        {
+          "name": ":app:uninstallDebugAndroidTest",
+          "group": "Install",
+          "type": "com.android.build.gradle.internal.tasks.UninstallTask_Decorated"
+        },
+        {
+          "name": ":app:uninstallRelease",
+          "group": "Install",
+          "type": "com.android.build.gradle.internal.tasks.UninstallTask_Decorated"
+        },
+        {
+          "name": ":app:updateLintBaseline",
+          "group": "verification",
+          "type": "com.android.build.gradle.internal.lint.AndroidLintGlobalTask_Decorated"
+        },
+        {
+          "name": ":app:updateLintBaselineDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:updateLintBaselineRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.lint.AndroidLintTask_Decorated"
+        },
+        {
+          "name": ":app:validateSigningDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateSigningTask_Decorated"
+        },
+        {
+          "name": ":app:validateSigningDebugAndroidTest",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ValidateSigningTask_Decorated"
+        },
+        {
+          "name": ":app:writeDebugAndroidTestSigningConfigVersions",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigVersionsWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeDebugAppMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.AppMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:writeDebugApplicationId",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ApplicationIdWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeDebugModuleMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ModuleMetadataWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeDebugSigningConfigVersions",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigVersionsWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeReleaseAppMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.AppMetadataTask_Decorated"
+        },
+        {
+          "name": ":app:writeReleaseApplicationId",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ApplicationIdWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeReleaseModuleMetadata",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ModuleMetadataWriterTask_Decorated"
+        },
+        {
+          "name": ":app:writeReleaseSigningConfigVersions",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.SigningConfigVersionsWriterTask_Decorated"
+        },
+        {
+          "name": ":app:zipApksForDebug",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ApkZipPackagingTask_Decorated"
+        },
+        {
+          "name": ":app:zipApksForRelease",
+          "group": null,
+          "type": "com.android.build.gradle.internal.tasks.ApkZipPackagingTask_Decorated"
+        }
+      ],
+      "configurations": [
+        {
+          "name": "_internal-unified-test-platform-android-device-provider-ddmlib",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-device-provider-ddmlib",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-driver-instrumentation",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.google.testing.platform",
+              "name": "android-driver-instrumentation",
+              "version": "0.0.9-alpha03",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.google.testing.platform",
+              "name": "android-test-plugin",
+              "version": "0.0.9-alpha03",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-additional-test-output",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-additional-test-output",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-apk-installer",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-apk-installer",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-coverage",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-coverage",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-device-info",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-device-info",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-emulator-control",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-emulator-control",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-host-logcat",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-host-logcat",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-android-test-plugin-result-listener-gradle",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "android-test-plugin-result-listener-gradle",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-core",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.google.testing.platform",
+              "name": "core",
+              "version": "0.0.9-alpha03",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-gradle-work-action",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.android.tools.utp",
+              "name": "gradle-work-action",
+              "version": "32.0.1",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "_internal-unified-test-platform-launcher",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "com.google.testing.platform",
+              "name": "launcher",
+              "version": "0.0.9-alpha03",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "androidApis",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": null,
+              "name": "unspecified",
+              "version": null,
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "androidJdkImage",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": null,
+              "name": "unspecified",
+              "version": null,
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "androidTestAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestDebugAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestDebugCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestDebugImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestDebugRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestReleaseAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestReleaseCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestReleaseImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestReleaseRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "androidTestUtil",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "annotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "api",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "name": "kotlin-stdlib",
+              "version": "2.2.10",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "archives",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "compileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "compileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "coreLibraryDesugaring",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestAnnotationProcessorClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestApiDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompilationApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompilationCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompilationImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompilationRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompileClasspath",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "EconomyAndroidValidation",
+              "name": "app",
+              "version": "unspecified",
+              "project": ":app"
+            }
+          ]
+        },
+        {
+          "name": "debugAndroidTestCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestCompileOnlyDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestImplementationDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestIntransitiveDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestLintChecksClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestRuntimeClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAndroidTestRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugAnnotationProcessorClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugApiDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugApiElements",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompilationApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompilationCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompilationImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompilationRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompileClasspath",
+          "resolved": [
+            {
+              "status": "unresolved",
+              "error": "Resolution of the configuration ':app:debugCompileClasspath' was attempted without an exclusive lock. This is unsafe and not allowed."
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugCompileOnlyDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugImplementationDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugIntransitiveDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugLintChecksClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugReverseMetadataValues",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugRuntimeClasspath",
+          "resolved": [
+            {
+              "status": "unresolved",
+              "error": "Resolution of the configuration ':app:debugRuntimeClasspath' was attempted without an exclusive lock. This is unsafe and not allowed."
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "name": "debugRuntimeElements",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestAnnotationProcessorClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestApiDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompilationApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompilationCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompilationImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompilationRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompileClasspath",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "EconomyAndroidValidation",
+              "name": "app",
+              "version": "unspecified",
+              "project": ":app"
+            }
+          ]
+        },
+        {
+          "name": "debugUnitTestCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestCompileOnlyDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestImplementationDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestIntransitiveDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestLintChecksClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "debugUnitTestRuntimeClasspath",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "EconomyAndroidValidation",
+              "name": "app",
+              "version": "unspecified",
+              "project": ":app"
+            }
+          ]
+        },
+        {
+          "name": "debugUnitTestRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "default",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "implementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinBuildToolsApiClasspath",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "name": "kotlin-build-tools-impl",
+              "version": null,
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "kotlinCompilerClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinCompilerPluginClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinCompilerPluginClasspathDebug",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinCompilerPluginClasspathDebugAndroidTest",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinCompilerPluginClasspathDebugUnitTest",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "kotlinCompilerPluginClasspathRelease",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "lintChecks",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "lintPublish",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseAnnotationProcessorClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseApiDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseApiElements",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompilationApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompilationCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompilationImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompilationRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompileClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseCompileOnlyDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseImplementationDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseIntransitiveDependenciesMetadata",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseLintChecksClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseReverseMetadataValues",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseRuntimeClasspath",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseRuntimeElements",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "releaseRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "runtimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testDebugAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testDebugCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testDebugImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testDebugRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesCompileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugCompileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesDebugRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseCompileOnlyApi",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesReleaseRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testFixturesRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testImplementation",
+          "resolved": [],
+          "dependencies": [
+            {
+              "group": "junit",
+              "name": "junit",
+              "version": "4.13.2",
+              "project": null
+            }
+          ]
+        },
+        {
+          "name": "testReleaseAnnotationProcessor",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testReleaseCompileOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testReleaseImplementation",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testReleaseRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        },
+        {
+          "name": "testRuntimeOnly",
+          "resolved": [],
+          "dependencies": []
+        }
+      ],
+      "sourceSets": []
+    }
+  ],
+  "origin": "gradle-projectsEvaluated",
+  "status": "resolved_by_tool",
+  "offline": true,
+  "snapshot": 2,
+  "previous_snapshot": 2
+}

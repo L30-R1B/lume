@@ -1,0 +1,13 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-parse_port/logic.js b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-parse_port-1-A/logic.js
+index fb2a52f..ef62fe4 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/node-parse_port/logic.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/node-parse_port-1-A/logic.js
+@@ -1 +1,7 @@
+-exports.parse_port = function(text) { return Number(text); };
++exports.parse_port = function(text) {
++  if (typeof text !== "string" || text.length === 0 || /[^0-9]/.test(text)) {
++    return null;
++  }
++  const port = Number(text);
++  return port >= 1 && port <= 65535 ? port : null;
++};

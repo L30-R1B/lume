@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(validation CXX)
+set(CMAKE_CXX_STANDARD 17)
+enable_testing()
+add_executable(check check.cpp)
+add_test(NAME acceptance COMMAND check)

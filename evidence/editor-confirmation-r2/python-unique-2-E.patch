@@ -1,0 +1,14 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-unique/logic.py b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-unique-2-E/logic.py
+index 7d4a1ce..cf873cb 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/editor-confirmation-inputs/python-unique/logic.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/editor-confirmation-r2/workspaces/python-unique-2-E/logic.py
+@@ -1,2 +1,8 @@
+ def unique(values):
+-    return list(values)
++    seen = set()
++    result = []
++    for value in values:
++        if value not in seen:
++            seen.add(value)
++            result.append(value)
++    return result

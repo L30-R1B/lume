@@ -7,6 +7,7 @@ from pathlib import Path
 
 from . import adapters
 from .security import DEFAULT_POLICY, digest, excluded, read_source
+from .store import root_identity
 
 
 class Engine:
@@ -22,8 +23,8 @@ class Engine:
             raise ValueError("Project root must be a directory")
         with self.db:
             self.db.execute(
-                "INSERT INTO projects(name,root,policy) VALUES(?,?,?) ON CONFLICT(name) DO NOTHING",
-                (name, str(root), json.dumps(DEFAULT_POLICY)),
+                "INSERT INTO projects(name,root,policy,root_identity) VALUES(?,?,?,?) ON CONFLICT(name) DO NOTHING",
+                (name, str(root), json.dumps(DEFAULT_POLICY), root_identity(root)),
             )
         p = self.s.project(name)
         if p["root"] != str(root):
@@ -44,7 +45,7 @@ class Engine:
                 if excluded(path, p["policy"]):
                     continue
                 try:
-                    source, h = read_source(root, path, p["policy"])
+                    source, h = read_source(root, path, p["policy"], p["root_identity"])
                     files[path] = (source, h)
                 except (OSError, ValueError, UnicodeError) as e:
                     omissions.append({"path": path, "reason": str(e)})
@@ -187,11 +188,39 @@ class Engine:
                             "INSERT INTO edges(project,source,target,kind,origin,status,snapshot) VALUES(?,?,?,?,?,?,?)",
                             (p["id"], path, dest, kind, adapters.VERSION, status, snap),
                         )
+            from .contracts import collect
+
+            self.db.execute("DELETE FROM entities WHERE project=?", (p["id"],))
+            contract_warnings = []
+            for path, (source, _) in files.items():
+                try:
+                    entities = collect(path, source)
+                except (ValueError, TypeError, SyntaxError, __import__("yaml").YAMLError) as error:
+                    contract_warnings.append({"path": path, "warnings": [str(error)]})
+                    continue
+                for entity in entities:
+                    self.db.execute(
+                        "INSERT OR REPLACE INTO entities VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                        (
+                            digest(str(p["id"]) + entity["id"]),
+                            p["id"],
+                            snap,
+                            path,
+                            entity["start"],
+                            entity["end"],
+                            entity["kind"],
+                            entity["name"],
+                            json.dumps(entity["payload"]),
+                            entity["origin"],
+                            entity["status"],
+                        ),
+                    )
             # Detect concurrent external edits before publishing the snapshot.
             verify, _ = self.scan(p)
             if self.fingerprint(p, verify) != fingerprint:
                 raise ValueError("Workspace changed during index; retry required")
             warnings = [{"path": k, "warnings": v["warnings"]} for k, v in facts.items() if v["warnings"]]
+            warnings.extend(contract_warnings)
             state = "partial" if omissions or warnings else "ready"
             details = {
                 "extractor_version": adapters.VERSION,
@@ -233,7 +262,7 @@ class Engine:
         if start < 1 or end < start or end - start > 2000:
             raise ValueError("Use a valid interval of at most 2001 lines")
         p = self.s.project(name)
-        source, h = read_source(p["root"], path, p["policy"])
+        source, h = read_source(p["root"], path, p["policy"], p["root_identity"])
         if expected_hash and expected_hash != h:
             raise ValueError("Hash mismatch; source changed, refresh evidence")
         lines = source.splitlines(keepends=True)
@@ -250,7 +279,16 @@ class Engine:
     def search(self, name, query, limit=20, mode="lexical"):
         if not query or len(query) > 2000 or not 1 <= limit <= 200:
             raise ValueError("Query must be 1–2000 characters; limit 1–200")
-        if mode not in ("lexical", "structural", "hybrid", "full", "assisted"):
+        if mode not in (
+            "lexical",
+            "structural",
+            "hybrid",
+            "full",
+            "assisted",
+            "hierarchical",
+            "ast-prune",
+            "longcodezip",
+        ):
             raise ValueError("Unsupported retrieval mode")
         status = self.require_current(name)
         p = self.s.project(name)
@@ -271,20 +309,20 @@ class Engine:
                 "INSERT INTO events(created,kind,payload) VALUES(?,?,?)", (time.time(), "retrieval", signature)
             )
         effective = mode
-        if mode in ("hybrid", "assisted"):
+        if mode in ("hybrid", "assisted", "hierarchical", "longcodezip"):
             from .providers import LocalReranker
 
             candidates = self.s.rows(
                 "SELECT path,hash,source,id FROM files WHERE project=? ORDER BY path LIMIT 500", (p["id"],)
             )
-            semantic = LocalReranker().rank(query, candidates)
+            semantic = [item for item in LocalReranker().rank(query, candidates) if item.get("rerank_score", 0) > 0]
             rank = {r["path"]: 1 / (60 + i) for i, r in enumerate(rows)}
             by = {r["path"]: r for r in rows}
             for i, r in enumerate(semantic):
                 rank[r["path"]] = rank.get(r["path"], 0) + 1 / (60 + i)
                 by[r["path"]] = r
             rows = [by[k] for k in sorted(rank, key=rank.get, reverse=True)[:limit]]
-        if mode == "structural":
+        if mode in ("structural", "ast-prune"):
             symbols = self.s.rows(
                 "SELECT f.path,f.hash,f.source,f.id,s.start,s.end,s.name FROM symbols s JOIN files f ON s.file=f.id WHERE f.project=? AND s.name LIKE ? LIMIT ?",
                 (p["id"], "%" + query + "%", limit),
@@ -293,8 +331,16 @@ class Engine:
         if mode == "assisted":
             from .providers import Jev
 
+            p["_investigation"] = {
+                "previous_equivalent_queries": previous_queries,
+                "fingerprint": status["fingerprint"],
+            }
             rows, meta = Jev(self.s).rank(p, query, rows)
-            effective = meta
+            effective = {
+                key: meta[key]
+                for key in ("mode", "error", "provider", "model", "requests", "latency_seconds", "cache_hit", "usage")
+                if key in meta
+            }
         for r in rows:
             if "start" not in r:
                 lines = r["source"].splitlines()
@@ -322,6 +368,8 @@ class Engine:
             "effective_mode": effective,
             "candidates": rows,
             "candidate_limit": limit,
+            "candidate_universe_limit": 500 if mode in ("hybrid", "assisted", "hierarchical", "longcodezip") else None,
+            "index_omissions": status["details"].get("omissions", []),
             "insufficient": not rows,
         }
 
@@ -352,6 +400,7 @@ class Engine:
         return {"edges": list(results.values()), "omitted": False}
 
     def context(self, name, query, budget=4000, mode="hybrid"):
+        requested_budget = budget
         if not 128 <= budget <= 100000:
             raise ValueError("Context byte budget must be 128–100000")
         found = self.search(name, query, mode=mode)
@@ -371,7 +420,7 @@ class Engine:
                 budget -= size
             else:
                 omitted.append({"path": row["path"], "reason": "budget"})
-        return {
+        packet = {
             **found,
             "candidates": None,
             "evidence": evidence,
@@ -380,6 +429,10 @@ class Engine:
             "budget_scope": "serialized evidence items, excluding envelope; not a token cap",
             "insufficient": not evidence,
         }
+
+        from .retrieval import augment
+
+        return augment(self, name, query, packet, requested_budget, mode)
 
     def capabilities(self, name):
         p = self.s.project(name)
@@ -396,9 +449,20 @@ class Engine:
             "structure": [r["adapter"] for r in adapters_used if r["adapter"] != "text"],
             "compiler_references": resolved,
             "semantics_fresh": status["state"] == "ready" and resolved > 0,
-            "framework_relations": False,
+            "framework_relations": bool(
+                self.s.rows(
+                    "SELECT 1 FROM entities WHERE project=? AND (kind LIKE 'next_%' OR kind LIKE 'android_%' OR kind LIKE 'compose_%') LIMIT 1",
+                    (p["id"],),
+                )
+            ),
+            "contracts": self.s.rows(
+                "SELECT kind,count(*) AS count FROM entities WHERE project=? GROUP BY kind", (p["id"],)
+            ),
+            "adapter_extensions": list(__import__("codex_economy.registry", fromlist=["installed"]).installed()),
             "build_test_commands": status.get("details", {}).get("commands", []),
-            "dynamic_graph": False,
+            "dynamic_graph": bool(
+                self.s.rows("SELECT 1 FROM edges WHERE project=? AND status='observed' LIMIT 1", (p["id"],))
+            ),
             "limits": [
                 "inferred calls are not resolved references",
                 "index refresh discards compiler edges; run semantic again",

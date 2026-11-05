@@ -1,0 +1,375 @@
+{
+  "model": "jev-1.14.0",
+  "question_domain": "actual named function definition vs mention; not general correctness",
+  "calibration": {
+    "threshold": 0.64,
+    "objective": "maximum calibration F1",
+    "f1": 1.0,
+    "n": 24,
+    "brier": 0.042883333333333336,
+    "dataset_hash": "9b296e1506f02bac7ccd357448c4d8ef4319d489ea1f5fc89a1b726a73596211",
+    "evaluation": false,
+    "guarantee": false,
+    "use": "advisory routing only; independent acceptance checks remain mandatory",
+    "confusion": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "holdout": {
+    "n": 8,
+    "correct": 8,
+    "accuracy": 1.0
+  },
+  "calibration_rows": [
+    {
+      "split": "calibration",
+      "probability": 0.77,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.65,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.72,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.72,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.7,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.65,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.76,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.72,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.72,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.77,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.64,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.03,
+      "label": 0
+    },
+    {
+      "split": "calibration",
+      "probability": 0.71,
+      "label": 1
+    },
+    {
+      "split": "calibration",
+      "probability": 0.01,
+      "label": 0
+    }
+  ],
+  "holdout_rows": [
+    {
+      "split": "holdout",
+      "probability": 0.97,
+      "label": 1
+    },
+    {
+      "split": "holdout",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "holdout",
+      "probability": 0.94,
+      "label": 1
+    },
+    {
+      "split": "holdout",
+      "probability": 0.01,
+      "label": 0
+    },
+    {
+      "split": "holdout",
+      "probability": 0.97,
+      "label": 1
+    },
+    {
+      "split": "holdout",
+      "probability": 0.02,
+      "label": 0
+    },
+    {
+      "split": "holdout",
+      "probability": 0.96,
+      "label": 1
+    },
+    {
+      "split": "holdout",
+      "probability": 0.01,
+      "label": 0
+    }
+  ],
+  "runs": [
+    {
+      "model": "jev-1.14.0",
+      "answers": {
+        "0": {
+          "type": "noul",
+          "noul": 0.77
+        },
+        "1": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "2": {
+          "type": "noul",
+          "noul": 0.65
+        },
+        "3": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "4": {
+          "type": "noul",
+          "noul": 0.72
+        },
+        "5": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "6": {
+          "type": "noul",
+          "noul": 0.72
+        },
+        "7": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "8": {
+          "type": "noul",
+          "noul": 0.7
+        },
+        "9": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "10": {
+          "type": "noul",
+          "noul": 0.65
+        },
+        "11": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 198
+      },
+      "mode": "jev",
+      "latency_seconds": 0.29847678600344807,
+      "provider": "typesafe",
+      "requested_model": "jev-1.14.0",
+      "input_bytes": 3236,
+      "cost": null,
+      "requests": 1,
+      "decision_used": "ranking_only",
+      "cache_hit": false
+    },
+    {
+      "model": "jev-1.14.0",
+      "answers": {
+        "0": {
+          "type": "noul",
+          "noul": 0.76
+        },
+        "1": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "2": {
+          "type": "noul",
+          "noul": 0.72
+        },
+        "3": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "4": {
+          "type": "noul",
+          "noul": 0.72
+        },
+        "5": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "6": {
+          "type": "noul",
+          "noul": 0.77
+        },
+        "7": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "8": {
+          "type": "noul",
+          "noul": 0.64
+        },
+        "9": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "10": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "11": {
+          "type": "noul",
+          "noul": 0.01
+        }
+      },
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 198
+      },
+      "mode": "jev",
+      "latency_seconds": 0.2602176599903032,
+      "provider": "typesafe",
+      "requested_model": "jev-1.14.0",
+      "input_bytes": 3272,
+      "cost": null,
+      "requests": 1,
+      "decision_used": "ranking_only",
+      "cache_hit": false
+    },
+    {
+      "model": "jev-1.14.0",
+      "answers": {
+        "0": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "1": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "2": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "3": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "4": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "5": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "6": {
+          "type": "noul",
+          "noul": 0.96
+        },
+        "7": {
+          "type": "noul",
+          "noul": 0.01
+        }
+      },
+      "usage": {
+        "input_tokens": 769,
+        "output_tokens": 132
+      },
+      "mode": "jev",
+      "latency_seconds": 0.2550935000181198,
+      "provider": "typesafe",
+      "requested_model": "jev-1.14.0",
+      "input_bytes": 2192,
+      "cost": null,
+      "requests": 1,
+      "decision_used": "ranking_only",
+      "cache_hit": false
+    }
+  ],
+  "acceptance_decision": false,
+  "universal_threshold_claimed": false
+}

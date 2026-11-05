@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/logic.hpp b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-distance-2-A/logic.hpp
+index ea1d416..906b02e 100644
+--- a/home/leo-ribeiro/codex-economy/tests/confirmation-inputs/cpp-distance/logic.hpp
++++ b/home/leo-ribeiro/codex-economy/evidence/confirmation-v2/workspaces/cpp-distance-2-A/logic.hpp
+@@ -1,2 +1,2 @@
+ #pragma once
+-inline int distance(int a, int b) { return a + b; }
++inline int distance(int a, int b) { return a >= b ? a - b : b - a; }

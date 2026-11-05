@@ -30,10 +30,17 @@ def capabilities():
 def execute(store, project, objective, acceptance, mode="hybrid", timeout=300, model=None, effort=None):
     engine = Engine(store)
     snapshot = engine.index(project)
+    from .continuity import cached_result
+
+    reused = cached_result(store, project, objective, acceptance)
+    if reused:
+        return reused
     sessions = Sessions(store)
     session = sessions.create(project, objective, acceptance)
     sid = session["session"]
-    packet = engine.context(project, objective, mode=mode)
+    from .config import load
+
+    packet = engine.context(project, objective, budget=load(store)["context_bytes"], mode=mode)
     prompt = (
         "Task: "
         + objective
