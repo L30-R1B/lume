@@ -1,0 +1,10 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/service.hpp b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/cpp-kib-1-E/service.hpp
+index e8d2f70..0caaa13 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/service.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/cpp-kib-1-E/service.hpp
+@@ -2,4 +2,4 @@
+ #include <string>
+ #include <cstdlib>
+ #include <climits>
+-inline unsigned long long kib(unsigned long long n){return n/1024;}
++inline unsigned long long kib(unsigned long long n){return n/1024 + (n%1024 != 0);}

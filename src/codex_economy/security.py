@@ -97,7 +97,10 @@ def read_source(root, relative, policy, expected_root=None):
 
 
 def redact(s):
-    s = re.sub(r'(?i)(bearer\s+)[^\s"\']+', r"\1[REDACTED]", s)
+    # Do not treat a quoted code literal such as `"Bearer "` as a credential.
+    # JSON escaping puts a backslash before that closing quote, so exclude it
+    # from both the token start and token body while still masking real values.
+    s = re.sub(r"(?i)(bearer\s+)(?![\"'\\])([^\s\"'\\]+)", r"\1[REDACTED]", s)
     s = re.sub(r"(?i)((?:api[_-]?key|password|token|secret)\s*[=:]\s*)[^\s,;]+", r"\1[REDACTED]", s)
     s = re.sub(r"\b(?:sk-|ts_)[a-zA-Z0-9_-]{12,}", "[REDACTED]", s)
     return s

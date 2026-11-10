@@ -1,0 +1,23 @@
+{
+  "scope": "Historical local CLI metrics snapshot, separate from the paired benchmark tables; do not add to benchmark totals because individual-run overlap cannot be excluded.",
+  "capture_timestamp": "not present in source snapshot",
+  "source": "Anonymized aggregate exported from the local ce metrics view; project names, run IDs, argv, prompts, stdout, and stderr omitted.",
+  "recorded_runs": 78,
+  "run_state_exit_counts": {
+    "completed:0": 75,
+    "completed:1": 1,
+    "cancelled:None": 1,
+    "running:None": 1
+  },
+  "codex_observed_turns": 7,
+  "codex_usage": {
+    "input_tokens": 502838,
+    "cached_input_tokens": 444416,
+    "output_tokens": 5440,
+    "reasoning_output_tokens": 416
+  },
+  "codex_total_tokens": 508278,
+  "auxiliary_event_records": 0,
+  "subscription_consumption": "unavailable",
+  "unknown_usage_records": 71
+}

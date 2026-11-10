@@ -5,7 +5,7 @@ certifi==2026.10.23
 cffi==2.1.1
 click==8.5.0
 cloudpickle==3.1.2
-codex-economy @ file:///tmp/tmp.Tp8GtfTbpi/codex_economy-0.2.0-py3-none-any.whl#sha256=69f461a40d18fe27a0ed4ea4bd984ba769822473c5a06a6017a117ad4253bf8f
+# The project wheel is built locally by scripts/install.sh; audit third-party runtime dependencies here.
 cryptography==50.0.2
 defusedxml==0.7.1
 h11==0.16.0

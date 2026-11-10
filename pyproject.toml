@@ -4,12 +4,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "codex-economy"
 version = "0.2.0"
-description = "Local evidence retrieval and measured Codex task execution"
+description = "Lume: local evidence retrieval and measured Codex task execution"
 requires-python = ">=3.12"
 license = "MIT"
 dependencies = ["mcp>=1.20,<2", "tree-sitter>=0.25,<0.26", "tree-sitter-javascript", "tree-sitter-typescript", "tree-sitter-kotlin", "tree-sitter-c", "tree-sitter-cpp", "PyYAML>=6", "scikit-learn>=1.5", "libclang>=18,<19", "jedi>=0.19,<0.21", "defusedxml>=0.7", "threadpoolctl>=3"]
 [project.scripts]
 ce = "codex_economy.cli:main"
+[project.urls]
+Homepage = "https://github.com/L30-R1B/lume"
+Repository = "https://github.com/L30-R1B/lume"
+Issues = "https://github.com/L30-R1B/lume/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 [tool.ruff]
@@ -17,5 +21,8 @@ line-length = 120
 extend-exclude = ["tests/benchmark-fixtures", "tests/confirmation-inputs", "tests/editor-confirmation-inputs", "tests/representative-inputs", "tests/framework-fixtures", "evidence", "tools"]
 [tool.setuptools.package-data]
 codex_economy = ["*.cjs"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["evidence", "build", "dist", ".git"]
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "PLW1510"]

@@ -1,0 +1,338 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "timeout": 180,
+  "context_bytes": 6000,
+  "codex_binary": "/home/leo-ribeiro/.nvm/versions/node/v22.23.2/bin/codex",
+  "version": 4,
+  "phase": "distinct-multifile-post-redaction-confirmation",
+  "seed": 20261115,
+  "arms": [
+    "A",
+    "E"
+  ],
+  "comparison_arm": "E",
+  "repetitions": 3,
+  "output": "/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3",
+  "execution_home": "/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2-codex-home",
+  "tasks": [
+    {
+      "id": "python-discount",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount",
+      "objective": "In service.py, fix discounted_cents. Apply an integer percent discount to cents using floor division only after multiplication. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-bearer",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer",
+      "objective": "In service.py, fix bearer. Extract a nonempty token only from the exact case-sensitive prefix Bearer followed by one space; otherwise return None. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-filename",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename",
+      "objective": "In service.py, fix safe_name. Accept a nonempty filename only if it is neither . nor .. and contains neither slash nor backslash. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "python-pagination",
+      "family": "python",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination",
+      "objective": "In service.py, fix offset. Return zero-based pagination offset for a one-based page and size 1 through 100; raise ValueError for any other page or size. Only change service.py.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.py",
+      "protected": [
+        "check.py",
+        "README.md",
+        "config.json",
+        "app.py"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "node-utf8length",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length",
+      "objective": "In service.js, fix bodyBytes. Return the UTF-8 byte length of a string as transmitted over HTTP. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-retryheader",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader",
+      "objective": "In service.js, fix retrySeconds. Convert milliseconds to a nonnegative Retry-After number of whole seconds, rounding upward. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-identifier",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier",
+      "objective": "In service.js, fix parseId. Parse only a canonical positive decimal integer string without leading zero and within JavaScript safe integer range; otherwise return null. Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "node-tax",
+      "family": "node",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax",
+      "objective": "In service.js, fix taxCents. Return tax in cents rounded to nearest integer from integer cents and basis points (10000 basis points is 100%). Only change service.js.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.js",
+      "protected": [
+        "check.js",
+        "README.md",
+        "config.json",
+        "app.js"
+      ],
+      "verify": [
+        "node",
+        "check.js"
+      ]
+    },
+    {
+      "id": "cpp-port",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port",
+      "objective": "In service.hpp, fix parsePort. Parse a nonempty ASCII decimal port from 1 to 65535 inclusive; return -1 for malformed or out-of-range input, including overflow. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-overlap",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap",
+      "objective": "In service.hpp, fix overlap. Return whether two nonempty half-open integer intervals [a,b) and [c,d) overlap; empty or reversed intervals never overlap. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-kib",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib",
+      "objective": "In service.hpp, fix kib. Round unsigned byte counts up to whole kibibytes without overflowing for the maximum unsigned long long. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    },
+    {
+      "id": "cpp-csvfield",
+      "family": "cpp",
+      "root": "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield",
+      "objective": "In service.hpp, fix csvField. Encode one CSV field by surrounding it with double quotes and doubling each embedded double quote; preserve all other bytes. Only change service.hpp.",
+      "acceptance": "All existing checks pass; no test or unrelated source changes.",
+      "target": "service.hpp",
+      "protected": [
+        "check.py",
+        "README.md",
+        "app.hpp",
+        "check.cpp",
+        "config.json"
+      ],
+      "verify": [
+        "python3",
+        "check.py"
+      ]
+    }
+  ],
+  "reference_config_hash": "38932be34081ac44bf21293a851c314ea2f3c7ba5f8bcee1eb259460fe97a147",
+  "reference_config_semantic_hash": "1fddd290073e9b8d227c915b49ad42bda402e7f4165952d41c9d7548ef8b663e",
+  "fixture_hashes": {
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount/service.py": "92751383f3bbc69cea3d3daf1304c51912fb5a4620bd0d3a7b9a41aa05948d84",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount/check.py": "afdb3df635df8d0db74e97a06583a6e3dafcdc42cce189e88ed4bc728316d9b3",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-discount/app.py": "a4595d8c7e5f1c37d53e3a73c92d87d59f782b944c6654919fb8339f4bc932dc",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/service.py": "18ee038f7ad104af0d99ed33a9ec0d0bb43022678bd48517647e3fc3bc29bf75",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/check.py": "45aea0b1357aaec49a48b68a1884755b92ee34a37d10dc246eab482e87d426b0",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/app.py": "77e4f553b83c3194934ad8d4279e999b17719a20ddcf1c9d7e167dfc1654696c",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/service.py": "3d60f65c4f30d6987e4f4e250a97aad0c162558273a3355ff0f896fe63f21046",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/check.py": "ab6f3e3ac754e7e449ae61e066dfec61da6c43e9dfdb623b235dcfeb23e448d8",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/app.py": "626ac8cdff2ad8afba7146424de7854e3705ceaabbd212f3fbec0d0dd3fe7fca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/service.py": "262055ec2b08768d6db9905e2d96bcc2aa0409015703bea36d48388a0f72d4f9",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/check.py": "3ffe94a036e118d3511184b86ebbc14a6ba60c929c25515ab593fc3e407652aa",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/app.py": "8b7c27661a9f74e71cb7f5250cfaf08f559186d5c63f8d5909e9005ff409a7bc",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/check.js": "4869a78906b3261b69dfb80f7fcd00640c11daff07bcaffd94aefac9c4fea65b",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/app.js": "ba4041fee48fa5020db930ba886abde14cf97e6cf6904debc85f95e79598dc27",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/service.js": "93ac8f3c2abd758b4f7ffa65cc3f6648c498f35dc242585402098facfa3af7a5",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader/check.js": "c947deb7d74e472e407b19e6f4d2116c9685400b7c3d308748c33b6ab354c1dd",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader/app.js": "ba4041fee48fa5020db930ba886abde14cf97e6cf6904debc85f95e79598dc27",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-retryheader/service.js": "e3ec8ea64c7af6704999e41ba15282a944e2f91f0b6c09ec2e14d4fd087a8d9d",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/check.js": "639042925a001983b64c7c0cdbfcde3847202010d5e7b0c907b1d1bac1f61830",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/app.js": "ba4041fee48fa5020db930ba886abde14cf97e6cf6904debc85f95e79598dc27",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/service.js": "5ba7c7a59fa18ba65693002173a07b0f2112c8316562689d9f8862dd39ccf392",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/check.js": "fcafdb434f25fb57c535ab689f91b1e0fed8ef646ff7752b2f9ccb9ed2d015f9",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/app.js": "ba4041fee48fa5020db930ba886abde14cf97e6cf6904debc85f95e79598dc27",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/service.js": "4088548f4a078e719e5bcd893397c0eee4e601430d230f0275702a75edcdea2f",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/service.hpp": "556f76ddab5e3934cb846833f5172b5dd096d872d636f443d7a051427acc8c72",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/check.py": "0301501df39edf81b5502e2f910b5649d23655fc06fb47e94becc459dbad0dc3",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/app.hpp": "fc0fb02d1a69354628e7f15e0ebdfaf8ffc5d5e1511f763a296f90af1be23fe0",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/check.cpp": "b1415f4b15007b2d2a0598c4d8f312dbdb331bd8d2cc2a5e353a2eeebee99a78",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-port/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/service.hpp": "01083479d189bac969d6784a55d379c53ec0aaa13b043e572c57dab180bdd171",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/check.py": "0301501df39edf81b5502e2f910b5649d23655fc06fb47e94becc459dbad0dc3",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/app.hpp": "fc0fb02d1a69354628e7f15e0ebdfaf8ffc5d5e1511f763a296f90af1be23fe0",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/check.cpp": "3ff635fa59c001140ef2c5ced25e17528aebede6e88e29424edd86101e63d1c7",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-overlap/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/service.hpp": "1cb05734d6ae3deecfa373e3d051255a2b85dd867b6747aef291895d607c7a70",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/check.py": "0301501df39edf81b5502e2f910b5649d23655fc06fb47e94becc459dbad0dc3",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/app.hpp": "fc0fb02d1a69354628e7f15e0ebdfaf8ffc5d5e1511f763a296f90af1be23fe0",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/check.cpp": "1db30e65c1b7e6b7b13cab8ef526e8331923485838294fb0e9d4830dc2cdecda",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-kib/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/service.hpp": "6801c7084ec4b1c51f79d5494436f7971050011ed6e63a7b6e2bdd6d5a7e7b31",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/check.py": "0301501df39edf81b5502e2f910b5649d23655fc06fb47e94becc459dbad0dc3",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/README.md": "9b7babd930dae9ba8487fe09ccbd042431c74797dc2cee565172a3a7b0629f01",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/app.hpp": "fc0fb02d1a69354628e7f15e0ebdfaf8ffc5d5e1511f763a296f90af1be23fe0",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/check.cpp": "c5a5944b8d80b350e5c6136ef7c3d2bf8f72e8b19ab88320f89bf429d26d7a9a",
+    "/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/config.json": "2c532fc378d097f5671a14e49e24c9623fd5f6a9df54f7133faa00397cc9ecca",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/benchmark.py": "608afb4460f499a422cb9b47183975d4b1f3fa67fc7a88a26e27f0495ead7c0f",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/semantic.py": "e5330ca71438bdf97e8a576393be609adef550882ba8491613fbefa54efa2036",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/retrieval.py": "b07072dd7dcdb3de71de16b0e40be3477f52b50650ecf5f754decd8f33229eae",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/security.py": "5f3bf616b0ceb2aca01584a7f943e533da381593841e4ee99400c27d33f767b4",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/traces.py": "5186765acd60bd93269c1add64038896193fc6d14b678e8c5c7206348e722f88",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/providers.py": "1356e147596100eda01b72f027000afb716b8fce79eea25a36ebd00db889977e",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/sessions.py": "2647a3f0cda5f3097ba2ed1fa1ea9ee5fe335b9f6882d0cf2614753ab907578e",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/experiments.py": "3662b62d12246aba709354139548533ca26c168d13ed3541c8b71917ed30380f",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/extensions.py": "a5a119c2a6cf4fee67e3f354648caf2e7a8b7f2f555c5591741c48bd8513af10",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/mcp_server.py": "4b1a053f36ae3aefb94f5e05a5c1267e40165c71a7a366702da8913d8bc7d597",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/backup.py": "8649a47fd941ed0fec3d9bbe234525c68704af2d51b82a28420d8e0e5080481e",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/trace_worker.py": "92d479c66c9f9ddf218b78388ee30d36300caf18c6d57e990325356deb697292",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/orchestrator.py": "fdc21d8f3f5a9d057e6d010e7f689d7a8f199b86f7e6afb074b25d552afd6de8",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/contracts.py": "939de3fcc2ad0a5d50c88f922fbef8427a65cf0939d4ca5ae3ad6e9d4dca279b",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/neural_worker.py": "03c646c33a364169bcf2b575ebaaf92a5dc7bb0569d2b250e89e832d308304ad",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/engine.py": "a4f669a98fbf73d210704598da123f9f111a5f2f9f3a197b1372c8adc130bed5",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/registry.py": "4c0f4b3c8fdfe00e06170e966a62b7e1cb6050e406d7f70c76d85a9f2f651bd1",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/patch_harness.py": "93ce822693021ff0cf7dd30a5ca1d41abb3a51c30f3ca06036515335fe4db3e1",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/typescript.cjs": "f3a8b6889ed345b3cbfad3b5c04587adf3e550a881b5f36e6afc2abe83ca3092",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/delegation.py": "13bd4092d87532d21dd443070274c98cb4ac6dc47846dec7939bf5cf54c17d69",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/resource_exec.py": "594b8b0dd95545a835248fd3e67435ae8d1e6c6ec951bc75f3ad5e1f3e93fefa",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/cli.py": "1c5555090e8143ebc351a5d249502157b37bebaac89a23169a7c335e854de804",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/config.py": "d76ce9022cc62acbe5f1105793af1a5ff48266a68474ccb1af37b098a60079b0",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/continuity.py": "fb6f5e37d5ff0576d84074b4af7a8de637af02b2510a7d764ac29ff789526e3e",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/build_analysis.py": "250dd6a9c3f247d594ada1ded33e657cc3125dbc561939701051e82ef5ac21b7",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/store.py": "0e787391fbe6c6f682a15b7541e5b4bb82062b7bfc7843ce72ad14c306c705f8",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/runner.py": "14b1af1f963806fb391c4bd30f62a9c1e5834b803ab149dd40899298d91b6a77",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/adapters.py": "d17466488a5ed6c844cc469929feb53a0b6e8529b17a2ba8fdedb32c0ced24a8",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/app_server.py": "2262d018e0622313120f922ce069820a9942308825d24936441f7d66eaef5513",
+    "/home/leo-ribeiro/codex-economy-next/src/codex_economy/__init__.py": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41"
+  }
+}

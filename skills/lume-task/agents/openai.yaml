@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lume Task"
+  short_description: "Executa tarefas de código com contexto, verificações e métricas"
+  default_prompt: "Use $lume-task para executar esta tarefa com as ferramentas locais de contexto e validação."

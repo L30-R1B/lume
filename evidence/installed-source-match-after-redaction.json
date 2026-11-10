@@ -1,0 +1,159 @@
+{
+  "captured_utc": "2026-11-09T22:58:44.933221+00:00",
+  "installed_version": "0.2.0",
+  "installed_root": "/home/leo-ribeiro/.local/share/codex-economy/releases/6d7e830f4fce8d91/lib/python3.12/site-packages/codex_economy",
+  "files_checked": 30,
+  "all_match": true,
+  "files": [
+    {
+      "file": "__init__.py",
+      "source_sha256": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+      "installed_sha256": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41"
+    },
+    {
+      "file": "adapters.py",
+      "source_sha256": "d17466488a5ed6c844cc469929feb53a0b6e8529b17a2ba8fdedb32c0ced24a8",
+      "installed_sha256": "d17466488a5ed6c844cc469929feb53a0b6e8529b17a2ba8fdedb32c0ced24a8"
+    },
+    {
+      "file": "app_server.py",
+      "source_sha256": "2262d018e0622313120f922ce069820a9942308825d24936441f7d66eaef5513",
+      "installed_sha256": "2262d018e0622313120f922ce069820a9942308825d24936441f7d66eaef5513"
+    },
+    {
+      "file": "backup.py",
+      "source_sha256": "8649a47fd941ed0fec3d9bbe234525c68704af2d51b82a28420d8e0e5080481e",
+      "installed_sha256": "8649a47fd941ed0fec3d9bbe234525c68704af2d51b82a28420d8e0e5080481e"
+    },
+    {
+      "file": "benchmark.py",
+      "source_sha256": "608afb4460f499a422cb9b47183975d4b1f3fa67fc7a88a26e27f0495ead7c0f",
+      "installed_sha256": "608afb4460f499a422cb9b47183975d4b1f3fa67fc7a88a26e27f0495ead7c0f"
+    },
+    {
+      "file": "build_analysis.py",
+      "source_sha256": "250dd6a9c3f247d594ada1ded33e657cc3125dbc561939701051e82ef5ac21b7",
+      "installed_sha256": "250dd6a9c3f247d594ada1ded33e657cc3125dbc561939701051e82ef5ac21b7"
+    },
+    {
+      "file": "cli.py",
+      "source_sha256": "1c5555090e8143ebc351a5d249502157b37bebaac89a23169a7c335e854de804",
+      "installed_sha256": "1c5555090e8143ebc351a5d249502157b37bebaac89a23169a7c335e854de804"
+    },
+    {
+      "file": "config.py",
+      "source_sha256": "d76ce9022cc62acbe5f1105793af1a5ff48266a68474ccb1af37b098a60079b0",
+      "installed_sha256": "d76ce9022cc62acbe5f1105793af1a5ff48266a68474ccb1af37b098a60079b0"
+    },
+    {
+      "file": "continuity.py",
+      "source_sha256": "fb6f5e37d5ff0576d84074b4af7a8de637af02b2510a7d764ac29ff789526e3e",
+      "installed_sha256": "fb6f5e37d5ff0576d84074b4af7a8de637af02b2510a7d764ac29ff789526e3e"
+    },
+    {
+      "file": "contracts.py",
+      "source_sha256": "939de3fcc2ad0a5d50c88f922fbef8427a65cf0939d4ca5ae3ad6e9d4dca279b",
+      "installed_sha256": "939de3fcc2ad0a5d50c88f922fbef8427a65cf0939d4ca5ae3ad6e9d4dca279b"
+    },
+    {
+      "file": "delegation.py",
+      "source_sha256": "13bd4092d87532d21dd443070274c98cb4ac6dc47846dec7939bf5cf54c17d69",
+      "installed_sha256": "13bd4092d87532d21dd443070274c98cb4ac6dc47846dec7939bf5cf54c17d69"
+    },
+    {
+      "file": "engine.py",
+      "source_sha256": "a4f669a98fbf73d210704598da123f9f111a5f2f9f3a197b1372c8adc130bed5",
+      "installed_sha256": "a4f669a98fbf73d210704598da123f9f111a5f2f9f3a197b1372c8adc130bed5"
+    },
+    {
+      "file": "experiments.py",
+      "source_sha256": "3662b62d12246aba709354139548533ca26c168d13ed3541c8b71917ed30380f",
+      "installed_sha256": "3662b62d12246aba709354139548533ca26c168d13ed3541c8b71917ed30380f"
+    },
+    {
+      "file": "extensions.py",
+      "source_sha256": "a5a119c2a6cf4fee67e3f354648caf2e7a8b7f2f555c5591741c48bd8513af10",
+      "installed_sha256": "a5a119c2a6cf4fee67e3f354648caf2e7a8b7f2f555c5591741c48bd8513af10"
+    },
+    {
+      "file": "mcp_server.py",
+      "source_sha256": "4b1a053f36ae3aefb94f5e05a5c1267e40165c71a7a366702da8913d8bc7d597",
+      "installed_sha256": "4b1a053f36ae3aefb94f5e05a5c1267e40165c71a7a366702da8913d8bc7d597"
+    },
+    {
+      "file": "neural_worker.py",
+      "source_sha256": "03c646c33a364169bcf2b575ebaaf92a5dc7bb0569d2b250e89e832d308304ad",
+      "installed_sha256": "03c646c33a364169bcf2b575ebaaf92a5dc7bb0569d2b250e89e832d308304ad"
+    },
+    {
+      "file": "orchestrator.py",
+      "source_sha256": "fdc21d8f3f5a9d057e6d010e7f689d7a8f199b86f7e6afb074b25d552afd6de8",
+      "installed_sha256": "fdc21d8f3f5a9d057e6d010e7f689d7a8f199b86f7e6afb074b25d552afd6de8"
+    },
+    {
+      "file": "patch_harness.py",
+      "source_sha256": "93ce822693021ff0cf7dd30a5ca1d41abb3a51c30f3ca06036515335fe4db3e1",
+      "installed_sha256": "93ce822693021ff0cf7dd30a5ca1d41abb3a51c30f3ca06036515335fe4db3e1"
+    },
+    {
+      "file": "providers.py",
+      "source_sha256": "1356e147596100eda01b72f027000afb716b8fce79eea25a36ebd00db889977e",
+      "installed_sha256": "1356e147596100eda01b72f027000afb716b8fce79eea25a36ebd00db889977e"
+    },
+    {
+      "file": "registry.py",
+      "source_sha256": "4c0f4b3c8fdfe00e06170e966a62b7e1cb6050e406d7f70c76d85a9f2f651bd1",
+      "installed_sha256": "4c0f4b3c8fdfe00e06170e966a62b7e1cb6050e406d7f70c76d85a9f2f651bd1"
+    },
+    {
+      "file": "resource_exec.py",
+      "source_sha256": "594b8b0dd95545a835248fd3e67435ae8d1e6c6ec951bc75f3ad5e1f3e93fefa",
+      "installed_sha256": "594b8b0dd95545a835248fd3e67435ae8d1e6c6ec951bc75f3ad5e1f3e93fefa"
+    },
+    {
+      "file": "retrieval.py",
+      "source_sha256": "b07072dd7dcdb3de71de16b0e40be3477f52b50650ecf5f754decd8f33229eae",
+      "installed_sha256": "b07072dd7dcdb3de71de16b0e40be3477f52b50650ecf5f754decd8f33229eae"
+    },
+    {
+      "file": "runner.py",
+      "source_sha256": "14b1af1f963806fb391c4bd30f62a9c1e5834b803ab149dd40899298d91b6a77",
+      "installed_sha256": "14b1af1f963806fb391c4bd30f62a9c1e5834b803ab149dd40899298d91b6a77"
+    },
+    {
+      "file": "security.py",
+      "source_sha256": "5f3bf616b0ceb2aca01584a7f943e533da381593841e4ee99400c27d33f767b4",
+      "installed_sha256": "5f3bf616b0ceb2aca01584a7f943e533da381593841e4ee99400c27d33f767b4"
+    },
+    {
+      "file": "semantic.py",
+      "source_sha256": "e5330ca71438bdf97e8a576393be609adef550882ba8491613fbefa54efa2036",
+      "installed_sha256": "e5330ca71438bdf97e8a576393be609adef550882ba8491613fbefa54efa2036"
+    },
+    {
+      "file": "sessions.py",
+      "source_sha256": "2647a3f0cda5f3097ba2ed1fa1ea9ee5fe335b9f6882d0cf2614753ab907578e",
+      "installed_sha256": "2647a3f0cda5f3097ba2ed1fa1ea9ee5fe335b9f6882d0cf2614753ab907578e"
+    },
+    {
+      "file": "store.py",
+      "source_sha256": "0e787391fbe6c6f682a15b7541e5b4bb82062b7bfc7843ce72ad14c306c705f8",
+      "installed_sha256": "0e787391fbe6c6f682a15b7541e5b4bb82062b7bfc7843ce72ad14c306c705f8"
+    },
+    {
+      "file": "trace_worker.py",
+      "source_sha256": "92d479c66c9f9ddf218b78388ee30d36300caf18c6d57e990325356deb697292",
+      "installed_sha256": "92d479c66c9f9ddf218b78388ee30d36300caf18c6d57e990325356deb697292"
+    },
+    {
+      "file": "traces.py",
+      "source_sha256": "5186765acd60bd93269c1add64038896193fc6d14b678e8c5c7206348e722f88",
+      "installed_sha256": "5186765acd60bd93269c1add64038896193fc6d14b678e8c5c7206348e722f88"
+    },
+    {
+      "file": "typescript.cjs",
+      "source_sha256": "f3a8b6889ed345b3cbfad3b5c04587adf3e550a881b5f36e6afc2abe83ca3092",
+      "installed_sha256": "f3a8b6889ed345b3cbfad3b5c04587adf3e550a881b5f36e6afc2abe83ca3092"
+    }
+  ]
+}

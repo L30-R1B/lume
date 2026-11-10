@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/service.js b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/node-tax-0-A/service.js
+index 8afad46..97b0f6d 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-tax/service.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/node-tax-0-A/service.js
+@@ -1 +1 @@
+-exports.taxCents=(cents,basisPoints)=>Math.round(cents*basisPoints/100);
++exports.taxCents=(cents,basisPoints)=>Math.round(cents*basisPoints/10000);

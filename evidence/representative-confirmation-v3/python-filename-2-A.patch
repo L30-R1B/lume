@@ -1,0 +1,8 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/service.py b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/python-filename-2-A/service.py
+index f2a1c0c..3896663 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-filename/service.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/python-filename-2-A/service.py
+@@ -1,2 +1,2 @@
+ def safe_name(name):
+-    return bool(name)
++    return bool(name) and name not in (".", "..") and "/" not in name and "\\" not in name

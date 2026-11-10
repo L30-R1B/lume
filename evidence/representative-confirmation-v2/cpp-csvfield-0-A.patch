@@ -1,0 +1,20 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/service.hpp b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/cpp-csvfield-0-A/service.hpp
+index c4fe46b..9f5f187 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/cpp-csvfield/service.hpp
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/cpp-csvfield-0-A/service.hpp
+@@ -2,4 +2,14 @@
+ #include <string>
+ #include <cstdlib>
+ #include <climits>
+-inline std::string csvField(const std::string& s){return "\""+s+"\"";}
++inline std::string csvField(const std::string& s) {
++    std::string result = "\"";
++    for (char c : s) {
++        if (c == '"') {
++            result += '"';
++        }
++        result += c;
++    }
++    result += '"';
++    return result;
++}

@@ -1,0 +1,7 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/service.js b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/node-utf8length-2-A/service.js
+index cfd61a0..fabd7f0 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-utf8length/service.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/node-utf8length-2-A/service.js
+@@ -1 +1 @@
+-exports.bodyBytes=s=>s.length;
++exports.bodyBytes=s=>Buffer.byteLength(s,"utf8");

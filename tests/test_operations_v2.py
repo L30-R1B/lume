@@ -542,6 +542,102 @@ def test_benchmark_reconciles_interrupted_workspace_without_erasing(env, tmp_pat
     assert benchmark(store, file)["pending"] == 0
 
 
+def test_benchmark_goal_requires_confirmation_cluster_interval_and_quality(tmp_path):
+    from codex_economy.benchmark import benchmark
+
+    output = tmp_path / "benchmark-report"
+    output.mkdir()
+    tasks = [{"id": f"task-{i}"} for i in range(12)]
+    manifest = {
+        "output": str(output),
+        "phase": "distinct-multifile-confirmation",
+        "tasks": tasks,
+        "repetitions": 3,
+        "arms": ["A", "E"],
+        "comparison_arm": "E",
+        "seed": 20261111,
+    }
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest))
+
+    def records(reject_treatment=False):
+        values = []
+        for task in manifest["tasks"]:
+            for repeat in range(manifest["repetitions"]):
+                for arm, tokens in (("A", 10000), ("E", 2000)):
+                    accepted = not (reject_treatment and task["id"] == "task-0" and repeat == 0 and arm == "E")
+                    values.append(
+                        {
+                            "task": task["id"],
+                            "repeat": repeat,
+                            "arm": arm,
+                            "accepted": accepted,
+                            "usage": [{"input_tokens": tokens, "output_tokens": 0, "cached_input_tokens": 0}],
+                            "seconds": 1,
+                            "actions": 1,
+                            "codex_invocations": 1,
+                        }
+                    )
+        (output / "results.jsonl").write_text("".join(json.dumps(row) + "\n" for row in values))
+
+    records()
+    report = benchmark(None, manifest_path, report=True)
+    assert report["complete"]
+    assert report["goal_80_percent"] == "achieved"
+    assert report["reduction_bootstrap_95_percent"] == [0.8, 0.8]
+    assert report["quality_no_regression"]
+
+    records(reject_treatment=True)
+    report = benchmark(None, manifest_path, report=True)
+    assert report["goal_80_percent"] == "inconclusive"
+    assert not report["quality_no_regression"]
+    assert report["paired_quality"]["baseline_only"] == 1
+
+    manifest["phase"] = "distinct-multifile-pilot"
+    output = tmp_path / "benchmark-pilot-report"
+    output.mkdir()
+    manifest["output"] = str(output)
+    manifest_path.write_text(json.dumps(manifest))
+    records()
+    report = benchmark(None, manifest_path, report=True)
+    assert report["classification_scope"] == "pilot_only"
+    assert report["goal_80_percent"] == "inconclusive"
+    assert report["observed_reduction_fraction"] == 0.8
+
+    manifest["phase"] = "redaction-remediation-followup"
+    manifest["tasks"] = tasks[:1]
+    output = tmp_path / "benchmark-targeted-followup"
+    output.mkdir()
+    manifest["output"] = str(output)
+    manifest_path.write_text(json.dumps(manifest))
+    records()
+    report = benchmark(None, manifest_path, report=True)
+    assert report["classification_scope"] == "targeted_followup"
+    assert report["goal_80_percent"] == "inconclusive"
+
+
+def test_runner_redacts_credentials_without_mutating_json_code_literals(env):
+    root, store, engine = env
+    source = (
+        'def bearer(header):\n'
+        '    if not header or not header.startswith("Bearer "):\n'
+        '        return None\n'
+        '    return header[7:] or None\n'
+    )
+    event = {
+        "type": "item.completed",
+        "item": {"text": json.dumps({"edits": [{"new": source}]})},
+        "authorization": "Bearer privateCredential123",
+    }
+    script = root / "emit_json.py"
+    script.write_text("import json\nprint(" + repr(json.dumps(event)) + ")\n")
+    run = Runner(store).run("project", [sys.executable, str(script)])
+    retained = json.loads(store.rows("SELECT stdout FROM runs WHERE id=?", (run["run"],))[0]["stdout"])
+    response = json.loads(retained["item"]["text"])
+    assert response["edits"][0]["new"] == source
+    assert retained["authorization"] == "Bearer [REDACTED]"
+
+
 def test_extension_removal_rejects_symlinked_parent(env, tmp_path):
     root, store, engine = env
     setup(store, "project")

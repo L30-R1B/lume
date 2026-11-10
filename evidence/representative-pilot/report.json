@@ -1,5 +1,19 @@
 {
-  "goal_80_percent": "achieved",
+  "goal_80_percent": "inconclusive",
+  "classification_scope": "pilot_only",
+  "observed_reduction_fraction": 0.8353546100793957,
+  "reduction_bootstrap_95_percent": [
+    0.8051899096816997,
+    0.8486583020423115
+  ],
+  "quality_no_regression": true,
+  "quality_equal_acceptance": true,
+  "paired_quality": {
+    "both_accepted": 3,
+    "baseline_only": 0,
+    "comparison_only": 0,
+    "both_rejected": 0
+  },
   "complete": true,
   "planned": 6,
   "completed": 6,

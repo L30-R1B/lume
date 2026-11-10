@@ -1,0 +1,215 @@
+{
+  "goal_80_percent": "achieved",
+  "classification_scope": "confirmation",
+  "observed_reduction_fraction": 0.8416146892548588,
+  "reduction_bootstrap_95_percent": [
+    0.8283166356433476,
+    0.8530025961527667
+  ],
+  "quality_no_regression": true,
+  "quality_equal_acceptance": true,
+  "paired_quality": {
+    "both_accepted": 36,
+    "baseline_only": 0,
+    "comparison_only": 0,
+    "both_rejected": 0
+  },
+  "complete": true,
+  "planned": 72,
+  "completed": 72,
+  "groups": {
+    "E": {
+      "attempts": 36,
+      "accepted": 36,
+      "tokens": 486053,
+      "cached_input_tokens": 244736,
+      "unknown_usage": 0,
+      "seconds": 330.68138930154964,
+      "tokens_per_accepted": 13501.472222222223
+    },
+    "A": {
+      "attempts": 36,
+      "accepted": 36,
+      "tokens": 3068801,
+      "cached_input_tokens": 2739968,
+      "unknown_usage": 0,
+      "seconds": 1024.684635468293,
+      "tokens_per_accepted": 85244.47222222222
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_comparison_arm": "E",
+  "paired_mean_difference_tokens": 71743,
+  "paired_bootstrap_95_percent": [
+    67347.19444444444,
+    76405.25
+  ],
+  "paired_n": 36,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "bc5b65df8c4e1473b5bf361072fd84ea1b6311b4a06633a448bc63c5efd28486",
+  "queue_complete": true,
+  "usage_complete": true,
+  "amortization": {
+    "index_seconds_total": 1.7322306449059397,
+    "assumption": "one cold per-task index; local wall time only, no API-price equivalence"
+  },
+  "task_quality": [
+    {
+      "task": "python-discount",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-bearer",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-filename",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "python-pagination",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-utf8length",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-retryheader",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-identifier",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "node-tax",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-port",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-overlap",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-kib",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    },
+    {
+      "task": "cpp-csvfield",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    }
+  ]
+}

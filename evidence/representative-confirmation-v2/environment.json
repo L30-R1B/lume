@@ -1,0 +1,14 @@
+{
+  "captured_utc": "2026-11-09T22:22:17.358602+00:00",
+  "version": "codex-cli 0.167.0",
+  "binary_path": "/home/leo-ribeiro/.nvm/versions/node/v22.23.2/lib/node_modules/@openai/codex/bin/codex.js",
+  "binary_sha256": "e14fc83739c13c1074b12bd1acce4010c893c7f6fbfc1593b4a31d74cabb57af",
+  "manifest_sha256": "a5bfef897fc31269be47140ee0012bb85e003feb5f3dd56eb9ed748299925cfe",
+  "reference_config_sha256": "abc6fc2cf827843d77df83f443922566875db66ea4261c2c41a83615403f2fa2",
+  "reference_config_semantic_sha256": "ac7b4bf912806bde9717f97764922000e724c6b78bae3f0d921c4d468e388a1d",
+  "node_version": "v22.23.2",
+  "first_job": "cpp-port-0-E",
+  "first_job_accepted": true,
+  "login_file": "existing CODEX_HOME auth.json symlink; contents not read",
+  "subscription_quota_counter": "unavailable"
+}

@@ -23,7 +23,7 @@
       "id": "R01.04",
       "requirement": "Repositório dedicado sem alterar projetos alheios",
       "state": "validado",
-      "evidence": "/home/leo-ribeiro/codex-economy; fixtures próprias"
+      "evidence": "repositório dedicado Lume; fixtures próprias em tests/"
     },
     {
       "id": "R02.01",
@@ -395,13 +395,13 @@
       "id": "R10.06",
       "requirement": "Instalação fora checkout/build/update",
       "state": "validado",
-      "evidence": "Instalação, atualização, rollback e desinstalação isoladas; execução fora do checkout."
+      "evidence": "Atualização da instalação local e validação isolada de 10 operações de instalação/upgrade/rollback/desinstalação; uso fora do checkout."
     },
     {
       "id": "R10.07",
       "requirement": "Desinstalação preserva projetos/config/credenciais",
       "state": "validado",
-      "evidence": "installation-cycle.json e profile-lifecycle.json; estado e projetos preservados; toolchains opcionais permanecem no prefixo"
+      "evidence": "release-schema3-latest.json: estado e projeto preservados; configuração pessoal não foi substituída."
     },
     {
       "id": "R10.08",
@@ -413,13 +413,13 @@
       "id": "R11.01",
       "requirement": "Suíte comportamental famílias e fronteiras",
       "state": "implementado",
-      "evidence": "44 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo."
+      "evidence": "46 testes comportamentais passaram; fixtures reais cobrem linguagens e fronteiras, mas não todos os cenários nem execução Android em dispositivo."
     },
     {
       "id": "R11.02",
       "requirement": "Build/lint/auditoria",
       "state": "validado",
-      "evidence": "Build/lint e auditoria de 49 dependências Python sem vulnerabilidades conhecidas; npm audit zero."
+      "evidence": "Build e lint passaram; pip-audit não encontrou vulnerabilidades conhecidas em 47 dependências runtime (`evidence/dependency-audit-final.json`). npm audit anterior registrou zero."
     },
     {
       "id": "R11.03",
@@ -437,25 +437,25 @@
       "id": "R12.01",
       "requirement": "Executor benchmark A/B/C isolado/retomável",
       "state": "validado",
-      "evidence": "Execuções A/B/C e A/E reais, com snapshots isolados, dados brutos, retomada e reconciliação."
+      "evidence": "A/B/C e confirmação A/E executadas por Codex real em snapshots/workspaces isolados; 72/72 registros e uso completo na confirmação atual."
     },
     {
       "id": "R12.02",
       "requirement": "D Jev e E técnicas avançadas comparadas",
       "state": "bloqueado",
-      "evidence": "D requer novas chamadas Jev faturáveis; instrução do usuário impede novos custos. E real concluído."
+      "evidence": "D requer novas chamadas Jev faturáveis; não foram feitas para respeitar a restrição de custo. Integração real permanece provada por cinco chamadas anteriores. E foi comparado, mas teve três regressões antes da correção do redator."
     },
     {
       "id": "R12.03",
       "requirement": "12 tarefas/3 famílias/3 repetições/arm",
-      "state": "implementado",
-      "evidence": "A/B/C: 108 tentativas; A/E: 72 tentativas; 12 tarefas e três repetições por braço executado; D bloqueado por custos."
+      "state": "validado",
+      "evidence": "Confirmação pós-correção A/E: 12 tarefas × 3 repetições × 2 braços = 72 execuções; A/E aceitaram 36/36. D não incluído."
     },
     {
       "id": "R12.04",
       "requirement": "Piloto separado/congelamento/holdout",
-      "state": "implementado",
-      "evidence": "Piloto 3 famílias e confirmação reservada; falhas anteriores preservadas; 4 problemas subjacentes em 3 linguagens limitam generalização."
+      "state": "validado",
+      "evidence": "Piloto separado e confirmação reservada de 12 tarefas em três famílias; rodada pré-correção preservada; versão corrigida confirmada em 72 execuções com 36/36 aceites por braço."
     },
     {
       "id": "R12.05",
@@ -467,19 +467,19 @@
       "id": "R12.06",
       "requirement": "Todas tentativas/aceite/regressões/amortização",
       "state": "implementado",
-      "evidence": "Todas as tentativas de cada rodada preservadas; uso ausente em uma falha B; local indexação explicitada; releituras/compactações não integralmente expostas."
+      "evidence": "Uso conhecido nas 72 tentativas atuais e falhas contabilizadas; índices e tempo registrados. Releituras/compactações internas e limite da assinatura não são expostos de modo suportado."
     },
     {
       "id": "R12.07",
       "requirement": "Pareamento/incerteza/consumo assinatura",
-      "state": "implementado",
-      "evidence": "Pares e bootstrap por tarefa e por problema; contador da assinatura e cobrança real não disponíveis."
+      "state": "validado",
+      "evidence": "Bootstrap pareado por tarefa na confirmação pós-correção: IC 95% 82,83%–85,30%. Contador da assinatura permanece indisponível."
     },
     {
       "id": "R12.08",
       "requirement": "Meta >=80%",
-      "state": "implementado",
-      "evidence": "84,04% no ensaio A/E limitado; meta geral e validação integral inconclusivas."
+      "state": "validado",
+      "evidence": "Confirmação pós-correção: 84,16% observado, IC 95% por tarefa 82,83%–85,30%, 36/36 aceites em ambos os braços. Válido para a avaliação de 12 tarefas pequenas; não é garantia geral."
     },
     {
       "id": "R13.01",
@@ -491,7 +491,7 @@
       "id": "R13.02",
       "requirement": "Documentação consistente/RC/evidências",
       "state": "implementado",
-      "evidence": "Uso, arquitetura, operação, recovery e resultados em documentação; sem afirmar certificação ou aprovação de produção integral."
+      "evidence": "Docs atualizados com 46 testes, build, lint, auditoria, instalação e métricas; escopo global continua incompleto e limites externos explícitos."
     }
   ]
 }

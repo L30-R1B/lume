@@ -7,7 +7,7 @@ Estados: **pendente**, **implementado**, **validado**, **bloqueado**, **não apl
 | R01.01 | Inspeção Linux, recursos, ferramentas, Codex/auth/config | validado | doctor.json; Codex 0.166.0, ChatGPT, modelo existente |
 | R01.02 | PDFs exigidos | bloqueado | Ambos PDFs de nomes exatos ausentes; recomendações internas não foram atribuídas. |
 | R01.03 | Fontes oficiais/licenças | validado | research.md; docs oficiais; licenças nos pacotes |
-| R01.04 | Repositório dedicado sem alterar projetos alheios | validado | /home/leo-ribeiro/codex-economy; fixtures próprias |
+| R01.04 | Repositório dedicado sem alterar projetos alheios | validado | Repositório Lume; fixtures próprias em tests/ |
 | R02.01 | CLI humana/JSON e todas funções básicas | implementado | CLI inclui registro, índices, contexto, sessões, métricas, benchmark, backup, recuperação e manutenção. |
 | R02.02 | MCP local e catálogo pequeno | validado | seis tools; teste SDK stdio; chamada real em codex-mcp-approved.jsonl |
 | R02.03 | Integração com login ChatGPT | validado | smoke real e MCP; sem leitura/reutilização OAuth |
@@ -69,22 +69,22 @@ Estados: **pendente**, **implementado**, **validado**, **bloqueado**, **não apl
 | R10.03 | Segurança traversal/symlinks/binários/multibyte | validado | test_boundaries; O_NOFOLLOW, UTF-8 estrito; auditoria não independente |
 | R10.04 | Retenção/logs/redação | implementado | Retenção e redação; bytes inválidos preservados em saídas redigidas novas, dados anteriores ao schema 3 ou além do limite não são recuperáveis. |
 | R10.05 | Backup/restore/corrupção | validado | Backup e restauração de corrupção testados; arquivos anteriores preservados; bundle valida checksums e travessia. |
-| R10.06 | Instalação fora checkout/build/update | validado | Instalação, atualização, rollback e desinstalação isoladas; execução fora do checkout. |
-| R10.07 | Desinstalação preserva projetos/config/credenciais | validado | installation-cycle.json e profile-lifecycle.json; estado e projetos preservados; toolchains opcionais permanecem no prefixo |
+| R10.06 | Instalação fora checkout/build/update | validado | Atualização instalada e validação isolada de 10 operações de instalação, upgrade, rollback e remoção. |
+| R10.07 | Desinstalação preserva projetos/config/credenciais | validado | release-schema3-latest.json; estado e projeto preservados, configuração pessoal não substituída. |
 | R10.08 | Serviço/exposição explícita | validado | stdio sob demanda; nenhuma porta/daemon; serviço permanente não necessário |
-| R11.01 | Suíte comportamental famílias e fronteiras | implementado | 44 testes comportamentais e provas reais em fixtures; não demonstram todos os cenários do escopo nem Android em dispositivo. |
-| R11.02 | Build/lint/auditoria | validado | Build/lint e auditoria de 49 dependências Python sem vulnerabilidades conhecidas; npm audit zero. |
+| R11.01 | Suíte comportamental famílias e fronteiras | implementado | 46 testes passaram e provas reais cobrem fixtures; não demonstram todos os cenários nem Android em dispositivo. |
+| R11.02 | Build/lint/auditoria | validado | Build/lint passaram; pip-audit sem vulnerabilidades conhecidas nas 47 dependências runtime; npm audit anterior zero. |
 | R11.03 | Performance fria/incremental/buscas/DB/RAM | implementado | 3 ensaios adicionais passaram gates; 1 ensaio anterior excedeu p95 lexical 1s e permanece registrado. |
 | R11.04 | Branch/worktrees/falhas parciais/cancelamento | validado | Branches/worktrees, concorrência, rollback, SIGINT e retomada testados. |
-| R12.01 | Executor benchmark A/B/C isolado/retomável | validado | Execuções A/B/C e A/E reais, com snapshots isolados, dados brutos, retomada e reconciliação. |
-| R12.02 | D Jev e E técnicas avançadas comparadas | bloqueado | D requer novas chamadas Jev faturáveis; instrução do usuário impede novos custos. E real concluído. |
-| R12.03 | 12 tarefas/3 famílias/3 repetições/arm | implementado | A/B/C: 108 tentativas; A/E: 72 tentativas; 12 tarefas e três repetições por braço executado; D bloqueado por custos. |
-| R12.04 | Piloto separado/congelamento/holdout | implementado | Piloto 3 famílias e confirmação reservada; falhas anteriores preservadas; 4 problemas subjacentes em 3 linguagens limitam generalização. |
+| R12.01 | Executor benchmark A/B/C isolado/retomável | validado | A/B/C e confirmação A/E reais em workspaces isolados; A/E atual completou 72/72 com uso conhecido. |
+| R12.02 | D Jev e E técnicas avançadas comparadas | bloqueado | D requer novas chamadas pagas e não foi executado; cinco chamadas reais anteriores validaram o conector. E teve três regressões antes da correção do redator. |
+| R12.03 | 12 tarefas/3 famílias/3 repetições/arm | validado | Confirmação pós-correção A/E: 12 tarefas × 3 repetições × 2 braços = 72 execuções; ambos aceitaram 36/36. D fora da rodada. |
+| R12.04 | Piloto separado/congelamento/holdout | validado | Piloto distinto; confirmação reservada de 12 tarefas; falhas pré-correção preservadas e versão corrigida confirmada separadamente. |
 | R12.05 | Tokens reais/cache/output/reasoning sem dupla contagem | validado | Uso exec/app-server e hooks reais; cache como subconjunto de entrada e raciocínio como subconjunto de saída. |
-| R12.06 | Todas tentativas/aceite/regressões/amortização | implementado | Todas as tentativas de cada rodada preservadas; uso ausente em uma falha B; local indexação explicitada; releituras/compactações não integralmente expostas. |
-| R12.07 | Pareamento/incerteza/consumo assinatura | implementado | Pares e bootstrap por tarefa e por problema; contador da assinatura e cobrança real não disponíveis. |
-| R12.08 | Meta >=80% | implementado | 84,04% no ensaio A/E limitado; meta geral e validação integral inconclusivas. |
+| R12.06 | Todas tentativas/aceite/regressões/amortização | implementado | Uso disponível em todas as 72 tentativas atuais, falhas contabilizadas e indexação medida; releituras, compactações e quota não totalmente expostas. |
+| R12.07 | Pareamento/incerteza/consumo assinatura | validado | Bootstrap pareado por tarefa na confirmação pós-correção: IC 95% 82,83%–85,30%; contador da assinatura indisponível. |
+| R12.08 | Meta >=80% | validado | Pós-correção: 84,16% observado, IC 95% por tarefa 82,83%–85,30%, aceite 36/36 nos dois braços. Escopo de 12 tarefas pequenas, não garantia universal. |
 | R13.01 | Rastreabilidade pesquisas | implementado | Matriz research.md e fontes acessíveis; rastreabilidade específica dos dois PDFs indisponível. |
-| R13.02 | Documentação consistente/RC/evidências | implementado | Uso, arquitetura, operação, recovery e resultados em documentação; sem afirmar certificação ou aprovação de produção integral. |
+| R13.02 | Documentação consistente/RC/evidências | implementado | Docs atualizados com métricas, 46 testes, build, lint, auditoria e instalação; escopo geral segue incompleto. |
 
 Não atribuímos pendências de implementação a bloqueios externos. Os PDFs ausentes e a restrição de novos custos para o braço Jev são bloqueios concretos identificados; a credencial está disponível. As demais pendências são trabalho ainda necessário.

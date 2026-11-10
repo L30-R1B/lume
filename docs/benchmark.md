@@ -1,27 +1,56 @@
-# Metodologia e estado do experimento
+# Benchmark e métricas coletadas
 
-A meta se refere a tokens Codex por tarefa aceita, somando tentativas malsucedidas. O total soma input_tokens e output_tokens; cached_input_tokens é subconjunto do input, reasoning_output_tokens é informado separadamente sem somá-lo novamente ao output. Nenhuma métrica local de bytes, ranking ou custo de API é convertida em limite da assinatura.
+Este relatório separa a confirmação da meta, rodadas exploratórias, telemetria operacional, uso de Jev e desempenho local. Percentuais de intervenções sobre o mesmo conteúdo não são somados. Todo consumo Codex da comparação usa entrada + saída em todas as tentativas; tokens em cache são subconjunto da entrada e raciocínio é subconjunto da saída.
 
-Referência: Codex CLI 0.166.0, login ChatGPT, modelo gpt-6.1-sol, esforço high, mesma configuração do usuário e ferramentas comuns a todos os braços; ephemeral, workspace-write, approval_policy=never. O perfil economy não é carregado nos braços, evitando mudança global de MCP. A é execução normal sem pacote pré-selecionado; B recebe seleção lexical e C recebe seleção híbrida lexical/TF-IDF. Ambos usam a CLI normal, que ainda pode usar ferramentas nativas. Logo, este experimento mede preparação de contexto; não demonstra interceptação ou controle universal de saídas internas. O runner retém e resume a saída da execução, mas não reescreve observações internas do Codex.
+## Confirmação A/E atual
 
-A rodada exploratória em evidence/benchmark foi interrompida após descoberta de alteração de whitespace em fixtures pelo formatador. Resultados e uma tentativa cancelada estão preservados em results.jsonl e cancelled-attempts.json; metodologia-warning.json impede interpretá-la como confirmação final. Não elimine tentativas fracassadas nem selecione apenas sucessos. Relatórios exploratórios não sustentam a meta de 80%.
+A confirmação pós-correção em `evidence/representative-confirmation-v3/` usou Codex CLI 0.167.0 com login ChatGPT, modelo `gpt-6.1-sol`, esforço `high`, timeout igual, configurações congeladas e workspaces separados. Comparou A (Codex de referência) e E (recuperação híbrida mais edição estruturada) em 12 tarefas sintéticas Python/Node/C++, com três repetições em cada braço: 72/72 tentativas tiveram uso conhecido.
 
-A confirmação em evidence/confirmation-v2-manifest.json usa 12 funções reservadas, distribuídas em Python, Node e C++, três repetições por braço A/B/C (108 jobs). São tarefas pequenas e representativas, com defeito existente e verificações executáveis; não representam grandes projetos Next/Android. Inputs e implementação recebem hashes congelados. Cada job copia uma fixture para workspace próprio, inicializa Git, gera contexto sem soluções, executa Codex e verifica testes e a invariância de todos arquivos salvo o alvo. Artefatos de build/cache são excluídos da comparação. Ordem aleatória fixa por seed. Todos braços usam mesmo modelo/esforço/timeout. Auxiliares remotos estão desligados; reranking local não compartilha soluções. Codex pode usar cache de prefixo do servidor e isso é registrado como cache observado, não controlado pelo produto.
+| Braço | Aceitas | Tokens em todas as tentativas | Tokens por tarefa aceita |
+|---|---:|---:|---:|
+| A — referência | 36/36 | 3.068.801 | 85.244,47 |
+| E — Lume | 36/36 | 486.053 | 13.501,47 |
 
-D exige chamadas Jev faturáveis e permanece bloqueado pela restrição de novos custos; não substituir por mock ou local. A chave foi disponibilizada e o conector foi exercitado em cinco chamadas reais antes de confirmada a cobrança. O piloto E foi seguido pela confirmação A/E reservada em `evidence/editor-confirmation-r2`: 12 tarefas pequenas, três repetições por braço e 36/36 aceitas em cada braço. A/E mediu 84,04% de redução; seu intervalo bootstrap agrupado por quatro problemas foi 83,09%–84,94%. Uma calibração pequena de Jev e um experimento local LLMLingua documental foram realizados, sem demonstrar economia total com Jev ou compressor. A versão medida antecede endurecimentos posteriores. A validação contratada permanece incompleta.
+A redução observada foi **84,1615%**. O bootstrap pareado agrupado por tarefa (12 grupos, preservando as três repetições) estimou intervalo de 95% de **82,8317% a 85,3003%**. Os 36 pares foram aceitos nos dois braços; não houve regressão de aceite. A regra pré-definida classificou a meta de 80% como **atingida nesta avaliação**. Isso é evidência para esse conjunto, não garantia geral.
 
-Os dados brutos preservam usage, ações item.completed, duração, custo de indexação, exit codes, verificações, patches e hashes. Faltam contagens específicas confiáveis de releituras/compactações, regressões extensas e custo amortizado completo de manutenção. Ausência de usage impede calcular tokens por aceita para o braço. Consumo do limite da assinatura e custo monetário auxiliar são indisponíveis onde não expostos.
+O manifesto, resultados por tentativa, eventos, patches, verificações e ambiente estão em `evidence/representative-confirmation-v3/` e nos manifestos adjacentes. Os fixtures correspondentes estão em `tests/representative-inputs/`. Não execute novamente o manifesto congelado para substituir uma tentativa: use-o apenas para relatório. Toda confirmação futura requer manifesto e diretório de resultados novos.
 
-Report usa totais por braço e bootstrap pareado A–C apenas em pares disponíveis aceitos, com seed fixa e intervalo 95%. Este subconjunto pareado é descritivo; não corrige viés de sobrevivência e deve ser interpretado junto com falhas e taxas de aceite de todos os jobs. Confirmação de qualidade equivalente requer comparar essas taxas, regressões e mudanças fora de escopo, não apenas tokens. O flag complete indica conclusão da fila especificada, não validação de produção ou de todo o experimento solicitado.
+## Rodadas anteriores preservadas
+
+- `representative-confirmation-v2`: 72 tentativas completas, uso conhecido; A aceitou 36/36 e E 33/36. Redução observada de 82,05%, IC 95% 78,13%–83,95%. Veredito inconclusivo porque E falhou três vezes no caso Python de bearer. A causa foi corrigida e permanece registrada.
+- `representative-confirmation-redaction-remediation`: repetição direcionada desse caso, 3/3 aceitas em ambos os braços e 84,38% observados. É seguimento de uma tarefa, não substitui a confirmação ampla.
+- `representative-confirmation`: rodada interrompida após mudança do hash da configuração do Codex, com 24/72 tentativas. Continua separada e não participa do veredito atual.
+- `representative-pilot`: piloto de três tarefas; seu tamanho não permite confirmar a meta geral.
+- `benchmark`, `confirmation` e `confirmation-v2`: séries exploratórias/históricas A/B/C. Resultados incompletos, falhas e avisos metodológicos foram mantidos; não são a comparação A/E atual.
+- Séries `editor-*`: medições de desenvolvimento anteriores à confirmação atual e às correções subsequentes. Não devem ser interpretadas como validação do código final.
+
+Os detalhes por tentativa de todas as séries estão em `evidence/metrics-preview-tasks.csv`; os agregados, artefatos e alertas estão em `evidence/metrics-preview.json` e `.md`. O total histórico é **408 tentativas, 397 aceitas e 23.719.781 tokens observados** em experiências distintas. Há quatro tentativas históricas sem uso conhecido. Esse total não mede economia: mistura pilotos, avaliações parciais e confirmações, e não deve ser comparado como se fosse um único experimento.
+
+## Outras métricas registradas
+
+- Um snapshot histórico do CLI contém 78 execuções, 7 turnos Codex observados e 508.278 tokens (502.838 de entrada, dos quais 444.416 em cache; 5.440 de saída, dos quais 416 de raciocínio). Ele fica separado das séries experimentais para evitar possível dupla contagem. O CSV anonimizado por execução é `evidence/runtime-runs.csv`; a soma está em `evidence/runtime-metrics-summary.json`.
+- Uma invocação Codex/MCP de validação, separada das experiências, registrou 64.577 tokens de entrada (43.136 em cache) e 196 de saída (14 de raciocínio), em `evidence/codex-profile-mcp-latest.jsonl`.
+- Cinco chamadas reais Jev registraram 4.389 tokens de entrada e 751 de saída; latências e eventos estão nos artefatos Jev ligados por `metrics-preview.json`. O valor efetivamente cobrado e o contador da assinatura não estão disponíveis.
+- Testes finais de desempenho usam carga sintética de três projetos e 600 arquivos. Os resultados respeitam os limites locais documentados pelo script; um ensaio anterior excedeu por pouco o limiar p95 lexical (1,043 s contra 1 s) e continua preservado. Isso não estabelece SLA para grandes repositórios.
+
+## Regras de contagem e limitações
+
+- Uso desconhecido não vira zero. Cache não é descontado dos tokens de entrada; ele é informado separadamente.
+- Raciocínio informado é subconjunto da saída e não é somado de novo.
+- Todas as tentativas, inclusive falhas, entram nos totais por braço. A aceitação é contada separadamente.
+- Métrica local de bytes, ranking, duração ou custo de API não se converte em consumo do plano ChatGPT.
+- A conta não fornece um contador suportado do limite de assinatura para o Codex CLI observado.
+- A comparação D com chamadas Jev faturáveis permanece pendente; nenhuma inferência simulada foi rotulada como execução real.
+- O executor não mede de forma completa releituras e compactações internas; Codex não expõe masking de histórico por estas interfaces.
+- A confirmação usa tarefas pequenas e sintéticas. Não prova a mesma redução em todos os repositórios, famílias, modelos ou alterações.
+
+## Reproduzir relatórios
+
+Os relatórios são derivados dos dados versionados no próprio repositório; não dependem de outro checkout local:
 
 ```bash
-ce benchmark evidence/confirmation-v2-manifest.json        # fila restante
-ce benchmark evidence/confirmation-v2-manifest.json --execute
-ce benchmark evidence/confirmation-v2-manifest.json --report
-systemctl --user status codex-economy-confirmation-v2
-journalctl --user -u codex-economy-confirmation-v2 --no-pager
+python3 scripts/metrics_preview.py
+ce benchmark evidence/representative-confirmation-v3-manifest.json --report
 ```
 
-Não inicie duas instâncias sobre a mesma fila. Se houver workspace sem linha final registrada após interrupção, conserve o workspace e a linha em runs do banco; reconcilie a tentativa cancelada antes de retomada. O executor recusa sobrescrever workspace incompleto. Recuperação automática dessa situação é uma pendência operacional conhecida.
-
-Limiares de performance local definidos antes da execução em scripts/performance.py: carga sintética de 600 arquivos/3 projetos, fria <10s, incremental p95 <2s, lexical p95 <1s e RSS <512 MiB. Hardware, amostras, percentis e tamanho do banco estão em evidence/performance.json. Não extrapolar para repositórios gigantes.
+Não passe `--execute` ao manifesto histórico. Para uma nova avaliação, crie um manifesto novo, congele hashes de tarefas/configuração, preserve todas as tentativas e só então compare os braços.

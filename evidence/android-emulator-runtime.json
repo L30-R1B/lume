@@ -1,0 +1,28 @@
+{
+  "captured_utc": "2026-11-09T23:28:56.621847+00:00",
+  "sdk_root": "/home/leo-ribeiro/.local/share/codex-economy/android-sdk",
+  "adb_devices": "List of devices attached",
+  "connected_device": false,
+  "kvm_acceleration_available": false,
+  "accel_check_exit_code": 11,
+  "software_emulator_boot_completed": true,
+  "boot_time_ms": 1298868,
+  "system_server_abort": true,
+  "apk_install_succeeded": false,
+  "apk_install_failure": true,
+  "apk_build_and_jvm_evidence": {
+    "passed": true,
+    "apk_sha256": "fd49fdb66943fb121cb86a165e4a6ac87b58671ff8d6f0b7fbf5fab2c7bda90a",
+    "apk_bytes": 847963,
+    "compile_sdk": 36,
+    "agp": "9.0.1",
+    "gradle": "9.2.1",
+    "source_change": "equivalent Kotlin implementation",
+    "resource_change_verified_in_apk": true,
+    "unit_tests": [
+      "TEST-sample.economy.CalculationTest.xml"
+    ],
+    "device_instrumentation": false
+  },
+  "verdict": "APK build and JVM tests passed; on-device runtime remains unvalidated because no device is connected and KVM is unavailable; software emulator system_server aborted before package install."
+}

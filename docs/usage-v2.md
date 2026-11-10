@@ -49,15 +49,17 @@ O harness patch usa instruções próprias para produzir JSON, sem conceder perm
 App-server interrompe após consumo informado, portanto uma requisição em curso pode ultrapassar o orçamento. Preserve thread/session e use `--thread THREAD` para retomada, ou carregue handoff. O CLI comum não pode interceptar todas as leituras ou alterar observações internas.
 
 ```bash
+bash scripts/install_skills.sh
 ce integrate
-codex -p economy
 ce setup projeto
+ce index projeto
+codex -p economy
 ce setup projeto --hooks
 ce setup projeto --remove
 ce integrate --remove
 ```
 
-O perfil separado não reescreve config.toml. A skill fica em `.agents/skills/codex-economy/SKILL.md`; hooks opcionais ficam em `.codex/hooks.json`. Quando necessário, o setup cria um `.codex/config.toml` mínimo para descoberta de hooks; um arquivo preexistente é preservado. Arquivos alheios ou editados externamente não são sobrescritos. Hooks exigem revisão/confiança pelo mecanismo oficial do Codex e são diagnósticos, sem bloqueio ou edição de contexto. Não configure um hook para chamar uma ferramenta de edição automaticamente.
+O instalador de skills copia `lume` e `lume-task` para o diretório de skills do CODEX_HOME e recusa substituir uma cópia divergente sem `--update` (a cópia anterior é preservada em backup). O perfil separado não reescreve config.toml. A skill de integração do projeto fica em `.agents/skills/codex-economy/SKILL.md`; hooks opcionais ficam em `.codex/hooks.json`. Execute `ce index projeto` depois de `ce setup projeto`, pois setup pode criar um arquivo no projeto. Quando necessário, o setup cria um `.codex/config.toml` mínimo para descoberta de hooks; um arquivo preexistente é preservado. Arquivos alheios ou editados externamente não são sobrescritos. Hooks exigem revisão/confiança pelo mecanismo oficial do Codex e são diagnósticos, sem bloqueio ou edição de contexto. Não configure um hook para chamar uma ferramenta de edição automaticamente.
 
 ```bash
 ce policy projeto

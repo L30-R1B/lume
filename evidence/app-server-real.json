@@ -28,7 +28,7 @@
       "method": "remoteControl/status/changed",
       "params": {
         "status": "disabled",
-        "serverName": "mestion-vm",
+        "serverName": "local-host-name-omitted",
         "installationId": "ec1b3308-76e7-472a-a6f0-08c731bd0b9a",
         "environmentId": null
       },
@@ -42,9 +42,9 @@
           "environments": [
             {
               "environmentId": "local",
-              "cwd": "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture",
+              "cwd": "<local-path>sts/semantic-fixture",
               "runtimeWorkspaceRoots": [
-                "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture"
+                "<local-path>sts/semantic-fixture"
               ]
             }
           ],
@@ -67,8 +67,8 @@
           "status": {
             "type": "idle"
           },
-          "path": "/home/leo-ribeiro/.codex/sessions/2026/11/04/rollout-2026-11-04T08-02-14-01a1a639-490d-7062-ab68-ed23bd645061.jsonl",
-          "cwd": "/home/leo-ribeiro/codex-economy-next/tests/semantic-fixture",
+          "path": "<local-path>sessions/2026/11/04/rollout-2026-11-04T08-02-14-01a1a639-490d-7062-ab68-ed23bd645061.jsonl",
+          "cwd": "<local-path>sts/semantic-fixture",
           "cliVersion": "0.166.0",
           "originator": "codex-economy",
           "source": "vscode",

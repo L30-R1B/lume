@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lume"
+  short_description: "Prepara o projeto para usar as ferramentas locais de contexto"
+  default_prompt: "Use $lume para inspecionar e preparar este projeto para trabalhar com o Codex Economy."

@@ -3,7 +3,7 @@
     {
       "hardware": {
         "system": "Linux",
-        "node": "mestion-vm",
+        "node": "local-host-name-omitted",
         "release": "6.17.0-23-generic",
         "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
         "machine": "x86_64",
@@ -111,15 +111,20 @@
       },
       "passed": true,
       "environment_before": {
-        "loadavg": "1.36 1.70 2.03 2/1188 1310183",
-        "meminfo": "MemTotal:        7871916 kB\nMemFree:         1794352 kB\nMemAvailable:    5055872 kB\nBuffers:          150860 kB\nCached:          2556280 kB\nSwapCached:        34164 kB\nActive:          1703464 kB\nInactive:        2356812 kB\nActive(anon):    1135476 kB\nInactive(anon):   292508 kB\nActive(file):     567988 kB\nInactive(file):  2064304 kB\nUnevictable:       10536 kB\nMlocked:              16 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380248 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              9724 kB\nWriteback:            16 kB\nAnonPages:       1358096 kB\nMapped:           665004 kB\nShmem:             74884 kB\nKReclaimable:     938776 kB\nSlab:            1256740 kB\nSReclaimable:     938776 kB\nSUnreclaim:       317964 kB\nKernelStack:       18924 kB\nPageTables:        47608 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13202288 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86288 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+        "load_average_1_5_15_minutes": "1.36 1.70 2.03",
+        "memory_summary": {
+          "MemTotal": "7871916 kB",
+          "MemAvailable": "5055872 kB",
+          "SwapTotal": "6033104 kB",
+          "SwapFree": "4380248 kB"
+        }
       },
-      "environment_after_loadavg": "1.33 1.68 2.03 2/1188 1310376"
+      "environment_after_loadavg": "1.33 1.68 2.03"
     },
     {
       "hardware": {
         "system": "Linux",
-        "node": "mestion-vm",
+        "node": "local-host-name-omitted",
         "release": "6.17.0-23-generic",
         "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
         "machine": "x86_64",
@@ -227,15 +232,20 @@
       },
       "passed": true,
       "environment_before": {
-        "loadavg": "1.33 1.68 2.03 2/1188 1310376",
-        "meminfo": "MemTotal:        7871916 kB\nMemFree:         1788048 kB\nMemAvailable:    5050860 kB\nBuffers:          151480 kB\nCached:          2556948 kB\nSwapCached:        34164 kB\nActive:          1717828 kB\nInactive:        2357656 kB\nActive(anon):    1149540 kB\nInactive(anon):   292364 kB\nActive(file):     568288 kB\nInactive(file):  2065292 kB\nUnevictable:       10536 kB\nMlocked:              16 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380328 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             11624 kB\nWriteback:             0 kB\nAnonPages:       1372172 kB\nMapped:           665536 kB\nShmem:             74884 kB\nKReclaimable:     938780 kB\nSlab:            1256760 kB\nSReclaimable:     938780 kB\nSUnreclaim:       317980 kB\nKernelStack:       18924 kB\nPageTables:        47788 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13216616 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86272 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+        "load_average_1_5_15_minutes": "1.33 1.68 2.03",
+        "memory_summary": {
+          "MemTotal": "7871916 kB",
+          "MemAvailable": "5050860 kB",
+          "SwapTotal": "6033104 kB",
+          "SwapFree": "4380328 kB"
+        }
       },
-      "environment_after_loadavg": "1.31 1.67 2.02 1/1185 1310610"
+      "environment_after_loadavg": "1.31 1.67 2.02"
     },
     {
       "hardware": {
         "system": "Linux",
-        "node": "mestion-vm",
+        "node": "local-host-name-omitted",
         "release": "6.17.0-23-generic",
         "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
         "machine": "x86_64",
@@ -343,10 +353,15 @@
       },
       "passed": true,
       "environment_before": {
-        "loadavg": "1.31 1.67 2.02 1/1185 1310610",
-        "meminfo": "MemTotal:        7871916 kB\nMemFree:         1714728 kB\nMemAvailable:    4977912 kB\nBuffers:          151892 kB\nCached:          2556912 kB\nSwapCached:        34164 kB\nActive:          1772120 kB\nInactive:        2358032 kB\nActive(anon):    1203832 kB\nInactive(anon):   292364 kB\nActive(file):     568288 kB\nInactive(file):  2065668 kB\nUnevictable:       10552 kB\nMlocked:              32 kB\nSwapTotal:       6033104 kB\nSwapFree:        4380336 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             12236 kB\nWriteback:             0 kB\nAnonPages:       1426284 kB\nMapped:           664560 kB\nShmem:             74884 kB\nKReclaimable:     938776 kB\nSlab:            1256752 kB\nSReclaimable:     938776 kB\nSUnreclaim:       317976 kB\nKernelStack:       18880 kB\nPageTables:        47652 kB\nSecPageTables:      2784 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     9969060 kB\nCommitted_AS:   13227536 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       86256 kB\nVmallocChunk:          0 kB\nPercpu:             7184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:     8192 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     61440 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      414976 kB\nDirectMap2M:     7712768 kB\nDirectMap1G:           0 kB\n"
+        "load_average_1_5_15_minutes": "1.31 1.67 2.02",
+        "memory_summary": {
+          "MemTotal": "7871916 kB",
+          "MemAvailable": "4977912 kB",
+          "SwapTotal": "6033104 kB",
+          "SwapFree": "4380336 kB"
+        }
       },
-      "environment_after_loadavg": "1.28 1.66 2.01 1/1183 1310815"
+      "environment_after_loadavg": "1.28 1.66 2.01"
     }
   ],
   "all_gates_passed": true,

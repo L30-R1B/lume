@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-11-09T23:03:11.167980+00:00",
+  "version": "codex-cli 0.167.0",
+  "binary_path": "/home/leo-ribeiro/.nvm/versions/node/v22.23.2/lib/node_modules/@openai/codex/bin/codex.js",
+  "binary_sha256": "e14fc83739c13c1074b12bd1acce4010c893c7f6fbfc1593b4a31d74cabb57af",
+  "node_version": "v22.23.2",
+  "manifest_sha256": "bc5b65df8c4e1473b5bf361072fd84ea1b6311b4a06633a448bc63c5efd28486",
+  "reference_config_sha256": "38932be34081ac44bf21293a851c314ea2f3c7ba5f8bcee1eb259460fe97a147",
+  "reference_config_semantic_sha256": "1fddd290073e9b8d227c915b49ad42bda402e7f4165952d41c9d7548ef8b663e",
+  "execution_home": "/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2-codex-home",
+  "login": "existing auth.json by symlink; secret not read",
+  "subscription_usage_counter": "unavailable"
+}

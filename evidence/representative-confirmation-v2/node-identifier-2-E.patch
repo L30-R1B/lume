@@ -1,0 +1,11 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/service.js b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/node-identifier-2-E/service.js
+index dcf4fb8..c90be51 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/node-identifier/service.js
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v2/workspaces/node-identifier-2-E/service.js
+@@ -1 +1,5 @@
+-exports.parseId=s=>parseInt(s,10)||null;
++exports.parseId=s=>{
++  if (typeof s !== "string") return null;
++  const n = Number(s);
++  return Number.isSafeInteger(n) && n > 0 && String(n) === s ? n : null;
++};

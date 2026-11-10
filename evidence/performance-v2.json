@@ -1,7 +1,7 @@
 {
   "hardware": {
     "system": "Linux",
-    "node": "mestion-vm",
+    "node": "local-host-name-omitted",
     "release": "6.17.0-23-generic",
     "version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
     "machine": "x86_64",

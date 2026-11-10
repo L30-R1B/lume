@@ -1,0 +1,12 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/service.py b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/python-pagination-2-E/service.py
+index aafa401..4d23d4a 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-pagination/service.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-v3/workspaces/python-pagination-2-E/service.py
+@@ -1,2 +1,6 @@
+ def offset(page,size):
+-    return page*size
++    if isinstance(page, bool) or not isinstance(page, int) or page < 1:
++        raise ValueError("page must be a positive integer")
++    if isinstance(size, bool) or not isinstance(size, int) or not 1 <= size <= 100:
++        raise ValueError("size must be an integer from 1 through 100")
++    return (page - 1) * size

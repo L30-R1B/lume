@@ -1,0 +1,212 @@
+{
+  "goal_80_percent": "inconclusive",
+  "classification_scope": "confirmation",
+  "observed_reduction_fraction": null,
+  "reduction_bootstrap_95_percent": null,
+  "quality_no_regression": null,
+  "quality_equal_acceptance": null,
+  "paired_quality": {
+    "both_accepted": 4,
+    "baseline_only": 1,
+    "comparison_only": 1,
+    "both_rejected": 0
+  },
+  "complete": false,
+  "planned": 72,
+  "completed": 24,
+  "groups": {
+    "E": {
+      "attempts": 12,
+      "accepted": 11,
+      "tokens": 157309,
+      "cached_input_tokens": 10624,
+      "unknown_usage": 0,
+      "seconds": 141.30420560063794,
+      "tokens_per_accepted": 14300.818181818182
+    },
+    "A": {
+      "attempts": 12,
+      "accepted": 11,
+      "tokens": 858796,
+      "cached_input_tokens": 762112,
+      "unknown_usage": 1,
+      "seconds": 422.91699517914094,
+      "tokens_per_accepted": null
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_comparison_arm": "E",
+  "paired_mean_difference_tokens": 67437.75,
+  "paired_bootstrap_95_percent": [
+    58400.5,
+    72808.5
+  ],
+  "paired_n": 4,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "e9ad5f25b9cc056414cf8a2086e1617ebab0c99543bb2f9067c4d4656c0a41ee",
+  "queue_complete": false,
+  "usage_complete": false,
+  "amortization": {
+    "index_seconds_total": 0.5298857840243727,
+    "assumption": "one cold per-task index; local wall time only, no API-price equivalence"
+  },
+  "task_quality": [
+    {
+      "task": "python-discount",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "python-bearer",
+      "arms": {
+        "A": {
+          "accepted": 2,
+          "attempts": 2
+        },
+        "E": {
+          "accepted": 0,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "python-filename",
+      "arms": {
+        "A": {
+          "accepted": 0,
+          "attempts": 0
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "python-pagination",
+      "arms": {
+        "A": {
+          "accepted": 0,
+          "attempts": 0
+        },
+        "E": {
+          "accepted": 0,
+          "attempts": 0
+        }
+      }
+    },
+    {
+      "task": "node-utf8length",
+      "arms": {
+        "A": {
+          "accepted": 2,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "node-retryheader",
+      "arms": {
+        "A": {
+          "accepted": 0,
+          "attempts": 0
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "node-identifier",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "node-tax",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 0,
+          "attempts": 0
+        }
+      }
+    },
+    {
+      "task": "cpp-port",
+      "arms": {
+        "A": {
+          "accepted": 2,
+          "attempts": 2
+        },
+        "E": {
+          "accepted": 2,
+          "attempts": 2
+        }
+      }
+    },
+    {
+      "task": "cpp-overlap",
+      "arms": {
+        "A": {
+          "accepted": 0,
+          "attempts": 0
+        },
+        "E": {
+          "accepted": 0,
+          "attempts": 0
+        }
+      }
+    },
+    {
+      "task": "cpp-kib",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 1,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "task": "cpp-csvfield",
+      "arms": {
+        "A": {
+          "accepted": 1,
+          "attempts": 1
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    }
+  ]
+}

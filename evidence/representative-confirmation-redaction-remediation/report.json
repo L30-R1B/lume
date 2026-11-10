@@ -1,0 +1,72 @@
+{
+  "goal_80_percent": "inconclusive",
+  "classification_scope": "targeted_followup",
+  "observed_reduction_fraction": 0.8438109568110692,
+  "reduction_bootstrap_95_percent": [
+    0.8438109568110692,
+    0.8438109568110692
+  ],
+  "quality_no_regression": true,
+  "quality_equal_acceptance": true,
+  "paired_quality": {
+    "both_accepted": 3,
+    "baseline_only": 0,
+    "comparison_only": 0,
+    "both_rejected": 0
+  },
+  "complete": true,
+  "planned": 6,
+  "completed": 6,
+  "groups": {
+    "A": {
+      "attempts": 3,
+      "accepted": 3,
+      "tokens": 257867,
+      "cached_input_tokens": 228480,
+      "unknown_usage": 0,
+      "seconds": 90.43209896818735,
+      "tokens_per_accepted": 85955.66666666667
+    },
+    "E": {
+      "attempts": 3,
+      "accepted": 3,
+      "tokens": 40276,
+      "cached_input_tokens": 0,
+      "unknown_usage": 0,
+      "seconds": 31.840429794276133,
+      "tokens_per_accepted": 13425.333333333334
+    }
+  },
+  "paired_A_minus_C_mean_tokens": null,
+  "paired_comparison_arm": "E",
+  "paired_mean_difference_tokens": 72530.33333333333,
+  "paired_bootstrap_95_percent": [
+    69917,
+    74079
+  ],
+  "paired_n": 3,
+  "subscription_limit_consumption": "unavailable",
+  "auxiliary_billing": "unavailable; see events",
+  "manifest_hash": "d15a9c042e7bb3aee01cd5df60b360a2a832d272c33f4fb28eb5ce9a2d13ffca",
+  "queue_complete": true,
+  "usage_complete": true,
+  "amortization": {
+    "index_seconds_total": 0.18525778409093618,
+    "assumption": "one cold per-task index; local wall time only, no API-price equivalence"
+  },
+  "task_quality": [
+    {
+      "task": "python-bearer",
+      "arms": {
+        "A": {
+          "accepted": 3,
+          "attempts": 3
+        },
+        "E": {
+          "accepted": 3,
+          "attempts": 3
+        }
+      }
+    }
+  ]
+}

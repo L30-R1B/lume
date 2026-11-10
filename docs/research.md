@@ -34,8 +34,8 @@ Não foram lidos; a rastreabilidade de recomendações específicas e referênci
 | Skills progressivas | skill curta instalada por `ce setup` no projeto autorizado, remoção preserva arquivos editados | `evidence/release-validation.json` | validado em projeto isolado |
 | Catálogo pequeno | seis ferramentas MCP stdio | teste cliente + Codex real | validado |
 | Aceite/esforço/modelo | task parametriza; benchmark verifica testes protegidos; não aceita só pelo juiz | eventos/fixtures | implementado parcialmente |
-| Delegação | configuração explícita, worktrees isoladas e contabilização; desligada por padrão | testes locais, sem execução multiagente real | implementado; validação real pendente |
-| Avaliação pareada | fila retomável, tentativas brutas, input/output/cache, bootstrap agrupado por problema | `evidence/editor-confirmation-r2/`, `evidence/confirmation-v2/` | validado em tarefas pequenas; confirmação abrangente e braço D pendentes |
+| Delegação | configuração explícita, worktrees isoladas e contabilização; desligada por padrão | `evidence/delegation-live.json`: 2 trabalhos reais, verificações independentes e 192.975 tokens observados | validado em escopo limitado; não garante qualidade geral |
+| Avaliação pareada | fila retomável, tentativas brutas, input/output/cache, bootstrap agrupado pelos 12 problemas | `evidence/representative-confirmation-v3/`, `evidence/metrics-preview.json` | 84,16% observado, IC 95% 82,83%–85,30%, 36/36 aceites por braço; Jev D não comparado |
 
 Fontes primárias consultadas em 2026-11-04:
 

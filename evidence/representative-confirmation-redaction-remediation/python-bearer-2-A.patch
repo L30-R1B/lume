@@ -1,0 +1,10 @@
+diff --git a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/service.py b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-redaction-remediation/workspaces/python-bearer-2-A/service.py
+index 5dbea53..c073201 100644
+--- a/home/leo-ribeiro/codex-economy-next/tests/representative-inputs/python-bearer/service.py
++++ b/home/leo-ribeiro/codex-economy-next/evidence/representative-confirmation-redaction-remediation/workspaces/python-bearer-2-A/service.py
+@@ -1,2 +1,4 @@
+ def bearer(header):
+-    return header.split(" ")[-1] if header else None
++    if not header or not header.startswith("Bearer "):
++        return None
++    return header[len("Bearer "):] or None

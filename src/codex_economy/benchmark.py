@@ -107,14 +107,33 @@ def _benchmark(store, manifest_path, execute=False, report=False):
         for g in groups.values():
             g["tokens_per_accepted"] = g["tokens"] / g["accepted"] if g["accepted"] and not g["unknown_usage"] else None
         planned = len(manifest["tasks"]) * manifest["repetitions"] * len(manifest["arms"])
-        complete = len(records) == planned and all(not g["unknown_usage"] for g in groups.values())
+        expected_jobs = {
+            (task["id"], rep, arm)
+            for task in manifest["tasks"]
+            for rep in range(manifest["repetitions"])
+            for arm in manifest["arms"]
+        }
+        observed_jobs = [(r["task"], r["repeat"], r["arm"]) for r in records]
+        queue_complete = len(records) == planned and len(set(observed_jobs)) == len(records) and set(observed_jobs) == expected_jobs
+        usage_complete = all(not g["unknown_usage"] for g in groups.values())
+        complete = queue_complete and usage_complete
         comparison_arm = manifest.get("comparison_arm", "E" if "E" in manifest["arms"] else "C")
         pairs = []
+        paired_quality = {"both_accepted": 0, "baseline_only": 0, "comparison_only": 0, "both_rejected": 0}
         keyed = {(r["task"], r["repeat"], r["arm"]): r for r in records}
         for task in manifest["tasks"]:
             for rep in range(manifest["repetitions"]):
                 a = keyed.get((task["id"], rep, "A"))
                 b = keyed.get((task["id"], rep, comparison_arm))
+                if a and b:
+                    if a["accepted"] and b["accepted"]:
+                        paired_quality["both_accepted"] += 1
+                    elif a["accepted"]:
+                        paired_quality["baseline_only"] += 1
+                    elif b["accepted"]:
+                        paired_quality["comparison_only"] += 1
+                    else:
+                        paired_quality["both_rejected"] += 1
                 if a and b and a["accepted"] and b["accepted"] and a["usage"] and b["usage"]:
 
                     def total(r):
@@ -126,20 +145,69 @@ def _benchmark(store, manifest_path, execute=False, report=False):
             rng = random.Random(20261104)
             samples = sorted(statistics.mean(rng.choices(pairs, k=len(pairs))) for _ in range(2000))
             interval = [samples[49], samples[1949]]
+        quality_no_regression = paired_quality["baseline_only"] == 0
+        quality_equal_acceptance = paired_quality["baseline_only"] == 0 and paired_quality["comparison_only"] == 0
+
+        # Resample task clusters, keeping all repetitions and both arms paired.
+        # The ratio includes every measured attempt, including rejected attempts.
+        reduction_samples = []
+        task_values = []
+        if complete and groups.get("A", {}).get("accepted") and groups.get(comparison_arm, {}).get("accepted"):
+            for task in manifest["tasks"]:
+                per_arm = {}
+                for arm in ("A", comparison_arm):
+                    subset = [r for r in records if r["task"] == task["id"] and r["arm"] == arm]
+                    per_arm[arm] = {
+                        "tokens": sum(
+                            u.get("input_tokens", 0) + u.get("output_tokens", 0)
+                            for row in subset
+                            for u in row["usage"]
+                        ),
+                        "accepted": sum(int(row["accepted"]) for row in subset),
+                    }
+                task_values.append(per_arm)
+            rng = random.Random(manifest.get("seed", 20261104) ^ 0x5EED)
+            for _ in range(5000):
+                sample = [rng.choice(task_values) for _ in task_values]
+                totals = {
+                    arm: {
+                        key: sum(item[arm][key] for item in sample)
+                        for key in ("tokens", "accepted")
+                    }
+                    for arm in ("A", comparison_arm)
+                }
+                if totals["A"]["accepted"] and totals[comparison_arm]["accepted"]:
+                    baseline_rate = totals["A"]["tokens"] / totals["A"]["accepted"]
+                    comparison_rate = totals[comparison_arm]["tokens"] / totals[comparison_arm]["accepted"]
+                    reduction_samples.append(1 - comparison_rate / baseline_rate if baseline_rate else 0)
+        reduction_interval = None
+        if len(reduction_samples) >= 1000:
+            reduction_samples.sort()
+            reduction_interval = [reduction_samples[124], reduction_samples[4874]]
+
+        pilot = "pilot" in str(manifest.get("phase", "")).lower()
+        confirmation_eligible = len(manifest["tasks"]) >= 12 and manifest["repetitions"] >= 3
+        observed_reduction = None
+        if groups.get("A", {}).get("tokens_per_accepted") and groups.get(comparison_arm, {}).get("tokens_per_accepted"):
+            observed_reduction = 1 - (
+                groups[comparison_arm]["tokens_per_accepted"] / groups["A"]["tokens_per_accepted"]
+            )
         conclusion = "inconclusive"
-        if complete and groups.get("A", {}).get("tokens_per_accepted"):
-            a = groups["A"]["tokens_per_accepted"]
-            comparable = [
-                g
-                for k, g in groups.items()
-                if k != "A" and g["accepted"] >= groups["A"]["accepted"] and g["tokens_per_accepted"] is not None
-            ]
-            if comparable:
-                conclusion = (
-                    "achieved" if min(g["tokens_per_accepted"] for g in comparable) <= a * 0.2 else "not_achieved"
-                )
+        if not pilot and confirmation_eligible and complete and quality_no_regression and reduction_interval:
+            if reduction_interval[0] >= 0.8:
+                conclusion = "achieved"
+            elif reduction_interval[1] < 0.8:
+                conclusion = "not_achieved"
         result = {
             "goal_80_percent": conclusion,
+            "classification_scope": (
+                "pilot_only" if pilot else "confirmation" if confirmation_eligible else "targeted_followup"
+            ),
+            "observed_reduction_fraction": observed_reduction,
+            "reduction_bootstrap_95_percent": reduction_interval,
+            "quality_no_regression": quality_no_regression if complete else None,
+            "quality_equal_acceptance": quality_equal_acceptance if complete else None,
+            "paired_quality": paired_quality,
             "complete": complete,
             "planned": planned,
             "completed": len(records),
@@ -153,8 +221,8 @@ def _benchmark(store, manifest_path, execute=False, report=False):
             "auxiliary_billing": "unavailable; see events",
             "manifest_hash": frozen,
         }
-        result["queue_complete"] = len(records) == planned
-        result["usage_complete"] = all(not g["unknown_usage"] for g in groups.values())
+        result["queue_complete"] = queue_complete
+        result["usage_complete"] = usage_complete
         result["amortization"] = {
             "index_seconds_total": sum(r.get("index_seconds", 0) for r in records),
             "assumption": "one cold per-task index; local wall time only, no API-price equivalence",
