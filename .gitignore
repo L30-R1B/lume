@@ -33,3 +33,4 @@ auth.json
 /evidence/representative-confirmation-redaction-remediation/workspaces/
 /evidence/representative-confirmation-v3/workspaces/
 /evidence/representative-state/
+.runner.lock
