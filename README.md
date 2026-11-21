@@ -13,6 +13,8 @@
   <img alt="Codex CLI" src="https://img.shields.io/badge/Codex-CLI-FFB86B?style=flat-square">
 </p>
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/l30-r1b-lume-1shr7e?v=a0f17f3a7a20e7130b98c642fa09e59a)](https://m8ven.ai/mcp/l30-r1b-lume-1shr7e?s=readme)
+
 <p align="center"><strong>Contexto com evidência. Trabalho com menos ruído.</strong><br>
 Lume organiza código, recupera trechos originais e ajuda o Codex a executar tarefas verificáveis — mantendo o login do ChatGPT e sem exigir chave da API da OpenAI.</p>
 
